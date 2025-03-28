@@ -1,0 +1,43 @@
+# 3 train sizes × 3 repeats × 3 Optuna trials = 27번 trial
+
+(venv) kim89@ailab-System-Product-Name:~/hier-mil$ python run.py --data_path icb.h5ad --task 3 \
+> --n_repeats 3 --n_folds 2 --n_folds_hyperparam_tune 2 \
+> --n_tune_trials 3
+✅ Using GPU: cuda:0
+[I 2025-03-27 02:48:27,476] A new study created in memory with name: no-name-af708254-5252-4d0a-b2c6-e712a9fde0a4
+[I 2025-03-27 02:48:36,250] Trial 0 finished with value: 0.6444444444444444 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.6444444444444444.
+[I 2025-03-27 02:48:51,580] Trial 1 finished with value: 0.688888888888889 and parameters: {'n_epochs': 1000, 'dropout': 0, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 128, 'lr': 0.005}. Best is trial 1 with value: 0.688888888888889.
+[I 2025-03-27 02:49:00,752] Trial 2 finished with value: 0.6444444444444444 and parameters: {'n_epochs': 500, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.005}. Best is trial 1 with value: 0.688888888888889.
+[I 2025-03-27 02:49:08,410] A new study created in memory with name: no-name-932fd24f-d38b-47aa-b9d2-23c114a79b16
+[I 2025-03-27 02:49:16,382] Trial 0 finished with value: 0.6444444444444445 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.6444444444444445.
+[I 2025-03-27 02:49:30,930] Trial 1 finished with value: 0.5777777777777777 and parameters: {'n_epochs': 1000, 'dropout': 0, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.6444444444444445.
+[I 2025-03-27 02:49:40,347] Trial 2 finished with value: 0.6444444444444444 and parameters: {'n_epochs': 500, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.6444444444444445.
+[I 2025-03-27 02:49:44,441] A new study created in memory with name: no-name-62c753d1-43d6-4a7e-9647-fbe6065f4d27
+[I 2025-03-27 02:49:51,909] Trial 0 finished with value: 0.46666666666666673 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.46666666666666673.
+[I 2025-03-27 02:50:02,557] Trial 1 finished with value: 0.4666666666666667 and parameters: {'n_epochs': 1000, 'dropout': 0, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.46666666666666673.
+[I 2025-03-27 02:50:11,747] Trial 2 finished with value: 0.5333333333333334 and parameters: {'n_epochs': 500, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.005}. Best is trial 2 with value: 0.5333333333333334.
+[I 2025-03-27 02:50:15,691] A new study created in memory with name: no-name-ab75293a-528b-4e41-b1fd-970a6e241d1f
+[I 2025-03-27 02:50:23,679] Trial 0 finished with value: 0.7953216374269005 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.7953216374269005.
+[I 2025-03-27 02:50:39,016] Trial 1 finished with value: 0.5263157894736842 and parameters: {'n_epochs': 1000, 'dropout': 0, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.7953216374269005.
+[I 2025-03-27 02:50:48,509] Trial 2 finished with value: 0.7192982456140351 and parameters: {'n_epochs': 500, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.7953216374269005.
+[I 2025-03-27 02:50:52,555] A new study created in memory with name: no-name-6d628079-9d3b-4ea2-b237-e3c79533e42d
+[I 2025-03-27 02:50:59,482] Trial 0 finished with value: 0.7426900584795322 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.7426900584795322.
+[I 2025-03-27 02:51:14,448] Trial 1 finished with value: 0.5672514619883041 and parameters: {'n_epochs': 1000, 'dropout': 0, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.7426900584795322.
+[I 2025-03-27 02:51:23,728] Trial 2 finished with value: 0.6081871345029239 and parameters: {'n_epochs': 500, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.7426900584795322.
+[I 2025-03-27 02:51:25,395] A new study created in memory with name: no-name-29067d7a-0b28-4bd3-9a9a-6d054cb9f6b9
+[I 2025-03-27 02:51:33,256] Trial 0 finished with value: 0.6198830409356725 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.6198830409356725.
+[I 2025-03-27 02:51:46,771] Trial 1 finished with value: 0.5087719298245614 and parameters: {'n_epochs': 1000, 'dropout': 0, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.6198830409356725.
+[I 2025-03-27 02:51:56,011] Trial 2 finished with value: 0.5029239766081871 and parameters: {'n_epochs': 500, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.6198830409356725.
+[I 2025-03-27 02:52:00,024] A new study created in memory with name: no-name-5dbd9a43-d326-4920-a1a2-c013af9fa149
+[I 2025-03-27 02:52:08,062] Trial 0 finished with value: 0.7295918367346939 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.7295918367346939.
+[I 2025-03-27 02:52:17,543] Trial 1 finished with value: 0.6862244897959183 and parameters: {'n_epochs': 1000, 'dropout': 0, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.7295918367346939.
+[I 2025-03-27 02:52:25,022] Trial 2 finished with value: 0.6352040816326531 and parameters: {'n_epochs': 500, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.7295918367346939.
+[I 2025-03-27 02:52:29,073] A new study created in memory with name: no-name-693fa890-4f92-48d3-b354-f669c96ee482
+[I 2025-03-27 02:52:36,550] Trial 0 finished with value: 0.8520408163265306 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.8520408163265306.
+[I 2025-03-27 02:52:51,819] Trial 1 finished with value: 0.6479591836734694 and parameters: {'n_epochs': 1000, 'dropout': 0, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.8520408163265306.
+[I 2025-03-27 02:53:01,115] Trial 2 finished with value: 0.6887755102040816 and parameters: {'n_epochs': 500, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.8520408163265306.
+[I 2025-03-27 02:53:05,107] A new study created in memory with name: no-name-aefd3c05-aec0-4ece-9155-dc4b6600ec72
+[I 2025-03-27 02:53:13,159] Trial 0 finished with value: 0.5994897959183674 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.5994897959183674.
+[I 2025-03-27 02:53:28,613] Trial 1 finished with value: 0.576530612244898 and parameters: {'n_epochs': 1000, 'dropout': 0, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.5994897959183674.
+[I 2025-03-27 02:53:38,138] Trial 2 finished with value: 0.41836734693877553 and parameters: {'n_epochs': 500, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.5994897959183674.
+Results saved to out.txt

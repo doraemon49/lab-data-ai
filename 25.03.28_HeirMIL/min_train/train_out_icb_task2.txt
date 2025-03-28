@@ -1,0 +1,224 @@
+(venv) kim89@ailab-System-Product-Name:~/hier-mil$ python run.py --data_path icb.h5ad --task 2 --n_folds 2 --n_tune_trials 5
+✅ Using GPU: cuda:0
+[I 2025-03-26 16:36:19,156] A new study created in memory with name: no-name-a953a6d7-02c2-41ce-879d-965f4b3d12b9
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 16:36:58,453] Trial 0 finished with value: 0.7134502923976608 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.7134502923976608.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 16:38:14,605] Trial 1 finished with value: 0.7953216374269005 and parameters: {'n_epochs': 1000, 'dropout': 0, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 128, 'lr': 0.005}. Best is trial 1 with value: 0.7953216374269005.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 16:39:00,465] Trial 2 finished with value: 0.6140350877192983 and parameters: {'n_epochs': 500, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.005}. Best is trial 1 with value: 0.7953216374269005.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 16:39:46,970] Trial 3 finished with value: 0.6374269005847952 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.0001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.001}. Best is trial 1 with value: 0.7953216374269005.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 16:41:01,921] Trial 4 finished with value: 0.6900584795321637 and parameters: {'n_epochs': 1000, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 1 with value: 0.7953216374269005.
+[I 2025-03-26 16:41:09,832] A new study created in memory with name: no-name-5ff45e86-ae80-462d-8366-79c836d76a66
+[I 2025-03-26 16:41:50,482] Trial 0 finished with value: 0.7789473684210526 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.7789473684210526.
+[I 2025-03-26 16:43:07,611] Trial 1 finished with value: 0.6631578947368422 and parameters: {'n_epochs': 1000, 'dropout': 0, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.7789473684210526.
+[I 2025-03-26 16:43:55,132] Trial 2 finished with value: 0.5947368421052632 and parameters: {'n_epochs': 500, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.7789473684210526.
+[I 2025-03-26 16:44:43,452] Trial 3 finished with value: 0.7842105263157895 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.0001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.001}. Best is trial 3 with value: 0.7842105263157895.
+[I 2025-03-26 16:46:02,183] Trial 4 finished with value: 0.7736842105263158 and parameters: {'n_epochs': 1000, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 3 with value: 0.7842105263157895.
+[I 2025-03-26 16:46:07,074] A new study created in memory with name: no-name-70b27214-77f0-47ed-82dd-8b67e49ee5e5
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 16:46:47,901] Trial 0 finished with value: 0.5321637426900585 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.5321637426900585.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 16:48:05,722] Trial 1 finished with value: 0.5906432748538011 and parameters: {'n_epochs': 1000, 'dropout': 0, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 128, 'lr': 0.005}. Best is trial 1 with value: 0.5906432748538011.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 16:48:53,590] Trial 2 finished with value: 0.5847953216374269 and parameters: {'n_epochs': 500, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.005}. Best is trial 1 with value: 0.5906432748538011.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 16:49:40,425] Trial 3 finished with value: 0.5087719298245613 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.0001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.001}. Best is trial 1 with value: 0.5906432748538011.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 16:51:00,639] Trial 4 finished with value: 0.5906432748538012 and parameters: {'n_epochs': 1000, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 4 with value: 0.5906432748538012.
+[I 2025-03-26 16:51:08,636] A new study created in memory with name: no-name-4c8fffd9-5dbc-4788-92a1-f05741f12539
+[I 2025-03-26 16:51:49,113] Trial 0 finished with value: 0.7105263157894737 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.7105263157894737.
+[I 2025-03-26 16:52:54,042] Trial 1 finished with value: 0.6368421052631579 and parameters: {'n_epochs': 1000, 'dropout': 0, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.7105263157894737.
+[I 2025-03-26 16:53:41,870] Trial 2 finished with value: 0.7210526315789474 and parameters: {'n_epochs': 500, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.005}. Best is trial 2 with value: 0.7210526315789474.
+[I 2025-03-26 16:54:30,146] Trial 3 finished with value: 0.7263157894736842 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.0001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.001}. Best is trial 3 with value: 0.7263157894736842.
+[I 2025-03-26 16:55:49,773] Trial 4 finished with value: 0.6052631578947368 and parameters: {'n_epochs': 1000, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 3 with value: 0.7263157894736842.
+[I 2025-03-26 16:55:54,656] A new study created in memory with name: no-name-098f7d7b-0413-4f64-83d0-4cb674c93938
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 16:56:35,117] Trial 0 finished with value: 0.6491228070175439 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.6491228070175439.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 16:57:53,505] Trial 1 finished with value: 0.7485380116959064 and parameters: {'n_epochs': 1000, 'dropout': 0, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 128, 'lr': 0.005}. Best is trial 1 with value: 0.7485380116959064.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 16:58:40,854] Trial 2 finished with value: 0.7660818713450293 and parameters: {'n_epochs': 500, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.005}. Best is trial 2 with value: 0.7660818713450293.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 16:59:27,802] Trial 3 finished with value: 0.631578947368421 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.0001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.001}. Best is trial 2 with value: 0.7660818713450293.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:00:44,600] Trial 4 finished with value: 0.6257309941520468 and parameters: {'n_epochs': 1000, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 2 with value: 0.7660818713450293.
+[I 2025-03-26 17:00:49,455] A new study created in memory with name: no-name-637a3326-385a-4f68-bf4f-565123b1dc97
+[I 2025-03-26 17:01:29,938] Trial 0 finished with value: 0.8999999999999999 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.8999999999999999.
+[I 2025-03-26 17:02:45,591] Trial 1 finished with value: 0.763157894736842 and parameters: {'n_epochs': 1000, 'dropout': 0, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.8999999999999999.
+[I 2025-03-26 17:03:33,588] Trial 2 finished with value: 0.8052631578947368 and parameters: {'n_epochs': 500, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.8999999999999999.
+[I 2025-03-26 17:04:18,482] Trial 3 finished with value: 0.8263157894736843 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.0001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.001}. Best is trial 0 with value: 0.8999999999999999.
+[I 2025-03-26 17:05:28,010] Trial 4 finished with value: 0.8631578947368421 and parameters: {'n_epochs': 1000, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.8999999999999999.
+[I 2025-03-26 17:05:32,064] A new study created in memory with name: no-name-47871bdd-47fd-4cb9-bfff-ce7cc44a3fae
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:06:08,681] Trial 0 finished with value: 0.672514619883041 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.672514619883041.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:07:26,420] Trial 1 finished with value: 0.7076023391812866 and parameters: {'n_epochs': 1000, 'dropout': 0, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 128, 'lr': 0.005}. Best is trial 1 with value: 0.7076023391812866.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:08:14,555] Trial 2 finished with value: 0.6666666666666666 and parameters: {'n_epochs': 500, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.005}. Best is trial 1 with value: 0.7076023391812866.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:09:02,643] Trial 3 finished with value: 0.5321637426900585 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.0001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.001}. Best is trial 1 with value: 0.7076023391812866.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:10:22,374] Trial 4 finished with value: 0.608187134502924 and parameters: {'n_epochs': 1000, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 1 with value: 0.7076023391812866.
+[I 2025-03-26 17:10:30,266] A new study created in memory with name: no-name-c2f23b4f-124f-4204-8576-b1fbeb9b4e9c
+[I 2025-03-26 17:11:03,490] Trial 0 finished with value: 0.8368421052631578 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.8368421052631578.
+[I 2025-03-26 17:12:21,176] Trial 1 finished with value: 0.49473684210526314 and parameters: {'n_epochs': 1000, 'dropout': 0, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.8368421052631578.
+[I 2025-03-26 17:13:08,833] Trial 2 finished with value: 0.7789473684210526 and parameters: {'n_epochs': 500, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.8368421052631578.
+[I 2025-03-26 17:13:52,243] Trial 3 finished with value: 0.8105263157894737 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.0001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.001}. Best is trial 0 with value: 0.8368421052631578.
+[I 2025-03-26 17:15:10,913] Trial 4 finished with value: 0.7894736842105263 and parameters: {'n_epochs': 1000, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.8368421052631578.
+[I 2025-03-26 17:15:14,998] A new study created in memory with name: no-name-cc3ecf7d-aa9c-4e4c-8d74-84e409a6c793
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:15:55,510] Trial 0 finished with value: 0.7251461988304093 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.7251461988304093.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:17:13,533] Trial 1 finished with value: 0.7017543859649122 and parameters: {'n_epochs': 1000, 'dropout': 0, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.7251461988304093.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:17:59,936] Trial 2 finished with value: 0.695906432748538 and parameters: {'n_epochs': 500, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.7251461988304093.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:18:47,388] Trial 3 finished with value: 0.5672514619883041 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.0001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.001}. Best is trial 0 with value: 0.7251461988304093.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:20:06,935] Trial 4 finished with value: 0.631578947368421 and parameters: {'n_epochs': 1000, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.7251461988304093.
+[I 2025-03-26 17:20:10,993] A new study created in memory with name: no-name-b0d65ccd-7bba-4b07-87f5-d0130c209995
+[I 2025-03-26 17:20:49,167] Trial 0 finished with value: 0.7736842105263158 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.7736842105263158.
+[I 2025-03-26 17:22:02,035] Trial 1 finished with value: 0.49473684210526325 and parameters: {'n_epochs': 1000, 'dropout': 0, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.7736842105263158.
+[I 2025-03-26 17:22:47,580] Trial 2 finished with value: 0.6105263157894737 and parameters: {'n_epochs': 500, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.7736842105263158.
+[I 2025-03-26 17:23:30,139] Trial 3 finished with value: 0.6210526315789473 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.0001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.001}. Best is trial 0 with value: 0.7736842105263158.
+[I 2025-03-26 17:24:48,814] Trial 4 finished with value: 0.6526315789473685 and parameters: {'n_epochs': 1000, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.7736842105263158.
+[I 2025-03-26 17:24:52,645] A new study created in memory with name: no-name-5fda6abf-53b8-42fc-b74f-a8a8341274d4
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:25:31,053] Trial 0 finished with value: 0.7543859649122807 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.7543859649122807.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:26:44,184] Trial 1 finished with value: 0.5672514619883041 and parameters: {'n_epochs': 1000, 'dropout': 0, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.7543859649122807.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:27:30,278] Trial 2 finished with value: 0.7076023391812866 and parameters: {'n_epochs': 500, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.7543859649122807.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:28:17,432] Trial 3 finished with value: 0.8011695906432749 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.0001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.001}. Best is trial 3 with value: 0.8011695906432749.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:29:32,083] Trial 4 finished with value: 0.7836257309941521 and parameters: {'n_epochs': 1000, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 3 with value: 0.8011695906432749.
+[I 2025-03-26 17:29:36,994] A new study created in memory with name: no-name-b7dbc930-d0eb-420e-af0e-8bc99bef7453
+[I 2025-03-26 17:30:12,581] Trial 0 finished with value: 0.6631578947368421 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.6631578947368421.
+[I 2025-03-26 17:31:29,956] Trial 1 finished with value: 0.7315789473684211 and parameters: {'n_epochs': 1000, 'dropout': 0, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 128, 'lr': 0.005}. Best is trial 1 with value: 0.7315789473684211.
+[I 2025-03-26 17:32:18,311] Trial 2 finished with value: 0.5578947368421053 and parameters: {'n_epochs': 500, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.005}. Best is trial 1 with value: 0.7315789473684211.
+[I 2025-03-26 17:33:06,000] Trial 3 finished with value: 0.6052631578947368 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.0001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.001}. Best is trial 1 with value: 0.7315789473684211.
+[I 2025-03-26 17:34:25,013] Trial 4 finished with value: 0.6894736842105263 and parameters: {'n_epochs': 1000, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 1 with value: 0.7315789473684211.
+[I 2025-03-26 17:34:32,936] A new study created in memory with name: no-name-e06524e8-db7d-4d9e-a8db-8f57e5492b24
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:35:09,401] Trial 0 finished with value: 0.8654970760233918 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.8654970760233918.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:36:27,000] Trial 1 finished with value: 0.7894736842105263 and parameters: {'n_epochs': 1000, 'dropout': 0, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.8654970760233918.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:37:14,381] Trial 2 finished with value: 0.672514619883041 and parameters: {'n_epochs': 500, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.8654970760233918.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:37:57,642] Trial 3 finished with value: 0.7017543859649122 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.0001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.001}. Best is trial 0 with value: 0.8654970760233918.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:39:11,004] Trial 4 finished with value: 0.783625730994152 and parameters: {'n_epochs': 1000, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.8654970760233918.
+[I 2025-03-26 17:39:15,097] A new study created in memory with name: no-name-8b462545-de76-4104-a71f-574b5d3838c2
+[I 2025-03-26 17:39:55,766] Trial 0 finished with value: 0.8368421052631579 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.8368421052631579.
+[I 2025-03-26 17:41:12,001] Trial 1 finished with value: 0.631578947368421 and parameters: {'n_epochs': 1000, 'dropout': 0, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.8368421052631579.
+[I 2025-03-26 17:42:00,468] Trial 2 finished with value: 0.8473684210526315 and parameters: {'n_epochs': 500, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.005}. Best is trial 2 with value: 0.8473684210526315.
+[I 2025-03-26 17:42:48,835] Trial 3 finished with value: 0.9210526315789473 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.0001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.001}. Best is trial 3 with value: 0.9210526315789473.
+[I 2025-03-26 17:44:04,328] Trial 4 finished with value: 0.7263157894736842 and parameters: {'n_epochs': 1000, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 3 with value: 0.9210526315789473.
+[I 2025-03-26 17:44:09,171] A new study created in memory with name: no-name-b5511a08-f2b2-4704-b5d7-8db84c6e7c01
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:44:49,623] Trial 0 finished with value: 0.5789473684210527 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.5789473684210527.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:46:07,813] Trial 1 finished with value: 0.5964912280701755 and parameters: {'n_epochs': 1000, 'dropout': 0, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 128, 'lr': 0.005}. Best is trial 1 with value: 0.5964912280701755.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:46:50,962] Trial 2 finished with value: 0.5555555555555556 and parameters: {'n_epochs': 500, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.005}. Best is trial 1 with value: 0.5964912280701755.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:47:39,235] Trial 3 finished with value: 0.5614035087719298 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.0001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.001}. Best is trial 1 with value: 0.5964912280701755.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:48:54,798] Trial 4 finished with value: 0.5789473684210527 and parameters: {'n_epochs': 1000, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 1 with value: 0.5964912280701755.
+[I 2025-03-26 17:49:02,632] A new study created in memory with name: no-name-70dc873f-43c6-43d5-98a2-2cbb5d70ef79
+[I 2025-03-26 17:49:43,027] Trial 0 finished with value: 0.7789473684210527 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.7789473684210527.
+[I 2025-03-26 17:50:57,447] Trial 1 finished with value: 0.7157894736842105 and parameters: {'n_epochs': 1000, 'dropout': 0, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.7789473684210527.
+[I 2025-03-26 17:51:45,697] Trial 2 finished with value: 0.7947368421052632 and parameters: {'n_epochs': 500, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.005}. Best is trial 2 with value: 0.7947368421052632.
+[I 2025-03-26 17:52:33,888] Trial 3 finished with value: 0.7789473684210526 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.0001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.001}. Best is trial 2 with value: 0.7947368421052632.
+[I 2025-03-26 17:53:47,233] Trial 4 finished with value: 0.7157894736842105 and parameters: {'n_epochs': 1000, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 2 with value: 0.7947368421052632.
+[I 2025-03-26 17:53:51,964] A new study created in memory with name: no-name-5c0db330-a686-48ea-a77c-59be19ae97c2
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:54:32,588] Trial 0 finished with value: 0.736842105263158 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.736842105263158.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:55:50,871] Trial 1 finished with value: 0.6432748538011696 and parameters: {'n_epochs': 1000, 'dropout': 0, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.736842105263158.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:56:36,751] Trial 2 finished with value: 0.760233918128655 and parameters: {'n_epochs': 500, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.005}. Best is trial 2 with value: 0.760233918128655.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:57:25,008] Trial 3 finished with value: 0.6842105263157895 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.0001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.001}. Best is trial 2 with value: 0.760233918128655.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 17:58:43,839] Trial 4 finished with value: 0.7309941520467836 and parameters: {'n_epochs': 1000, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 2 with value: 0.760233918128655.
+[I 2025-03-26 17:58:48,686] A new study created in memory with name: no-name-9d9cca95-9218-40c0-9f20-620f714b2056
+[I 2025-03-26 17:59:28,839] Trial 0 finished with value: 0.631578947368421 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.631578947368421.
+[I 2025-03-26 18:00:47,270] Trial 1 finished with value: 0.6736842105263159 and parameters: {'n_epochs': 1000, 'dropout': 0, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 128, 'lr': 0.005}. Best is trial 1 with value: 0.6736842105263159.
+[I 2025-03-26 18:01:34,040] Trial 2 finished with value: 0.45789473684210524 and parameters: {'n_epochs': 500, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.005}. Best is trial 1 with value: 0.6736842105263159.
+[I 2025-03-26 18:02:21,084] Trial 3 finished with value: 0.6473684210526316 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.0001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.001}. Best is trial 1 with value: 0.6736842105263159.
+[I 2025-03-26 18:03:37,823] Trial 4 finished with value: 0.6105263157894737 and parameters: {'n_epochs': 1000, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 1 with value: 0.6736842105263159.
+[I 2025-03-26 18:03:45,720] A new study created in memory with name: no-name-c8d9e96a-40db-4ece-b7a2-f4a81dbc6e51
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 18:04:26,340] Trial 0 finished with value: 0.5964912280701755 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.5964912280701755.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 18:05:41,387] Trial 1 finished with value: 0.5789473684210527 and parameters: {'n_epochs': 1000, 'dropout': 0, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.5964912280701755.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 18:06:29,338] Trial 2 finished with value: 0.4912280701754386 and parameters: {'n_epochs': 500, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.5964912280701755.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 18:07:09,855] Trial 3 finished with value: 0.608187134502924 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.0001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.001}. Best is trial 3 with value: 0.608187134502924.
+/home/kim89/hier-mil/venv/lib/python3.12/site-packages/sklearn/model_selection/_split.py:737: UserWarning: The least populated class in y has only 9 members, which is less than n_splits=10.
+  warnings.warn(
+[I 2025-03-26 18:08:23,833] Trial 4 finished with value: 0.5380116959064327 and parameters: {'n_epochs': 1000, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 3 with value: 0.608187134502924.
+[I 2025-03-26 18:08:28,680] A new study created in memory with name: no-name-e4707330-7e80-4cef-9d32-c7f340822c41
+[I 2025-03-26 18:09:09,261] Trial 0 finished with value: 0.9789473684210527 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.9789473684210527.
+[I 2025-03-26 18:10:17,419] Trial 1 finished with value: 0.9473684210526316 and parameters: {'n_epochs': 1000, 'dropout': 0, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.9789473684210527.
+[I 2025-03-26 18:11:04,723] Trial 2 finished with value: 0.9210526315789473 and parameters: {'n_epochs': 500, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.005}. Best is trial 0 with value: 0.9789473684210527.
+[I 2025-03-26 18:11:52,758] Trial 3 finished with value: 0.8947368421052633 and parameters: {'n_epochs': 500, 'dropout': 0.5, 'weight_decay': 0.0001, 'n_layers_lin': 2, 'n_hid': 128, 'lr': 0.001}. Best is trial 0 with value: 0.9789473684210527.
+[I 2025-03-26 18:13:08,649] Trial 4 finished with value: 0.9789473684210527 and parameters: {'n_epochs': 1000, 'dropout': 0.3, 'weight_decay': 0.001, 'n_layers_lin': 1, 'n_hid': 64, 'lr': 0.001}. Best is trial 0 with value: 0.9789473684210527.
+AUC: 0.6504155124653739 +/- 0.06188888894322846
+Results saved to out.txt

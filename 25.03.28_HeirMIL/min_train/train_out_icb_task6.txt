@@ -1,0 +1,5 @@
+(venv) kim89@ailab-System-Product-Name:~/hier-mil$ python run.py --data_path icb.h5ad --task 6 \
+> --n_repeats 3 --n_folds 2 --n_folds_hyperparam_tune 2 \
+> --n_tune_trials 3
+✅ Using GPU: cuda:0
+Results saved to out.txt
