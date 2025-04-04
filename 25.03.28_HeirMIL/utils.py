@@ -47,7 +47,8 @@ def get_data(df, all_ct, samples, meta=None, binary=True, attn2=True):
         batches.append(batch)
     Xs = torch.tensor(np.concatenate(Xs), dtype = torch.float)
     batches = torch.tensor(np.concatenate(batches))
-    ys = torch.tensor(samples["label"].to_list(), dtype = torch.float if binary else torch.long)
+    # ys = torch.tensor(samples["label"].to_list(), dtype = torch.float if binary else torch.long)
+    ys = torch.tensor(samples["label"].to_list(), dtype=torch.long if not binary else torch.float)
     return Xs, ys, batches, meta
 
 # In args: attn1, attn2, use_meta, binary, n_classes, device, all_ct, model_save_path, n_skf_in, n_perm
@@ -59,7 +60,8 @@ def train(X_train, y_train, batch_train, meta_train, args, dropout=0., n_layers_
     attn1=args.attn1, attn2=args.attn2, use_softmax=True, dropout=dropout, n_layers_lin=n_layers_lin, n_layers_lin2=0, \
     n_layers_lin_meta=n_layers_lin_meta if not args.use_meta else 1, n_hid=n_hid, n_hid2=0).to(args.device)
     opt = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=weight_decay)
-    loss_fn = torch.nn.BCEWithLogitsLoss() if args.binary else torch.nn.CrossEntropyLo
+    # loss_fn = torch.nn.BCEWithLogitsLoss() if args.binary else torch.nn.CrossEntropyLo
+    loss_fn = torch.nn.BCEWithLogitsLoss() if args.binary else torch.nn.CrossEntropyLoss()
     for epoch in range(n_epochs):
         model.train()
         opt.zero_grad()
