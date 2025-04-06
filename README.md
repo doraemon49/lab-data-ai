@@ -1,4 +1,4 @@
-# AI_Lab
+# laboratory
 
 명지대학교 오민식 교수님 연구실 (ARTIFICIAL INTELLIGENCE AND DATA ANALYTICS LAB)
 <br>
@@ -7,8 +7,6 @@
 ### 기술 블로그 : [도라에민](https://doraemin.tistory.com/)
 
 # scRAT
-
-(2025. 03. 21.)
 
 #### PAPER REVIEW
 
@@ -29,8 +27,6 @@
 
 # Hierarchical MIL
 
-(2025. 03. 28.)
-
 #### PAPER REVIEW
 
 - [[Hierarchical MIL] Incorporating Hierarchical Information into Multiple Instance Learning for Patient Phenotype Prediction with scRNA-seq Data](https://doraemin.tistory.com/167)
@@ -44,14 +40,11 @@
 #### CODE
 
 - [[Hierarchical MIL] scRNA Analysis](https://doraemin.tistory.com/169)
-
 - [[Hierarchical MIL] Code ; Train.py](https://doraemin.tistory.com/173)
 - [Difference btw '.h5ad' and '.h5'](https://doraemin.tistory.com/175)
 - [[Hierarchical MIL] Preprocessing Create '.h5ad'](https://doraemin.tistory.com/176)
 
 # scMILD
-
-(2025. 04. 04.)
 
 #### DATA
 
