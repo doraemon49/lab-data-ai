@@ -6,7 +6,7 @@
 
 ### 기술 블로그 : [도라에민](https://doraemin.tistory.com/)
 
-# scRAT
+# ScRAT
 
 #### PAPER REVIEW
 
