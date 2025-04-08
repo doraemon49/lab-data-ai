@@ -4,7 +4,7 @@
 <br>
 [인공지능을 다양한 분야의 데이터에 적용하여 문제 해결 방법을 개발하는 연구실](https://ailab-mju.github.io/)
 
-### 기술 블로그 : [도라에민](https://doraemin.tistory.com/)
+## My Developer blog : [Doraemin](https://doraemin.tistory.com/)
 
 # ScRAT
 
@@ -44,11 +44,14 @@
 - [Difference btw '.h5ad' and '.h5'](https://doraemin.tistory.com/175)
 - [[Hierarchical MIL] Preprocessing Create '.h5ad'](https://doraemin.tistory.com/176)
 
+#### compare AI Model
+
+- [[Hierarchical MIL] compare AI Model](https://doraemin.tistory.com/188)
+
 # scMILD
 
 #### DATA
 
 - [[scMILD] Datasets Download](https://doraemin.tistory.com/185)
 
-<!-- - [](https://doraemin.tistory.com/)
-- [](https://doraemin.tistory.com/) -->
+<!-- - [](https://doraemin.tistory.com/) -->
