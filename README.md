@@ -60,6 +60,10 @@
 
 - [[PaSCient] Learning multi-cellular representations of single-cell transcriptomics data enables characterization of patient-level disease states](https://doraemin.tistory.com/189)
 
-<!-- - [](https://doraemin.tistory.com/) -->
-<!-- - [](https://doraemin.tistory.com/) -->
-<!-- - [](https://doraemin.tistory.com/) -->
+# ProtoCell4P
+
+#### CODE
+
+- [[ProtoCell 4P] scRNA Analysis](https://doraemin.tistory.com/190)
+  <!-- - [](https://doraemin.tistory.com/) -->
+  <!-- - [](https://doraemin.tistory.com/) -->
