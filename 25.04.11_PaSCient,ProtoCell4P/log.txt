@@ -1,0 +1,1669 @@
+Training Data Augmented: 24 --> 138
+****************************************
+Learning rate: 0.000100
+Max epoch: 75
+Batch size: 3
+Test step: 1
+Number of hidden layers: 2
+Number of prototypes: 4
+Lambdas: {'lambda_1': 1.0, 'lambda_2': 1.0, 'lambda_3': 1.0, 'lambda_4': 1.0, 'lambda_5': 1.0, 'lambda_6': 1.0}
+D_min: 1.0
+Device: cuda:0
+Seed: 1
+****************************************
+
+Pre-training Starts
+
+[Epoch 0]
+Time: 1.1s | Avg. Training Loss: 789.95 | CT Acc: 0.00
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 353.48 | CT Acc: 0.00
+Model Saved!
+
+[Epoch 1]
+Time: 1.0s | Avg. Training Loss: 3420.50 | CT Acc: 0.15
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 692.15 | CT Acc: 0.47
+
+[Epoch 2]
+Time: 1.0s | Avg. Training Loss: 919.53 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 932.80 | CT Acc: 0.47
+
+[Epoch 3]
+Time: 1.0s | Avg. Training Loss: 884.35 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 719.20 | CT Acc: 0.47
+
+[Epoch 4]
+Time: 1.0s | Avg. Training Loss: 613.51 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 517.36 | CT Acc: 0.47
+
+[Epoch 5]
+Time: 1.0s | Avg. Training Loss: 392.13 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 311.98 | CT Acc: 0.47
+Model Saved!
+
+[Epoch 6]
+Time: 1.0s | Avg. Training Loss: 234.93 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 205.34 | CT Acc: 0.47
+Model Saved!
+
+[Epoch 7]
+Time: 1.0s | Avg. Training Loss: 163.87 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 142.99 | CT Acc: 0.47
+Model Saved!
+
+[Epoch 8]
+Time: 1.0s | Avg. Training Loss: 109.00 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 85.11 | CT Acc: 0.47
+Model Saved!
+
+[Epoch 9]
+Time: 1.0s | Avg. Training Loss: 67.92 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 53.14 | CT Acc: 0.47
+Model Saved!
+
+[Epoch 10]
+Time: 1.0s | Avg. Training Loss: 45.90 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 38.18 | CT Acc: 0.47
+Model Saved!
+
+[Epoch 11]
+Time: 1.0s | Avg. Training Loss: 35.99 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 29.46 | CT Acc: 0.47
+Model Saved!
+
+[Epoch 12]
+Time: 1.0s | Avg. Training Loss: 29.48 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 23.14 | CT Acc: 0.47
+Model Saved!
+
+[Epoch 13]
+Time: 1.0s | Avg. Training Loss: 27.21 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 22.04 | CT Acc: 0.47
+Model Saved!
+
+[Epoch 14]
+Time: 1.0s | Avg. Training Loss: 25.33 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 20.08 | CT Acc: 0.47
+Model Saved!
+
+[Epoch 15]
+Time: 1.0s | Avg. Training Loss: 23.68 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 18.98 | CT Acc: 0.47
+Model Saved!
+
+[Epoch 16]
+Time: 1.0s | Avg. Training Loss: 22.53 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 18.74 | CT Acc: 0.47
+Model Saved!
+
+[Epoch 17]
+Time: 1.0s | Avg. Training Loss: 21.79 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 19.29 | CT Acc: 0.47
+
+[Epoch 18]
+Time: 1.0s | Avg. Training Loss: 24.51 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 23.48 | CT Acc: 0.47
+
+[Epoch 19]
+Time: 1.0s | Avg. Training Loss: 25.79 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 19230790.99 | CT Acc: 0.47
+
+[Epoch 20]
+Time: 1.0s | Avg. Training Loss: 23.82 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 19.82 | CT Acc: 0.47
+
+[Epoch 21]
+Time: 1.0s | Avg. Training Loss: 22.66 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 18.65 | CT Acc: 0.47
+Model Saved!
+
+[Epoch 22]
+Time: 1.0s | Avg. Training Loss: 21.59 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 38461555.36 | CT Acc: 0.47
+
+[Epoch 23]
+Time: 1.0s | Avg. Training Loss: 21.17 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 19230787.41 | CT Acc: 0.47
+
+[Epoch 24]
+Time: 1.0s | Avg. Training Loss: 20.20 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 16.48 | CT Acc: 0.47
+Model Saved!
+
+[Epoch 25]
+Time: 1.0s | Avg. Training Loss: 19.43 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 16.29 | CT Acc: 0.47
+Model Saved!
+
+[Epoch 26]
+Time: 1.0s | Avg. Training Loss: 18.83 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 15.58 | CT Acc: 0.47
+Model Saved!
+
+[Epoch 27]
+Time: 1.0s | Avg. Training Loss: 18.60 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 19230785.67 | CT Acc: 0.47
+
+[Epoch 28]
+Time: 1.0s | Avg. Training Loss: 18.37 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 15.21 | CT Acc: 0.47
+Model Saved!
+
+[Epoch 29]
+Time: 1.0s | Avg. Training Loss: 18.17 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 15.63 | CT Acc: 0.47
+
+[Epoch 30]
+Time: 1.0s | Avg. Training Loss: 18.07 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 15.15 | CT Acc: 0.47
+Model Saved!
+
+[Epoch 31]
+Time: 1.0s | Avg. Training Loss: 17.94 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 14.95 | CT Acc: 0.47
+Model Saved!
+
+[Epoch 32]
+Time: 1.0s | Avg. Training Loss: 17.67 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 19230784.32 | CT Acc: 0.47
+
+[Epoch 33]
+Time: 1.0s | Avg. Training Loss: 17.64 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 15.47 | CT Acc: 0.48
+
+[Epoch 34]
+Time: 1.0s | Avg. Training Loss: 17.39 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 15.06 | CT Acc: 0.48
+
+[Epoch 35]
+Time: 1.0s | Avg. Training Loss: 17.35 | CT Acc: 0.31
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 15.20 | CT Acc: 0.48
+
+[Epoch 36]
+Time: 1.0s | Avg. Training Loss: 17.17 | CT Acc: 0.32
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 19230784.47 | CT Acc: 0.48
+
+[Epoch 37]
+Time: 1.0s | Avg. Training Loss: 16.94 | CT Acc: 0.34
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 15.38 | CT Acc: 0.48
+
+[Epoch 38]
+Time: 1.0s | Avg. Training Loss: 16.84 | CT Acc: 0.34
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 15.41 | CT Acc: 0.48
+
+[Epoch 39]
+Time: 1.0s | Avg. Training Loss: 16.80 | CT Acc: 0.34
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 15.94 | CT Acc: 0.48
+
+[Epoch 40]
+Time: 1.0s | Avg. Training Loss: 16.43 | CT Acc: 0.34
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 16.23 | CT Acc: 0.48
+
+[Epoch 41]
+Time: 1.0s | Avg. Training Loss: 16.23 | CT Acc: 0.34
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 16.83 | CT Acc: 0.48
+
+[Epoch 42]
+Time: 1.0s | Avg. Training Loss: 15.81 | CT Acc: 0.34
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 17.17 | CT Acc: 0.48
+
+[Epoch 43]
+Time: 1.0s | Avg. Training Loss: 15.35 | CT Acc: 0.34
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 16.19 | CT Acc: 0.48
+
+[Epoch 44]
+Time: 1.0s | Avg. Training Loss: 14.91 | CT Acc: 0.34
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 17.38 | CT Acc: 0.48
+
+[Epoch 45]
+Time: 1.0s | Avg. Training Loss: 14.47 | CT Acc: 0.34
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 17.37 | CT Acc: 0.48
+
+[Epoch 46]
+Time: 1.0s | Avg. Training Loss: 13.96 | CT Acc: 0.34
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 17.56 | CT Acc: 0.48
+
+[Epoch 47]
+Time: 1.0s | Avg. Training Loss: 13.57 | CT Acc: 0.35
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 16.33 | CT Acc: 0.48
+
+[Epoch 48]
+Time: 1.0s | Avg. Training Loss: 13.27 | CT Acc: 0.35
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 16.50 | CT Acc: 0.48
+
+[Epoch 49]
+Time: 1.0s | Avg. Training Loss: 13.07 | CT Acc: 0.35
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 19230786.44 | CT Acc: 0.48
+
+[Epoch 50]
+Time: 1.0s | Avg. Training Loss: 12.92 | CT Acc: 0.35
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 16.21 | CT Acc: 0.48
+
+[Epoch 51]
+Time: 1.0s | Avg. Training Loss: 12.71 | CT Acc: 0.35
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 15.09 | CT Acc: 0.48
+
+[Epoch 52]
+Time: 1.0s | Avg. Training Loss: 12.48 | CT Acc: 0.35
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 14.25 | CT Acc: 0.48
+Model Saved!
+
+[Epoch 53]
+Time: 1.0s | Avg. Training Loss: 12.31 | CT Acc: 0.35
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 19230784.13 | CT Acc: 0.48
+
+[Epoch 54]
+Time: 1.0s | Avg. Training Loss: 12.34 | CT Acc: 0.35
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 14.31 | CT Acc: 0.48
+
+[Epoch 55]
+Time: 1.0s | Avg. Training Loss: 12.20 | CT Acc: 0.35
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 14.87 | CT Acc: 0.48
+
+[Epoch 56]
+Time: 1.0s | Avg. Training Loss: 12.18 | CT Acc: 0.36
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 14.23 | CT Acc: 0.49
+Model Saved!
+
+[Epoch 57]
+Time: 1.0s | Avg. Training Loss: 12.13 | CT Acc: 0.36
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 13.94 | CT Acc: 0.49
+Model Saved!
+
+[Epoch 58]
+Time: 1.0s | Avg. Training Loss: 12.11 | CT Acc: 0.36
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 13.92 | CT Acc: 0.49
+Model Saved!
+
+[Epoch 59]
+Time: 1.0s | Avg. Training Loss: 11.96 | CT Acc: 0.36
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 13.65 | CT Acc: 0.49
+Model Saved!
+
+[Epoch 60]
+Time: 1.0s | Avg. Training Loss: 11.94 | CT Acc: 0.36
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 14.52 | CT Acc: 0.49
+
+[Epoch 61]
+Time: 1.0s | Avg. Training Loss: 11.94 | CT Acc: 0.36
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 13.54 | CT Acc: 0.50
+Model Saved!
+
+[Epoch 62]
+Time: 1.0s | Avg. Training Loss: 11.99 | CT Acc: 0.37
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 13.95 | CT Acc: 0.50
+
+[Epoch 63]
+Time: 1.0s | Avg. Training Loss: 11.84 | CT Acc: 0.38
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 19230783.88 | CT Acc: 0.50
+
+[Epoch 64]
+Time: 1.0s | Avg. Training Loss: 12.00 | CT Acc: 0.38
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 13.58 | CT Acc: 0.50
+
+[Epoch 65]
+Time: 1.0s | Avg. Training Loss: 11.90 | CT Acc: 0.38
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 13.67 | CT Acc: 0.51
+
+[Epoch 66]
+Time: 1.0s | Avg. Training Loss: 11.81 | CT Acc: 0.38
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 13.84 | CT Acc: 0.51
+
+[Epoch 67]
+Time: 1.0s | Avg. Training Loss: 11.71 | CT Acc: 0.38
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 19230783.22 | CT Acc: 0.51
+
+[Epoch 68]
+Time: 1.0s | Avg. Training Loss: 11.75 | CT Acc: 0.39
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 13.81 | CT Acc: 0.51
+
+[Epoch 69]
+Time: 1.0s | Avg. Training Loss: 11.69 | CT Acc: 0.39
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 13.73 | CT Acc: 0.51
+
+[Epoch 70]
+Time: 1.0s | Avg. Training Loss: 11.78 | CT Acc: 0.39
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 13.55 | CT Acc: 0.51
+
+[Epoch 71]
+Time: 1.0s | Avg. Training Loss: 11.86 | CT Acc: 0.40
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 14.10 | CT Acc: 0.51
+
+[Epoch 72]
+Time: 1.0s | Avg. Training Loss: 11.78 | CT Acc: 0.41
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 13.43 | CT Acc: 0.51
+Model Saved!
+
+[Epoch 73]
+Time: 1.0s | Avg. Training Loss: 11.62 | CT Acc: 0.40
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 13.98 | CT Acc: 0.52
+
+[Epoch 74]
+Time: 1.0s | Avg. Training Loss: 11.62 | CT Acc: 0.40
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 13.28 | CT Acc: 0.51
+Model Saved!
+
+Training Starts
+
+[Epoch 0]
+Time: 0.9s | Avg. Training Loss: 3.38 | Avg. Training Accuracy: 0.66 | Avg. ROC AUC Score: 0.69 | F1 Score: 0.48 | CT Acc: 0.10
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 3.20 | Avg. Validation Accuracy: 0.69 | Avg. ROC AUC Score: 0.56 | F1 Score: 0.41 | CT Acc: 0.09
+Model Saved!
+
+[Epoch 1]
+Time: 0.8s | Avg. Training Loss: 3.05 | Avg. Training Accuracy: 0.78 | Avg. ROC AUC Score: 0.95 | F1 Score: 0.62 | CT Acc: 0.16
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 3.07 | Avg. Validation Accuracy: 0.77 | Avg. ROC AUC Score: 0.67 | F1 Score: 0.63 | CT Acc: 0.09
+Model Saved!
+
+[Epoch 2]
+Time: 0.9s | Avg. Training Loss: 2.92 | Avg. Training Accuracy: 0.90 | Avg. ROC AUC Score: 1.00 | F1 Score: 0.86 | CT Acc: 0.16
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.97 | Avg. Validation Accuracy: 0.77 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.63 | CT Acc: 0.10
+Model Saved!
+
+[Epoch 3]
+Time: 0.9s | Avg. Training Loss: 2.82 | Avg. Training Accuracy: 0.94 | Avg. ROC AUC Score: 1.00 | F1 Score: 0.92 | CT Acc: 0.17
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.87 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.94 | F1 Score: 0.90 | CT Acc: 0.14
+Model Saved!
+
+[Epoch 4]
+Time: 0.8s | Avg. Training Loss: 2.73 | Avg. Training Accuracy: 0.98 | Avg. ROC AUC Score: 1.00 | F1 Score: 0.97 | CT Acc: 0.19
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.81 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.92 | F1 Score: 0.90 | CT Acc: 0.22
+
+[Epoch 5]
+Time: 0.9s | Avg. Training Loss: 2.66 | Avg. Training Accuracy: 0.98 | Avg. ROC AUC Score: 1.00 | F1 Score: 0.97 | CT Acc: 0.21
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.78 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.89 | F1 Score: 0.90 | CT Acc: 0.25
+
+[Epoch 6]
+Time: 0.8s | Avg. Training Loss: 2.62 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.22
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 2.76 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.27
+
+[Epoch 7]
+Time: 0.8s | Avg. Training Loss: 2.59 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.24
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.75 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.28
+
+[Epoch 8]
+Time: 0.9s | Avg. Training Loss: 2.56 | Avg. Training Accuracy: 0.99 | Avg. ROC AUC Score: 1.00 | F1 Score: 0.99 | CT Acc: 0.24
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.73 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.34
+
+[Epoch 9]
+Time: 0.9s | Avg. Training Loss: 2.54 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.27
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.72 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.38
+
+[Epoch 10]
+Time: 0.9s | Avg. Training Loss: 2.52 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.32
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.71 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.46
+
+[Epoch 11]
+Time: 0.8s | Avg. Training Loss: 2.50 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.36
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.70 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.46
+
+[Epoch 12]
+Time: 0.8s | Avg. Training Loss: 2.48 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.37
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 2.69 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.48
+
+[Epoch 13]
+Time: 0.8s | Avg. Training Loss: 2.47 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.37
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.69 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.48
+
+[Epoch 14]
+Time: 0.8s | Avg. Training Loss: 2.46 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.38
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.68 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.90 | CT Acc: 0.49
+
+[Epoch 15]
+Time: 0.8s | Avg. Training Loss: 2.45 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.38
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.68 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.90 | CT Acc: 0.49
+
+[Epoch 16]
+Time: 0.9s | Avg. Training Loss: 2.44 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.38
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.67 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.90 | CT Acc: 0.50
+
+[Epoch 17]
+Time: 0.9s | Avg. Training Loss: 2.43 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.38
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.67 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.90 | CT Acc: 0.51
+
+[Epoch 18]
+Time: 0.9s | Avg. Training Loss: 2.42 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.38
+[Evaluation on Validation Set]
+Time: 0.8s | Avg. Validation Loss: 2.66 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.90 | CT Acc: 0.50
+
+[Epoch 19]
+Time: 0.8s | Avg. Training Loss: 2.41 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.38
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.66 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.90 | CT Acc: 0.51
+
+[Epoch 20]
+Time: 0.9s | Avg. Training Loss: 2.40 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.39
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.65 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.90 | CT Acc: 0.51
+
+[Epoch 21]
+Time: 0.9s | Avg. Training Loss: 2.40 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.40
+[Evaluation on Validation Set]
+Time: 0.8s | Avg. Validation Loss: 2.65 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.90 | CT Acc: 0.52
+
+[Epoch 22]
+Time: 0.9s | Avg. Training Loss: 2.39 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.43
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.65 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.90 | CT Acc: 0.53
+
+[Epoch 23]
+Time: 0.9s | Avg. Training Loss: 2.38 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.46
+[Evaluation on Validation Set]
+Time: 0.8s | Avg. Validation Loss: 2.65 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.90 | CT Acc: 0.52
+
+[Epoch 24]
+Time: 0.9s | Avg. Training Loss: 2.38 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.47
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 2.64 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.90 | CT Acc: 0.54
+
+[Epoch 25]
+Time: 0.9s | Avg. Training Loss: 2.37 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.49
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.64 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.90 | CT Acc: 0.54
+
+[Epoch 26]
+Time: 0.9s | Avg. Training Loss: 2.37 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.50
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.63 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.90 | CT Acc: 0.55
+
+[Epoch 27]
+Time: 0.9s | Avg. Training Loss: 2.36 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.50
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.63 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.90 | CT Acc: 0.54
+
+[Epoch 28]
+Time: 0.9s | Avg. Training Loss: 2.36 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.51
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.63 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.90 | CT Acc: 0.55
+
+[Epoch 29]
+Time: 0.9s | Avg. Training Loss: 2.35 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.51
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.62 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.90 | CT Acc: 0.55
+
+[Epoch 30]
+Time: 0.9s | Avg. Training Loss: 2.35 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.52
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.62 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.90 | CT Acc: 0.57
+
+[Epoch 31]
+Time: 0.8s | Avg. Training Loss: 2.34 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.53
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.62 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.90 | CT Acc: 0.57
+
+[Epoch 32]
+Time: 0.9s | Avg. Training Loss: 2.34 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.53
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.61 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.90 | CT Acc: 0.57
+
+[Epoch 33]
+Time: 0.9s | Avg. Training Loss: 2.34 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.54
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.61 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.90 | CT Acc: 0.59
+
+[Epoch 34]
+Time: 0.8s | Avg. Training Loss: 2.33 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.56
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.60 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.90 | CT Acc: 0.58
+
+[Epoch 35]
+Time: 0.9s | Avg. Training Loss: 2.33 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.59
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.60 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.90 | CT Acc: 0.61
+
+[Epoch 36]
+Time: 0.9s | Avg. Training Loss: 2.32 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.62
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.60 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.90 | CT Acc: 0.61
+
+[Epoch 37]
+Time: 0.8s | Avg. Training Loss: 2.32 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.62
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.59 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.90 | CT Acc: 0.61
+
+[Epoch 38]
+Time: 0.9s | Avg. Training Loss: 2.32 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.63
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.59 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.90 | CT Acc: 0.62
+
+[Epoch 39]
+Time: 0.9s | Avg. Training Loss: 2.31 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.64
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 2.59 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.90 | CT Acc: 0.62
+
+[Epoch 40]
+Time: 0.8s | Avg. Training Loss: 2.31 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.64
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.58 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.90 | CT Acc: 0.62
+
+[Epoch 41]
+Time: 0.8s | Avg. Training Loss: 2.31 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.65
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.58 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.63
+
+[Epoch 42]
+Time: 0.9s | Avg. Training Loss: 2.30 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.65
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.58 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.63
+
+[Epoch 43]
+Time: 0.8s | Avg. Training Loss: 2.30 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.66
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 2.58 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.63
+
+[Epoch 44]
+Time: 0.9s | Avg. Training Loss: 2.30 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.66
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.57 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.64
+
+[Epoch 45]
+Time: 0.8s | Avg. Training Loss: 2.29 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.66
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 2.57 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.64
+
+[Epoch 46]
+Time: 0.9s | Avg. Training Loss: 2.29 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.66
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.57 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.64
+
+[Epoch 47]
+Time: 0.8s | Avg. Training Loss: 2.29 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.66
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.56 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.65
+
+[Epoch 48]
+Time: 0.9s | Avg. Training Loss: 2.28 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.67
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.56 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.65
+
+[Epoch 49]
+Time: 0.8s | Avg. Training Loss: 2.28 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.67
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.55 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.65
+
+[Epoch 50]
+Time: 0.8s | Avg. Training Loss: 2.28 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.67
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.55 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.65
+
+[Epoch 51]
+Time: 0.8s | Avg. Training Loss: 2.27 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.67
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 2.55 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.66
+
+[Epoch 52]
+Time: 0.9s | Avg. Training Loss: 2.27 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.67
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.54 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.66
+
+[Epoch 53]
+Time: 0.9s | Avg. Training Loss: 2.27 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.67
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.54 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.66
+
+[Epoch 54]
+Time: 0.9s | Avg. Training Loss: 2.26 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.67
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.54 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.66
+
+[Epoch 55]
+Time: 0.8s | Avg. Training Loss: 2.26 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.67
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.53 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.66
+
+[Epoch 56]
+Time: 0.9s | Avg. Training Loss: 2.26 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.67
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.53 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.66
+
+[Epoch 57]
+Time: 0.9s | Avg. Training Loss: 2.26 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.67
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.53 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.66
+
+[Epoch 58]
+Time: 0.8s | Avg. Training Loss: 2.25 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.67
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.53 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.67
+
+[Epoch 59]
+Time: 0.8s | Avg. Training Loss: 2.25 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.67
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.52 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.67
+
+[Epoch 60]
+Time: 0.9s | Avg. Training Loss: 2.25 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.67
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.52 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.67
+
+[Epoch 61]
+Time: 0.9s | Avg. Training Loss: 2.24 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.67
+[Evaluation on Validation Set]
+Time: 0.5s | Avg. Validation Loss: 2.52 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.67
+
+[Epoch 62]
+Time: 0.9s | Avg. Training Loss: 2.24 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.67
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.52 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.67
+
+[Epoch 63]
+Time: 0.9s | Avg. Training Loss: 2.24 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.67
+[Evaluation on Validation Set]
+Time: 0.8s | Avg. Validation Loss: 2.51 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.67
+
+[Epoch 64]
+Time: 0.9s | Avg. Training Loss: 2.23 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.67
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 2.51 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.68
+
+[Epoch 65]
+Time: 0.9s | Avg. Training Loss: 2.23 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.67
+[Evaluation on Validation Set]
+Time: 0.8s | Avg. Validation Loss: 2.51 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.68
+
+[Epoch 66]
+Time: 0.9s | Avg. Training Loss: 2.23 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.67
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 2.50 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.68
+
+[Epoch 67]
+Time: 0.9s | Avg. Training Loss: 2.23 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.68
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.50 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.68
+
+[Epoch 68]
+Time: 0.8s | Avg. Training Loss: 2.22 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.68
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.50 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.68
+
+[Epoch 69]
+Time: 0.9s | Avg. Training Loss: 2.22 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.68
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.49 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.69
+
+[Epoch 70]
+Time: 0.9s | Avg. Training Loss: 2.22 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.68
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.49 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.68
+
+[Epoch 71]
+Time: 0.9s | Avg. Training Loss: 2.22 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.68
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 2.49 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.69
+
+[Epoch 72]
+Time: 0.8s | Avg. Training Loss: 2.21 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.68
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 2.49 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.68
+
+[Epoch 73]
+Time: 0.8s | Avg. Training Loss: 2.21 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.68
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 2.49 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.69
+
+[Epoch 74]
+Time: 0.9s | Avg. Training Loss: 2.21 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.68
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 2.48 | Avg. Validation Accuracy: 0.92 | Avg. ROC AUC Score: 0.86 | F1 Score: 0.90 | CT Acc: 0.69
+
+Best epoch: 3
+Training Ends
+
+[Evaluation on Test Set]
+Time: 0.3s | Avg. Test Loss: 3.20 | Avg. Test Accuracy: 0.69 | Avg. ROC AUC Score: 0.81 | F1 Score: 0.69 | CT Acc: 0.08
+
+Training Data Augmented: 24 --> 138
+****************************************
+Learning rate: 0.000100
+Max epoch: 75
+Batch size: 3
+Test step: 1
+Number of hidden layers: 2
+Number of prototypes: 4
+Lambdas: {'lambda_1': 1.0, 'lambda_2': 1.0, 'lambda_3': 1.0, 'lambda_4': 1.0, 'lambda_5': 1.0, 'lambda_6': 1.0}
+D_min: 1.0
+Device: cuda:0
+Seed: 1
+****************************************
+
+Pre-training Starts
+
+[Epoch 0]
+Time: 1.0s | Avg. Training Loss: 2419.09 | CT Acc: 0.06
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 374.83 | CT Acc: 0.08
+Model Saved!
+
+[Epoch 1]
+Time: 1.0s | Avg. Training Loss: 1255.77 | CT Acc: 0.15
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 712.57 | CT Acc: 0.08
+
+[Epoch 2]
+Time: 1.0s | Avg. Training Loss: 1237.91 | CT Acc: 0.15
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 1500.89 | CT Acc: 0.08
+
+[Epoch 3]
+Time: 1.0s | Avg. Training Loss: 1980.11 | CT Acc: 0.15
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2011.47 | CT Acc: 0.08
+
+[Epoch 4]
+Time: 1.0s | Avg. Training Loss: 2015.33 | CT Acc: 0.15
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 1926.73 | CT Acc: 0.08
+
+[Epoch 5]
+Time: 1.0s | Avg. Training Loss: 1335.21 | CT Acc: 0.15
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 721.07 | CT Acc: 0.08
+
+[Epoch 6]
+Time: 1.0s | Avg. Training Loss: 524.38 | CT Acc: 0.15
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 275.18 | CT Acc: 0.08
+Model Saved!
+
+[Epoch 7]
+Time: 1.0s | Avg. Training Loss: 251.28 | CT Acc: 0.15
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 185.68 | CT Acc: 0.08
+Model Saved!
+
+[Epoch 8]
+Time: 1.0s | Avg. Training Loss: 139.56 | CT Acc: 0.21
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 105.06 | CT Acc: 0.54
+Model Saved!
+
+[Epoch 9]
+Time: 1.0s | Avg. Training Loss: 92.08 | CT Acc: 0.37
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 71.40 | CT Acc: 0.49
+Model Saved!
+
+[Epoch 10]
+Time: 1.0s | Avg. Training Loss: 61.31 | CT Acc: 0.36
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 47.17 | CT Acc: 0.53
+Model Saved!
+
+[Epoch 11]
+Time: 1.0s | Avg. Training Loss: 44.58 | CT Acc: 0.40
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 43.12 | CT Acc: 0.53
+Model Saved!
+
+[Epoch 12]
+Time: 1.0s | Avg. Training Loss: 36.42 | CT Acc: 0.35
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 30.13 | CT Acc: 0.47
+Model Saved!
+
+[Epoch 13]
+Time: 1.0s | Avg. Training Loss: 31.43 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 26.55 | CT Acc: 0.47
+Model Saved!
+
+[Epoch 14]
+Time: 1.0s | Avg. Training Loss: 29.52 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 25.17 | CT Acc: 0.47
+Model Saved!
+
+[Epoch 15]
+Time: 1.0s | Avg. Training Loss: 28.17 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 23.53 | CT Acc: 0.47
+Model Saved!
+
+[Epoch 16]
+Time: 1.0s | Avg. Training Loss: 27.02 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 24.47 | CT Acc: 0.47
+
+[Epoch 17]
+Time: 1.0s | Avg. Training Loss: 26.24 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 23.85 | CT Acc: 0.47
+
+[Epoch 18]
+Time: 1.0s | Avg. Training Loss: 25.39 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 21.33 | CT Acc: 0.47
+Model Saved!
+
+[Epoch 19]
+Time: 1.0s | Avg. Training Loss: 24.81 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 19230790.61 | CT Acc: 0.47
+
+[Epoch 20]
+Time: 1.0s | Avg. Training Loss: 24.12 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 20.57 | CT Acc: 0.47
+Model Saved!
+
+[Epoch 21]
+Time: 1.0s | Avg. Training Loss: 23.62 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 20.19 | CT Acc: 0.47
+Model Saved!
+
+[Epoch 22]
+Time: 1.0s | Avg. Training Loss: 23.06 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 38461558.56 | CT Acc: 0.47
+
+[Epoch 23]
+Time: 1.0s | Avg. Training Loss: 22.69 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 19230787.75 | CT Acc: 0.47
+
+[Epoch 24]
+Time: 1.0s | Avg. Training Loss: 22.04 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 18.96 | CT Acc: 0.47
+Model Saved!
+
+[Epoch 25]
+Time: 1.0s | Avg. Training Loss: 21.70 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 19.82 | CT Acc: 0.47
+
+[Epoch 26]
+Time: 1.0s | Avg. Training Loss: 21.22 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 18.31 | CT Acc: 0.47
+Model Saved!
+
+[Epoch 27]
+Time: 1.0s | Avg. Training Loss: 20.89 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 19230787.85 | CT Acc: 0.47
+
+[Epoch 28]
+Time: 1.0s | Avg. Training Loss: 20.54 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 17.65 | CT Acc: 0.47
+Model Saved!
+
+[Epoch 29]
+Time: 1.0s | Avg. Training Loss: 20.25 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 18.54 | CT Acc: 0.47
+
+[Epoch 30]
+Time: 1.0s | Avg. Training Loss: 20.01 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 17.10 | CT Acc: 0.48
+Model Saved!
+
+[Epoch 31]
+Time: 1.0s | Avg. Training Loss: 19.77 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 16.85 | CT Acc: 0.48
+Model Saved!
+
+[Epoch 32]
+Time: 1.0s | Avg. Training Loss: 19.58 | CT Acc: 0.30
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 19230785.52 | CT Acc: 0.48
+
+[Epoch 33]
+Time: 1.0s | Avg. Training Loss: 19.44 | CT Acc: 0.31
+[Evaluation on Validation Set]
+Time: 0.5s | Avg. Validation Loss: 17.36 | CT Acc: 0.49
+
+[Epoch 34]
+Time: 1.0s | Avg. Training Loss: 19.32 | CT Acc: 0.31
+[Evaluation on Validation Set]
+Time: 0.5s | Avg. Validation Loss: 16.31 | CT Acc: 0.49
+Model Saved!
+
+[Epoch 35]
+Time: 1.0s | Avg. Training Loss: 19.16 | CT Acc: 0.31
+[Evaluation on Validation Set]
+Time: 0.5s | Avg. Validation Loss: 16.06 | CT Acc: 0.49
+Model Saved!
+
+[Epoch 36]
+Time: 1.0s | Avg. Training Loss: 19.08 | CT Acc: 0.31
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 19230784.99 | CT Acc: 0.49
+
+[Epoch 37]
+Time: 1.0s | Avg. Training Loss: 18.98 | CT Acc: 0.31
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 15.83 | CT Acc: 0.49
+Model Saved!
+
+[Epoch 38]
+Time: 1.0s | Avg. Training Loss: 18.91 | CT Acc: 0.32
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 15.77 | CT Acc: 0.49
+Model Saved!
+
+[Epoch 39]
+Time: 1.0s | Avg. Training Loss: 18.79 | CT Acc: 0.32
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 16.65 | CT Acc: 0.49
+
+[Epoch 40]
+Time: 1.0s | Avg. Training Loss: 18.72 | CT Acc: 0.32
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 15.65 | CT Acc: 0.49
+Model Saved!
+
+[Epoch 41]
+Time: 1.0s | Avg. Training Loss: 18.63 | CT Acc: 0.32
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 16.55 | CT Acc: 0.49
+
+[Epoch 42]
+Time: 1.0s | Avg. Training Loss: 18.63 | CT Acc: 0.32
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 16.92 | CT Acc: 0.50
+
+[Epoch 43]
+Time: 1.0s | Avg. Training Loss: 18.51 | CT Acc: 0.32
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 15.37 | CT Acc: 0.50
+Model Saved!
+
+[Epoch 44]
+Time: 1.0s | Avg. Training Loss: 18.46 | CT Acc: 0.33
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 15.32 | CT Acc: 0.50
+Model Saved!
+
+[Epoch 45]
+Time: 1.0s | Avg. Training Loss: 18.37 | CT Acc: 0.34
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 15.28 | CT Acc: 0.51
+Model Saved!
+
+[Epoch 46]
+Time: 1.0s | Avg. Training Loss: 18.31 | CT Acc: 0.34
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 15.91 | CT Acc: 0.51
+
+[Epoch 47]
+Time: 1.0s | Avg. Training Loss: 18.25 | CT Acc: 0.35
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 15.16 | CT Acc: 0.51
+Model Saved!
+
+[Epoch 48]
+Time: 1.0s | Avg. Training Loss: 18.26 | CT Acc: 0.35
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 15.04 | CT Acc: 0.51
+Model Saved!
+
+[Epoch 49]
+Time: 1.0s | Avg. Training Loss: 18.13 | CT Acc: 0.36
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 19230784.22 | CT Acc: 0.52
+
+[Epoch 50]
+Time: 1.0s | Avg. Training Loss: 18.06 | CT Acc: 0.36
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 14.91 | CT Acc: 0.51
+Model Saved!
+
+[Epoch 51]
+Time: 1.0s | Avg. Training Loss: 18.00 | CT Acc: 0.37
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 14.89 | CT Acc: 0.52
+Model Saved!
+
+[Epoch 52]
+Time: 1.0s | Avg. Training Loss: 17.89 | CT Acc: 0.38
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 14.80 | CT Acc: 0.52
+Model Saved!
+
+[Epoch 53]
+Time: 1.0s | Avg. Training Loss: 17.82 | CT Acc: 0.38
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 19230783.85 | CT Acc: 0.52
+
+[Epoch 54]
+Time: 1.0s | Avg. Training Loss: 17.73 | CT Acc: 0.39
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 14.66 | CT Acc: 0.52
+Model Saved!
+
+[Epoch 55]
+Time: 1.0s | Avg. Training Loss: 17.55 | CT Acc: 0.39
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 15.25 | CT Acc: 0.52
+
+[Epoch 56]
+Time: 1.0s | Avg. Training Loss: 17.38 | CT Acc: 0.40
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 14.40 | CT Acc: 0.51
+Model Saved!
+
+[Epoch 57]
+Time: 1.0s | Avg. Training Loss: 17.13 | CT Acc: 0.41
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 14.18 | CT Acc: 0.52
+Model Saved!
+
+[Epoch 58]
+Time: 1.0s | Avg. Training Loss: 16.76 | CT Acc: 0.41
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 13.91 | CT Acc: 0.51
+Model Saved!
+
+[Epoch 59]
+Time: 1.0s | Avg. Training Loss: 16.36 | CT Acc: 0.41
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 13.68 | CT Acc: 0.52
+Model Saved!
+
+[Epoch 60]
+Time: 1.0s | Avg. Training Loss: 15.74 | CT Acc: 0.41
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 15.13 | CT Acc: 0.52
+
+[Epoch 61]
+Time: 1.0s | Avg. Training Loss: 15.40 | CT Acc: 0.41
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 14.31 | CT Acc: 0.51
+
+[Epoch 62]
+Time: 1.0s | Avg. Training Loss: 15.21 | CT Acc: 0.40
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 14.66 | CT Acc: 0.51
+
+[Epoch 63]
+Time: 1.0s | Avg. Training Loss: 14.58 | CT Acc: 0.41
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 19230781.76 | CT Acc: 0.52
+
+[Epoch 64]
+Time: 1.0s | Avg. Training Loss: 13.25 | CT Acc: 0.42
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 11.77 | CT Acc: 0.53
+Model Saved!
+
+[Epoch 65]
+Time: 1.0s | Avg. Training Loss: 12.56 | CT Acc: 0.43
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 11.67 | CT Acc: 0.52
+Model Saved!
+
+[Epoch 66]
+Time: 1.0s | Avg. Training Loss: 12.35 | CT Acc: 0.42
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 11.34 | CT Acc: 0.52
+Model Saved!
+
+[Epoch 67]
+Time: 1.0s | Avg. Training Loss: 12.00 | CT Acc: 0.43
+[Evaluation on Validation Set]
+Time: 0.5s | Avg. Validation Loss: 19230780.46 | CT Acc: 0.52
+
+[Epoch 68]
+Time: 1.0s | Avg. Training Loss: 11.81 | CT Acc: 0.42
+[Evaluation on Validation Set]
+Time: 0.4s | Avg. Validation Loss: 10.90 | CT Acc: 0.52
+Model Saved!
+
+[Epoch 69]
+Time: 1.0s | Avg. Training Loss: 11.63 | CT Acc: 0.44
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 10.86 | CT Acc: 0.53
+Model Saved!
+
+[Epoch 70]
+Time: 1.0s | Avg. Training Loss: 11.51 | CT Acc: 0.44
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 10.79 | CT Acc: 0.52
+Model Saved!
+
+[Epoch 71]
+Time: 1.0s | Avg. Training Loss: 11.74 | CT Acc: 0.44
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 10.83 | CT Acc: 0.53
+
+[Epoch 72]
+Time: 1.0s | Avg. Training Loss: 11.57 | CT Acc: 0.45
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 10.83 | CT Acc: 0.53
+
+[Epoch 73]
+Time: 1.0s | Avg. Training Loss: 11.49 | CT Acc: 0.44
+[Evaluation on Validation Set]
+Time: 0.5s | Avg. Validation Loss: 10.70 | CT Acc: 0.53
+Model Saved!
+
+[Epoch 74]
+Time: 1.0s | Avg. Training Loss: 11.36 | CT Acc: 0.44
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 10.65 | CT Acc: 0.54
+Model Saved!
+
+Training Starts
+
+[Epoch 0]
+Time: 0.8s | Avg. Training Loss: 3.41 | Avg. Training Accuracy: 0.63 | Avg. ROC AUC Score: 0.69 | F1 Score: 0.50 | CT Acc: 0.12
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.93 | Avg. Validation Accuracy: 0.69 | Avg. ROC AUC Score: 0.58 | F1 Score: 0.41 | CT Acc: 0.48
+Model Saved!
+
+[Epoch 1]
+Time: 0.8s | Avg. Training Loss: 3.07 | Avg. Training Accuracy: 0.86 | Avg. ROC AUC Score: 0.93 | F1 Score: 0.80 | CT Acc: 0.29
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.79 | Avg. Validation Accuracy: 0.69 | Avg. ROC AUC Score: 0.69 | F1 Score: 0.64 | CT Acc: 0.51
+Model Saved!
+
+[Epoch 2]
+Time: 0.9s | Avg. Training Loss: 2.97 | Avg. Training Accuracy: 0.97 | Avg. ROC AUC Score: 1.00 | F1 Score: 0.96 | CT Acc: 0.31
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.80 | Avg. Validation Accuracy: 0.69 | Avg. ROC AUC Score: 0.72 | F1 Score: 0.57 | CT Acc: 0.51
+Model Saved!
+
+[Epoch 3]
+Time: 0.8s | Avg. Training Loss: 2.89 | Avg. Training Accuracy: 0.96 | Avg. ROC AUC Score: 1.00 | F1 Score: 0.94 | CT Acc: 0.32
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 2.74 | Avg. Validation Accuracy: 0.69 | Avg. ROC AUC Score: 0.75 | F1 Score: 0.57 | CT Acc: 0.50
+Model Saved!
+
+[Epoch 4]
+Time: 0.8s | Avg. Training Loss: 2.82 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.33
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.71 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.75 | F1 Score: 0.82 | CT Acc: 0.50
+Model Saved!
+
+[Epoch 5]
+Time: 0.9s | Avg. Training Loss: 2.76 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.34
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.71 | Avg. Validation Accuracy: 0.77 | Avg. ROC AUC Score: 0.72 | F1 Score: 0.71 | CT Acc: 0.51
+
+[Epoch 6]
+Time: 0.8s | Avg. Training Loss: 2.72 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.34
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.68 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.75 | F1 Score: 0.82 | CT Acc: 0.51
+Model Saved!
+
+[Epoch 7]
+Time: 0.8s | Avg. Training Loss: 2.68 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.34
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.66 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.75 | F1 Score: 0.82 | CT Acc: 0.51
+
+[Epoch 8]
+Time: 0.8s | Avg. Training Loss: 2.65 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.34
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.64 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.78 | F1 Score: 0.82 | CT Acc: 0.51
+Model Saved!
+
+[Epoch 9]
+Time: 0.9s | Avg. Training Loss: 2.62 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.34
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.63 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.78 | F1 Score: 0.82 | CT Acc: 0.51
+Model Saved!
+
+[Epoch 10]
+Time: 0.9s | Avg. Training Loss: 2.60 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.35
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.63 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.78 | F1 Score: 0.82 | CT Acc: 0.51
+
+[Epoch 11]
+Time: 0.9s | Avg. Training Loss: 2.57 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.35
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.61 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.78 | F1 Score: 0.82 | CT Acc: 0.51
+
+[Epoch 12]
+Time: 0.8s | Avg. Training Loss: 2.56 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.35
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.60 | Avg. Validation Accuracy: 0.77 | Avg. ROC AUC Score: 0.78 | F1 Score: 0.75 | CT Acc: 0.51
+Model Saved!
+
+[Epoch 13]
+Time: 0.8s | Avg. Training Loss: 2.54 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.35
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.59 | Avg. Validation Accuracy: 0.77 | Avg. ROC AUC Score: 0.81 | F1 Score: 0.75 | CT Acc: 0.51
+Model Saved!
+
+[Epoch 14]
+Time: 0.9s | Avg. Training Loss: 2.52 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.36
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.58 | Avg. Validation Accuracy: 0.77 | Avg. ROC AUC Score: 0.81 | F1 Score: 0.75 | CT Acc: 0.52
+Model Saved!
+
+[Epoch 15]
+Time: 0.9s | Avg. Training Loss: 2.51 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.36
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.57 | Avg. Validation Accuracy: 0.77 | Avg. ROC AUC Score: 0.81 | F1 Score: 0.75 | CT Acc: 0.51
+
+[Epoch 16]
+Time: 0.8s | Avg. Training Loss: 2.50 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.36
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.57 | Avg. Validation Accuracy: 0.77 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.75 | CT Acc: 0.51
+Model Saved!
+
+[Epoch 17]
+Time: 0.9s | Avg. Training Loss: 2.49 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.36
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.56 | Avg. Validation Accuracy: 0.77 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.75 | CT Acc: 0.52
+Model Saved!
+
+[Epoch 18]
+Time: 0.8s | Avg. Training Loss: 2.48 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.36
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.55 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.51
+
+[Epoch 19]
+Time: 0.8s | Avg. Training Loss: 2.47 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.36
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.55 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.52
+Model Saved!
+
+[Epoch 20]
+Time: 0.9s | Avg. Training Loss: 2.46 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.37
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.54 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.52
+
+[Epoch 21]
+Time: 0.9s | Avg. Training Loss: 2.45 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.37
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.54 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.52
+Model Saved!
+
+[Epoch 22]
+Time: 0.8s | Avg. Training Loss: 2.44 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.38
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.53 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.52
+Model Saved!
+
+[Epoch 23]
+Time: 0.8s | Avg. Training Loss: 2.44 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.40
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.53 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.52
+
+[Epoch 24]
+Time: 0.8s | Avg. Training Loss: 2.43 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.42
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.52 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.52
+Model Saved!
+
+[Epoch 25]
+Time: 0.8s | Avg. Training Loss: 2.42 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.42
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.52 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.52
+Model Saved!
+
+[Epoch 26]
+Time: 0.8s | Avg. Training Loss: 2.42 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.43
+[Evaluation on Validation Set]
+Time: 0.7s | Avg. Validation Loss: 2.51 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.52
+Model Saved!
+
+[Epoch 27]
+Time: 0.9s | Avg. Training Loss: 2.41 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.43
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.51 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.52
+
+[Epoch 28]
+Time: 0.8s | Avg. Training Loss: 2.41 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.44
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.50 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.52
+
+[Epoch 29]
+Time: 0.8s | Avg. Training Loss: 2.40 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.44
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.50 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.52
+Model Saved!
+
+[Epoch 30]
+Time: 0.8s | Avg. Training Loss: 2.40 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.44
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.50 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+Model Saved!
+
+[Epoch 31]
+Time: 0.9s | Avg. Training Loss: 2.39 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.44
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.49 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+Model Saved!
+
+[Epoch 32]
+Time: 0.9s | Avg. Training Loss: 2.39 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.45
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.49 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+Model Saved!
+
+[Epoch 33]
+Time: 0.9s | Avg. Training Loss: 2.38 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.45
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.49 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+Model Saved!
+
+[Epoch 34]
+Time: 0.9s | Avg. Training Loss: 2.38 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.45
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.49 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+
+[Epoch 35]
+Time: 0.9s | Avg. Training Loss: 2.37 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.45
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.48 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+Model Saved!
+
+[Epoch 36]
+Time: 0.8s | Avg. Training Loss: 2.37 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.45
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.48 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+Model Saved!
+
+[Epoch 37]
+Time: 0.9s | Avg. Training Loss: 2.36 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.45
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.47 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+Model Saved!
+
+[Epoch 38]
+Time: 0.8s | Avg. Training Loss: 2.36 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.45
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.47 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+
+[Epoch 39]
+Time: 0.8s | Avg. Training Loss: 2.36 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.45
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.47 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+
+[Epoch 40]
+Time: 0.9s | Avg. Training Loss: 2.35 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.45
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.46 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+
+[Epoch 41]
+Time: 0.9s | Avg. Training Loss: 2.35 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.45
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.46 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+
+[Epoch 42]
+Time: 0.8s | Avg. Training Loss: 2.34 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.45
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.46 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+Model Saved!
+
+[Epoch 43]
+Time: 0.8s | Avg. Training Loss: 2.34 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.45
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.46 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+Model Saved!
+
+[Epoch 44]
+Time: 0.9s | Avg. Training Loss: 2.34 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.45
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.45 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+Model Saved!
+
+[Epoch 45]
+Time: 0.9s | Avg. Training Loss: 2.33 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.45
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.45 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+
+[Epoch 46]
+Time: 0.8s | Avg. Training Loss: 2.33 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.45
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.45 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+Model Saved!
+
+[Epoch 47]
+Time: 0.8s | Avg. Training Loss: 2.32 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.45
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.44 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+Model Saved!
+
+[Epoch 48]
+Time: 0.9s | Avg. Training Loss: 2.32 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.46
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.44 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+Model Saved!
+
+[Epoch 49]
+Time: 0.8s | Avg. Training Loss: 2.32 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.46
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.44 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+
+[Epoch 50]
+Time: 0.8s | Avg. Training Loss: 2.32 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.46
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.44 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+Model Saved!
+
+[Epoch 51]
+Time: 0.8s | Avg. Training Loss: 2.31 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.46
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.44 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+Model Saved!
+
+[Epoch 52]
+Time: 0.8s | Avg. Training Loss: 2.31 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.46
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.43 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+Model Saved!
+
+[Epoch 53]
+Time: 0.9s | Avg. Training Loss: 2.31 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.46
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.43 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+Model Saved!
+
+[Epoch 54]
+Time: 0.9s | Avg. Training Loss: 2.30 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.46
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.42 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+Model Saved!
+
+[Epoch 55]
+Time: 0.9s | Avg. Training Loss: 2.30 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.46
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.42 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+
+[Epoch 56]
+Time: 0.9s | Avg. Training Loss: 2.29 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.46
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.42 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+Model Saved!
+
+[Epoch 57]
+Time: 0.9s | Avg. Training Loss: 2.29 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.46
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.42 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+
+[Epoch 58]
+Time: 0.8s | Avg. Training Loss: 2.29 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.46
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.41 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+Model Saved!
+
+[Epoch 59]
+Time: 0.8s | Avg. Training Loss: 2.29 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.46
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.41 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+
+[Epoch 60]
+Time: 0.8s | Avg. Training Loss: 2.28 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.46
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.41 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+Model Saved!
+
+[Epoch 61]
+Time: 0.9s | Avg. Training Loss: 2.28 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.46
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.40 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+
+[Epoch 62]
+Time: 0.8s | Avg. Training Loss: 2.28 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.46
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.40 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+Model Saved!
+
+[Epoch 63]
+Time: 0.8s | Avg. Training Loss: 2.27 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.46
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.40 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+
+[Epoch 64]
+Time: 0.8s | Avg. Training Loss: 2.27 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.46
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.40 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+
+[Epoch 65]
+Time: 0.8s | Avg. Training Loss: 2.27 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.46
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.39 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+
+[Epoch 66]
+Time: 0.9s | Avg. Training Loss: 2.26 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.46
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.39 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+
+[Epoch 67]
+Time: 0.8s | Avg. Training Loss: 2.26 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.46
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.39 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+Model Saved!
+
+[Epoch 68]
+Time: 0.9s | Avg. Training Loss: 2.26 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.46
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.39 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+Model Saved!
+
+[Epoch 69]
+Time: 0.8s | Avg. Training Loss: 2.25 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.46
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.38 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+
+[Epoch 70]
+Time: 0.9s | Avg. Training Loss: 2.25 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.46
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.38 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+
+[Epoch 71]
+Time: 0.8s | Avg. Training Loss: 2.25 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.46
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.38 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+
+[Epoch 72]
+Time: 0.8s | Avg. Training Loss: 2.25 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.46
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.37 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+
+[Epoch 73]
+Time: 0.8s | Avg. Training Loss: 2.24 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.46
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.37 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+
+[Epoch 74]
+Time: 0.9s | Avg. Training Loss: 2.24 | Avg. Training Accuracy: 1.00 | Avg. ROC AUC Score: 1.00 | F1 Score: 1.00 | CT Acc: 0.46
+[Evaluation on Validation Set]
+Time: 0.6s | Avg. Validation Loss: 2.37 | Avg. Validation Accuracy: 0.85 | Avg. ROC AUC Score: 0.83 | F1 Score: 0.82 | CT Acc: 0.53
+
+Best epoch: 68
+Training Ends
+
+[Evaluation on Test Set]
+Time: 0.2s | Avg. Test Loss: 2.64 | Avg. Test Accuracy: 0.77 | Avg. ROC AUC Score: 0.88 | F1 Score: 0.76 | CT Acc: 0.36
+
