@@ -130,9 +130,9 @@ do
     for exp in 1 2 3 4 5 6 7 8
     do
         python run.py \
-            --data covid_ours \
+            --data icb_ours \
             --batch_size 3 \
-            --lr 1e-6 \
+            --lr 1e-4 \
             --max_epoch 75 \
             --n_proto $n_p \
             --split_ratio 0.5 0.25 0.25 \
