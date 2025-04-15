@@ -294,3 +294,42 @@ def load_covid_data(task, load_ct=False, keep_sparse=True):
 
 
     return OurDataset(X=X, y=y, cell_id=barcodes, gene_id=genes, class_id=class_id)
+
+def load_cardio_data(task, load_ct=False, keep_sparse=True):
+    adata = sc.read_h5ad("../data_ours/cardio/cardio_adata_scAce.h5ad")
+
+    # X: gene expression matrix
+    if not keep_sparse:
+        X = adata.X.toarray()
+    else:
+        X = adata.X
+
+    print(f"Loaded X shape: {X.shape}")
+
+    # Add normalization
+    if hasattr(X, 'toarray'):
+        X = X.toarray()
+    # Zero-safe log transform
+    X = np.log1p(X)
+    X = X / (X.max() + 1e-8)
+    
+    print(f"Loaded X shape: {X.shape}")
+
+    # y: label
+    y = adata.obs["label"].astype("category").cat.codes.values
+
+    # cell_id: cell barcodes
+    barcodes = adata.obs.index.tolist()
+
+    # gene_id: gene list
+    genes = adata.var.index.tolist()
+
+    # class_id: label categories
+    class_id = adata.obs["label"].astype("category").cat.categories.tolist()
+    print("Unique labels:", np.unique(y))
+
+    print("Any NaN in X?", np.isnan(X).sum())
+    print("Any NaN in Y?", np.isnan(y).sum())
+
+
+    return OurDataset(X=X, y=y, cell_id=barcodes, gene_id=genes, class_id=class_id)

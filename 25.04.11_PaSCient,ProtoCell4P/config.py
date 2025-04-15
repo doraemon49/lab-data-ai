@@ -48,9 +48,12 @@ class Config:
             dataset = load_icb_data(task=task, load_ct=load_ct, keep_sparse=self.keep_sparse)
         elif data.lower() == "covid_ours":
             dataset = load_covid_data(task=task, load_ct=load_ct, keep_sparse=self.keep_sparse)
+        elif data.lower() == "cardio_ours": 
+            dataset = load_cardio_data(task=task, load_ct=load_ct, keep_sparse=self.keep_sparse)    
         else:
             raise ValueError("Data [:s] not supported".format(data))
-
+        self.input_dim = dataset.X.shape[1]
+        print("input_dim 크기",self.input_dim)
         self.collate_fn = self.my_collate
 
         # split the dataset according to train_val_test_split
@@ -62,9 +65,20 @@ class Config:
         X_valid, X_test, y_valid, y_test = train_test_split(
             X_temp, y_temp, test_size=0.5, random_state=42
         )
-        self.train_set = list(zip(X_train, y_train))
-        self.val_set = list(zip(X_valid, y_valid)) 
-        self.test_set = list(zip(X_test, y_test))
+        # self.train_set = list(zip(X_train, y_train))
+        # self.val_set = list(zip(X_valid, y_valid)) 
+        # self.test_set = list(zip(X_test, y_test))
+        self.train_set = [(x.reshape(1, -1), y) for x, y in zip(X_train, y_train)]
+        self.val_set = [(x.reshape(1, -1), y) for x, y in zip(X_valid, y_valid)]
+        self.test_set = [(x.reshape(1, -1), y) for x, y in zip(X_test, y_test)]
+
+
+        print("[🔍 DEBUG] dataset.X type:", type(dataset.X))
+        print("[🔍 DEBUG] len(dataset.X):", len(dataset.X))
+
+        for i, x in enumerate(dataset.X[:5]):
+            print(f"[🔍 DEBUG] dataset.X[{i}].shape: {x.shape}")
+
 
         self.device = device
         self.lr = lr
@@ -96,7 +110,12 @@ class Config:
             "lambda_5": 0 if self.n_ct is None else lambda_5,
             "lambda_6": 0 if self.n_ct is None else lambda_6
         }
-        
+        print(f"X type: {type(dataset.X)}")
+        if isinstance(dataset.X, list):
+            print(f"Each item shape: {dataset.X[0].shape}")
+        else:
+            print(f"X shape: {dataset.X.shape}")
+
         # if self.model_type == "ProtoCell":
         #     self.model = ProtoCell(dataset.X[0].shape[1], self.h_dim, self.z_dim, self.n_layers, \
         #         self.n_proto, self.n_classes, self.lambdas, self.n_ct, self.device, d_min=d_min) 
@@ -107,10 +126,10 @@ class Config:
         #     raise ValueError("Model [:s] not supported".format(self.model_type))
 
         if self.model_type == "ProtoCell":
-            self.model = ProtoCell(dataset.X.shape[1], self.h_dim, self.z_dim, self.n_layers, \
+            self.model = ProtoCell(dataset.X[0].shape[0], self.h_dim, self.z_dim, self.n_layers, \
                 self.n_proto, self.n_classes, self.lambdas, self.n_ct, self.device, d_min=d_min) 
         elif self.model_type == "BaseModel":
-            self.model = BaseModel(dataset.X.shape[1], self.h_dim, self.z_dim, self.n_layers, \
+            self.model = BaseModel(dataset.X[0].shape[0], self.h_dim, self.z_dim, self.n_layers, \
                 self.n_proto, self.n_classes, self.lambdas, self.n_ct, self.device, d_min=d_min) 
         else:
             raise ValueError("Model [:s] not supported".format(self.model_type))
@@ -140,7 +159,10 @@ class Config:
             c_counts = []
             for ins in self.train_set:
                 c_counts.append(ins[0].shape[0])
-            W = sum(c_counts) // (5 * len(c_counts))
+            ##### 핵심,,####
+            # 각 샘플에서 W개의 cell만 뽑아 쓰겠다
+            # W = sum(c_counts) // (5 * len(c_counts)) 
+            W = max(10, sum(c_counts) // (5 * len(c_counts)))  # 최소 10개는 뽑도록
 
             train_set = []
             for ins in self.train_set:
@@ -153,14 +175,56 @@ class Config:
                 else:
                     D = 8
                 idx = np.arange(n)
+                # for _ in range(D):
+                #     np.random.shuffle(idx)
+                #     x_sub = ins[0][idx[:W]]
+                #     # 차원 자동 보정 (1D → 2D로 reshape)
+                #     if isinstance(x_sub, np.ndarray) and x_sub.ndim == 1:
+                #         x_sub = x_sub.reshape(1, -1)
+
+                #     if self.n_ct is None:
+                #         # train_set.append([ins[0][idx[:W]], ins[1]])
+                #         train_set.append([x_sub, ins[1]])
+                #     else:
+                #         # train_set.append([ins[0][idx[:W]], ins[1], [ins[2][i] for i in idx[:W]]])
+                #         train_set.append([x_sub, ins[1], [ins[2][i] for i in idx[:W]]])
                 for _ in range(D):
                     np.random.shuffle(idx)
+                    x_sub = ins[0][idx[:W]]
+                        
+                    # ✅ 빈 샘플이면 패스
+                    if isinstance(x_sub, np.ndarray) and x_sub.shape[0] == 0:
+                        continue
+
+                    if isinstance(x_sub, np.ndarray):
+                        if x_sub.ndim == 1:
+                            x_sub = x_sub.reshape(1, -1)
+                        elif x_sub.shape[1] != self.input_dim:
+                            if x_sub.shape[1] < self.input_dim:
+                                pad_width = self.input_dim - x_sub.shape[1]
+                                x_sub = np.pad(x_sub, ((0, 0), (0, pad_width)), mode='constant')
+                            elif x_sub.shape[1] > self.input_dim:
+                                x_sub = x_sub[:, :self.input_dim]
+
                     if self.n_ct is None:
-                        train_set.append([ins[0][idx[:W]], ins[1]])
+                        train_set.append([x_sub, ins[1]])
                     else:
-                        train_set.append([ins[0][idx[:W]], ins[1], [ins[2][i] for i in idx[:W]]])
+                        train_set.append([x_sub, ins[1], [ins[2][i] for i in idx[:W]]])
+                
             self.logger("Training Data Augmented: {:d} --> {:d}".format(len(self.train_set), len(train_set)))
             self.train_set = train_set
+            # ✅ subsample 후 feature 수가 맞는지 확인하는 코드
+            for i, ins in enumerate(self.train_set):
+                x_i = ins[0]
+                # print(f"[DEBUG] train_set[{i}]: type={type(x_i)}, shape={getattr(x_i, 'shape', 'No shape')}") # [DEBUG] train_set[90176]: type=<class 'numpy.ndarray'>, shape=(0, 3000)
+
+                # 빈 샘플이나 이상한 구조는 건너뜀
+                if not hasattr(x_i, 'shape') or len(x_i.shape) != 2:
+                    raise ValueError(f"[❗️Error] train_set[{i}] is not 2D: {x_i}")
+                
+                if x_i.shape[1] != self.input_dim:
+                    raise ValueError(f"[❗️Error] train_set[{i}].shape = {x_i.shape} (expected {self.input_dim} features)")
+
             self.train_batch_size = 8 * self.batch_size # 64 for the 625 setting
         else:
             self.train_batch_size = self.batch_size
@@ -422,6 +486,9 @@ class Config:
 
             for bat in train_loader:
                 x = bat[0]
+                # print(f"[DEBUG] type(x): {type(x)}") # [DEBUG] type(x): <class 'list'>
+                # print(f"[DEBUG] x[0] type: {type(x[0])}, shape: {x[0].shape}") # [DEBUG] x[0] type: <class 'numpy.ndarray'>, shape: (1, 3000)
+
                 optim_pretrain.zero_grad()
                 if self.n_ct is not None:
                     loss, ct_logit = self.model.pretrain(*bat, sparse=self.keep_sparse)

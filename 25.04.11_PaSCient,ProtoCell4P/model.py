@@ -68,7 +68,13 @@ class ProtoCell(nn.Module):
         
         split_idx = [0]
         for i in range(len(x)):
-            split_idx.append(split_idx[-1]+x[i].shape[0])
+            xi = x[i]
+            if hasattr(xi, 'toarray'):
+                xi = xi.toarray()
+            if xi.ndim == 1:
+                xi = xi.reshape(1, -1)  # 보정
+            split_idx.append(split_idx[-1] + xi.shape[0])
+            # split_idx.append(split_idx[-1]+x[i].shape[0])
         
         # if sparse:
         #     x = torch.cat([torch.tensor(x[i].toarray()) for i in range(len(x))]).to(self.device)
@@ -89,10 +95,21 @@ class ProtoCell(nn.Module):
         z = self.encode(x)
         
         import_scores = self.compute_importance(x) # (n_cell, n_proto, n_class)
+        import_scores = torch.clamp(import_scores, min=1e-4, max=1.0)
         
         c2p_dists = torch.pow(z[:, None] - self.prototypes[None, :], 2).sum(-1)
-        c_logits = (1 / (c2p_dists+0.5))[:,None,:].matmul(import_scores).squeeze(1) # (n_cell, n_classes)
-        logits = torch.stack([c_logits[split_idx[i]:split_idx[i+1]].mean(dim=0) for i in range(len(split_idx)-1)])
+        c2p_dists = torch.nan_to_num(c2p_dists, nan=1e4, posinf=1e4, neginf=1e4)
+        c2p_dists = torch.clamp(c2p_dists, min=1e-4, max=1e4)  # 너무 작거나 큰 값 방지
+        # c_logits = (1 / (c2p_dists+0.5))[:,None,:].matmul(import_scores).squeeze(1) # (n_cell, n_classes)
+        c_logits = (1.0 / (c2p_dists + 1e-4))[:, None, :].matmul(import_scores).squeeze(1)
+        # 안전하게 logits clamp
+        c_logits = torch.nan_to_num(c_logits, nan=0.0, posinf=1e4, neginf=-1e4)
+
+        logits = torch.stack([c_logits[split_idx[i]:split_idx[i+1]].mean(dim=0)
+        if split_idx[i] != split_idx[i+1]
+        else torch.zeros(c_logits.shape[1], device=self.device)
+        for i in range(len(split_idx)-1)
+        ])
 
         clf_loss = self.ce_(logits, y)
 
@@ -104,19 +121,23 @@ class ProtoCell(nn.Module):
 
         total_loss = clf_loss + self.lambda_6 * ct_loss
         
-        print(f"[DEBUG] logits NaN: {torch.isnan(logits).sum().item()}")
+        # print(f"[DEBUG] logits NaN: {torch.isnan(logits).sum().item()}")
 
         if ct is not None:
             return total_loss, logits, ct_logits    
         return total_loss, logits
-
-
     
     def encode(self, x):
         h_e = self.activate(self.enc_i(x))
         for i in range(self.n_layers - 1):
             h_e = self.activate(self.enc_h[i](h_e))
         z = self.activate(self.enc_z(h_e))
+        # ✅ 차원이 3개면 중간 차원 squeeze
+        if z.ndim == 3 and z.shape[1] == 1:
+            z = z.squeeze(1)  # (batch, z_dim)
+        # ✅ 혹시 1D인 경우도 대응
+        if z.ndim == 1:
+            z = z.unsqueeze(0)
         return z
 
     def decode(self, z):
@@ -134,16 +155,24 @@ class ProtoCell(nn.Module):
         return import_scores
     
     def pretrain(self, x, y, ct=None, sparse=True):
-        print(f"[DEBUG] x type: {type(x)}")
-        if isinstance(x, list):
-            print(f"[DEBUG] first element shape: {x[0].shape}")
-        else:
-            print(f"[DEBUG] x shape: {x.shape}")
-
+        # print(f"[DEBUG] x type: {type(x)}")
+        # if isinstance(x, list):
+        #     print(f"[DEBUG] first element shape: {x[0].shape}")
+        # else:
+        #     print(f"[DEBUG] x shape: {x.shape}")
+        # print("x[i].shape for all i:")
+        # for i in range(len(x)):
+        #     print(i, x[i].shape)
 
         split_idx = [0]
         for i in range(len(x)):
-            split_idx.append(split_idx[-1]+x[i].shape[0])
+            xi = x[i]
+            if hasattr(xi, 'toarray'):
+                xi = xi.toarray()
+            if xi.ndim == 1:
+                xi = xi.reshape(1, -1)  # 보정
+            split_idx.append(split_idx[-1] + xi.shape[0])
+            # split_idx.append(split_idx[-1]+x[i].shape[0])
         
         # if sparse:
         #     x = torch.cat([torch.tensor(x[i].toarray()) for i in range(len(x))]).to(self.device)
@@ -162,14 +191,20 @@ class ProtoCell(nn.Module):
         if ct is not None:
             ct = torch.tensor([j for i in ct for j in i]).to(self.device)
         z = self.encode(x)
+        # print(f"[DEBUG] z.shape = {z.shape}") # [DEBUG] z.shape = torch.Size([3, 32])
+
         x_hat = self.decode(z)
         
         c2p_dists = torch.pow(z[:, None] - self.prototypes[None, :], 2).sum(-1)
+        c2p_dists = torch.nan_to_num(c2p_dists, nan=1e4, posinf=1e4, neginf=1e4)
+        c2p_dists = torch.clamp(c2p_dists, min=1e-4, max=1e4)
+
         if ct is None:
             p2c_dists = torch.pow(self.prototypes[:, None] - z[None, :], 2).sum(-1)
         else:
             p2c_dists = torch.stack([torch.pow(self.prototypes[:, None] - z[ct == t][None, :], 2).sum(-1).mean(-1) for t in ct.unique().tolist()]).T # n_proto * n_ct
-        p2p_dists = (torch.pow(self.prototypes[:, None] - self.prototypes[None, :], 2).sum(-1)+1e-16).sqrt()
+        # p2p_dists = (torch.pow(self.prototypes[:, None] - self.prototypes[None, :], 2).sum(-1)+1e-16).sqrt()
+        p2p_dists = (torch.pow(self.prototypes[:, None] - self.prototypes[None, :], 2).sum(-1) + 1e-8).sqrt()
 
         recon_loss = (x - x_hat).pow(2).mean()
         c2p_loss = (c2p_dists).min(dim=1)[0].mean()
