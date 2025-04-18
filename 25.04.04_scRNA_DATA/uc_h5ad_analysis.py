@@ -1,24 +1,7 @@
-# python data/covid_inf/h5ad_analysis.py
+# python data/uc/uc_h5ad_analysis.py
 import scanpy as sc
 import pandas as pd
-adata = sc.read_h5ad("uc_imm.h5ad")
-
-# from scipy import sparse
-# import numpy as np
-
-# # sparse matrix인 경우
-# if sparse.issparse(adata.X):
-#     print("✅ X is sparse matrix!")
-#     X_dense = adata.X.toarray()
-# else:
-#     print("✅ X is dense array!")
-#     X_dense = adata.X
-
-# # NaN, Inf 검사
-# print("NaN 개수:", np.isnan(X_dense).sum()) # 0
-# print("Inf 개수:", np.isinf(X_dense).sum()) # 0
-
-
+adata = sc.read_h5ad("uc_fib.h5ad")
 
 print(adata)                
 """
@@ -79,18 +62,21 @@ print(adata.obs["Health"].unique())
 label_counts = adata.obs["Health"].value_counts()
 print(label_counts)
 """
+<<epi>>
 Health
 Healthy         50258
 Non-inflamed    49704
 Inflamed        23044
 Name: count, dtype: int64
 
+<<fib>>
 Health
 Non-inflamed    13147
 Inflamed        10245
 Healthy          8480
 Name: count, dtype: int64
 
+<<imm>>
 Health
 Inflamed        91830
 Non-inflamed    67412
@@ -204,7 +190,51 @@ N661           0     17371         21687
 
 """
 
+# scMILD 논문에서 제시된 내용 확인하기
+# Sample 수 : 42                                        # 안 맞음    # 30 = 18+12
+# Classes : Inflamed 18, Healthy 24                     # Inflamed 는 맞는데, Healthy가 안 맞음. # ✅ 순수 Inflamed 환자 수: 18 # ✅ 순수 Healthy 환자 수: 12
+# Cells : 18,725                                        # 맞음      # 전체 세포 수: 18725
+# Avg Cells : 446 (Average number of cell per sample)   # 안 맏음   # 평균 세포 수: 624.17
 
+import scanpy as sc
+import pandas as pd
+
+
+# "Healthy", "Inflamed"만 필터링
+adata = adata[adata.obs["Health"].isin(["Healthy", "Inflamed"])]
+
+# 환자별로 Health 상태에 따른 cell 수 세기
+patient_health_counts = adata.obs.groupby(["Subject", "Health"]).size().unstack(fill_value=0)
+# 환자별 라벨 종류 개수
+label_type_count_per_patient = (patient_health_counts > 0).sum(axis=1)
+# 각 환자 상태 판별
+patient_labels = label_type_count_per_patient.map({1: "Pure", 2: "Mixed"})
+# Pure 환자 중 어떤 라벨인지 확인
+pure_patients = patient_health_counts[label_type_count_per_patient == 1]
+pure_patient_types = pure_patients.idxmax(axis=1)  # 각 row에서 가장 큰 값의 column 이름 (Health or Inflamed)
+# 최종 요약
+summary = pure_patient_types.value_counts().to_dict()
+mixed_count = (patient_labels == "Mixed").sum()
+# 출력
+print(f"✅ 순수 Healthy 환자 수: {summary.get('Healthy', 0)}")      # ✅ 순수 Healthy 환자 수: 12
+print(f"✅ 순수 Inflamed 환자 수: {summary.get('Inflamed', 0)}")    # ✅ 순수 Inflamed 환자 수: 18
+print(f"⚠️  혼합(Mixed) 환자 수: {mixed_count}")                    # ⚠️  혼합(Mixed) 환자 수: 0
+
+# 전체 샘플 수
+n_samples = adata.obs["Subject"].nunique()
+# 전체 세포 수
+n_cells = adata.n_obs
+# 평균 세포 수 (전체 / 샘플 수) # average number of cells  per sample
+avg_cells_per_sample = n_cells / n_samples
+# 출력
+print(f"전체 세포 수: {n_cells}")                                   # 전체 세포 수: 18725
+print(f"평균 세포 수: {avg_cells_per_sample:.2f}")                  # 평균 세포 수: 624.17
+
+# ===================
+# ===================
+# uc의 Metadata
+# ===================
+# ===================
 
 df = pd.read_csv("data/uc/all.meta2.txt", sep='\t')
 # 타입 행과 실제 데이터 분리
