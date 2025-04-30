@@ -8,22 +8,32 @@
 
 # ScRAT
 
-#### PAPER REVIEW
+<details>
+<summary>PAPER REVIEW</summary>
+<ul>
+  <li><a href="https://doraemin.tistory.com/165" target="_blank">[ScRAT] Phenotype prediction from single-cell RNA-seq data using attention-based neural networks</a></li>
+  <li><a href="https://doraemin.tistory.com/162" target="_blank">[ScRAT Flow] Phenotype prediction from single-cell RNA-seq data using attention-based neural networks</a></li>
+</ul>
+</details>
 
-- [[ScRAT] Phenotype prediction from single-cell RNA-seq data using attention-based neural networks](https://doraemin.tistory.com/165)
-- [[ScRAT 흐름] Phenotype prediction from single-cell RNA-seq data using attention-based neural networks](https://doraemin.tistory.com/162)
+<details>
+<summary>DATA</summary>
+<ul>
+  <li><a href="https://doraemin.tistory.com/164" target="_blank"></a>[ScRAT] Exploratory Data (Summary)</li>
+</ul>
+</details>
 
-#### DATA
-
-- [[ScRAT] Exploratory Data (Summary)](https://doraemin.tistory.com/164)
-
-#### CODE
-
-- [[ScRAT] scRNA Analysis](https://doraemin.tistory.com/158)
-- [[ScRAT] Code Demo](https://doraemin.tistory.com/159)
-- [[ScRAT] STEP 1. Sample mixup](https://doraemin.tistory.com/161)
-- [[ScRAT] utils.py_mixup()](https://doraemin.tistory.com/160)
-- [[ScRAT] STEP 2. Attention layer](https://doraemin.tistory.com/163)
+<details>
+<summary>CODE</summary>
+<ul>
+  <li><a href="https://doraemin.tistory.com/158" target="_blank">[ScRAT] scRNA Analysis</a></li>
+  <li><a href="https://doraemin.tistory.com/159" target="_blank">[ScRAT] Code Demo</a></li>
+  <li><a href="https://doraemin.tistory.com/161" target="_blank">[ScRAT] STEP 1. Sample mixup</a></li>
+  <li><a href="https://doraemin.tistory.com/160" target="_blank">[ScRAT] utils.py_mixup()</a></li>
+  <li><a href="https://doraemin.tistory.com/163" target="_blank">[ScRAT] STEP 2. Attention layer</a></li>
+</ul>
+</details>
+<br>
 
 # Hierarchical MIL
 
@@ -67,3 +77,29 @@
 - [[ProtoCell 4P] scRNA Analysis](https://doraemin.tistory.com/190)
   <!-- - [](https://doraemin.tistory.com/) -->
   <!-- - [](https://doraemin.tistory.com/) -->
+
+## GSE86982 (human embryonic stem cells (hESCs))
+
+<details>
+<summary>CODE</summary>
+<ul>
+  <li><a href="https://doraemin.tistory.com/37" target="_blank">[Seurat] Single cell Analysis</a></li>
+  <li><a href="https://doraemin.tistory.com/38" target="_blank">[Seurat] [MAST] DEGs 분석</a></li>
+  <li><a href="https://doraemin.tistory.com/39" target="_blank">[Seurat] [limma] DEGs Analysis</a></li>
+  <li><a href="https://doraemin.tistory.com/40" target="_blank">[Seurat] [DESeq2] DEGs Analysis</a></li>
+  <li><a href="https://doraemin.tistory.com/41" target="_blank">[MAST], [limma], [DESeq2] Common DEGs Analysis</a></li>
+  <li><a herf="https://doraemin.tistory.com/202" target="_blank">GSE86982 Analysis Summary</li>
+
+</ul>
+</details>
+
+<!--
+<details>
+<summary></summary>
+<ul>
+  <li><a href="https://doraemin.tistory.com/" target="_blank"></a></li>
+  <li><a href="https://doraemin.tistory.com/" target="_blank"></a></li>
+</ul>
+</details>
+
+ -->
