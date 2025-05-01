@@ -19,7 +19,7 @@
 <details>
 <summary>DATA</summary>
 <ul>
-  <li><a href="https://doraemin.tistory.com/164" target="_blank"></a>[ScRAT] Exploratory Data (Summary)</li>
+  <li><a href="https://doraemin.tistory.com/164" target="_blank">[ScRAT] Exploratory Data (Summary)</a></li>
 </ul>
 </details>
 
@@ -37,48 +37,89 @@
 
 # Hierarchical MIL
 
-#### PAPER REVIEW
+<details>
+<summary>PAPER REVIEW</summary>
+<ul>
+  <li><a href="https://doraemin.tistory.com/167" target="_blank">[Hierarchical MIL] Incorporating Hierarchical Information into Multiple Instance Learning for Patient Phenotype Prediction with scRNA-seq Data</a></li>
+  <li><a href="https://doraemin.tistory.com/172" target="_blank">[Optuna] Key Concepts and Descriptions</a></li>
+  <li><a href="https://doraemin.tistory.com/174" target="_blank">[StratifiedKFold] Key Concepts and Descriptions</a></li>
+</ul>
+</details>
 
-- [[Hierarchical MIL] Incorporating Hierarchical Information into Multiple Instance Learning for Patient Phenotype Prediction with scRNA-seq Data](https://doraemin.tistory.com/167)
-- [[Optuna] Key Concepts and Descriptions](https://doraemin.tistory.com/172)
-- [[StratifiedKFold] Key Concepts and Descriptions](https://doraemin.tistory.com/174)
+<details>
+<summary>DATA</summary>
+<ul>
+  <li><a href="https://doraemin.tistory.com/166" target="_blank">[Hierarchical MIL] Exploratory Data (Summary)</a></li>
+</ul>
+</details>
 
-#### DATA
+<details>
+<summary>CODE</summary>
+<ul>
+  <li><a href="https://doraemin.tistory.com/169" target="_blank">[Hierarchical MIL] scRNA Analysis</a></li>
+  <li><a href="https://doraemin.tistory.com/173" target="_blank">[Hierarchical MIL] Code ; Train.py</a></li>
+  <li><a href="https://doraemin.tistory.com/175" target="_blank">[Hierarchical MIL] Difference btw '.h5ad' and '.h5'</a></li>
+  <li><a href="https://doraemin.tistory.com/176" target="_blank">[Hierarchical MIL] [Hierarchical MIL] Preprocessing Create '.h5ad'</a></li>
+</ul>
+</details>
+<details>
+<summary>compare AI Model</summary>
+<ul>
+  <li><a href="https://doraemin.tistory.com/188" target="_blank">[Hierarchical MIL] compare AI Model</a></li>
+</ul>
+</details>
 
-- [[Hierarchical MIL] Exploratory Data (Summary)](https://doraemin.tistory.com/166)
-
-#### CODE
-
-- [[Hierarchical MIL] scRNA Analysis](https://doraemin.tistory.com/169)
-- [[Hierarchical MIL] Code ; Train.py](https://doraemin.tistory.com/173)
-- [Difference btw '.h5ad' and '.h5'](https://doraemin.tistory.com/175)
-- [[Hierarchical MIL] Preprocessing Create '.h5ad'](https://doraemin.tistory.com/176)
-
-#### compare AI Model
-
-- [[Hierarchical MIL] compare AI Model](https://doraemin.tistory.com/188)
+<br>
 
 # scMILD
 
-#### DATA
-
-- [[scMILD] Datasets Download](https://doraemin.tistory.com/185)
+<details>
+<summary>DATA</summary>
+<ul>
+  <li><a href="https://doraemin.tistory.com/185" target="_blank">[scMILD] Datasets Download</a></li>
+</ul>
+</details>
+<br>
 
 # PaSCient
 
-#### PAPER REVIEW
-
-- [[PaSCient] Learning multi-cellular representations of single-cell transcriptomics data enables characterization of patient-level disease states](https://doraemin.tistory.com/189)
+<details>
+<summary>PAPER REVIEW</summary>
+<ul>
+  <li><a href="https://doraemin.tistory.com/189" target="_blank">[PaSCient] Learning multi-cellular representations of single-cell transcriptomics data enables characterization of patient-level disease states</a></li>
+</ul>
+</details>
+<br>
 
 # ProtoCell4P
 
-#### CODE
+<details>
+<summary>CODE</summary>
+<ul>
+  <li><a href="https://doraemin.tistory.com/190" target="_blank">[ProtoCell 4P] scRNA Analysis</a></li>
+</ul>
+</details>
+<br>
 
-- [[ProtoCell 4P] scRNA Analysis](https://doraemin.tistory.com/190)
-  <!-- - [](https://doraemin.tistory.com/) -->
-  <!-- - [](https://doraemin.tistory.com/) -->
+# GSEA
 
-## GSE86982 (human embryonic stem cells (hESCs))
+<details>
+<summary>PAPER REVIEW</summary>
+<ul>
+  <li><a href="https://doraemin.tistory.com/204" target="_blank">[GSEA] Gene set enrichment analysis (GSEA),Pathway Enrichment analysis,Gene Ontology Enrichment analysis</a></li>
+</ul>
+</details>
+<br>
+
+# GSE86982 (human embryonic stem cells (hESCs))
+
+<details>
+<summary>PAPER REVIEW</summary>
+<ul>
+  <li><a href="https://doraemin.tistory.com/203" target="_blank">Single-cell RNA-seq data analysis reveals functionally relevant biomarkers of early brain development and their regulatory footprints in human embryonic stem cells (hESCs)</a></li>
+  <li><a href="https://doraemin.tistory.com/44" target="_blank">[GSEA] Paper review detail</a></li>
+</ul>
+</details>
 
 <details>
 <summary>CODE</summary>
@@ -88,8 +129,7 @@
   <li><a href="https://doraemin.tistory.com/39" target="_blank">[Seurat] [limma] DEGs Analysis</a></li>
   <li><a href="https://doraemin.tistory.com/40" target="_blank">[Seurat] [DESeq2] DEGs Analysis</a></li>
   <li><a href="https://doraemin.tistory.com/41" target="_blank">[MAST], [limma], [DESeq2] Common DEGs Analysis</a></li>
-  <li><a herf="https://doraemin.tistory.com/202" target="_blank">GSE86982 Analysis Summary</li>
-
+  <li><a herf="https://doraemin.tistory.com/202" target="_blank">GSE86982 Analysis Summary</a></li>
 </ul>
 </details>
 
