@@ -129,10 +129,18 @@
   <li><a href="https://doraemin.tistory.com/39" target="_blank">[Seurat] [limma] DEGs Analysis</a></li>
   <li><a href="https://doraemin.tistory.com/40" target="_blank">[Seurat] [DESeq2] DEGs Analysis</a></li>
   <li><a href="https://doraemin.tistory.com/41" target="_blank">[MAST], [limma], [DESeq2] Common DEGs Analysis</a></li>
-  <li><a herf="https://doraemin.tistory.com/202" target="_blank">GSE86982 Analysis Summary</a></li>
+  <li><a href="https://doraemin.tistory.com/202" target="_blank">GSE86982 Analysis Summary</a></li>
 </ul>
 </details>
 
+# GSE62452
+
+<details>
+<summary>CODE</summary>
+<ul>
+  <li><a href="https://doraemin.tistory.com/205" target="_blank">GSE62452 (microarray) Analysis Result</a></li>
+</ul>
+</details>
 <!--
 <details>
 <summary></summary>
@@ -141,5 +149,4 @@
   <li><a href="https://doraemin.tistory.com/" target="_blank"></a></li>
 </ul>
 </details>
-
  -->
