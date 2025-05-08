@@ -150,10 +150,7 @@
 <summary>PAPER REVIEWS</summary>
 <ul>
   <li><a href="https://doraemin.tistory.com/206" target="_blank">Transcriptome analysis based onmachine learning reveals a role forautoinflammatory genes of chronicnonbacterial osteomyelitis (CNO)</a></li>
-  <!-- <li><a href="https://doraemin.tistory.com/207" target="_blank">[DESeq2] Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2</a></li>
-  <li><a href="https://doraemin.tistory.com/208" target="_blank">[DESeq2] Materials and methods</a></li>
-  <li><a href="https://doraemin.tistory.com/209" target="_blank">[WGCNA] WGCNA: an R package for weighted correlation network analysis</a></li>
-  <li><a href="https://doraemin.tistory.com/210" target="_blank">The limits of molecular signaturesfor pancreaticductal adenocarcinoma subtyping (PDAC)</a></li> -->
+  <li><a href="https://doraemin.tistory.com/207" target="_blank">[DESeq2] Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2</a></li>
 </ul>
 </details>
 <!--
