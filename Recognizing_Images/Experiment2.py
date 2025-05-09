@@ -20,9 +20,9 @@ val_dir = '/content/cnn_validation_data'
 
 basic_datagen = ImageDataGenerator(rescale=1./255)
 train_gen = basic_datagen.flow_from_directory(train_dir, target_size=img_size,
-                                             batch_size=batch_size, class_mode='categorical')
+                                            batch_size=batch_size, class_mode='categorical')
 val_gen = basic_datagen.flow_from_directory(val_dir, target_size=img_size,
-                                           batch_size=batch_size, class_mode='categorical', shuffle=False)
+                                            batch_size=batch_size, class_mode='categorical', shuffle=False)
 
 # ====== 2. freeze 전략 정의 ======
 def apply_freeze(base_model, strategy):
@@ -52,7 +52,7 @@ for strategy in freeze_strategies:
         
         # 4.1. 모델 정의
         base = InceptionV3(weights='imagenet', include_top=False,
-                           input_shape=(*img_size, 3))
+                            input_shape=(*img_size, 3))
         apply_freeze(base, strategy)
         
         x = GlobalAveragePooling2D()(base.output)
@@ -104,3 +104,16 @@ sns.heatmap(pivot_acc, annot=True, fmt=".3f", cmap="viridis")
 plt.title('Val Accuracy by Freeze Strategy & LR')
 plt.savefig('exp2_accuracy_heatmap.png')
 
+"""
+Experiment 2 results:
+                 strategy  learning_rate  accuracy       auc  epochs_trained
+0               top_only        0.00001  0.673145  0.992695              20
+1               top_only        0.00010  0.998233  0.999980              20
+2               top_only        0.00100  0.994700  0.999997              20
+3  unfreeze_last2_blocks        0.00001  0.715548  0.986805              20
+4  unfreeze_last2_blocks        0.00010  0.996466  0.999969              20
+5  unfreeze_last2_blocks        0.00100  0.996466  1.000000              20
+6          full_unfreeze        0.00001  1.000000  1.000000              20
+7          full_unfreeze        0.00010  1.000000  1.000000              20
+8          full_unfreeze        0.00100  0.991166  1.000000              15
+"""
