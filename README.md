@@ -151,6 +151,7 @@
 <ul>
   <li><a href="https://doraemin.tistory.com/206" target="_blank">Transcriptome analysis based onmachine learning reveals a role forautoinflammatory genes of chronicnonbacterial osteomyelitis (CNO)</a></li>
   <li><a href="https://doraemin.tistory.com/207" target="_blank">[DESeq2] Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2</a></li>
+  <li><a href="https://doraemin.tistory.com/208" target="_blank">[DESeq2] Materials and methods</a></li>
 </ul>
 </details>
 <!--
