@@ -122,3 +122,10 @@ for model_name, hist in histories.items():
             plt.grid(True)
             plt.savefig(f'{model_name.lower()}_{metric}.png')
             plt.close()
+"""
+Experiment 1 results:
+VGG16: Accuracy=0.0812, AUC=0.7006
+InceptionV3: Accuracy=0.3901, AUC=0.9011
+ResNet50: Accuracy=0.0048, AUC=0.5000
+EfficientNetB0: Accuracy=0.0032, AUC=0.5000
+"""
