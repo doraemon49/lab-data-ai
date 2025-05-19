@@ -1,4 +1,4 @@
-# $ python models/two_cnn/data/cnn_split_augmentation_data.py
+# $ python app/models/two_cnn/data/cnn_split_augmentation_data.py
 import os
 import json
 import re
@@ -12,11 +12,15 @@ import albumentations as A
 # 설정: 경로 및 파라미터
 # -----------------------------
 json_file_path = r"C:\Users\LG\Documents\MJU\Activity\SKT_FLY_AI\github\AI\app\models\two_cnn\labels_with_image_paths.json"
-train_dir = r"C:\Users\LG\Documents\MJU\Activity\SKT_FLY_AI\github\AI\app\models\two_cnn\data\cnn_train_data"
-val_dir   = r"C:\Users\LG\Documents\MJU\Activity\SKT_FLY_AI\github\AI\app\models\two_cnn\data\cnn_validation_data"
+train_dir = r"C:\Users\LG\Documents\MJU\Activity\SKT_FLY_AI\github\AI\app\models\two_cnn\data\train_data"
+val_dir   = r"C:\Users\LG\Documents\MJU\Activity\SKT_FLY_AI\github\AI\app\models\two_cnn\data\validation_data"
+test_dir   = r"C:\Users\LG\Documents\MJU\Activity\SKT_FLY_AI\github\AI\app\models\two_cnn\data\test_data"
+
 TARGET_SIZE = (150, 150)
-NUM_AUG = 10
-VAL_RATIO = 0.2
+NUM_AUG = 10        # 원본당 생성할 증강본 수
+VAL_COUNT = 2       # 클래스당 validation 이미지 수
+TEST_COUNT = 2      # 클래스당 test 이미지 수
+
 
 # -----------------------------
 # 헬퍼 함수
@@ -82,8 +86,11 @@ if __name__ == '__main__':
         # 저장 경로 생성
         train_cls = os.path.join(train_dir, title)
         val_cls   = os.path.join(val_dir, title)
+        test_cls  = os.path.join(test_dir, title)
+
         create_dir(train_cls)
         create_dir(val_cls)
+        create_dir(test_cls)
 
         # 원본 저장
         array_to_img(img_arr).save(os.path.join(train_cls, f"{title}_orig.jpg"))
@@ -95,13 +102,21 @@ if __name__ == '__main__':
             aug_resized = A.Resize(*TARGET_SIZE)(image=aug)['image']
             aug_list.append(aug_resized)
 
-        # train/val 분할 및 저장
-        train_imgs, val_imgs = train_test_split(aug_list, test_size=VAL_RATIO, random_state=42)
+        # train/val/test 분할 및 저장
+        # 6:2:2 비율로 나누기
+        train_imgs, tmp = train_test_split(aug_list,
+                                           test_size=VAL_COUNT + TEST_COUNT,
+                                           random_state=42)
+        val_imgs, test_imgs = train_test_split(tmp,
+                                               test_size=TEST_COUNT,
+                                               random_state=42)        
         for idx, arr in enumerate(train_imgs, 1):
             array_to_img(arr).save(os.path.join(train_cls, f"{title}_train_{idx}.jpg"))
         for idx, arr in enumerate(val_imgs, 1):
             array_to_img(arr).save(os.path.join(val_cls, f"{title}_val_{idx}.jpg"))
+        for idx, arr in enumerate(test_imgs, 1):
+            array_to_img(arr).save(os.path.join(test_cls,  f"{title}_test_{idx}.jpg"))
 
-        print(f"[OK] {title}: train={len(train_imgs)}, val={len(val_imgs)} 이미지 저장 완료.")
+        print(f"[OK] {title}: train={len(train_imgs)}, val={len(val_imgs)}, test={len(test_imgs)} 이미지 저장 완료.")
 
     print("=== 모든 클래스 증강 완료 ===")
