@@ -1,5 +1,6 @@
 import tensorflow as tf
 from tensorflow.keras.applications import VGG16, InceptionV3, ResNet50, EfficientNetB0
+from tensorflow.keras.applications import DenseNet121, MobileNetV2, Xception, EfficientNetV2B0
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import GlobalAveragePooling2D, Dense, Dropout, BatchNormalization
