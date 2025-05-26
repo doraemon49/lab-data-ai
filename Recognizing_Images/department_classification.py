@@ -8,7 +8,7 @@ import tensorflow as tf
 from tensorflow.keras.applications import EfficientNetB0
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.layers import (
-    Input, GlobalAveragePooling2D, Dense
+    Input, GlobalAveragePooling2D, Dense, Dropout
 )
 from tensorflow.keras.models import Model
 from tensorflow.keras.callbacks import ReduceLROnPlateau, EarlyStopping
@@ -17,12 +17,16 @@ import pandas as pd
 # from tensorflow.keras.applications import DenseNet121
 from tensorflow.keras.applications import InceptionResNetV2
 from tensorflow.keras.regularizers import l2
+from sklearn.metrics import classification_report, confusion_matrix
+import seaborn as sns
+import tensorflow.keras.backend as K
+from tensorflow.keras.utils import register_keras_serializable
 
 
 # 2. 설정
-train_dir   = '/content/train_by_dept'
-val_dir     = '/content/val_by_dept'
-test_dir    = '/content/test_by_dept'
+train_dir   = '/content/train'
+val_dir     = '/content/val'
+test_dir    = '/content/test'
 img_size    = (224,224)
 input_shape = img_size + (3,)
 batch_size  = 128
@@ -104,6 +108,10 @@ model.compile(
 )
 model.summary()
 
+param_count = model.count_params()
+print(f"📦 Total parameters: {param_count:,}")
+
+
 # 6. 데이터 로더
 train_gen = ImageDataGenerator(
     rescale=1/255,
@@ -159,8 +167,8 @@ history = model.fit(
 # 10. 시각화, 저장, 평가
 plt.figure(figsize=(12,4))
 plt.subplot(1,2,1)
-plt.plot(history.history['loss'], label='train loss')
-plt.plot(history.history['val_loss'], '--', label='val loss')
+plt.plot(history.history['predictions_loss'], label='train loss')
+plt.plot(history.history['val_predictions_loss'], '--', label='val loss')
 plt.legend(); plt.title('Loss')
 
 plt.subplot(1,2,2)
@@ -172,30 +180,10 @@ plt.legend(); plt.title('Accuracy')
 plt.savefig('/content/results/metrics.png')
 plt.show()
 
-# 9. 모델·히스토리 저장
+# 11. 모델·히스토리 저장
 os.makedirs('/content/results', exist_ok=True)
 model.save('/content/results/style_saff_department.h5')
 pd.DataFrame(history.history).to_csv(
     '/content/results/history.csv', index=False
 )
 
-# 10. 테스트 평가
-test_gen = ImageDataGenerator(rescale=1/255)
-test_loader = test_gen.flow_from_directory(
-    test_dir, target_size=img_size,
-    batch_size=batch_size,
-    class_mode='categorical', shuffle=False
-)
-test_mt = multitask_generator(test_loader)
-
-# 3) steps 계산
-test_steps = test_loader.samples // batch_size
-
-# 4) evaluate 호출
-results = model.evaluate(
-    test_mt,
-    steps=test_steps,
-    verbose=2
-)
-
-print(results)
