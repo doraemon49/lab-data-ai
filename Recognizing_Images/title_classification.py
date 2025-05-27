@@ -16,6 +16,27 @@ import tensorflow.keras.backend as K
 import pandas as pd
 from tensorflow.keras.utils import register_keras_serializable
 from tensorflow.keras.regularizers import l2
+from sklearn.metrics import classification_report
+import os
+import numpy as np
+import tensorflow as tf
+from tensorflow.keras.applications import EfficientNetB0
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.layers import (
+    Input, GlobalAveragePooling2D, Dense, Dropout
+)
+from tensorflow.keras.models import Model
+from tensorflow.keras.callbacks import ReduceLROnPlateau, EarlyStopping
+import matplotlib.pyplot as plt
+import pandas as pd
+# from tensorflow.keras.applications import DenseNet121
+from tensorflow.keras.applications import InceptionResNetV2
+from tensorflow.keras.regularizers import l2
+from sklearn.metrics import classification_report, confusion_matrix
+import seaborn as sns
+import tensorflow.keras.backend as K
+from tensorflow.keras.utils import register_keras_serializable
+
 
 
 # 2. 설정
@@ -27,10 +48,10 @@ style_dim     = 256
 epochs        = 300
 
 depts = [
-    'American Paintings and Sculpture'#,
-    # 'Drawings and Prints',
-    # 'European Paintings',
-    # 'Robert Lehman Collection'
+    'American Paintings and Sculpture',
+    'Drawings and Prints',
+    'European Paintings',
+    'Robert Lehman Collection'
 ]
 
 # 3. SAFF 레이어 정의 (직렬화 등록)
@@ -76,13 +97,17 @@ def build_pretrained_style_model(input_shape, num_classes, style_dim):
         weights='imagenet', include_top=False, input_shape=input_shape
     )
     base.trainable = True
+
     feat = base.output
     style_vec = GlobalAveragePooling2D(name='style_gap')(feat)
     style_vec = Dense(style_dim, activation='relu', name='style_fc')(style_vec)
+
     fused = SAFF(channels=feat.shape[-1], name='saff')(style_vec, feat)
+
     x = GlobalAveragePooling2D(name='final_gap')(fused)
     x = Dropout(0.5, name='dropout')(x)  ########## ← 추가
     preds = Dense(num_classes, activation='softmax',kernel_regularizer=l2(1e-4),  name='predictions')(x) ########## ← L2 규제 추가
+
     return Model(inputs=base.input, outputs=[style_vec, preds], name='EfficientStyleModel')
 
 # 6. 멀티태스크 제너레이터 (style labels로 수정)
@@ -98,8 +123,8 @@ os.makedirs('/content/results1', exist_ok=True)
 for dept in depts:
     K.clear_session()
     print(f"\n===== Training titles for {dept} =====")
-    train_dir = os.path.join(base_data_dir, 'train_by_dept', dept)
-    val_dir   = os.path.join(base_data_dir, 'val_by_dept',   dept)
+    train_dir = os.path.join(base_data_dir, 'train', dept)
+    val_dir   = os.path.join(base_data_dir, 'val',   dept)
 
     train_gen = ImageDataGenerator(
         rescale=1/255, rotation_range=20,
@@ -124,6 +149,9 @@ for dept in depts:
         loss_weights={'style_fc':0.5, 'predictions':1.0},  #### ← style weight 줄여보기
         metrics={'predictions':'accuracy'}
     )
+    model.summary()
+    param_count = model.count_params()
+    print(f"📦 Total parameters: {param_count:,}")
 
     train_mt = multitask_generator(train_gen)
     val_mt   = multitask_generator(val_gen)
@@ -143,8 +171,8 @@ for dept in depts:
 
     # 8. 결과 저장 및 시각화
     fig, axes = plt.subplots(1,2,figsize=(12,4))
-    axes[0].plot(history.history['loss'], label='train loss')
-    axes[0].plot(history.history['val_loss'], '--', label='val loss')
+    axes[0].plot(history.history['predictions_loss'], label='train loss')
+    axes[0].plot(history.history['val_predictions_loss'], '--', label='val loss')
     axes[0].legend(); axes[0].set_title('Loss')
     axes[1].plot(history.history['predictions_accuracy'], label='train acc')
     axes[1].plot(history.history['val_predictions_accuracy'], '--', label='val acc')
@@ -158,32 +186,80 @@ for dept in depts:
 
     # 9. 테스트 평가
     print(f"--- Testing titles for {dept} ---")
-    test_dir = os.path.join(base_data_dir, 'test_by_dept', dept)
+    test_dir = os.path.join(base_data_dir, 'test', dept)
     test_flow = ImageDataGenerator(rescale=1/255).flow_from_directory(
         test_dir, target_size=img_size,
         batch_size=batch_size, class_mode='categorical', shuffle=False
     )
     test_mt = multitask_generator(test_flow)
-    test_steps = max(1, test_flow.samples // batch_size)
+    test_steps = int(np.ceil(test_flow.samples / batch_size))
 
-    # return_dict=True 로 dict 반환
+    # 9-1. 모델 정량 평가
     test_res = model.evaluate(test_mt, steps=test_steps, verbose=1, return_dict=True)
-
     print(f"Test results for {dept}:")
     for name, value in test_res.items():
         print(f"{name}: {value:.4f}")
 
-    # accuracy만 별도 추출
-    test_acc = test_res.get('predictions_accuracy', test_res.get('accuracy'))
+    # 9-2. 예측 결과 추출
+    predict_model = tf.keras.Model(inputs=model.input, outputs=model.get_layer('predictions').output)
+    pred_probs = predict_model.predict(test_flow, steps=test_steps, verbose=1)
+    y_pred = np.argmax(pred_probs, axis=1)
+    y_true = test_flow.classes[:len(y_pred)]
 
-    # 파일 저장
+    # 9-3. class 이름 및 class 수
+    class_names = list(test_flow.class_indices.keys())
+    num_classes = len(class_names)
+
+    # 9-4. Classification Report
+    report = classification_report(y_true, y_pred, target_names=class_names, digits=4)
+    print("\n🔍 Classification Report:\n", report)
+
+    # 9-5. Top-3 Accuracy 계산
+    from tensorflow.keras.utils import to_categorical
+    y_true_onehot = to_categorical(y_true, num_classes=num_classes)
+    top3 = np.mean(tf.keras.metrics.top_k_categorical_accuracy(y_true_onehot, pred_probs, k=3).numpy())
+    print(f"🔝 Top-3 Accuracy: {top3:.4f}")
+
+    # 9-6. Confusion Matrix 시각화
+    cm = confusion_matrix(y_true, y_pred)
+    plt.figure(figsize=(8,6))
+    sns.heatmap(cm, annot=True, fmt='d',
+                xticklabels=class_names, yticklabels=class_names, cmap='Blues')
+    plt.xlabel('Predicted Label')
+    plt.ylabel('True Label')
+    plt.title(f'Confusion Matrix - {dept}')
+    plt.tight_layout()
+    plt.savefig(f'/content/results1/confmat_{prefix}.png')
+    plt.show()
+    plt.close()
+
+    # 9-7. Style 벡터 추출 및 t-SNE 시각화
+    style_model = tf.keras.Model(inputs=model.input, outputs=model.get_layer('style_fc').output)
+    style_vecs = style_model.predict(test_flow, steps=test_steps, verbose=1)
+
+    from sklearn.manifold import TSNE
+    tsne = TSNE(n_components=2, random_state=42, perplexity=30)
+    tsne_result = tsne.fit_transform(style_vecs)
+
+    plt.figure(figsize=(8,6))
+    scatter = plt.scatter(tsne_result[:,0], tsne_result[:,1], c=y_true, cmap='tab10', alpha=0.7)
+    plt.colorbar(scatter, ticks=range(num_classes), label='True Label')
+    plt.title(f't-SNE of Style Vectors - {dept}')
+    plt.xlabel('Dim 1'); plt.ylabel('Dim 2')
+    plt.tight_layout()
+    plt.savefig(f'/content/results1/tsne_style_vecs_{prefix}.png')
+    plt.show()
+    plt.close()
+
+    # 9-8. 파일 저장
     save_path = f"/content/results1/test_results_{prefix}.txt"
     with open(save_path, 'w') as f:
         for name, value in test_res.items():
             f.write(f"{name}: {value:.4f}\n")
-        f.write(f"test_accuracy: {test_acc:.4f}\n")
+        f.write(f"Top-3 Accuracy: {top3:.4f}\n\n")
+        f.write("Classification Report:\n")
+        f.write(report)
 
-    print(f"→ Saved test results (including accuracy) to {save_path}")
-
+    print(f"→ Saved test results, confusion matrix, and t-SNE to /content/results1/ for {dept}")
 
 print("\nAll Dept Title classifiers trained, tested, and saved under /content/results1/")
