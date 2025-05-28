@@ -8,7 +8,7 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.keras.applications import InceptionResNetV2
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.keras.layers import GlobalAveragePooling2D, Dense, Dropout
+from tensorflow.keras.layers import Input, GlobalAveragePooling2D, Dense, Dropout
 from tensorflow.keras.models import Model
 from tensorflow.keras.callbacks import ReduceLROnPlateau, EarlyStopping
 import matplotlib.pyplot as plt
@@ -16,31 +16,12 @@ import tensorflow.keras.backend as K
 import pandas as pd
 from tensorflow.keras.utils import register_keras_serializable
 from tensorflow.keras.regularizers import l2
-from sklearn.metrics import classification_report
-import os
-import numpy as np
-import tensorflow as tf
 from tensorflow.keras.applications import EfficientNetB0
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.keras.layers import (
-    Input, GlobalAveragePooling2D, Dense, Dropout
-)
-from tensorflow.keras.models import Model
-from tensorflow.keras.callbacks import ReduceLROnPlateau, EarlyStopping
-import matplotlib.pyplot as plt
-import pandas as pd
-# from tensorflow.keras.applications import DenseNet121
-from tensorflow.keras.applications import InceptionResNetV2
-from tensorflow.keras.regularizers import l2
 from sklearn.metrics import classification_report, confusion_matrix
 import seaborn as sns
-import tensorflow.keras.backend as K
-from tensorflow.keras.utils import register_keras_serializable
-
-
 
 # 2. 설정
-base_data_dir = '/content/'  # train_by_dept, val_by_dept, test_by_dept 폴더가 이 아래에 있음
+base_data_dir = '/content/data_by_class'  # train_by_dept, val_by_dept, test_by_dept 폴더가 이 아래에 있음
 img_size      = (224,224)
 input_shape   = img_size + (3,)
 batch_size    = 128
@@ -121,7 +102,6 @@ def multitask_generator(flow):
 os.makedirs('/content/results1', exist_ok=True)
 
 for dept in depts:
-    K.clear_session()
     print(f"\n===== Training titles for {dept} =====")
     train_dir = os.path.join(base_data_dir, 'train', dept)
     val_dir   = os.path.join(base_data_dir, 'val',   dept)
@@ -180,8 +160,9 @@ for dept in depts:
 
     prefix = dept.replace(' ', '_')
     plt.savefig(f"/content/results1/{prefix}_metrics.png")
+    plt.show()
     plt.close(fig)
-    model.save(f"/content/results1/title_model_{prefix}.h5")
+    model.save(f"/content/results1/title_model_{prefix}.keras")
     pd.DataFrame(history.history).to_csv(f"/content/results1/history_{prefix}.csv", index=False)
 
     # 9. 테스트 평가
