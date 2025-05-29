@@ -5,7 +5,6 @@
 import os
 import numpy as np
 import tensorflow as tf
-from tensorflow.keras.applications import EfficientNetB0
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras.layers import (
     Input, GlobalAveragePooling2D, Dense, Dropout
@@ -22,17 +21,26 @@ import seaborn as sns
 import tensorflow.keras.backend as K
 from tensorflow.keras.utils import register_keras_serializable
 
+from tensorflow.keras.layers import BatchNormalization
+from tensorflow.keras.losses import CategoricalCrossentropy
+from tensorflow.keras.layers import (
+    Conv2D, Dense, Dropout,
+    GlobalAveragePooling2D, BatchNormalization
+)
+from tensorflow.keras.regularizers import l2
+from tensorflow.keras.applications import InceptionResNetV2
+
 
 # 2. 설정
-train_dir   = '/content/train'
-val_dir     = '/content/val'
-test_dir    = '/content/test'
+train_dir   = '/content/data_by_class/train'
+val_dir     = '/content/data_by_class/val'
+test_dir    = '/content/data_by_class/test'
 img_size    = (224,224)
 input_shape = img_size + (3,)
 batch_size  = 128
 num_classes = 4
-style_dim   = 256
 epochs      = 300
+style_dim   = 512 
 
 # 3. SAFF 레이어 정의 (직렬화 등록)
 @register_keras_serializable(package='custom_layers', name='SAFF')
@@ -86,8 +94,19 @@ def build_pretrained_style_model():
         style_vec, feat
     )
 
-    x = GlobalAveragePooling2D(name='final_gap')(fused)
-    x = Dropout(0.5, name='dropout')(x)  ########## ← 추가
+    x = Conv2D(256, 3, padding='same', activation='relu',
+              kernel_regularizer=l2(1e-4),
+              name='conv_saff')(fused)
+    x = BatchNormalization(name='bn_saff')(x)
+    x = Dropout(0.3, name='drop_saff')(x)
+
+    # 그다음 풀링 & Dense
+    x = GlobalAveragePooling2D(name='gap_final')(x)
+    x = BatchNormalization(name='bn_final')(x)
+    x = Dropout(0.5, name='drop_final')(x)
+    x = Dense(512, activation='relu',
+              kernel_regularizer=l2(1e-4),
+              name='fc_mid')(x)
 
     preds = Dense(num_classes, activation='softmax', kernel_regularizer=l2(1e-4),
                   name='predictions')(x)
@@ -182,8 +201,8 @@ plt.show()
 
 # 11. 모델·히스토리 저장
 os.makedirs('/content/results', exist_ok=True)
-model.save('/content/results/style_saff_department.h5')
+# 학습 후
+model.save('/content/results/style_saff_department.keras')
 pd.DataFrame(history.history).to_csv(
     '/content/results/history.csv', index=False
 )
-
