@@ -12,14 +12,19 @@ import albumentations as A
 # 설정: 경로 및 파라미터
 # -----------------------------
 json_file_path = r"C:\Users\LG\Documents\MJU\Activity\SKT_FLY_AI\github\AI\app\models\two_cnn\labels_with_image_paths.json"
-train_dir = r"C:\Users\LG\Documents\MJU\Activity\SKT_FLY_AI\github\AI\app\models\two_cnn\data\train_data"
-val_dir   = r"C:\Users\LG\Documents\MJU\Activity\SKT_FLY_AI\github\AI\app\models\two_cnn\data\validation_data"
-test_dir   = r"C:\Users\LG\Documents\MJU\Activity\SKT_FLY_AI\github\AI\app\models\two_cnn\data\test_data"
+train_dir = r"C:\Users\LG\Documents\MJU\Activity\SKT_FLY_AI\github\AI\app\models\two_cnn\data\train_299"
+val_dir   = r"C:\Users\LG\Documents\MJU\Activity\SKT_FLY_AI\github\AI\app\models\two_cnn\data\val_299"
+test_dir   = r"C:\Users\LG\Documents\MJU\Activity\SKT_FLY_AI\github\AI\app\models\two_cnn\data\test_299"
 
-TARGET_SIZE = (150, 150)
-NUM_AUG = 10        # 원본당 생성할 증강본 수
-VAL_COUNT = 2       # 클래스당 validation 이미지 수
-TEST_COUNT = 2      # 클래스당 test 이미지 수
+# TARGET_SIZE = (150, 150)
+# NUM_AUG = 10        # 원본당 생성할 증강본 수
+# VAL_COUNT = 2       # 클래스당 validation 이미지 수
+# TEST_COUNT = 2      # 클래스당 test 이미지 수
+
+TARGET_SIZE = (229, 229)
+NUM_AUG = 20        # 원본당 생성할 증강본 수
+VAL_COUNT = 4       # 클래스당 validation 이미지 수
+TEST_COUNT = 4      # 클래스당 test 이미지 수
 
 
 # -----------------------------
