@@ -19,20 +19,29 @@ from tensorflow.keras.regularizers import l2
 from tensorflow.keras.applications import EfficientNetB0
 from sklearn.metrics import classification_report, confusion_matrix
 import seaborn as sns
+# from IPython import get_ipython
+from tensorflow.keras.layers import BatchNormalization
+from tensorflow.keras.losses import CategoricalCrossentropy
+from tensorflow.keras.layers import (
+    Conv2D, Dense, Dropout,
+    GlobalAveragePooling2D, BatchNormalization
+)
+from tensorflow.keras.regularizers import l2
+from tensorflow.keras.applications import InceptionResNetV2
 
 # 2. 설정
 base_data_dir = '/content/data_by_class'  # train_by_dept, val_by_dept, test_by_dept 폴더가 이 아래에 있음
 img_size      = (224,224)
 input_shape   = img_size + (3,)
 batch_size    = 128
-style_dim     = 256
+style_dim     = 512 ########### 추가2
 epochs        = 300
 
 depts = [
     'American Paintings and Sculpture',
     'Drawings and Prints',
     'European Paintings',
-    'Robert Lehman Collection'
+    'Robert Lehma n Collection'
 ]
 
 # 3. SAFF 레이어 정의 (직렬화 등록)
@@ -85,9 +94,23 @@ def build_pretrained_style_model(input_shape, num_classes, style_dim):
 
     fused = SAFF(channels=feat.shape[-1], name='saff')(style_vec, feat)
 
-    x = GlobalAveragePooling2D(name='final_gap')(fused)
-    x = Dropout(0.5, name='dropout')(x)  ########## ← 추가
-    preds = Dense(num_classes, activation='softmax',kernel_regularizer=l2(1e-4),  name='predictions')(x) ########## ← L2 규제 추가
+    #### 추가3
+    x = Conv2D(256, 3, padding='same', activation='relu',
+              kernel_regularizer=l2(1e-4),
+              name='conv_saff')(fused)
+    x = BatchNormalization(name='bn_saff')(x)
+    x = Dropout(0.3, name='drop_saff')(x)
+
+    # 그다음 풀링 & Dense
+    x = GlobalAveragePooling2D(name='gap_final')(x)
+    x = BatchNormalization(name='bn_final')(x)
+    x = Dropout(0.5, name='drop_final')(x)
+    x = Dense(512, activation='relu',
+              kernel_regularizer=l2(1e-4),
+              name='fc_mid')(x)
+
+
+    preds = Dense(num_classes, activation='softmax',kernel_regularizer=l2(1e-4),  name='predictions')(x)
 
     return Model(inputs=base.input, outputs=[style_vec, preds], name='EfficientStyleModel')
 
