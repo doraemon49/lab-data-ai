@@ -107,3 +107,7 @@ for head in head_types:
 df = pd.DataFrame(results)
 df.to_csv('experiment3_head_results.csv', index=False)
 print("\nExperiment 3 (head structures) results:\n", df)
+
+print("Test")
+print("아무리 수정해도, git이 추적하지 않음.")
+print("staging이후")
