@@ -156,6 +156,7 @@
   <li><a href="https://doraemin.tistory.com/210" target="_blank">The limits of molecular signaturesfor pancreaticductal adenocarcinoma subtyping (PDAC)</a></li>
   <li><a href="https://doraemin.tistory.com/211" target="_blank">[CoT] Chain-of-Thought Prompting Elicits Reasoning in Large Language Models</a></li>
   <li><a href="https://doraemin.tistory.com/216" target="_blank">Isoform Function Prediction Using a Deep Neural Network</a></li>
+  <li><a href="https://doraemin.tistory.com/217" target="_blank">[DosaCNV] Deep multiple-instance learning accurately predicts gene haploinsufficiency and deletion pathogenicity</a></li>
 </ul>
 </details>
 <!--
