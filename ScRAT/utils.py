@@ -96,7 +96,14 @@ def mixups(args, data, p_idx, labels_, cell_type):
     ###################
     for idx, i in enumerate(p_idx):
         max_num_cells += (max(args.min_size - len(i), 0) + 100)
-    data_augmented = np.zeros([max_num_cells + (args.min_size + 100) * args.augment_num, data.shape[1]])
+    # data_augmented = np.zeros([max_num_cells + (args.min_size + 100) * args.augment_num, data.shape[1]])
+    data_augmented = np.zeros([max_num_cells + (args.min_size + 100) * args.augment_num, data.shape[1]], dtype=np.float32) # 수정 5
+
+    
+    # pca False ; 수정 3
+    if not isinstance(data, np.ndarray):
+        data = data.toarray()
+
     data_augmented[:data.shape[0]] = data
     last = data.shape[0]
     labels_augmented = copy.deepcopy(labels_)
@@ -125,10 +132,24 @@ def mixups(args, data, p_idx, labels_, cell_type):
                 id_1, id_2 = np.random.randint(len(p_idx_per_pheno[temp_label]), size=2)
                 idx_1, idx_2 = p_idx_per_pheno[temp_label][id_1], p_idx_per_pheno[temp_label][id_2]
             elif args.same_pheno == -1:
-                i_1, i_2 = np.random.choice(len(p_idx_per_pheno), 2, replace=False)
-                id_1 = np.random.randint(len(p_idx_per_pheno[i_1]))
-                id_2 = np.random.randint(len(p_idx_per_pheno[i_2]))
-                idx_1, idx_2 = p_idx_per_pheno[i_1][id_1], p_idx_per_pheno[i_2][id_2]
+                # 수정 4
+                # mixup 대상이 되는 class 종류가 2개 미만일 경우→ mixup 조건을 만족하지 못하는 split은 학습 자체를 건너뛰자
+                if len(p_idx_per_pheno.keys()) < 2:
+                    print("❌ Skipping mixup: not enough classes for same_pheno = -1")
+                    return None, None, None, None
+                label_keys = list(p_idx_per_pheno.keys())
+                i_1, i_2 = np.random.choice(len(label_keys), 2, replace=False)
+                label_1 = label_keys[i_1]
+                label_2 = label_keys[i_2]
+                id_1 = np.random.randint(len(p_idx_per_pheno[label_1]))
+                id_2 = np.random.randint(len(p_idx_per_pheno[label_2]))
+                idx_1 = p_idx_per_pheno[label_1][id_1]
+                idx_2 = p_idx_per_pheno[label_2][id_2]
+
+                # i_1, i_2 = np.random.choice(len(p_idx_per_pheno), 2, replace=False)
+                # id_1 = np.random.randint(len(p_idx_per_pheno[i_1]))
+                # id_2 = np.random.randint(len(p_idx_per_pheno[i_2]))
+                # idx_1, idx_2 = p_idx_per_pheno[i_1][id_1], p_idx_per_pheno[i_2][id_2]
             else:
                 id_1, id_2 = np.random.randint(len(p_idx), size=2)
                 idx_1, idx_2 = p_idx[id_1], p_idx[id_2]
