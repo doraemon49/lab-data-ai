@@ -1,0 +1,36 @@
+# 실행 방법은 아래와 같습니다.
+# 1. Setup
+git clone https://github.com/yuzhenmao/ScRAT
+cd ScRAT
+python -m venv scrat
+source scrat/bin/activate
+pip install -r requirements.txt
+
+# 2. PCA 추가
+# 데이터에 PCA를 추가하는 Python 코드를 실행합니다.
+# ※ 데이터 경로는 직접 수정해주셔야 합니다.
+pip install scanpy
+python data_check.py
+
+# 3.실행 코드 교체
+# dataloader.py와 main.py는 보내드린 파일로 교체해주세요.
+
+# 4-1. cardio 데이터 실행
+# ※ --dataset 경로는 수정해주셔야 합니다.
+python main.py --dataset /data/project/kim89/cardio_pca.h5ad --task custom_cardio
+
+# 4-2. covid 데이터 실행
+# ※ --dataset 경로는 수정해주셔야 합니다.
+python main.py --dataset /data/project/kim89/covid_pca.h5ad --task custom_covid
+
+
+
+### 에러 발생 시 참고
+# 'torchmetrics.utilities.imports' 에러 발생 시
+pip install torchmetrics==0.10.3
+
+# 'RuntimeError: CUDA error: no kernel image is available for execution on the device' 에러 발생 시
+# 현재 설치된 PyTorch 버전이 RTX 4090 GPU를 지원하지 않아서 발생한 에러
+pip install torch==2.0.1+cu118 torchvision==0.15.2+cu118 torchaudio==2.0.2 --extra-index-url https://download.pytorch.org/whl/cu118
+# pytorch_lightning==1.7.7이 최신 torch와 호환되는지 확인해야 합니다. 보통 1.13+ torch는 lightning 1.8 이상과 잘 맞습니다.
+pip install pytorch_lightning==1.9.0
