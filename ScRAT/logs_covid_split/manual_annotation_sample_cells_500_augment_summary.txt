@@ -1,0 +1,26 @@
+logs_covid_split/manual_annotation_sample_cells_500_augment.txt
+Best performance: Epoch 100, Loss 0.444877, Test ACC 0.666667, Test AUC 0.000000, Test Recall 0.666667, Test Precision 1.000000
+Best performance: Epoch 70, Loss 0.441977, Test ACC 0.500000, Test AUC 0.666667, Test Recall 1.000000, Test Precision 0.333333
+Best performance: Epoch 19, Loss 0.425272, Test ACC 1.000000, Test AUC 0.000000, Test Recall 0.000000, Test Precision 0.000000
+Best performance: Epoch 51, Loss 0.437136, Test ACC 1.000000, Test AUC 1.000000, Test Recall 1.000000, Test Precision 1.000000
+Best performance: Epoch 15, Loss 0.591440, Test ACC 0.600000, Test AUC 1.000000, Test Recall 1.000000, Test Precision 0.333333
+Best performance: Epoch 99, Loss 0.373308, Test ACC 0.666667, Test AUC 0.000000, Test Recall 0.666667, Test Precision 1.000000
+Best performance: Epoch 18, Loss 0.563417, Test ACC 0.571429, Test AUC 0.666667, Test Recall 0.333333, Test Precision 0.500000
+Best performance: Epoch 53, Loss 0.453803, Test ACC 1.000000, Test AUC 0.000000, Test Recall 0.000000, Test Precision 0.000000
+Best performance: Epoch 24, Loss 0.509676, Test ACC 1.000000, Test AUC 1.000000, Test Recall 1.000000, Test Precision 1.000000
+Best performance: Epoch 100, Loss 0.424275, Test ACC 0.500000, Test AUC 0.000000, Test Recall 0.666667, Test Precision 0.666667
+Best performance: Epoch 24, Loss 0.467041, Test ACC 0.500000, Test AUC 0.666667, Test Recall 0.666667, Test Precision 0.666667
+Best performance: Epoch 98, Loss 0.419151, Test ACC 1.000000, Test AUC 1.000000, Test Recall 1.000000, Test Precision 1.000000
+Best performance: Epoch 41, Loss 0.639413, Test ACC 0.400000, Test AUC 1.000000, Test Recall 1.000000, Test Precision 0.400000
+Best performance: Epoch 50, Loss 0.424673, Test ACC 0.666667, Test AUC 0.500000, Test Recall 0.500000, Test Precision 1.000000
+Best performance: Epoch 50, Loss 0.509558, Test ACC 0.750000, Test AUC 0.750000, Test Recall 0.500000, Test Precision 1.000000
+Best performance: Epoch 12, Loss 0.504324, Test ACC 1.000000, Test AUC 1.000000, Test Recall 1.000000, Test Precision 1.000000
+Best performance: Epoch 100, Loss 0.466711, Test ACC 0.500000, Test AUC 0.000000, Test Recall 0.000000, Test Precision 0.000000
+Best performance: Epoch 100, Loss 0.384415, Test ACC 0.500000, Test AUC 0.666667, Test Recall 1.000000, Test Precision 0.333333
+Best performance: Epoch 89, Loss 0.427287, Test ACC 0.571429, Test AUC 0.500000, Test Recall 0.500000, Test Precision 0.333333
+Best performance: Epoch 11, Loss 0.564544, Test ACC 1.000000, Test AUC 0.000000, Test Recall 0.000000, Test Precision 0.000000
+Best performance: Epoch 49, Loss 0.468405, Test ACC 0.250000, Test AUC 0.250000, Test Recall 0.000000, Test Precision 0.000000
+Best performance: Epoch 100, Loss 0.370396, Test ACC 1.000000, Test AUC 1.000000, Test Recall 1.000000, Test Precision 1.000000
+Best performance: Epoch 63, Loss 0.462464, Test ACC 1.000000, Test AUC 1.000000, Test Recall 1.000000, Test Precision 1.000000
+Best performance: Epoch 50, Loss 0.523198, Test ACC 0.500000, Test AUC 0.500000, Test Recall 1.000000, Test Precision 0.500000
+Best performance: Epoch 67, Loss 0.455979, Test ACC 0.600000, Test AUC 0.666667, Test Recall 0.666667, Test Precision 0.666667
