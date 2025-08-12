@@ -1,0 +1,3402 @@
+Namespace(seed=240, batch_size=16, learning_rate=0.0001, weight_decay=0.0001, epochs=100, task='custom_covid', emb_dim=8, h_dim=128, dropout=0.0, layers=1, heads=4, train_sample_cells=300, test_sample_cells=300, train_num_sample=20, test_num_sample=100, model='Transformer', dataset=None, inter_only=False, same_pheno=0, augment_num=0, alpha=1.0, repeat=5, all=1, min_size=6000, n_splits=5, pca=False, mix_type=1, norm_first=False, warmup=False, top_k=1)
+🔁 Repeat 0, Fold 0
+🔍 Split #1
+  → train_p_index 환자 수: 25
+  → test_p_index 환자 수: 7
+  → train 환자 ID: ['COVID19_Participant13', 'COVID19_Participant14', 'COVID19_Participant15', 'COVID19_Participant17', 'COVID19_Participant19', 'COVID19_Participant2', 'COVID19_Participant20', 'COVID19_Participant22', 'COVID19_Participant23', 'COVID19_Participant26', 'COVID19_Participant29', 'COVID19_Participant31', 'COVID19_Participant32', 'COVID19_Participant37', 'COVID19_Participant4', 'COVID19_Participant40', 'COVID19_Participant7', 'Control_Participant1', 'Control_Participant10', 'Control_Participant11', 'Control_Participant15', 'Control_Participant3', 'Control_Participant4', 'Control_Participant5', 'Control_Participant8']
+  → test  환자 ID: ['COVID19_Participant5', 'COVID19_Participant31', 'COVID19_Participant7', 'Control_Participant1', 'Control_Participant4', 'COVID19_Participant13', 'COVID19_Participant26']
+  → train 환자 ID 및 라벨:
+    ID: COVID19_Participant13, Label: 1
+    ID: COVID19_Participant14, Label: 1
+    ID: COVID19_Participant15, Label: 1
+    ID: COVID19_Participant17, Label: 1
+    ID: COVID19_Participant19, Label: 1
+    ID: COVID19_Participant2, Label: 1
+    ID: COVID19_Participant20, Label: 1
+    ID: COVID19_Participant22, Label: 1
+    ID: COVID19_Participant23, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: COVID19_Participant29, Label: 1
+    ID: COVID19_Participant31, Label: 1
+    ID: COVID19_Participant32, Label: 1
+    ID: COVID19_Participant37, Label: 1
+    ID: COVID19_Participant4, Label: 1
+    ID: COVID19_Participant40, Label: 1
+    ID: COVID19_Participant7, Label: 1
+    ID: Control_Participant1, Label: 0
+    ID: Control_Participant10, Label: 0
+    ID: Control_Participant11, Label: 0
+    ID: Control_Participant15, Label: 0
+    ID: Control_Participant3, Label: 0
+    ID: Control_Participant4, Label: 0
+    ID: Control_Participant5, Label: 0
+    ID: Control_Participant8, Label: 0
+  → test 환자 ID 및 라벨:
+    ID: COVID19_Participant5, Label: 1
+    ID: COVID19_Participant31, Label: 1
+    ID: COVID19_Participant7, Label: 1
+    ID: Control_Participant1, Label: 1
+    ID: Control_Participant4, Label: 1
+    ID: COVID19_Participant13, Label: 0
+    ID: COVID19_Participant26, Label: 0
+train_p_index_ 16
+valid_p_index 9
+test_p_index 7
+data augment 실행 안 함
+eval_p_index len:  16
+individual_train 16
+individual_eval 16
+train data의 x, y, id 길이: 16 16 16
+valid data의 x, y, id 길이: 9 9 9
+test data의 x, y, id 길이: 7 7 7
+output_class :  1
+Memory Allocated: 0.44 MB
+Memory Reserved: 2.00 MB
+cuda
+Epoch 1, Train Loss 0.588132, Valid_loss 0.734393
+Epoch 2, Train Loss 0.586688, Valid_loss 0.734408
+Epoch 3, Train Loss 0.585383, Valid_loss 0.734401
+Epoch 4, Train Loss 0.584204, Valid_loss 0.734352
+Epoch 5, Train Loss 0.583122, Valid_loss 0.734247
+Epoch 6, Train Loss 0.582102, Valid_loss 0.734067
+Epoch 7, Train Loss 0.581367, Valid_loss 0.733846
+Epoch 8, Train Loss 0.580890, Valid_loss 0.733603
+Epoch 9, Train Loss 0.580351, Valid_loss 0.733334
+Epoch 10, Train Loss 0.579788, Valid_loss 0.733063
+Epoch 11, Train Loss 0.579191, Valid_loss 0.732777
+Epoch 12, Train Loss 0.578564, Valid_loss 0.732469
+Epoch 13, Train Loss 0.577917, Valid_loss 0.732126
+Epoch 14, Train Loss 0.577259, Valid_loss 0.731734
+Epoch 15, Train Loss 0.576585, Valid_loss 0.731282
+Epoch 16, Train Loss 0.575895, Valid_loss 0.730765
+Epoch 17, Train Loss 0.575189, Valid_loss 0.730171
+Epoch 18, Train Loss 0.574464, Valid_loss 0.729493
+Epoch 19, Train Loss 0.573711, Valid_loss 0.728707
+Epoch 20, Train Loss 0.572975, Valid_loss 0.727753
+Epoch 21, Train Loss 0.572092, Valid_loss 0.726635
+Epoch 22, Train Loss 0.571105, Valid_loss 0.725367
+Epoch 23, Train Loss 0.570177, Valid_loss 0.724036
+Epoch 24, Train Loss 0.569227, Valid_loss 0.722622
+Epoch 25, Train Loss 0.568182, Valid_loss 0.720985
+Epoch 26, Train Loss 0.567117, Valid_loss 0.719164
+Epoch 27, Train Loss 0.566033, Valid_loss 0.717310
+Epoch 28, Train Loss 0.564929, Valid_loss 0.715444
+Epoch 29, Train Loss 0.563807, Valid_loss 0.713586
+Epoch 30, Train Loss 0.562671, Valid_loss 0.711755
+Epoch 31, Train Loss 0.561516, Valid_loss 0.709975
+Epoch 32, Train Loss 0.560347, Valid_loss 0.708197
+Epoch 33, Train Loss 0.559161, Valid_loss 0.706501
+Epoch 34, Train Loss 0.557957, Valid_loss 0.704895
+Epoch 35, Train Loss 0.556738, Valid_loss 0.703400
+Epoch 36, Train Loss 0.555509, Valid_loss 0.702017
+Epoch 37, Train Loss 0.554264, Valid_loss 0.700755
+Epoch 38, Train Loss 0.553001, Valid_loss 0.699603
+Epoch 39, Train Loss 0.551721, Valid_loss 0.698545
+Epoch 40, Train Loss 0.550419, Valid_loss 0.697570
+Epoch 41, Train Loss 0.549104, Valid_loss 0.696675
+Epoch 42, Train Loss 0.547653, Valid_loss 0.695811
+Epoch 43, Train Loss 0.546149, Valid_loss 0.694953
+Epoch 44, Train Loss 0.544612, Valid_loss 0.694094
+Epoch 45, Train Loss 0.543060, Valid_loss 0.693209
+Epoch 46, Train Loss 0.541498, Valid_loss 0.692226
+Epoch 47, Train Loss 0.539961, Valid_loss 0.691152
+Epoch 48, Train Loss 0.538396, Valid_loss 0.689973
+Epoch 49, Train Loss 0.536804, Valid_loss 0.688698
+Epoch 50, Train Loss 0.535181, Valid_loss 0.687336
+Epoch 51, Train Loss 0.533564, Valid_loss 0.686599
+Epoch 52, Train Loss 0.532744, Valid_loss 0.685829
+Epoch 53, Train Loss 0.531906, Valid_loss 0.685034
+Epoch 54, Train Loss 0.531054, Valid_loss 0.684185
+Epoch 55, Train Loss 0.530193, Valid_loss 0.683287
+Epoch 56, Train Loss 0.529322, Valid_loss 0.682348
+Epoch 57, Train Loss 0.528442, Valid_loss 0.681375
+Epoch 58, Train Loss 0.527556, Valid_loss 0.680376
+Epoch 59, Train Loss 0.526663, Valid_loss 0.679365
+Epoch 60, Train Loss 0.525776, Valid_loss 0.678345
+Epoch 61, Train Loss 0.524890, Valid_loss 0.677322
+Epoch 62, Train Loss 0.523995, Valid_loss 0.676306
+Epoch 63, Train Loss 0.523103, Valid_loss 0.675305
+Epoch 64, Train Loss 0.522200, Valid_loss 0.674323
+Epoch 65, Train Loss 0.521284, Valid_loss 0.673361
+Epoch 66, Train Loss 0.520498, Valid_loss 0.672643
+Epoch 67, Train Loss 0.519715, Valid_loss 0.672154
+Epoch 68, Train Loss 0.518922, Valid_loss 0.671870
+Epoch 69, Train Loss 0.518124, Valid_loss 0.671758
+Epoch 70, Train Loss 0.517324, Valid_loss 0.671776
+Epoch 71, Train Loss 0.516523, Valid_loss 0.671876
+COVID19_Participant5 -- true: COVID-19 -- pred: COVID-19
+COVID19_Participant31 -- true: COVID-19 -- pred: COVID-19
+COVID19_Participant7 -- true: COVID-19 -- pred: COVID-19
+Control_Participant1 -- true: normal -- pred: COVID-19
+Control_Participant4 -- true: normal -- pred: COVID-19
+COVID19_Participant13 -- true: COVID-19 -- pred: COVID-19
+COVID19_Participant26 -- true: COVID-19 -- pred: COVID-19
+true :  [1, 1, 1, 0, 0, 1, 1]
+pred :  [1, 1, 1, 1, 1, 1, 1]
+Confusion Matrix: [0 2 0 5]
+Best performance: Epoch 69, Loss 0.518124, Test ACC 0.714286, Test AUC 0.600000, Test Recall 1.000000, Test Precision 0.714286
+✅ Total valid splits used: 1
+🔁 Repeat 0, Fold 1
+🔍 Split #2
+  → train_p_index 환자 수: 27
+  → test_p_index 환자 수: 5
+  → train 환자 ID: ['COVID19_Participant11', 'COVID19_Participant13', 'COVID19_Participant14', 'COVID19_Participant17', 'COVID19_Participant19', 'COVID19_Participant2', 'COVID19_Participant20', 'COVID19_Participant22', 'COVID19_Participant23', 'COVID19_Participant25', 'COVID19_Participant26', 'COVID19_Participant28', 'COVID19_Participant29', 'COVID19_Participant37', 'COVID19_Participant39', 'COVID19_Participant4', 'COVID19_Participant40', 'COVID19_Participant7', 'COVID19_Participant8', 'Control_Participant1', 'Control_Participant10', 'Control_Participant11', 'Control_Participant4', 'Control_Participant5', 'Control_Participant7', 'Control_Participant8', 'Control_Participant9']
+  → test  환자 ID: ['Control_Participant5', 'Control_Participant7', 'Control_Participant4', 'COVID19_Participant19', 'Control_Participant7']
+  → train 환자 ID 및 라벨:
+    ID: COVID19_Participant11, Label: 1
+    ID: COVID19_Participant13, Label: 1
+    ID: COVID19_Participant14, Label: 1
+    ID: COVID19_Participant17, Label: 1
+    ID: COVID19_Participant19, Label: 1
+    ID: COVID19_Participant2, Label: 1
+    ID: COVID19_Participant20, Label: 1
+    ID: COVID19_Participant22, Label: 1
+    ID: COVID19_Participant23, Label: 1
+    ID: COVID19_Participant25, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: COVID19_Participant28, Label: 1
+    ID: COVID19_Participant29, Label: 1
+    ID: COVID19_Participant37, Label: 1
+    ID: COVID19_Participant39, Label: 1
+    ID: COVID19_Participant4, Label: 1
+    ID: COVID19_Participant40, Label: 1
+    ID: COVID19_Participant7, Label: 1
+    ID: COVID19_Participant8, Label: 1
+    ID: Control_Participant1, Label: 0
+    ID: Control_Participant10, Label: 0
+    ID: Control_Participant11, Label: 0
+    ID: Control_Participant4, Label: 0
+    ID: Control_Participant5, Label: 0
+    ID: Control_Participant7, Label: 0
+    ID: Control_Participant8, Label: 0
+    ID: Control_Participant9, Label: 0
+  → test 환자 ID 및 라벨:
+    ID: Control_Participant5, Label: 1
+    ID: Control_Participant7, Label: 1
+    ID: Control_Participant4, Label: 1
+    ID: COVID19_Participant19, Label: 0
+    ID: Control_Participant7, Label: 0
+train_p_index_ 18
+valid_p_index 9
+test_p_index 5
+data augment 실행 안 함
+eval_p_index len:  14
+individual_train 18
+individual_eval 14
+train data의 x, y, id 길이: 18 18 18
+valid data의 x, y, id 길이: 9 9 9
+test data의 x, y, id 길이: 5 5 5
+output_class :  1
+Memory Allocated: 16.69 MB
+Memory Reserved: 42.00 MB
+cuda
+Epoch 1, Train Loss 0.640321, Valid_loss 0.720549
+Epoch 2, Train Loss 0.667146, Valid_loss 0.720440
+Epoch 3, Train Loss 0.435617, Valid_loss 0.720904
+Epoch 4, Train Loss 0.647757, Valid_loss 0.721175
+Epoch 5, Train Loss 0.429832, Valid_loss 0.721183
+Epoch 6, Train Loss 0.433729, Valid_loss 0.721491
+Epoch 7, Train Loss 0.641376, Valid_loss 0.721703
+Epoch 8, Train Loss 0.429413, Valid_loss 0.721676
+Epoch 9, Train Loss 0.431065, Valid_loss 0.721777
+Epoch 10, Train Loss 0.644915, Valid_loss 0.721610
+Epoch 11, Train Loss 0.436383, Valid_loss 0.721058
+Epoch 12, Train Loss 0.432936, Valid_loss 0.720665
+Epoch 13, Train Loss 0.625376, Valid_loss 0.719603
+Epoch 14, Train Loss 0.420436, Valid_loss 0.718838
+Epoch 15, Train Loss 0.625086, Valid_loss 0.718221
+Epoch 16, Train Loss 0.413401, Valid_loss 0.717566
+Epoch 17, Train Loss 0.424122, Valid_loss 0.717078
+Epoch 18, Train Loss 0.417268, Valid_loss 0.716780
+Epoch 19, Train Loss 0.638305, Valid_loss 0.716587
+Epoch 20, Train Loss 0.419786, Valid_loss 0.716473
+Epoch 21, Train Loss 0.419382, Valid_loss 0.716437
+Epoch 22, Train Loss 0.431049, Valid_loss 0.716390
+Epoch 23, Train Loss 0.417339, Valid_loss 0.716293
+Epoch 24, Train Loss 0.620949, Valid_loss 0.715724
+Epoch 25, Train Loss 0.426037, Valid_loss 0.714740
+Epoch 26, Train Loss 0.418110, Valid_loss 0.713927
+Epoch 27, Train Loss 0.642207, Valid_loss 0.713241
+Epoch 28, Train Loss 0.407180, Valid_loss 0.712699
+Epoch 29, Train Loss 0.414188, Valid_loss 0.712274
+Epoch 30, Train Loss 0.407295, Valid_loss 0.711934
+Epoch 31, Train Loss 0.413891, Valid_loss 0.711565
+Epoch 32, Train Loss 0.411704, Valid_loss 0.710934
+Epoch 33, Train Loss 0.409026, Valid_loss 0.710071
+Epoch 34, Train Loss 0.415759, Valid_loss 0.709050
+Epoch 35, Train Loss 0.422498, Valid_loss 0.707929
+Epoch 36, Train Loss 0.417778, Valid_loss 0.707190
+Epoch 37, Train Loss 0.616194, Valid_loss 0.707313
+Epoch 38, Train Loss 0.619123, Valid_loss 0.707571
+Epoch 39, Train Loss 0.398049, Valid_loss 0.708259
+Epoch 40, Train Loss 0.411393, Valid_loss 0.708197
+Epoch 41, Train Loss 0.622642, Valid_loss 0.707394
+Epoch 42, Train Loss 0.607696, Valid_loss 0.705828
+Epoch 43, Train Loss 0.414723, Valid_loss 0.703124
+Epoch 44, Train Loss 0.400284, Valid_loss 0.700261
+Epoch 45, Train Loss 0.610202, Valid_loss 0.697209
+Epoch 46, Train Loss 0.631158, Valid_loss 0.693556
+Epoch 47, Train Loss 0.405074, Valid_loss 0.690821
+Epoch 48, Train Loss 0.563815, Valid_loss 0.689109
+Epoch 49, Train Loss 0.401283, Valid_loss 0.687703
+Epoch 50, Train Loss 0.601839, Valid_loss 0.689647
+Epoch 51, Train Loss 0.559215, Valid_loss 0.691356
+Epoch 52, Train Loss 0.557275, Valid_loss 0.692924
+Control_Participant5 -- true: normal -- pred: COVID-19
+Control_Participant7 -- true: normal -- pred: COVID-19
+Control_Participant4 -- true: normal -- pred: COVID-19
+COVID19_Participant19 -- true: COVID-19 -- pred: COVID-19
+Control_Participant7 -- true: normal -- pred: COVID-19
+true :  [0, 0, 0, 1, 0]
+pred :  [1, 1, 1, 1, 1]
+Confusion Matrix: [0 4 0 1]
+Best performance: Epoch 49, Loss 0.401283, Test ACC 0.200000, Test AUC 1.000000, Test Recall 1.000000, Test Precision 0.200000
+✅ Total valid splits used: 2
+🔁 Repeat 0, Fold 2
+🔍 Split #3
+  → train_p_index 환자 수: 26
+  → test_p_index 환자 수: 6
+  → train 환자 ID: ['COVID19_Participant11', 'COVID19_Participant13', 'COVID19_Participant15', 'COVID19_Participant17', 'COVID19_Participant19', 'COVID19_Participant20', 'COVID19_Participant22', 'COVID19_Participant25', 'COVID19_Participant26', 'COVID19_Participant28', 'COVID19_Participant29', 'COVID19_Participant31', 'COVID19_Participant32', 'COVID19_Participant37', 'COVID19_Participant39', 'COVID19_Participant40', 'COVID19_Participant7', 'COVID19_Participant8', 'Control_Participant1', 'Control_Participant10', 'Control_Participant15', 'Control_Participant3', 'Control_Participant5', 'Control_Participant7', 'Control_Participant8', 'Control_Participant9']
+  → test  환자 ID: ['Control_Participant7', 'Control_Participant5', 'COVID19_Participant26', 'COVID19_Participant26', 'COVID19_Participant13', 'Control_Participant7']
+  → train 환자 ID 및 라벨:
+    ID: COVID19_Participant11, Label: 1
+    ID: COVID19_Participant13, Label: 1
+    ID: COVID19_Participant15, Label: 1
+    ID: COVID19_Participant17, Label: 1
+    ID: COVID19_Participant19, Label: 1
+    ID: COVID19_Participant20, Label: 1
+    ID: COVID19_Participant22, Label: 1
+    ID: COVID19_Participant25, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: COVID19_Participant28, Label: 1
+    ID: COVID19_Participant29, Label: 1
+    ID: COVID19_Participant31, Label: 1
+    ID: COVID19_Participant32, Label: 1
+    ID: COVID19_Participant37, Label: 1
+    ID: COVID19_Participant39, Label: 1
+    ID: COVID19_Participant40, Label: 1
+    ID: COVID19_Participant7, Label: 1
+    ID: COVID19_Participant8, Label: 1
+    ID: Control_Participant1, Label: 0
+    ID: Control_Participant10, Label: 0
+    ID: Control_Participant15, Label: 0
+    ID: Control_Participant3, Label: 0
+    ID: Control_Participant5, Label: 0
+    ID: Control_Participant7, Label: 0
+    ID: Control_Participant8, Label: 0
+    ID: Control_Participant9, Label: 0
+  → test 환자 ID 및 라벨:
+    ID: Control_Participant7, Label: 1
+    ID: Control_Participant5, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: COVID19_Participant13, Label: 0
+    ID: Control_Participant7, Label: 0
+train_p_index_ 17
+valid_p_index 9
+test_p_index 6
+data augment 실행 안 함
+eval_p_index len:  15
+individual_train 17
+individual_eval 15
+train data의 x, y, id 길이: 17 17 17
+valid data의 x, y, id 길이: 9 9 9
+test data의 x, y, id 길이: 6 6 6
+output_class :  1
+Memory Allocated: 16.69 MB
+Memory Reserved: 42.00 MB
+cuda
+Epoch 1, Train Loss 0.783401, Valid_loss 0.688267
+Epoch 2, Train Loss 0.781249, Valid_loss 0.687671
+Epoch 3, Train Loss 0.768309, Valid_loss 0.686388
+Epoch 4, Train Loss 0.738186, Valid_loss 0.684837
+Epoch 5, Train Loss 0.672483, Valid_loss 0.682479
+Epoch 6, Train Loss 0.705949, Valid_loss 0.680159
+Epoch 7, Train Loss 0.681161, Valid_loss 0.678587
+Epoch 8, Train Loss 0.667726, Valid_loss 0.677805
+Epoch 9, Train Loss 0.656645, Valid_loss 0.678663
+Epoch 10, Train Loss 0.661460, Valid_loss 0.680529
+Epoch 11, Train Loss 0.657616, Valid_loss 0.682243
+Epoch 12, Train Loss 0.631063, Valid_loss 0.684345
+Epoch 13, Train Loss 0.619643, Valid_loss 0.687016
+Epoch 14, Train Loss 0.607571, Valid_loss 0.690237
+Epoch 15, Train Loss 0.584374, Valid_loss 0.693932
+Epoch 16, Train Loss 0.591040, Valid_loss 0.697519
+Epoch 17, Train Loss 0.579710, Valid_loss 0.701022
+Epoch 18, Train Loss 0.688349, Valid_loss 0.703944
+Epoch 19, Train Loss 0.557472, Valid_loss 0.706418
+Epoch 20, Train Loss 0.552817, Valid_loss 0.709228
+Epoch 21, Train Loss 0.705700, Valid_loss 0.712047
+Epoch 22, Train Loss 0.536169, Valid_loss 0.714231
+Epoch 23, Train Loss 0.697981, Valid_loss 0.715906
+Epoch 24, Train Loss 0.528796, Valid_loss 0.717031
+Epoch 25, Train Loss 0.545012, Valid_loss 0.718385
+Epoch 26, Train Loss 0.529971, Valid_loss 0.719937
+Epoch 27, Train Loss 0.540854, Valid_loss 0.721527
+Epoch 28, Train Loss 0.697080, Valid_loss 0.722435
+Epoch 29, Train Loss 0.534322, Valid_loss 0.722419
+Epoch 30, Train Loss 0.689634, Valid_loss 0.721697
+Epoch 31, Train Loss 0.543387, Valid_loss 0.720929
+Epoch 32, Train Loss 0.546964, Valid_loss 0.720793
+Epoch 33, Train Loss 0.522109, Valid_loss 0.721030
+Epoch 34, Train Loss 0.521021, Valid_loss 0.721411
+Epoch 35, Train Loss 0.686973, Valid_loss 0.721369
+Epoch 36, Train Loss 0.526389, Valid_loss 0.721052
+Epoch 37, Train Loss 0.534655, Valid_loss 0.721245
+Epoch 38, Train Loss 0.520028, Valid_loss 0.721733
+Epoch 39, Train Loss 0.674710, Valid_loss 0.721645
+Epoch 40, Train Loss 0.512772, Valid_loss 0.720779
+Epoch 41, Train Loss 0.511865, Valid_loss 0.719647
+Epoch 42, Train Loss 0.512653, Valid_loss 0.718704
+Epoch 43, Train Loss 0.534595, Valid_loss 0.718281
+Epoch 44, Train Loss 0.510504, Valid_loss 0.718309
+Epoch 45, Train Loss 0.509132, Valid_loss 0.718407
+Epoch 46, Train Loss 0.507947, Valid_loss 0.718537
+Epoch 47, Train Loss 0.514182, Valid_loss 0.718740
+Epoch 48, Train Loss 0.540824, Valid_loss 0.719239
+Epoch 49, Train Loss 0.506614, Valid_loss 0.719763
+Epoch 50, Train Loss 0.522561, Valid_loss 0.720392
+Epoch 51, Train Loss 0.505246, Valid_loss 0.720796
+Epoch 52, Train Loss 0.501531, Valid_loss 0.721142
+Control_Participant7 -- true: normal -- pred: normal
+Control_Participant5 -- true: normal -- pred: normal
+COVID19_Participant26 -- true: COVID-19 -- pred: COVID-19
+COVID19_Participant26 -- true: COVID-19 -- pred: COVID-19
+COVID19_Participant13 -- true: COVID-19 -- pred: COVID-19
+Control_Participant7 -- true: normal -- pred: normal
+true :  [0, 0, 1, 1, 1, 0]
+pred :  [0, 0, 1, 1, 1, 0]
+Confusion Matrix: [3 0 0 3]
+Best performance: Epoch 8, Loss 0.667726, Test ACC 1.000000, Test AUC 1.000000, Test Recall 1.000000, Test Precision 1.000000
+✅ Total valid splits used: 3
+🔁 Repeat 0, Fold 3
+🔍 Split #4
+  → train_p_index 환자 수: 25
+  → test_p_index 환자 수: 7
+  → train 환자 ID: ['COVID19_Participant11', 'COVID19_Participant13', 'COVID19_Participant14', 'COVID19_Participant15', 'COVID19_Participant17', 'COVID19_Participant2', 'COVID19_Participant22', 'COVID19_Participant23', 'COVID19_Participant25', 'COVID19_Participant28', 'COVID19_Participant31', 'COVID19_Participant32', 'COVID19_Participant37', 'COVID19_Participant39', 'COVID19_Participant4', 'COVID19_Participant40', 'COVID19_Participant8', 'Control_Participant1', 'Control_Participant10', 'Control_Participant11', 'Control_Participant15', 'Control_Participant3', 'Control_Participant4', 'Control_Participant7', 'Control_Participant9']
+  → test  환자 ID: ['Control_Participant12', 'Control_Participant3', 'Control_Participant7', 'COVID19_Participant11', 'COVID19_Participant13', 'COVID19_Participant13', 'COVID19_Participant25']
+  → train 환자 ID 및 라벨:
+    ID: COVID19_Participant11, Label: 1
+    ID: COVID19_Participant13, Label: 1
+    ID: COVID19_Participant14, Label: 1
+    ID: COVID19_Participant15, Label: 1
+    ID: COVID19_Participant17, Label: 1
+    ID: COVID19_Participant2, Label: 1
+    ID: COVID19_Participant22, Label: 1
+    ID: COVID19_Participant23, Label: 1
+    ID: COVID19_Participant25, Label: 1
+    ID: COVID19_Participant28, Label: 1
+    ID: COVID19_Participant31, Label: 1
+    ID: COVID19_Participant32, Label: 1
+    ID: COVID19_Participant37, Label: 1
+    ID: COVID19_Participant39, Label: 1
+    ID: COVID19_Participant4, Label: 1
+    ID: COVID19_Participant40, Label: 1
+    ID: COVID19_Participant8, Label: 1
+    ID: Control_Participant1, Label: 0
+    ID: Control_Participant10, Label: 0
+    ID: Control_Participant11, Label: 0
+    ID: Control_Participant15, Label: 0
+    ID: Control_Participant3, Label: 0
+    ID: Control_Participant4, Label: 0
+    ID: Control_Participant7, Label: 0
+    ID: Control_Participant9, Label: 0
+  → test 환자 ID 및 라벨:
+    ID: Control_Participant12, Label: 1
+    ID: Control_Participant3, Label: 1
+    ID: Control_Participant7, Label: 1
+    ID: COVID19_Participant11, Label: 1
+    ID: COVID19_Participant13, Label: 1
+    ID: COVID19_Participant13, Label: 0
+    ID: COVID19_Participant25, Label: 0
+train_p_index_ 16
+valid_p_index 9
+test_p_index 7
+data augment 실행 안 함
+eval_p_index len:  16
+individual_train 16
+individual_eval 16
+train data의 x, y, id 길이: 16 16 16
+valid data의 x, y, id 길이: 9 9 9
+test data의 x, y, id 길이: 7 7 7
+output_class :  1
+Memory Allocated: 16.69 MB
+Memory Reserved: 42.00 MB
+cuda
+Epoch 1, Train Loss 0.577017, Valid_loss 0.696345
+Epoch 2, Train Loss 0.574965, Valid_loss 0.696576
+Epoch 3, Train Loss 0.572918, Valid_loss 0.696842
+Epoch 4, Train Loss 0.570850, Valid_loss 0.697149
+Epoch 5, Train Loss 0.568664, Valid_loss 0.697490
+Epoch 6, Train Loss 0.566448, Valid_loss 0.697647
+Epoch 7, Train Loss 0.564267, Valid_loss 0.697698
+Epoch 8, Train Loss 0.562129, Valid_loss 0.697783
+Epoch 9, Train Loss 0.560037, Valid_loss 0.697897
+Epoch 10, Train Loss 0.558118, Valid_loss 0.698025
+Epoch 11, Train Loss 0.556310, Valid_loss 0.698095
+Epoch 12, Train Loss 0.554541, Valid_loss 0.698283
+Epoch 13, Train Loss 0.552803, Valid_loss 0.698625
+Epoch 14, Train Loss 0.551091, Valid_loss 0.699039
+Epoch 15, Train Loss 0.549384, Valid_loss 0.699442
+Epoch 16, Train Loss 0.547596, Valid_loss 0.699826
+Epoch 17, Train Loss 0.545811, Valid_loss 0.700423
+Epoch 18, Train Loss 0.544025, Valid_loss 0.701241
+Epoch 19, Train Loss 0.542266, Valid_loss 0.702056
+Epoch 20, Train Loss 0.540482, Valid_loss 0.703034
+Epoch 21, Train Loss 0.538668, Valid_loss 0.703907
+Epoch 22, Train Loss 0.536868, Valid_loss 0.704196
+Epoch 23, Train Loss 0.535050, Valid_loss 0.704374
+Epoch 24, Train Loss 0.533199, Valid_loss 0.704394
+Epoch 25, Train Loss 0.531341, Valid_loss 0.704271
+Epoch 26, Train Loss 0.529521, Valid_loss 0.704040
+Epoch 27, Train Loss 0.527664, Valid_loss 0.703705
+Epoch 28, Train Loss 0.525808, Valid_loss 0.703322
+Epoch 29, Train Loss 0.524126, Valid_loss 0.702841
+Epoch 30, Train Loss 0.522388, Valid_loss 0.702265
+Epoch 31, Train Loss 0.520622, Valid_loss 0.701520
+Epoch 32, Train Loss 0.518844, Valid_loss 0.700610
+Epoch 33, Train Loss 0.517056, Valid_loss 0.699547
+Epoch 34, Train Loss 0.515231, Valid_loss 0.698346
+Epoch 35, Train Loss 0.513376, Valid_loss 0.697026
+Epoch 36, Train Loss 0.511495, Valid_loss 0.695599
+Epoch 37, Train Loss 0.509713, Valid_loss 0.694118
+Epoch 38, Train Loss 0.507959, Valid_loss 0.692595
+Epoch 39, Train Loss 0.506185, Valid_loss 0.691043
+Epoch 40, Train Loss 0.504424, Valid_loss 0.689462
+Epoch 41, Train Loss 0.502703, Valid_loss 0.687980
+Epoch 42, Train Loss 0.500981, Valid_loss 0.686605
+Epoch 43, Train Loss 0.499228, Valid_loss 0.685337
+Epoch 44, Train Loss 0.497445, Valid_loss 0.684185
+Epoch 45, Train Loss 0.495630, Valid_loss 0.683151
+Epoch 46, Train Loss 0.493819, Valid_loss 0.682232
+Epoch 47, Train Loss 0.492015, Valid_loss 0.681292
+Epoch 48, Train Loss 0.490190, Valid_loss 0.680384
+Epoch 49, Train Loss 0.488380, Valid_loss 0.679459
+Epoch 50, Train Loss 0.486550, Valid_loss 0.678520
+Epoch 51, Train Loss 0.484701, Valid_loss 0.678051
+Epoch 52, Train Loss 0.483792, Valid_loss 0.677669
+Epoch 53, Train Loss 0.482872, Valid_loss 0.677369
+Epoch 54, Train Loss 0.481935, Valid_loss 0.677144
+Epoch 55, Train Loss 0.480985, Valid_loss 0.676903
+Epoch 56, Train Loss 0.480051, Valid_loss 0.676638
+Epoch 57, Train Loss 0.479126, Valid_loss 0.676352
+Epoch 58, Train Loss 0.478194, Valid_loss 0.676048
+Epoch 59, Train Loss 0.477267, Valid_loss 0.675819
+Epoch 60, Train Loss 0.476330, Valid_loss 0.675656
+Epoch 61, Train Loss 0.475395, Valid_loss 0.675462
+Epoch 62, Train Loss 0.474459, Valid_loss 0.675240
+Epoch 63, Train Loss 0.473517, Valid_loss 0.674991
+Epoch 64, Train Loss 0.472567, Valid_loss 0.674717
+Epoch 65, Train Loss 0.471627, Valid_loss 0.674518
+Epoch 66, Train Loss 0.470680, Valid_loss 0.674387
+Epoch 67, Train Loss 0.469720, Valid_loss 0.674219
+Epoch 68, Train Loss 0.468770, Valid_loss 0.674015
+Epoch 69, Train Loss 0.467816, Valid_loss 0.673883
+Epoch 70, Train Loss 0.466861, Valid_loss 0.673710
+Epoch 71, Train Loss 0.465901, Valid_loss 0.673500
+Epoch 72, Train Loss 0.464944, Valid_loss 0.673364
+Epoch 73, Train Loss 0.463977, Valid_loss 0.673296
+Epoch 74, Train Loss 0.463017, Valid_loss 0.673181
+Epoch 75, Train Loss 0.462053, Valid_loss 0.672957
+Epoch 76, Train Loss 0.461080, Valid_loss 0.672648
+Epoch 77, Train Loss 0.460099, Valid_loss 0.672295
+Epoch 78, Train Loss 0.459138, Valid_loss 0.672028
+Epoch 79, Train Loss 0.458164, Valid_loss 0.671841
+Epoch 80, Train Loss 0.457176, Valid_loss 0.671725
+Epoch 81, Train Loss 0.456179, Valid_loss 0.671545
+Epoch 82, Train Loss 0.455197, Valid_loss 0.671305
+Epoch 83, Train Loss 0.454213, Valid_loss 0.671237
+Epoch 84, Train Loss 0.453235, Valid_loss 0.671298
+Epoch 85, Train Loss 0.452241, Valid_loss 0.671464
+Control_Participant12 -- true: normal -- pred: COVID-19
+Control_Participant3 -- true: normal -- pred: COVID-19
+Control_Participant7 -- true: normal -- pred: COVID-19
+COVID19_Participant11 -- true: COVID-19 -- pred: COVID-19
+COVID19_Participant13 -- true: COVID-19 -- pred: COVID-19
+COVID19_Participant13 -- true: COVID-19 -- pred: COVID-19
+COVID19_Participant25 -- true: COVID-19 -- pred: COVID-19
+true :  [0, 0, 0, 1, 1, 1, 1]
+pred :  [1, 1, 1, 1, 1, 1, 1]
+Confusion Matrix: [0 3 0 4]
+Best performance: Epoch 83, Loss 0.454213, Test ACC 0.571429, Test AUC 1.000000, Test Recall 1.000000, Test Precision 0.571429
+✅ Total valid splits used: 4
+🔁 Repeat 0, Fold 4
+🔍 Split #5
+  → train_p_index 환자 수: 25
+  → test_p_index 환자 수: 7
+  → train 환자 ID: ['COVID19_Participant11', 'COVID19_Participant14', 'COVID19_Participant15', 'COVID19_Participant19', 'COVID19_Participant2', 'COVID19_Participant20', 'COVID19_Participant23', 'COVID19_Participant25', 'COVID19_Participant26', 'COVID19_Participant28', 'COVID19_Participant29', 'COVID19_Participant31', 'COVID19_Participant32', 'COVID19_Participant39', 'COVID19_Participant4', 'COVID19_Participant7', 'COVID19_Participant8', 'Control_Participant11', 'Control_Participant15', 'Control_Participant3', 'Control_Participant4', 'Control_Participant5', 'Control_Participant7', 'Control_Participant8', 'Control_Participant9']
+  → test  환자 ID: ['Control_Participant7', 'Control_Participant5', 'Control_Participant3', 'COVID19_Participant25', 'COVID19_Participant11', 'Control_Participant7', 'Control_Participant12']
+  → train 환자 ID 및 라벨:
+    ID: COVID19_Participant11, Label: 1
+    ID: COVID19_Participant14, Label: 1
+    ID: COVID19_Participant15, Label: 1
+    ID: COVID19_Participant19, Label: 1
+    ID: COVID19_Participant2, Label: 1
+    ID: COVID19_Participant20, Label: 1
+    ID: COVID19_Participant23, Label: 1
+    ID: COVID19_Participant25, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: COVID19_Participant28, Label: 1
+    ID: COVID19_Participant29, Label: 1
+    ID: COVID19_Participant31, Label: 1
+    ID: COVID19_Participant32, Label: 1
+    ID: COVID19_Participant39, Label: 1
+    ID: COVID19_Participant4, Label: 1
+    ID: COVID19_Participant7, Label: 1
+    ID: COVID19_Participant8, Label: 1
+    ID: Control_Participant11, Label: 0
+    ID: Control_Participant15, Label: 0
+    ID: Control_Participant3, Label: 0
+    ID: Control_Participant4, Label: 0
+    ID: Control_Participant5, Label: 0
+    ID: Control_Participant7, Label: 0
+    ID: Control_Participant8, Label: 0
+    ID: Control_Participant9, Label: 0
+  → test 환자 ID 및 라벨:
+    ID: Control_Participant7, Label: 1
+    ID: Control_Participant5, Label: 1
+    ID: Control_Participant3, Label: 1
+    ID: COVID19_Participant25, Label: 1
+    ID: COVID19_Participant11, Label: 1
+    ID: Control_Participant7, Label: 0
+    ID: Control_Participant12, Label: 0
+train_p_index_ 16
+valid_p_index 9
+test_p_index 7
+data augment 실행 안 함
+eval_p_index len:  16
+individual_train 16
+individual_eval 16
+train data의 x, y, id 길이: 16 16 16
+valid data의 x, y, id 길이: 9 9 9
+test data의 x, y, id 길이: 7 7 7
+output_class :  1
+Memory Allocated: 16.69 MB
+Memory Reserved: 42.00 MB
+cuda
+Epoch 1, Train Loss 0.574177, Valid_loss 0.684680
+Epoch 2, Train Loss 0.571038, Valid_loss 0.685328
+Epoch 3, Train Loss 0.568112, Valid_loss 0.684939
+Epoch 4, Train Loss 0.565200, Valid_loss 0.683110
+Epoch 5, Train Loss 0.562147, Valid_loss 0.679949
+Epoch 6, Train Loss 0.558846, Valid_loss 0.675557
+Epoch 7, Train Loss 0.555214, Valid_loss 0.670009
+Epoch 8, Train Loss 0.551206, Valid_loss 0.663397
+Epoch 9, Train Loss 0.546822, Valid_loss 0.657588
+Epoch 10, Train Loss 0.542107, Valid_loss 0.651041
+Epoch 11, Train Loss 0.537167, Valid_loss 0.644023
+Epoch 12, Train Loss 0.532236, Valid_loss 0.639141
+Epoch 13, Train Loss 0.529735, Valid_loss 0.636554
+Epoch 14, Train Loss 0.527448, Valid_loss 0.634855
+Epoch 15, Train Loss 0.525067, Valid_loss 0.633898
+Epoch 16, Train Loss 0.522685, Valid_loss 0.633750
+Epoch 17, Train Loss 0.520193, Valid_loss 0.634333
+Epoch 18, Train Loss 0.517649, Valid_loss 0.634945
+Epoch 19, Train Loss 0.515092, Valid_loss 0.635551
+Epoch 20, Train Loss 0.512552, Valid_loss 0.636183
+Epoch 21, Train Loss 0.510672, Valid_loss 0.637520
+Epoch 22, Train Loss 0.509211, Valid_loss 0.638330
+Epoch 23, Train Loss 0.507923, Valid_loss 0.638446
+Epoch 24, Train Loss 0.506647, Valid_loss 0.638673
+Epoch 25, Train Loss 0.505366, Valid_loss 0.638981
+Epoch 26, Train Loss 0.504067, Valid_loss 0.639346
+Epoch 27, Train Loss 0.502741, Valid_loss 0.639748
+Epoch 28, Train Loss 0.501390, Valid_loss 0.640178
+Epoch 29, Train Loss 0.500016, Valid_loss 0.640702
+Epoch 30, Train Loss 0.498837, Valid_loss 0.640997
+Epoch 31, Train Loss 0.497626, Valid_loss 0.640884
+Epoch 32, Train Loss 0.496396, Valid_loss 0.640374
+Epoch 33, Train Loss 0.495162, Valid_loss 0.639590
+Epoch 34, Train Loss 0.494001, Valid_loss 0.637905
+Epoch 35, Train Loss 0.492723, Valid_loss 0.636051
+Epoch 36, Train Loss 0.491528, Valid_loss 0.634084
+Epoch 37, Train Loss 0.490350, Valid_loss 0.632061
+Epoch 38, Train Loss 0.489190, Valid_loss 0.630055
+Epoch 39, Train Loss 0.488049, Valid_loss 0.628118
+Epoch 40, Train Loss 0.486925, Valid_loss 0.626316
+Epoch 41, Train Loss 0.485812, Valid_loss 0.624689
+Epoch 42, Train Loss 0.484707, Valid_loss 0.623275
+Epoch 43, Train Loss 0.483608, Valid_loss 0.622140
+Epoch 44, Train Loss 0.482512, Valid_loss 0.621303
+Epoch 45, Train Loss 0.481420, Valid_loss 0.620696
+Epoch 46, Train Loss 0.480336, Valid_loss 0.620333
+Epoch 47, Train Loss 0.479261, Valid_loss 0.620189
+Epoch 48, Train Loss 0.478199, Valid_loss 0.620237
+Epoch 49, Train Loss 0.477082, Valid_loss 0.619827
+Epoch 50, Train Loss 0.475942, Valid_loss 0.619046
+Epoch 51, Train Loss 0.474795, Valid_loss 0.618505
+Epoch 52, Train Loss 0.474222, Valid_loss 0.617842
+Epoch 53, Train Loss 0.473647, Valid_loss 0.617085
+Epoch 54, Train Loss 0.473077, Valid_loss 0.616260
+Epoch 55, Train Loss 0.472512, Valid_loss 0.615423
+Epoch 56, Train Loss 0.471956, Valid_loss 0.614601
+Epoch 57, Train Loss 0.471411, Valid_loss 0.613791
+Epoch 58, Train Loss 0.470877, Valid_loss 0.613011
+Epoch 59, Train Loss 0.470354, Valid_loss 0.612278
+Epoch 60, Train Loss 0.469843, Valid_loss 0.611608
+Epoch 61, Train Loss 0.469343, Valid_loss 0.611009
+Epoch 62, Train Loss 0.468852, Valid_loss 0.610487
+Epoch 63, Train Loss 0.468370, Valid_loss 0.610043
+Epoch 64, Train Loss 0.467895, Valid_loss 0.609686
+Epoch 65, Train Loss 0.467426, Valid_loss 0.609415
+Epoch 66, Train Loss 0.466962, Valid_loss 0.609230
+Epoch 67, Train Loss 0.466502, Valid_loss 0.609130
+Epoch 68, Train Loss 0.466047, Valid_loss 0.609109
+Epoch 69, Train Loss 0.465595, Valid_loss 0.609162
+Epoch 70, Train Loss 0.465146, Valid_loss 0.609283
+Control_Participant7 -- true: normal -- pred: COVID-19
+Control_Participant5 -- true: normal -- pred: normal
+Control_Participant3 -- true: normal -- pred: normal
+COVID19_Participant25 -- true: COVID-19 -- pred: COVID-19
+COVID19_Participant11 -- true: COVID-19 -- pred: COVID-19
+Control_Participant7 -- true: normal -- pred: COVID-19
+Control_Participant12 -- true: normal -- pred: COVID-19
+true :  [0, 0, 0, 1, 1, 0, 0]
+pred :  [1, 0, 0, 1, 1, 1, 1]
+Confusion Matrix: [2 3 0 2]
+Best performance: Epoch 68, Loss 0.466047, Test ACC 0.571429, Test AUC 0.700000, Test Recall 1.000000, Test Precision 0.400000
+✅ Total valid splits used: 5
+
+📌 Repeat 0: 평균 AUC = 0.8600, 표준편차 = 0.1744
+🔁 Repeat 1, Fold 0
+🔍 Split #1
+  → train_p_index 환자 수: 24
+  → test_p_index 환자 수: 8
+  → train 환자 ID: ['COVID19_Participant13', 'COVID19_Participant14', 'COVID19_Participant15', 'COVID19_Participant17', 'COVID19_Participant19', 'COVID19_Participant20', 'COVID19_Participant22', 'COVID19_Participant26', 'COVID19_Participant28', 'COVID19_Participant29', 'COVID19_Participant31', 'COVID19_Participant32', 'COVID19_Participant39', 'COVID19_Participant4', 'COVID19_Participant40', 'COVID19_Participant8', 'Control_Participant1', 'Control_Participant10', 'Control_Participant11', 'Control_Participant15', 'Control_Participant3', 'Control_Participant4', 'Control_Participant7', 'Control_Participant8']
+  → test  환자 ID: ['COVID19_Participant31', 'Control_Participant3', 'Control_Participant1', 'Control_Participant7', 'COVID19_Participant26', 'Control_Participant7', 'COVID19_Participant13', 'COVID19_Participant5']
+  → train 환자 ID 및 라벨:
+    ID: COVID19_Participant13, Label: 1
+    ID: COVID19_Participant14, Label: 1
+    ID: COVID19_Participant15, Label: 1
+    ID: COVID19_Participant17, Label: 1
+    ID: COVID19_Participant19, Label: 1
+    ID: COVID19_Participant20, Label: 1
+    ID: COVID19_Participant22, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: COVID19_Participant28, Label: 1
+    ID: COVID19_Participant29, Label: 1
+    ID: COVID19_Participant31, Label: 1
+    ID: COVID19_Participant32, Label: 1
+    ID: COVID19_Participant39, Label: 1
+    ID: COVID19_Participant4, Label: 1
+    ID: COVID19_Participant40, Label: 1
+    ID: COVID19_Participant8, Label: 1
+    ID: Control_Participant1, Label: 0
+    ID: Control_Participant10, Label: 0
+    ID: Control_Participant11, Label: 0
+    ID: Control_Participant15, Label: 0
+    ID: Control_Participant3, Label: 0
+    ID: Control_Participant4, Label: 0
+    ID: Control_Participant7, Label: 0
+    ID: Control_Participant8, Label: 0
+  → test 환자 ID 및 라벨:
+    ID: COVID19_Participant31, Label: 1
+    ID: Control_Participant3, Label: 1
+    ID: Control_Participant1, Label: 1
+    ID: Control_Participant7, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: Control_Participant7, Label: 1
+    ID: COVID19_Participant13, Label: 0
+    ID: COVID19_Participant5, Label: 0
+train_p_index_ 16
+valid_p_index 8
+test_p_index 8
+data augment 실행 안 함
+eval_p_index len:  16
+individual_train 16
+individual_eval 16
+train data의 x, y, id 길이: 16 16 16
+valid data의 x, y, id 길이: 8 8 8
+test data의 x, y, id 길이: 8 8 8
+output_class :  1
+Memory Allocated: 16.69 MB
+Memory Reserved: 42.00 MB
+cuda
+Epoch 1, Train Loss 0.561493, Valid_loss 0.731656
+Epoch 2, Train Loss 0.556033, Valid_loss 0.732384
+Epoch 3, Train Loss 0.551694, Valid_loss 0.730447
+Epoch 4, Train Loss 0.547944, Valid_loss 0.727300
+Epoch 5, Train Loss 0.544125, Valid_loss 0.723765
+Epoch 6, Train Loss 0.540573, Valid_loss 0.720118
+Epoch 7, Train Loss 0.537234, Valid_loss 0.716033
+Epoch 8, Train Loss 0.533823, Valid_loss 0.711844
+Epoch 9, Train Loss 0.530371, Valid_loss 0.707163
+Epoch 10, Train Loss 0.526836, Valid_loss 0.702237
+Epoch 11, Train Loss 0.523311, Valid_loss 0.696858
+Epoch 12, Train Loss 0.519737, Valid_loss 0.690992
+Epoch 13, Train Loss 0.516139, Valid_loss 0.685152
+Epoch 14, Train Loss 0.512606, Valid_loss 0.679188
+Epoch 15, Train Loss 0.509193, Valid_loss 0.673705
+Epoch 16, Train Loss 0.505925, Valid_loss 0.669573
+Epoch 17, Train Loss 0.502894, Valid_loss 0.665852
+Epoch 18, Train Loss 0.499933, Valid_loss 0.662296
+Epoch 19, Train Loss 0.497087, Valid_loss 0.658884
+Epoch 20, Train Loss 0.494341, Valid_loss 0.655572
+Epoch 21, Train Loss 0.491661, Valid_loss 0.652315
+Epoch 22, Train Loss 0.488757, Valid_loss 0.648805
+Epoch 23, Train Loss 0.486055, Valid_loss 0.645531
+Epoch 24, Train Loss 0.483298, Valid_loss 0.642250
+Epoch 25, Train Loss 0.480585, Valid_loss 0.639996
+Epoch 26, Train Loss 0.478010, Valid_loss 0.637909
+Epoch 27, Train Loss 0.475584, Valid_loss 0.636409
+Epoch 28, Train Loss 0.473245, Valid_loss 0.634889
+Epoch 29, Train Loss 0.470914, Valid_loss 0.633226
+Epoch 30, Train Loss 0.468578, Valid_loss 0.631404
+Epoch 31, Train Loss 0.466227, Valid_loss 0.629441
+Epoch 32, Train Loss 0.463855, Valid_loss 0.627254
+Epoch 33, Train Loss 0.461586, Valid_loss 0.624988
+Epoch 34, Train Loss 0.459341, Valid_loss 0.622701
+Epoch 35, Train Loss 0.457085, Valid_loss 0.620510
+Epoch 36, Train Loss 0.454832, Valid_loss 0.618483
+Epoch 37, Train Loss 0.452597, Valid_loss 0.616624
+Epoch 38, Train Loss 0.450499, Valid_loss 0.614995
+Epoch 39, Train Loss 0.448394, Valid_loss 0.613543
+Epoch 40, Train Loss 0.446276, Valid_loss 0.612226
+Epoch 41, Train Loss 0.444117, Valid_loss 0.611086
+Epoch 42, Train Loss 0.441958, Valid_loss 0.610011
+Epoch 43, Train Loss 0.439900, Valid_loss 0.608685
+Epoch 44, Train Loss 0.437933, Valid_loss 0.607142
+Epoch 45, Train Loss 0.435936, Valid_loss 0.605514
+Epoch 46, Train Loss 0.434019, Valid_loss 0.603832
+Epoch 47, Train Loss 0.432159, Valid_loss 0.602068
+Epoch 48, Train Loss 0.430301, Valid_loss 0.600246
+Epoch 49, Train Loss 0.428437, Valid_loss 0.598380
+Epoch 50, Train Loss 0.426565, Valid_loss 0.596479
+Epoch 51, Train Loss 0.424746, Valid_loss 0.595562
+Epoch 52, Train Loss 0.423854, Valid_loss 0.594749
+Epoch 53, Train Loss 0.422957, Valid_loss 0.593988
+Epoch 54, Train Loss 0.422053, Valid_loss 0.593284
+Epoch 55, Train Loss 0.421211, Valid_loss 0.592624
+Epoch 56, Train Loss 0.420405, Valid_loss 0.591934
+Epoch 57, Train Loss 0.419568, Valid_loss 0.591206
+Epoch 58, Train Loss 0.418698, Valid_loss 0.590442
+Epoch 59, Train Loss 0.417863, Valid_loss 0.589749
+Epoch 60, Train Loss 0.417059, Valid_loss 0.589100
+Epoch 61, Train Loss 0.416251, Valid_loss 0.588487
+Epoch 62, Train Loss 0.415442, Valid_loss 0.587906
+Epoch 63, Train Loss 0.414631, Valid_loss 0.587357
+Epoch 64, Train Loss 0.413821, Valid_loss 0.586837
+Epoch 65, Train Loss 0.413013, Valid_loss 0.586346
+Epoch 66, Train Loss 0.412275, Valid_loss 0.585816
+Epoch 67, Train Loss 0.411456, Valid_loss 0.585326
+Epoch 68, Train Loss 0.410726, Valid_loss 0.584951
+Epoch 69, Train Loss 0.409983, Valid_loss 0.584685
+Epoch 70, Train Loss 0.409246, Valid_loss 0.584436
+Epoch 71, Train Loss 0.408516, Valid_loss 0.584201
+Epoch 72, Train Loss 0.407771, Valid_loss 0.583970
+Epoch 73, Train Loss 0.407043, Valid_loss 0.583837
+Epoch 74, Train Loss 0.406316, Valid_loss 0.583796
+Epoch 75, Train Loss 0.405571, Valid_loss 0.583738
+Epoch 76, Train Loss 0.404848, Valid_loss 0.583656
+Epoch 77, Train Loss 0.404144, Valid_loss 0.583678
+Epoch 78, Train Loss 0.403459, Valid_loss 0.583670
+Epoch 79, Train Loss 0.402763, Valid_loss 0.583632
+Epoch 80, Train Loss 0.402061, Valid_loss 0.583677
+Epoch 81, Train Loss 0.401377, Valid_loss 0.583800
+COVID19_Participant31 -- true: COVID-19 -- pred: COVID-19
+Control_Participant3 -- true: normal -- pred: normal
+Control_Participant1 -- true: normal -- pred: normal
+Control_Participant7 -- true: normal -- pred: normal
+COVID19_Participant26 -- true: COVID-19 -- pred: COVID-19
+Control_Participant7 -- true: normal -- pred: normal
+COVID19_Participant13 -- true: COVID-19 -- pred: COVID-19
+COVID19_Participant5 -- true: COVID-19 -- pred: COVID-19
+true :  [1, 0, 0, 0, 1, 0, 1, 1]
+pred :  [1, 0, 0, 0, 1, 0, 1, 1]
+Confusion Matrix: [4 0 0 4]
+Best performance: Epoch 79, Loss 0.402763, Test ACC 1.000000, Test AUC 1.000000, Test Recall 1.000000, Test Precision 1.000000
+✅ Total valid splits used: 1
+🔁 Repeat 1, Fold 1
+🔍 Split #2
+  → train_p_index 환자 수: 25
+  → test_p_index 환자 수: 7
+  → train 환자 ID: ['COVID19_Participant11', 'COVID19_Participant13', 'COVID19_Participant14', 'COVID19_Participant15', 'COVID19_Participant2', 'COVID19_Participant20', 'COVID19_Participant23', 'COVID19_Participant25', 'COVID19_Participant28', 'COVID19_Participant31', 'COVID19_Participant32', 'COVID19_Participant37', 'COVID19_Participant39', 'COVID19_Participant4', 'COVID19_Participant40', 'COVID19_Participant7', 'COVID19_Participant8', 'Control_Participant1', 'Control_Participant10', 'Control_Participant11', 'Control_Participant15', 'Control_Participant4', 'Control_Participant5', 'Control_Participant8', 'Control_Participant9']
+  → test  환자 ID: ['Control_Participant1', 'Control_Participant5', 'COVID19_Participant8', 'COVID19_Participant31', 'Control_Participant10', 'Control_Participant4', 'COVID19_Participant13']
+  → train 환자 ID 및 라벨:
+    ID: COVID19_Participant11, Label: 1
+    ID: COVID19_Participant13, Label: 1
+    ID: COVID19_Participant14, Label: 1
+    ID: COVID19_Participant15, Label: 1
+    ID: COVID19_Participant2, Label: 1
+    ID: COVID19_Participant20, Label: 1
+    ID: COVID19_Participant23, Label: 1
+    ID: COVID19_Participant25, Label: 1
+    ID: COVID19_Participant28, Label: 1
+    ID: COVID19_Participant31, Label: 1
+    ID: COVID19_Participant32, Label: 1
+    ID: COVID19_Participant37, Label: 1
+    ID: COVID19_Participant39, Label: 1
+    ID: COVID19_Participant4, Label: 1
+    ID: COVID19_Participant40, Label: 1
+    ID: COVID19_Participant7, Label: 1
+    ID: COVID19_Participant8, Label: 1
+    ID: Control_Participant1, Label: 0
+    ID: Control_Participant10, Label: 0
+    ID: Control_Participant11, Label: 0
+    ID: Control_Participant15, Label: 0
+    ID: Control_Participant4, Label: 0
+    ID: Control_Participant5, Label: 0
+    ID: Control_Participant8, Label: 0
+    ID: Control_Participant9, Label: 0
+  → test 환자 ID 및 라벨:
+    ID: Control_Participant1, Label: 1
+    ID: Control_Participant5, Label: 1
+    ID: COVID19_Participant8, Label: 1
+    ID: COVID19_Participant31, Label: 1
+    ID: Control_Participant10, Label: 1
+    ID: Control_Participant4, Label: 0
+    ID: COVID19_Participant13, Label: 0
+train_p_index_ 16
+valid_p_index 9
+test_p_index 7
+data augment 실행 안 함
+eval_p_index len:  16
+individual_train 16
+individual_eval 16
+train data의 x, y, id 길이: 16 16 16
+valid data의 x, y, id 길이: 9 9 9
+test data의 x, y, id 길이: 7 7 7
+output_class :  1
+Memory Allocated: 16.69 MB
+Memory Reserved: 42.00 MB
+cuda
+Epoch 1, Train Loss 0.633778, Valid_loss 0.689870
+Epoch 2, Train Loss 0.631828, Valid_loss 0.690291
+Epoch 3, Train Loss 0.629950, Valid_loss 0.690814
+Epoch 4, Train Loss 0.628084, Valid_loss 0.691424
+Epoch 5, Train Loss 0.626239, Valid_loss 0.692100
+Epoch 6, Train Loss 0.624410, Valid_loss 0.692840
+Epoch 7, Train Loss 0.622593, Valid_loss 0.693663
+Epoch 8, Train Loss 0.620856, Valid_loss 0.694544
+Epoch 9, Train Loss 0.619258, Valid_loss 0.695438
+Epoch 10, Train Loss 0.617643, Valid_loss 0.696566
+Epoch 11, Train Loss 0.616095, Valid_loss 0.697516
+Epoch 12, Train Loss 0.614565, Valid_loss 0.698415
+Epoch 13, Train Loss 0.613009, Valid_loss 0.699367
+Epoch 14, Train Loss 0.611329, Valid_loss 0.700386
+Epoch 15, Train Loss 0.609593, Valid_loss 0.701475
+Epoch 16, Train Loss 0.607830, Valid_loss 0.702629
+Epoch 17, Train Loss 0.606030, Valid_loss 0.703614
+Epoch 18, Train Loss 0.604203, Valid_loss 0.704441
+Epoch 19, Train Loss 0.602350, Valid_loss 0.705342
+Epoch 20, Train Loss 0.600475, Valid_loss 0.706220
+Epoch 21, Train Loss 0.598662, Valid_loss 0.707143
+Epoch 22, Train Loss 0.596847, Valid_loss 0.708154
+Epoch 23, Train Loss 0.595060, Valid_loss 0.709311
+Epoch 24, Train Loss 0.593337, Valid_loss 0.710545
+Epoch 25, Train Loss 0.591635, Valid_loss 0.711843
+Epoch 26, Train Loss 0.589953, Valid_loss 0.713198
+Epoch 27, Train Loss 0.588301, Valid_loss 0.714608
+Epoch 28, Train Loss 0.586641, Valid_loss 0.716054
+Epoch 29, Train Loss 0.584970, Valid_loss 0.717494
+Epoch 30, Train Loss 0.583330, Valid_loss 0.718905
+Epoch 31, Train Loss 0.581725, Valid_loss 0.720310
+Epoch 32, Train Loss 0.580144, Valid_loss 0.721689
+Epoch 33, Train Loss 0.578597, Valid_loss 0.723097
+Epoch 34, Train Loss 0.577064, Valid_loss 0.724404
+Epoch 35, Train Loss 0.575568, Valid_loss 0.725597
+Epoch 36, Train Loss 0.574106, Valid_loss 0.726669
+Epoch 37, Train Loss 0.572678, Valid_loss 0.727594
+Epoch 38, Train Loss 0.571285, Valid_loss 0.728356
+Epoch 39, Train Loss 0.569975, Valid_loss 0.728793
+Epoch 40, Train Loss 0.568728, Valid_loss 0.728655
+Epoch 41, Train Loss 0.567453, Valid_loss 0.728294
+Epoch 42, Train Loss 0.566303, Valid_loss 0.727830
+Epoch 43, Train Loss 0.565081, Valid_loss 0.727017
+Epoch 44, Train Loss 0.563663, Valid_loss 0.725916
+Epoch 45, Train Loss 0.562408, Valid_loss 0.724963
+Epoch 46, Train Loss 0.561199, Valid_loss 0.724188
+Epoch 47, Train Loss 0.559931, Valid_loss 0.723513
+Epoch 48, Train Loss 0.558706, Valid_loss 0.723307
+Epoch 49, Train Loss 0.557518, Valid_loss 0.723635
+Epoch 50, Train Loss 0.556372, Valid_loss 0.724335
+Epoch 51, Train Loss 0.555196, Valid_loss 0.724804
+Epoch 52, Train Loss 0.554589, Valid_loss 0.725391
+Control_Participant1 -- true: normal -- pred: COVID-19
+Control_Participant5 -- true: normal -- pred: COVID-19
+COVID19_Participant8 -- true: COVID-19 -- pred: COVID-19
+COVID19_Participant31 -- true: COVID-19 -- pred: COVID-19
+Control_Participant10 -- true: normal -- pred: COVID-19
+Control_Participant4 -- true: normal -- pred: COVID-19
+COVID19_Participant13 -- true: COVID-19 -- pred: COVID-19
+true :  [0, 0, 1, 1, 0, 0, 1]
+pred :  [1, 1, 1, 1, 1, 1, 1]
+Confusion Matrix: [0 4 0 3]
+Best performance: Epoch 1, Loss 0.633778, Test ACC 0.428571, Test AUC 0.583333, Test Recall 1.000000, Test Precision 0.428571
+✅ Total valid splits used: 2
+🔁 Repeat 1, Fold 2
+🔍 Split #3
+  → train_p_index 환자 수: 28
+  → test_p_index 환자 수: 4
+  → train 환자 ID: ['COVID19_Participant11', 'COVID19_Participant13', 'COVID19_Participant15', 'COVID19_Participant17', 'COVID19_Participant19', 'COVID19_Participant2', 'COVID19_Participant22', 'COVID19_Participant23', 'COVID19_Participant25', 'COVID19_Participant26', 'COVID19_Participant28', 'COVID19_Participant29', 'COVID19_Participant31', 'COVID19_Participant32', 'COVID19_Participant37', 'COVID19_Participant39', 'COVID19_Participant4', 'COVID19_Participant7', 'COVID19_Participant8', 'Control_Participant1', 'Control_Participant10', 'Control_Participant11', 'Control_Participant15', 'Control_Participant3', 'Control_Participant5', 'Control_Participant7', 'Control_Participant8', 'Control_Participant9']
+  → test  환자 ID: ['Control_Participant7', 'COVID19_Participant31', 'COVID19_Participant13', 'Control_Participant7']
+  → train 환자 ID 및 라벨:
+    ID: COVID19_Participant11, Label: 1
+    ID: COVID19_Participant13, Label: 1
+    ID: COVID19_Participant15, Label: 1
+    ID: COVID19_Participant17, Label: 1
+    ID: COVID19_Participant19, Label: 1
+    ID: COVID19_Participant2, Label: 1
+    ID: COVID19_Participant22, Label: 1
+    ID: COVID19_Participant23, Label: 1
+    ID: COVID19_Participant25, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: COVID19_Participant28, Label: 1
+    ID: COVID19_Participant29, Label: 1
+    ID: COVID19_Participant31, Label: 1
+    ID: COVID19_Participant32, Label: 1
+    ID: COVID19_Participant37, Label: 1
+    ID: COVID19_Participant39, Label: 1
+    ID: COVID19_Participant4, Label: 1
+    ID: COVID19_Participant7, Label: 1
+    ID: COVID19_Participant8, Label: 1
+    ID: Control_Participant1, Label: 0
+    ID: Control_Participant10, Label: 0
+    ID: Control_Participant11, Label: 0
+    ID: Control_Participant15, Label: 0
+    ID: Control_Participant3, Label: 0
+    ID: Control_Participant5, Label: 0
+    ID: Control_Participant7, Label: 0
+    ID: Control_Participant8, Label: 0
+    ID: Control_Participant9, Label: 0
+  → test 환자 ID 및 라벨:
+    ID: Control_Participant7, Label: 1
+    ID: COVID19_Participant31, Label: 1
+    ID: COVID19_Participant13, Label: 1
+    ID: Control_Participant7, Label: 0
+train_p_index_ 18
+valid_p_index 10
+test_p_index 4
+data augment 실행 안 함
+eval_p_index len:  14
+individual_train 18
+individual_eval 14
+train data의 x, y, id 길이: 18 18 18
+valid data의 x, y, id 길이: 10 10 10
+test data의 x, y, id 길이: 4 4 4
+output_class :  1
+Memory Allocated: 16.69 MB
+Memory Reserved: 42.00 MB
+cuda
+Epoch 1, Train Loss 0.656008, Valid_loss 0.686971
+Epoch 2, Train Loss 0.676450, Valid_loss 0.685212
+Epoch 3, Train Loss 0.665940, Valid_loss 0.683741
+Epoch 4, Train Loss 0.662287, Valid_loss 0.682403
+Epoch 5, Train Loss 0.617194, Valid_loss 0.681248
+Epoch 6, Train Loss 0.613117, Valid_loss 0.680495
+Epoch 7, Train Loss 0.648516, Valid_loss 0.680000
+Epoch 8, Train Loss 0.609308, Valid_loss 0.679732
+Epoch 9, Train Loss 0.591084, Valid_loss 0.679837
+Epoch 10, Train Loss 0.586765, Valid_loss 0.680219
+Epoch 11, Train Loss 0.594100, Valid_loss 0.680916
+Epoch 12, Train Loss 0.571263, Valid_loss 0.681865
+Epoch 13, Train Loss 0.572236, Valid_loss 0.682968
+Epoch 14, Train Loss 0.629133, Valid_loss 0.684028
+Epoch 15, Train Loss 0.573187, Valid_loss 0.685063
+Epoch 16, Train Loss 0.560589, Valid_loss 0.686291
+Epoch 17, Train Loss 0.702056, Valid_loss 0.687223
+Epoch 18, Train Loss 0.627476, Valid_loss 0.687614
+Epoch 19, Train Loss 0.542866, Valid_loss 0.687912
+Epoch 20, Train Loss 0.624133, Valid_loss 0.688203
+Epoch 21, Train Loss 0.627451, Valid_loss 0.688365
+Epoch 22, Train Loss 0.610070, Valid_loss 0.688316
+Epoch 23, Train Loss 0.702943, Valid_loss 0.687770
+Epoch 24, Train Loss 0.622700, Valid_loss 0.686724
+Epoch 25, Train Loss 0.699735, Valid_loss 0.685367
+Epoch 26, Train Loss 0.524434, Valid_loss 0.683871
+Epoch 27, Train Loss 0.686056, Valid_loss 0.682339
+Epoch 28, Train Loss 0.691411, Valid_loss 0.680328
+Epoch 29, Train Loss 0.516924, Valid_loss 0.678283
+Epoch 30, Train Loss 0.610128, Valid_loss 0.676524
+Epoch 31, Train Loss 0.597741, Valid_loss 0.674827
+Epoch 32, Train Loss 0.518000, Valid_loss 0.673474
+Epoch 33, Train Loss 0.495181, Valid_loss 0.672623
+Epoch 34, Train Loss 0.520939, Valid_loss 0.672176
+Epoch 35, Train Loss 0.492027, Valid_loss 0.672235
+Epoch 36, Train Loss 0.596318, Valid_loss 0.672401
+Epoch 37, Train Loss 0.588820, Valid_loss 0.671921
+Epoch 38, Train Loss 0.506177, Valid_loss 0.672052
+Epoch 39, Train Loss 0.511472, Valid_loss 0.673870
+Epoch 40, Train Loss 0.573587, Valid_loss 0.676991
+Epoch 41, Train Loss 0.495470, Valid_loss 0.680983
+Epoch 42, Train Loss 0.470400, Valid_loss 0.686254
+Epoch 43, Train Loss 0.563123, Valid_loss 0.688941
+Epoch 44, Train Loss 0.461181, Valid_loss 0.689858
+Epoch 45, Train Loss 0.476579, Valid_loss 0.690821
+Epoch 46, Train Loss 0.477287, Valid_loss 0.691818
+Epoch 47, Train Loss 0.552522, Valid_loss 0.693055
+Epoch 48, Train Loss 0.454127, Valid_loss 0.693038
+Epoch 49, Train Loss 0.539974, Valid_loss 0.692480
+Epoch 50, Train Loss 0.452845, Valid_loss 0.691621
+Epoch 51, Train Loss 0.460980, Valid_loss 0.691431
+Epoch 52, Train Loss 0.467565, Valid_loss 0.691666
+Epoch 53, Train Loss 0.536667, Valid_loss 0.691905
+Control_Participant7 -- true: normal -- pred: COVID-19
+COVID19_Participant31 -- true: COVID-19 -- pred: COVID-19
+COVID19_Participant13 -- true: COVID-19 -- pred: COVID-19
+Control_Participant7 -- true: normal -- pred: COVID-19
+true :  [0, 1, 1, 0]
+pred :  [1, 1, 1, 1]
+Confusion Matrix: [0 2 0 2]
+Best performance: Epoch 37, Loss 0.588820, Test ACC 0.500000, Test AUC 1.000000, Test Recall 1.000000, Test Precision 0.500000
+✅ Total valid splits used: 3
+🔁 Repeat 1, Fold 3
+🔍 Split #4
+  → train_p_index 환자 수: 24
+  → test_p_index 환자 수: 8
+  → train 환자 ID: ['COVID19_Participant11', 'COVID19_Participant14', 'COVID19_Participant15', 'COVID19_Participant17', 'COVID19_Participant19', 'COVID19_Participant2', 'COVID19_Participant20', 'COVID19_Participant22', 'COVID19_Participant23', 'COVID19_Participant25', 'COVID19_Participant26', 'COVID19_Participant29', 'COVID19_Participant32', 'COVID19_Participant37', 'COVID19_Participant40', 'COVID19_Participant7', 'COVID19_Participant8', 'Control_Participant10', 'Control_Participant11', 'Control_Participant3', 'Control_Participant4', 'Control_Participant5', 'Control_Participant7', 'Control_Participant9']
+  → test  환자 ID: ['Control_Participant7', 'COVID19_Participant26', 'Control_Participant7', 'COVID19_Participant7', 'Control_Participant5', 'COVID19_Participant26', 'Control_Participant3', 'Control_Participant5']
+  → train 환자 ID 및 라벨:
+    ID: COVID19_Participant11, Label: 1
+    ID: COVID19_Participant14, Label: 1
+    ID: COVID19_Participant15, Label: 1
+    ID: COVID19_Participant17, Label: 1
+    ID: COVID19_Participant19, Label: 1
+    ID: COVID19_Participant2, Label: 1
+    ID: COVID19_Participant20, Label: 1
+    ID: COVID19_Participant22, Label: 1
+    ID: COVID19_Participant23, Label: 1
+    ID: COVID19_Participant25, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: COVID19_Participant29, Label: 1
+    ID: COVID19_Participant32, Label: 1
+    ID: COVID19_Participant37, Label: 1
+    ID: COVID19_Participant40, Label: 1
+    ID: COVID19_Participant7, Label: 1
+    ID: COVID19_Participant8, Label: 1
+    ID: Control_Participant10, Label: 0
+    ID: Control_Participant11, Label: 0
+    ID: Control_Participant3, Label: 0
+    ID: Control_Participant4, Label: 0
+    ID: Control_Participant5, Label: 0
+    ID: Control_Participant7, Label: 0
+    ID: Control_Participant9, Label: 0
+  → test 환자 ID 및 라벨:
+    ID: Control_Participant7, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: Control_Participant7, Label: 1
+    ID: COVID19_Participant7, Label: 1
+    ID: Control_Participant5, Label: 1
+    ID: COVID19_Participant26, Label: 0
+    ID: Control_Participant3, Label: 0
+    ID: Control_Participant5, Label: 0
+train_p_index_ 16
+valid_p_index 8
+test_p_index 8
+data augment 실행 안 함
+eval_p_index len:  16
+individual_train 16
+individual_eval 16
+train data의 x, y, id 길이: 16 16 16
+valid data의 x, y, id 길이: 8 8 8
+test data의 x, y, id 길이: 8 8 8
+output_class :  1
+Memory Allocated: 16.69 MB
+Memory Reserved: 42.00 MB
+cuda
+Epoch 1, Train Loss 0.692331, Valid_loss 0.681430
+Epoch 2, Train Loss 0.688132, Valid_loss 0.679119
+Epoch 3, Train Loss 0.683887, Valid_loss 0.676792
+Epoch 4, Train Loss 0.679632, Valid_loss 0.674179
+Epoch 5, Train Loss 0.675521, Valid_loss 0.672467
+Epoch 6, Train Loss 0.671822, Valid_loss 0.671787
+Epoch 7, Train Loss 0.668207, Valid_loss 0.671225
+Epoch 8, Train Loss 0.664595, Valid_loss 0.670740
+Epoch 9, Train Loss 0.661037, Valid_loss 0.669857
+Epoch 10, Train Loss 0.657676, Valid_loss 0.668705
+Epoch 11, Train Loss 0.654967, Valid_loss 0.667603
+Epoch 12, Train Loss 0.652690, Valid_loss 0.666607
+Epoch 13, Train Loss 0.650608, Valid_loss 0.665699
+Epoch 14, Train Loss 0.648850, Valid_loss 0.665029
+Epoch 15, Train Loss 0.647285, Valid_loss 0.665155
+Epoch 16, Train Loss 0.645844, Valid_loss 0.665712
+Epoch 17, Train Loss 0.644835, Valid_loss 0.666521
+Epoch 18, Train Loss 0.643939, Valid_loss 0.667399
+Epoch 19, Train Loss 0.643139, Valid_loss 0.667858
+Epoch 20, Train Loss 0.642627, Valid_loss 0.667941
+Epoch 21, Train Loss 0.642137, Valid_loss 0.667973
+Epoch 22, Train Loss 0.641607, Valid_loss 0.667951
+Epoch 23, Train Loss 0.641067, Valid_loss 0.667907
+Epoch 24, Train Loss 0.640496, Valid_loss 0.667794
+Epoch 25, Train Loss 0.639874, Valid_loss 0.667585
+Epoch 26, Train Loss 0.639213, Valid_loss 0.667352
+Epoch 27, Train Loss 0.638527, Valid_loss 0.667089
+Epoch 28, Train Loss 0.637825, Valid_loss 0.666798
+Epoch 29, Train Loss 0.637123, Valid_loss 0.666505
+Epoch 30, Train Loss 0.636431, Valid_loss 0.666259
+Epoch 31, Train Loss 0.635746, Valid_loss 0.666121
+Epoch 32, Train Loss 0.635040, Valid_loss 0.666027
+Epoch 33, Train Loss 0.634333, Valid_loss 0.665952
+Epoch 34, Train Loss 0.633643, Valid_loss 0.665901
+Epoch 35, Train Loss 0.632949, Valid_loss 0.665699
+Epoch 36, Train Loss 0.632266, Valid_loss 0.665461
+Epoch 37, Train Loss 0.631685, Valid_loss 0.665226
+Epoch 38, Train Loss 0.631165, Valid_loss 0.665013
+Epoch 39, Train Loss 0.630679, Valid_loss 0.664831
+Epoch 40, Train Loss 0.630193, Valid_loss 0.664678
+Epoch 41, Train Loss 0.629698, Valid_loss 0.664552
+Epoch 42, Train Loss 0.629194, Valid_loss 0.664451
+Epoch 43, Train Loss 0.628680, Valid_loss 0.664373
+Epoch 44, Train Loss 0.628159, Valid_loss 0.664317
+Epoch 45, Train Loss 0.627629, Valid_loss 0.664281
+Epoch 46, Train Loss 0.627090, Valid_loss 0.664229
+Epoch 47, Train Loss 0.626564, Valid_loss 0.664175
+Epoch 48, Train Loss 0.626021, Valid_loss 0.664163
+Epoch 49, Train Loss 0.625484, Valid_loss 0.664166
+Epoch 50, Train Loss 0.624942, Valid_loss 0.664180
+Epoch 51, Train Loss 0.624435, Valid_loss 0.664173
+Epoch 52, Train Loss 0.624210, Valid_loss 0.664151
+Epoch 53, Train Loss 0.623985, Valid_loss 0.664105
+Epoch 54, Train Loss 0.623761, Valid_loss 0.664035
+Epoch 55, Train Loss 0.623527, Valid_loss 0.663944
+Epoch 56, Train Loss 0.623284, Valid_loss 0.663836
+Epoch 57, Train Loss 0.623033, Valid_loss 0.663713
+Epoch 58, Train Loss 0.622776, Valid_loss 0.663577
+Epoch 59, Train Loss 0.622526, Valid_loss 0.663451
+Epoch 60, Train Loss 0.622282, Valid_loss 0.663330
+Epoch 61, Train Loss 0.622037, Valid_loss 0.663198
+Epoch 62, Train Loss 0.621795, Valid_loss 0.663084
+Epoch 63, Train Loss 0.621557, Valid_loss 0.662995
+Epoch 64, Train Loss 0.621316, Valid_loss 0.662929
+Epoch 65, Train Loss 0.621064, Valid_loss 0.662886
+Epoch 66, Train Loss 0.620815, Valid_loss 0.662836
+Epoch 67, Train Loss 0.620573, Valid_loss 0.662774
+Epoch 68, Train Loss 0.620331, Valid_loss 0.662701
+Epoch 69, Train Loss 0.620084, Valid_loss 0.662619
+Epoch 70, Train Loss 0.619827, Valid_loss 0.662529
+Epoch 71, Train Loss 0.619564, Valid_loss 0.662431
+Epoch 72, Train Loss 0.619296, Valid_loss 0.662329
+Epoch 73, Train Loss 0.619024, Valid_loss 0.662224
+Epoch 74, Train Loss 0.618751, Valid_loss 0.662121
+Epoch 75, Train Loss 0.618477, Valid_loss 0.662022
+Epoch 76, Train Loss 0.618200, Valid_loss 0.661938
+Epoch 77, Train Loss 0.617917, Valid_loss 0.661858
+Epoch 78, Train Loss 0.617631, Valid_loss 0.661782
+Epoch 79, Train Loss 0.617354, Valid_loss 0.661716
+Epoch 80, Train Loss 0.617076, Valid_loss 0.661659
+Epoch 81, Train Loss 0.616786, Valid_loss 0.661611
+Epoch 82, Train Loss 0.616478, Valid_loss 0.661551
+Epoch 83, Train Loss 0.616163, Valid_loss 0.661500
+Epoch 84, Train Loss 0.615845, Valid_loss 0.661450
+Epoch 85, Train Loss 0.615527, Valid_loss 0.661407
+Epoch 86, Train Loss 0.615203, Valid_loss 0.661372
+Epoch 87, Train Loss 0.614874, Valid_loss 0.661336
+Epoch 88, Train Loss 0.614553, Valid_loss 0.661264
+Epoch 89, Train Loss 0.614243, Valid_loss 0.661181
+Epoch 90, Train Loss 0.613940, Valid_loss 0.661097
+Epoch 91, Train Loss 0.613638, Valid_loss 0.661014
+Epoch 92, Train Loss 0.613333, Valid_loss 0.660931
+Epoch 93, Train Loss 0.613023, Valid_loss 0.660817
+Epoch 94, Train Loss 0.612713, Valid_loss 0.660708
+Epoch 95, Train Loss 0.612400, Valid_loss 0.660572
+Epoch 96, Train Loss 0.612084, Valid_loss 0.660445
+Epoch 97, Train Loss 0.611758, Valid_loss 0.660296
+Epoch 98, Train Loss 0.611411, Valid_loss 0.660161
+Epoch 99, Train Loss 0.611059, Valid_loss 0.660029
+Epoch 100, Train Loss 0.610705, Valid_loss 0.659878
+Control_Participant7 -- true: normal -- pred: COVID-19
+COVID19_Participant26 -- true: COVID-19 -- pred: COVID-19
+Control_Participant7 -- true: normal -- pred: COVID-19
+COVID19_Participant7 -- true: COVID-19 -- pred: COVID-19
+Control_Participant5 -- true: normal -- pred: COVID-19
+COVID19_Participant26 -- true: COVID-19 -- pred: COVID-19
+Control_Participant3 -- true: normal -- pred: COVID-19
+Control_Participant5 -- true: normal -- pred: COVID-19
+true :  [0, 1, 0, 1, 0, 1, 0, 0]
+pred :  [1, 1, 1, 1, 1, 1, 1, 1]
+Confusion Matrix: [0 5 0 3]
+Best performance: Epoch 100, Loss 0.610705, Test ACC 0.375000, Test AUC 0.866667, Test Recall 1.000000, Test Precision 0.375000
+✅ Total valid splits used: 4
+🔁 Repeat 1, Fold 4
+🔍 Split #5
+  → train_p_index 환자 수: 27
+  → test_p_index 환자 수: 5
+  → train 환자 ID: ['COVID19_Participant11', 'COVID19_Participant13', 'COVID19_Participant14', 'COVID19_Participant17', 'COVID19_Participant19', 'COVID19_Participant2', 'COVID19_Participant20', 'COVID19_Participant22', 'COVID19_Participant23', 'COVID19_Participant25', 'COVID19_Participant26', 'COVID19_Participant28', 'COVID19_Participant29', 'COVID19_Participant31', 'COVID19_Participant37', 'COVID19_Participant39', 'COVID19_Participant4', 'COVID19_Participant40', 'COVID19_Participant7', 'Control_Participant1', 'Control_Participant15', 'Control_Participant3', 'Control_Participant4', 'Control_Participant5', 'Control_Participant7', 'Control_Participant8', 'Control_Participant9']
+  → test  환자 ID: ['COVID19_Participant11', 'COVID19_Participant25', 'Control_Participant7', 'Control_Participant7', 'COVID19_Participant26']
+  → train 환자 ID 및 라벨:
+    ID: COVID19_Participant11, Label: 1
+    ID: COVID19_Participant13, Label: 1
+    ID: COVID19_Participant14, Label: 1
+    ID: COVID19_Participant17, Label: 1
+    ID: COVID19_Participant19, Label: 1
+    ID: COVID19_Participant2, Label: 1
+    ID: COVID19_Participant20, Label: 1
+    ID: COVID19_Participant22, Label: 1
+    ID: COVID19_Participant23, Label: 1
+    ID: COVID19_Participant25, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: COVID19_Participant28, Label: 1
+    ID: COVID19_Participant29, Label: 1
+    ID: COVID19_Participant31, Label: 1
+    ID: COVID19_Participant37, Label: 1
+    ID: COVID19_Participant39, Label: 1
+    ID: COVID19_Participant4, Label: 1
+    ID: COVID19_Participant40, Label: 1
+    ID: COVID19_Participant7, Label: 1
+    ID: Control_Participant1, Label: 0
+    ID: Control_Participant15, Label: 0
+    ID: Control_Participant3, Label: 0
+    ID: Control_Participant4, Label: 0
+    ID: Control_Participant5, Label: 0
+    ID: Control_Participant7, Label: 0
+    ID: Control_Participant8, Label: 0
+    ID: Control_Participant9, Label: 0
+  → test 환자 ID 및 라벨:
+    ID: COVID19_Participant11, Label: 1
+    ID: COVID19_Participant25, Label: 1
+    ID: Control_Participant7, Label: 1
+    ID: Control_Participant7, Label: 0
+    ID: COVID19_Participant26, Label: 0
+train_p_index_ 18
+valid_p_index 9
+test_p_index 5
+data augment 실행 안 함
+eval_p_index len:  14
+individual_train 18
+individual_eval 14
+train data의 x, y, id 길이: 18 18 18
+valid data의 x, y, id 길이: 9 9 9
+test data의 x, y, id 길이: 5 5 5
+output_class :  1
+Memory Allocated: 16.69 MB
+Memory Reserved: 42.00 MB
+cuda
+Epoch 1, Train Loss 0.786194, Valid_loss 0.712665
+Epoch 2, Train Loss 0.765361, Valid_loss 0.703749
+Epoch 3, Train Loss 0.715363, Valid_loss 0.696592
+Epoch 4, Train Loss 0.728893, Valid_loss 0.690844
+Epoch 5, Train Loss 0.738204, Valid_loss 0.686321
+Epoch 6, Train Loss 0.695484, Valid_loss 0.682618
+Epoch 7, Train Loss 0.682223, Valid_loss 0.679597
+Epoch 8, Train Loss 0.697006, Valid_loss 0.677157
+Epoch 9, Train Loss 0.666871, Valid_loss 0.675282
+Epoch 10, Train Loss 0.696247, Valid_loss 0.673694
+Epoch 11, Train Loss 0.699818, Valid_loss 0.672530
+Epoch 12, Train Loss 0.651218, Valid_loss 0.671674
+Epoch 13, Train Loss 0.695343, Valid_loss 0.671108
+Epoch 14, Train Loss 0.677320, Valid_loss 0.670951
+Epoch 15, Train Loss 0.654079, Valid_loss 0.670884
+Epoch 16, Train Loss 0.642538, Valid_loss 0.670717
+Epoch 17, Train Loss 0.685078, Valid_loss 0.670660
+Epoch 18, Train Loss 0.664579, Valid_loss 0.670566
+Epoch 19, Train Loss 0.661148, Valid_loss 0.670419
+Epoch 20, Train Loss 0.672318, Valid_loss 0.670336
+Epoch 21, Train Loss 0.657140, Valid_loss 0.670067
+Epoch 22, Train Loss 0.645765, Valid_loss 0.669629
+Epoch 23, Train Loss 0.625148, Valid_loss 0.669181
+Epoch 24, Train Loss 0.654953, Valid_loss 0.668838
+Epoch 25, Train Loss 0.647213, Valid_loss 0.668504
+Epoch 26, Train Loss 0.650757, Valid_loss 0.668020
+Epoch 27, Train Loss 0.650421, Valid_loss 0.667545
+Epoch 28, Train Loss 0.624586, Valid_loss 0.667131
+Epoch 29, Train Loss 0.687116, Valid_loss 0.666672
+Epoch 30, Train Loss 0.670400, Valid_loss 0.666170
+Epoch 31, Train Loss 0.680636, Valid_loss 0.665825
+Epoch 32, Train Loss 0.669729, Valid_loss 0.665603
+Epoch 33, Train Loss 0.635537, Valid_loss 0.665466
+Epoch 34, Train Loss 0.664073, Valid_loss 0.665097
+Epoch 35, Train Loss 0.619397, Valid_loss 0.664478
+Epoch 36, Train Loss 0.640811, Valid_loss 0.663876
+Epoch 37, Train Loss 0.640086, Valid_loss 0.663172
+Epoch 38, Train Loss 0.667793, Valid_loss 0.662534
+Epoch 39, Train Loss 0.599105, Valid_loss 0.662046
+Epoch 40, Train Loss 0.644333, Valid_loss 0.661660
+Epoch 41, Train Loss 0.590762, Valid_loss 0.661435
+Epoch 42, Train Loss 0.645789, Valid_loss 0.661348
+Epoch 43, Train Loss 0.634752, Valid_loss 0.661289
+Epoch 44, Train Loss 0.667697, Valid_loss 0.661004
+Epoch 45, Train Loss 0.661042, Valid_loss 0.660548
+Epoch 46, Train Loss 0.673634, Valid_loss 0.659780
+Epoch 47, Train Loss 0.628458, Valid_loss 0.658687
+Epoch 48, Train Loss 0.632684, Valid_loss 0.657625
+Epoch 49, Train Loss 0.618897, Valid_loss 0.656912
+Epoch 50, Train Loss 0.649264, Valid_loss 0.656308
+Epoch 51, Train Loss 0.656152, Valid_loss 0.656091
+Epoch 52, Train Loss 0.618911, Valid_loss 0.656023
+Epoch 53, Train Loss 0.612006, Valid_loss 0.655930
+Epoch 54, Train Loss 0.656932, Valid_loss 0.655770
+Epoch 55, Train Loss 0.618423, Valid_loss 0.655570
+Epoch 56, Train Loss 0.606620, Valid_loss 0.655242
+Epoch 57, Train Loss 0.642203, Valid_loss 0.654710
+Epoch 58, Train Loss 0.624098, Valid_loss 0.654085
+Epoch 59, Train Loss 0.647538, Valid_loss 0.653406
+Epoch 60, Train Loss 0.627295, Valid_loss 0.652789
+Epoch 61, Train Loss 0.640962, Valid_loss 0.652417
+Epoch 62, Train Loss 0.578436, Valid_loss 0.652113
+Epoch 63, Train Loss 0.641529, Valid_loss 0.651786
+Epoch 64, Train Loss 0.626641, Valid_loss 0.651595
+Epoch 65, Train Loss 0.593271, Valid_loss 0.651596
+Epoch 66, Train Loss 0.647282, Valid_loss 0.651664
+COVID19_Participant11 -- true: COVID-19 -- pred: COVID-19
+COVID19_Participant25 -- true: COVID-19 -- pred: COVID-19
+Control_Participant7 -- true: normal -- pred: COVID-19
+Control_Participant7 -- true: normal -- pred: COVID-19
+COVID19_Participant26 -- true: COVID-19 -- pred: COVID-19
+true :  [1, 1, 0, 0, 1]
+pred :  [1, 1, 1, 1, 1]
+Confusion Matrix: [0 2 0 3]
+Best performance: Epoch 64, Loss 0.626641, Test ACC 0.600000, Test AUC 0.500000, Test Recall 1.000000, Test Precision 0.600000
+✅ Total valid splits used: 5
+
+📌 Repeat 1: 평균 AUC = 0.7900, 표준편차 = 0.2102
+🔁 Repeat 2, Fold 0
+🔍 Split #1
+  → train_p_index 환자 수: 26
+  → test_p_index 환자 수: 6
+  → train 환자 ID: ['COVID19_Participant11', 'COVID19_Participant13', 'COVID19_Participant14', 'COVID19_Participant15', 'COVID19_Participant17', 'COVID19_Participant19', 'COVID19_Participant2', 'COVID19_Participant22', 'COVID19_Participant23', 'COVID19_Participant25', 'COVID19_Participant26', 'COVID19_Participant28', 'COVID19_Participant29', 'COVID19_Participant31', 'COVID19_Participant32', 'COVID19_Participant37', 'COVID19_Participant39', 'COVID19_Participant40', 'COVID19_Participant8', 'Control_Participant1', 'Control_Participant10', 'Control_Participant11', 'Control_Participant15', 'Control_Participant3', 'Control_Participant4', 'Control_Participant7']
+  → test  환자 ID: ['COVID19_Participant11', 'COVID19_Participant26', 'Control_Participant7', 'Control_Participant7', 'COVID19_Participant31', 'COVID19_Participant13']
+  → train 환자 ID 및 라벨:
+    ID: COVID19_Participant11, Label: 1
+    ID: COVID19_Participant13, Label: 1
+    ID: COVID19_Participant14, Label: 1
+    ID: COVID19_Participant15, Label: 1
+    ID: COVID19_Participant17, Label: 1
+    ID: COVID19_Participant19, Label: 1
+    ID: COVID19_Participant2, Label: 1
+    ID: COVID19_Participant22, Label: 1
+    ID: COVID19_Participant23, Label: 1
+    ID: COVID19_Participant25, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: COVID19_Participant28, Label: 1
+    ID: COVID19_Participant29, Label: 1
+    ID: COVID19_Participant31, Label: 1
+    ID: COVID19_Participant32, Label: 1
+    ID: COVID19_Participant37, Label: 1
+    ID: COVID19_Participant39, Label: 1
+    ID: COVID19_Participant40, Label: 1
+    ID: COVID19_Participant8, Label: 1
+    ID: Control_Participant1, Label: 0
+    ID: Control_Participant10, Label: 0
+    ID: Control_Participant11, Label: 0
+    ID: Control_Participant15, Label: 0
+    ID: Control_Participant3, Label: 0
+    ID: Control_Participant4, Label: 0
+    ID: Control_Participant7, Label: 0
+  → test 환자 ID 및 라벨:
+    ID: COVID19_Participant11, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: Control_Participant7, Label: 1
+    ID: Control_Participant7, Label: 0
+    ID: COVID19_Participant31, Label: 0
+    ID: COVID19_Participant13, Label: 0
+train_p_index_ 17
+valid_p_index 9
+test_p_index 6
+data augment 실행 안 함
+eval_p_index len:  15
+individual_train 17
+individual_eval 15
+train data의 x, y, id 길이: 17 17 17
+valid data의 x, y, id 길이: 9 9 9
+test data의 x, y, id 길이: 6 6 6
+output_class :  1
+Memory Allocated: 16.69 MB
+Memory Reserved: 42.00 MB
+cuda
+Epoch 1, Train Loss 0.688022, Valid_loss 0.765018
+Epoch 2, Train Loss 0.695092, Valid_loss 0.763086
+Epoch 3, Train Loss 0.950559, Valid_loss 0.760841
+Epoch 4, Train Loss 0.927025, Valid_loss 0.757995
+Epoch 5, Train Loss 0.928683, Valid_loss 0.754933
+Epoch 6, Train Loss 0.896084, Valid_loss 0.751848
+Epoch 7, Train Loss 0.912041, Valid_loss 0.748961
+Epoch 8, Train Loss 0.681929, Valid_loss 0.746841
+Epoch 9, Train Loss 0.881218, Valid_loss 0.745216
+Epoch 10, Train Loss 0.680893, Valid_loss 0.743359
+Epoch 11, Train Loss 0.868985, Valid_loss 0.741173
+Epoch 12, Train Loss 0.849481, Valid_loss 0.738724
+Epoch 13, Train Loss 0.846505, Valid_loss 0.735981
+Epoch 14, Train Loss 0.836584, Valid_loss 0.733258
+Epoch 15, Train Loss 0.816898, Valid_loss 0.730759
+Epoch 16, Train Loss 0.795402, Valid_loss 0.728094
+Epoch 17, Train Loss 0.787637, Valid_loss 0.725307
+Epoch 18, Train Loss 0.777437, Valid_loss 0.722190
+Epoch 19, Train Loss 0.763906, Valid_loss 0.718684
+Epoch 20, Train Loss 0.767168, Valid_loss 0.714692
+Epoch 21, Train Loss 0.767053, Valid_loss 0.711270
+Epoch 22, Train Loss 0.744841, Valid_loss 0.708453
+Epoch 23, Train Loss 0.750894, Valid_loss 0.706495
+Epoch 24, Train Loss 0.730786, Valid_loss 0.705428
+Epoch 25, Train Loss 0.732414, Valid_loss 0.705130
+Epoch 26, Train Loss 0.715106, Valid_loss 0.704691
+Epoch 27, Train Loss 0.707803, Valid_loss 0.703634
+Epoch 28, Train Loss 0.716891, Valid_loss 0.702101
+Epoch 29, Train Loss 0.721432, Valid_loss 0.700901
+Epoch 30, Train Loss 0.700090, Valid_loss 0.700158
+Epoch 31, Train Loss 0.697348, Valid_loss 0.699538
+Epoch 32, Train Loss 0.727266, Valid_loss 0.699148
+Epoch 33, Train Loss 0.723831, Valid_loss 0.698882
+Epoch 34, Train Loss 0.704083, Valid_loss 0.699199
+Epoch 35, Train Loss 0.648198, Valid_loss 0.699671
+Epoch 36, Train Loss 0.693870, Valid_loss 0.700314
+Epoch 37, Train Loss 0.680045, Valid_loss 0.700626
+Epoch 38, Train Loss 0.692806, Valid_loss 0.700734
+Epoch 39, Train Loss 0.671256, Valid_loss 0.700600
+Epoch 40, Train Loss 0.710726, Valid_loss 0.700375
+Epoch 41, Train Loss 0.690756, Valid_loss 0.700333
+Epoch 42, Train Loss 0.690835, Valid_loss 0.700630
+Epoch 43, Train Loss 0.689673, Valid_loss 0.701145
+Epoch 44, Train Loss 0.690238, Valid_loss 0.701539
+Epoch 45, Train Loss 0.689564, Valid_loss 0.701924
+Epoch 46, Train Loss 0.687492, Valid_loss 0.702337
+Epoch 47, Train Loss 0.687146, Valid_loss 0.702598
+Epoch 48, Train Loss 0.689334, Valid_loss 0.702743
+Epoch 49, Train Loss 0.682963, Valid_loss 0.702880
+Epoch 50, Train Loss 0.686097, Valid_loss 0.702907
+Epoch 51, Train Loss 0.690942, Valid_loss 0.702760
+Epoch 52, Train Loss 0.681563, Valid_loss 0.702465
+Epoch 53, Train Loss 0.693704, Valid_loss 0.702192
+Epoch 54, Train Loss 0.683715, Valid_loss 0.701632
+Epoch 55, Train Loss 0.680911, Valid_loss 0.700964
+Epoch 56, Train Loss 0.679285, Valid_loss 0.700436
+Epoch 57, Train Loss 0.682410, Valid_loss 0.700039
+Epoch 58, Train Loss 0.687119, Valid_loss 0.699770
+Epoch 59, Train Loss 0.677973, Valid_loss 0.699571
+Epoch 60, Train Loss 0.681386, Valid_loss 0.699306
+Epoch 61, Train Loss 0.677070, Valid_loss 0.698987
+Epoch 62, Train Loss 0.680634, Valid_loss 0.698639
+Epoch 63, Train Loss 0.627421, Valid_loss 0.698206
+Epoch 64, Train Loss 0.685649, Valid_loss 0.697821
+Epoch 65, Train Loss 0.675010, Valid_loss 0.697732
+Epoch 66, Train Loss 0.679161, Valid_loss 0.697833
+Epoch 67, Train Loss 0.677908, Valid_loss 0.698230
+COVID19_Participant11 -- true: COVID-19 -- pred: normal
+COVID19_Participant26 -- true: COVID-19 -- pred: COVID-19
+Control_Participant7 -- true: normal -- pred: normal
+Control_Participant7 -- true: normal -- pred: normal
+COVID19_Participant31 -- true: COVID-19 -- pred: COVID-19
+COVID19_Participant13 -- true: COVID-19 -- pred: normal
+true :  [1, 1, 0, 0, 1, 1]
+pred :  [0, 1, 0, 0, 1, 0]
+Confusion Matrix: [2 0 2 2]
+Best performance: Epoch 65, Loss 0.675010, Test ACC 0.666667, Test AUC 1.000000, Test Recall 0.500000, Test Precision 1.000000
+✅ Total valid splits used: 1
+🔁 Repeat 2, Fold 1
+🔍 Split #2
+  → train_p_index 환자 수: 26
+  → test_p_index 환자 수: 6
+  → train 환자 ID: ['COVID19_Participant11', 'COVID19_Participant13', 'COVID19_Participant14', 'COVID19_Participant15', 'COVID19_Participant17', 'COVID19_Participant19', 'COVID19_Participant2', 'COVID19_Participant20', 'COVID19_Participant22', 'COVID19_Participant25', 'COVID19_Participant28', 'COVID19_Participant29', 'COVID19_Participant31', 'COVID19_Participant32', 'COVID19_Participant39', 'COVID19_Participant4', 'COVID19_Participant40', 'COVID19_Participant7', 'Control_Participant1', 'Control_Participant10', 'Control_Participant11', 'Control_Participant15', 'Control_Participant5', 'Control_Participant7', 'Control_Participant8', 'Control_Participant9']
+  → test  환자 ID: ['COVID19_Participant19', 'Control_Participant7', 'COVID19_Participant11', 'Control_Participant5', 'COVID19_Participant13', 'COVID19_Participant13']
+  → train 환자 ID 및 라벨:
+    ID: COVID19_Participant11, Label: 1
+    ID: COVID19_Participant13, Label: 1
+    ID: COVID19_Participant14, Label: 1
+    ID: COVID19_Participant15, Label: 1
+    ID: COVID19_Participant17, Label: 1
+    ID: COVID19_Participant19, Label: 1
+    ID: COVID19_Participant2, Label: 1
+    ID: COVID19_Participant20, Label: 1
+    ID: COVID19_Participant22, Label: 1
+    ID: COVID19_Participant25, Label: 1
+    ID: COVID19_Participant28, Label: 1
+    ID: COVID19_Participant29, Label: 1
+    ID: COVID19_Participant31, Label: 1
+    ID: COVID19_Participant32, Label: 1
+    ID: COVID19_Participant39, Label: 1
+    ID: COVID19_Participant4, Label: 1
+    ID: COVID19_Participant40, Label: 1
+    ID: COVID19_Participant7, Label: 1
+    ID: Control_Participant1, Label: 0
+    ID: Control_Participant10, Label: 0
+    ID: Control_Participant11, Label: 0
+    ID: Control_Participant15, Label: 0
+    ID: Control_Participant5, Label: 0
+    ID: Control_Participant7, Label: 0
+    ID: Control_Participant8, Label: 0
+    ID: Control_Participant9, Label: 0
+  → test 환자 ID 및 라벨:
+    ID: COVID19_Participant19, Label: 1
+    ID: Control_Participant7, Label: 1
+    ID: COVID19_Participant11, Label: 1
+    ID: Control_Participant5, Label: 1
+    ID: COVID19_Participant13, Label: 0
+    ID: COVID19_Participant13, Label: 0
+train_p_index_ 17
+valid_p_index 9
+test_p_index 6
+data augment 실행 안 함
+eval_p_index len:  15
+individual_train 17
+individual_eval 15
+train data의 x, y, id 길이: 17 17 17
+valid data의 x, y, id 길이: 9 9 9
+test data의 x, y, id 길이: 6 6 6
+output_class :  1
+Memory Allocated: 16.69 MB
+Memory Reserved: 42.00 MB
+cuda
+Epoch 1, Train Loss 0.778419, Valid_loss 0.678393
+Epoch 2, Train Loss 0.782531, Valid_loss 0.674316
+Epoch 3, Train Loss 0.691688, Valid_loss 0.670938
+Epoch 4, Train Loss 0.735560, Valid_loss 0.667828
+Epoch 5, Train Loss 0.662467, Valid_loss 0.665020
+Epoch 6, Train Loss 0.711493, Valid_loss 0.663138
+Epoch 7, Train Loss 0.653549, Valid_loss 0.666431
+Epoch 8, Train Loss 0.693987, Valid_loss 0.672924
+Epoch 9, Train Loss 0.665042, Valid_loss 0.680411
+Epoch 10, Train Loss 0.677812, Valid_loss 0.685931
+Epoch 11, Train Loss 0.670436, Valid_loss 0.687457
+Epoch 12, Train Loss 0.648205, Valid_loss 0.687922
+Epoch 13, Train Loss 0.658886, Valid_loss 0.689756
+Epoch 14, Train Loss 0.630049, Valid_loss 0.691881
+Epoch 15, Train Loss 0.658563, Valid_loss 0.693964
+Epoch 16, Train Loss 0.652048, Valid_loss 0.696621
+Epoch 17, Train Loss 0.689447, Valid_loss 0.698338
+Epoch 18, Train Loss 0.589407, Valid_loss 0.699091
+Epoch 19, Train Loss 0.619317, Valid_loss 0.700555
+Epoch 20, Train Loss 0.601872, Valid_loss 0.703683
+Epoch 21, Train Loss 0.629530, Valid_loss 0.707706
+Epoch 22, Train Loss 0.566894, Valid_loss 0.711349
+Epoch 23, Train Loss 0.637205, Valid_loss 0.714678
+Epoch 24, Train Loss 0.634595, Valid_loss 0.718030
+Epoch 25, Train Loss 0.632098, Valid_loss 0.721195
+Epoch 26, Train Loss 0.597540, Valid_loss 0.723991
+Epoch 27, Train Loss 0.698760, Valid_loss 0.726118
+Epoch 28, Train Loss 0.556941, Valid_loss 0.727032
+Epoch 29, Train Loss 0.611345, Valid_loss 0.727413
+Epoch 30, Train Loss 0.698508, Valid_loss 0.726982
+Epoch 31, Train Loss 0.551227, Valid_loss 0.725006
+Epoch 32, Train Loss 0.543364, Valid_loss 0.722460
+Epoch 33, Train Loss 0.615696, Valid_loss 0.720553
+Epoch 34, Train Loss 0.669065, Valid_loss 0.718830
+Epoch 35, Train Loss 0.615214, Valid_loss 0.716368
+Epoch 36, Train Loss 0.674302, Valid_loss 0.713798
+Epoch 37, Train Loss 0.621231, Valid_loss 0.711661
+Epoch 38, Train Loss 0.572004, Valid_loss 0.713724
+Epoch 39, Train Loss 0.575030, Valid_loss 0.719865
+Epoch 40, Train Loss 0.615409, Valid_loss 0.726117
+Epoch 41, Train Loss 0.528813, Valid_loss 0.730171
+Epoch 42, Train Loss 0.657326, Valid_loss 0.731392
+Epoch 43, Train Loss 0.621359, Valid_loss 0.730785
+Epoch 44, Train Loss 0.559468, Valid_loss 0.730801
+Epoch 45, Train Loss 0.694060, Valid_loss 0.729530
+Epoch 46, Train Loss 0.609124, Valid_loss 0.727063
+Epoch 47, Train Loss 0.532114, Valid_loss 0.724905
+Epoch 48, Train Loss 0.559216, Valid_loss 0.724045
+Epoch 49, Train Loss 0.517151, Valid_loss 0.724453
+Epoch 50, Train Loss 0.668264, Valid_loss 0.723708
+Epoch 51, Train Loss 0.689124, Valid_loss 0.722214
+Epoch 52, Train Loss 0.665599, Valid_loss 0.719596
+Epoch 53, Train Loss 0.526412, Valid_loss 0.716988
+Epoch 54, Train Loss 0.662834, Valid_loss 0.714430
+Epoch 55, Train Loss 0.588632, Valid_loss 0.712530
+Epoch 56, Train Loss 0.605853, Valid_loss 0.712097
+Epoch 57, Train Loss 0.523503, Valid_loss 0.712908
+Epoch 58, Train Loss 0.513208, Valid_loss 0.714358
+COVID19_Participant19 -- true: COVID-19 -- pred: COVID-19
+Control_Participant7 -- true: normal -- pred: normal
+COVID19_Participant11 -- true: COVID-19 -- pred: COVID-19
+Control_Participant5 -- true: normal -- pred: COVID-19
+COVID19_Participant13 -- true: COVID-19 -- pred: COVID-19
+COVID19_Participant13 -- true: COVID-19 -- pred: COVID-19
+true :  [1, 0, 1, 0, 1, 1]
+pred :  [1, 0, 1, 1, 1, 1]
+Confusion Matrix: [1 1 0 4]
+Best performance: Epoch 6, Loss 0.711493, Test ACC 0.833333, Test AUC 0.875000, Test Recall 1.000000, Test Precision 0.800000
+✅ Total valid splits used: 2
+🔁 Repeat 2, Fold 2
+🔍 Split #3
+  → train_p_index 환자 수: 27
+  → test_p_index 환자 수: 5
+  → train 환자 ID: ['COVID19_Participant11', 'COVID19_Participant13', 'COVID19_Participant14', 'COVID19_Participant19', 'COVID19_Participant2', 'COVID19_Participant20', 'COVID19_Participant23', 'COVID19_Participant25', 'COVID19_Participant26', 'COVID19_Participant29', 'COVID19_Participant31', 'COVID19_Participant37', 'COVID19_Participant39', 'COVID19_Participant4', 'COVID19_Participant40', 'COVID19_Participant7', 'COVID19_Participant8', 'Control_Participant1', 'Control_Participant10', 'Control_Participant11', 'Control_Participant15', 'Control_Participant3', 'Control_Participant4', 'Control_Participant5', 'Control_Participant7', 'Control_Participant8', 'Control_Participant9']
+  → test  환자 ID: ['Control_Participant5', 'COVID19_Participant13', 'COVID19_Participant5', 'Control_Participant7', 'Control_Participant4']
+  → train 환자 ID 및 라벨:
+    ID: COVID19_Participant11, Label: 1
+    ID: COVID19_Participant13, Label: 1
+    ID: COVID19_Participant14, Label: 1
+    ID: COVID19_Participant19, Label: 1
+    ID: COVID19_Participant2, Label: 1
+    ID: COVID19_Participant20, Label: 1
+    ID: COVID19_Participant23, Label: 1
+    ID: COVID19_Participant25, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: COVID19_Participant29, Label: 1
+    ID: COVID19_Participant31, Label: 1
+    ID: COVID19_Participant37, Label: 1
+    ID: COVID19_Participant39, Label: 1
+    ID: COVID19_Participant4, Label: 1
+    ID: COVID19_Participant40, Label: 1
+    ID: COVID19_Participant7, Label: 1
+    ID: COVID19_Participant8, Label: 1
+    ID: Control_Participant1, Label: 0
+    ID: Control_Participant10, Label: 0
+    ID: Control_Participant11, Label: 0
+    ID: Control_Participant15, Label: 0
+    ID: Control_Participant3, Label: 0
+    ID: Control_Participant4, Label: 0
+    ID: Control_Participant5, Label: 0
+    ID: Control_Participant7, Label: 0
+    ID: Control_Participant8, Label: 0
+    ID: Control_Participant9, Label: 0
+  → test 환자 ID 및 라벨:
+    ID: Control_Participant5, Label: 1
+    ID: COVID19_Participant13, Label: 1
+    ID: COVID19_Participant5, Label: 1
+    ID: Control_Participant7, Label: 1
+    ID: Control_Participant4, Label: 1
+train_p_index_ 18
+valid_p_index 9
+test_p_index 5
+data augment 실행 안 함
+eval_p_index len:  14
+individual_train 18
+individual_eval 14
+train data의 x, y, id 길이: 18 18 18
+valid data의 x, y, id 길이: 9 9 9
+test data의 x, y, id 길이: 5 5 5
+output_class :  1
+Memory Allocated: 16.69 MB
+Memory Reserved: 42.00 MB
+cuda
+Epoch 1, Train Loss 0.647805, Valid_loss 0.688665
+Epoch 2, Train Loss 0.628210, Valid_loss 0.688756
+Epoch 3, Train Loss 0.600630, Valid_loss 0.689235
+Epoch 4, Train Loss 0.708151, Valid_loss 0.689841
+Epoch 5, Train Loss 0.592472, Valid_loss 0.690259
+Epoch 6, Train Loss 0.671937, Valid_loss 0.690667
+Epoch 7, Train Loss 0.671036, Valid_loss 0.690747
+Epoch 8, Train Loss 0.695362, Valid_loss 0.690542
+Epoch 9, Train Loss 0.735786, Valid_loss 0.689684
+Epoch 10, Train Loss 0.762146, Valid_loss 0.688360
+Epoch 11, Train Loss 0.566273, Valid_loss 0.687106
+Epoch 12, Train Loss 0.573383, Valid_loss 0.686267
+Epoch 13, Train Loss 0.659865, Valid_loss 0.685633
+Epoch 14, Train Loss 0.665653, Valid_loss 0.684931
+Epoch 15, Train Loss 0.562481, Valid_loss 0.684466
+Epoch 16, Train Loss 0.644085, Valid_loss 0.684223
+Epoch 17, Train Loss 0.675311, Valid_loss 0.683625
+Epoch 18, Train Loss 0.542253, Valid_loss 0.682961
+Epoch 19, Train Loss 0.627089, Valid_loss 0.682474
+Epoch 20, Train Loss 0.637341, Valid_loss 0.681919
+Epoch 21, Train Loss 0.542610, Valid_loss 0.681330
+Epoch 22, Train Loss 0.532655, Valid_loss 0.681146
+Epoch 23, Train Loss 0.529722, Valid_loss 0.681406
+Epoch 24, Train Loss 0.735553, Valid_loss 0.681182
+Epoch 25, Train Loss 0.604514, Valid_loss 0.679729
+Epoch 26, Train Loss 0.550679, Valid_loss 0.678298
+Epoch 27, Train Loss 0.563625, Valid_loss 0.677495
+Epoch 28, Train Loss 0.660939, Valid_loss 0.676657
+Epoch 29, Train Loss 0.595222, Valid_loss 0.675210
+Epoch 30, Train Loss 0.513608, Valid_loss 0.673820
+Epoch 31, Train Loss 0.724248, Valid_loss 0.671728
+Epoch 32, Train Loss 0.641357, Valid_loss 0.668038
+Epoch 33, Train Loss 0.553747, Valid_loss 0.664549
+Epoch 34, Train Loss 0.532647, Valid_loss 0.662389
+Epoch 35, Train Loss 0.569758, Valid_loss 0.660712
+Epoch 36, Train Loss 0.631700, Valid_loss 0.658619
+Epoch 37, Train Loss 0.610500, Valid_loss 0.655839
+Epoch 38, Train Loss 0.556317, Valid_loss 0.653488
+Epoch 39, Train Loss 0.617002, Valid_loss 0.651953
+Epoch 40, Train Loss 0.639706, Valid_loss 0.649267
+Epoch 41, Train Loss 0.532484, Valid_loss 0.646558
+Epoch 42, Train Loss 0.607556, Valid_loss 0.644704
+Epoch 43, Train Loss 0.646667, Valid_loss 0.640929
+Epoch 44, Train Loss 0.636084, Valid_loss 0.635470
+Epoch 45, Train Loss 0.498978, Valid_loss 0.631632
+Epoch 46, Train Loss 0.557604, Valid_loss 0.629187
+Epoch 47, Train Loss 0.652943, Valid_loss 0.626381
+Epoch 48, Train Loss 0.592449, Valid_loss 0.623970
+Epoch 49, Train Loss 0.494483, Valid_loss 0.623639
+Epoch 50, Train Loss 0.634076, Valid_loss 0.624090
+Epoch 51, Train Loss 0.490087, Valid_loss 0.624485
+Epoch 52, Train Loss 0.512669, Valid_loss 0.625897
+Control_Participant5 -- true: normal -- pred: COVID-19
+COVID19_Participant13 -- true: COVID-19 -- pred: COVID-19
+COVID19_Participant5 -- true: COVID-19 -- pred: COVID-19
+Control_Participant7 -- true: normal -- pred: COVID-19
+Control_Participant4 -- true: normal -- pred: COVID-19
+true :  [0, 1, 1, 0, 0]
+pred :  [1, 1, 1, 1, 1]
+Confusion Matrix: [0 3 0 2]
+Best performance: Epoch 49, Loss 0.494483, Test ACC 0.400000, Test AUC 0.666667, Test Recall 1.000000, Test Precision 0.400000
+✅ Total valid splits used: 3
+🔁 Repeat 2, Fold 3
+🔍 Split #4
+  → train_p_index 환자 수: 23
+  → test_p_index 환자 수: 9
+  → train 환자 ID: ['COVID19_Participant13', 'COVID19_Participant15', 'COVID19_Participant17', 'COVID19_Participant20', 'COVID19_Participant22', 'COVID19_Participant23', 'COVID19_Participant26', 'COVID19_Participant28', 'COVID19_Participant29', 'COVID19_Participant32', 'COVID19_Participant37', 'COVID19_Participant39', 'COVID19_Participant4', 'COVID19_Participant40', 'COVID19_Participant7', 'COVID19_Participant8', 'Control_Participant11', 'Control_Participant15', 'Control_Participant3', 'Control_Participant4', 'Control_Participant5', 'Control_Participant8', 'Control_Participant9']
+  → test  환자 ID: ['COVID19_Participant26', 'Control_Participant3', 'COVID19_Participant7', 'Control_Participant9', 'COVID19_Participant26', 'Control_Participant12', 'Control_Participant4', 'Control_Participant5', 'COVID19_Participant13']
+  → train 환자 ID 및 라벨:
+    ID: COVID19_Participant13, Label: 1
+    ID: COVID19_Participant15, Label: 1
+    ID: COVID19_Participant17, Label: 1
+    ID: COVID19_Participant20, Label: 1
+    ID: COVID19_Participant22, Label: 1
+    ID: COVID19_Participant23, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: COVID19_Participant28, Label: 1
+    ID: COVID19_Participant29, Label: 1
+    ID: COVID19_Participant32, Label: 1
+    ID: COVID19_Participant37, Label: 1
+    ID: COVID19_Participant39, Label: 1
+    ID: COVID19_Participant4, Label: 1
+    ID: COVID19_Participant40, Label: 1
+    ID: COVID19_Participant7, Label: 1
+    ID: COVID19_Participant8, Label: 1
+    ID: Control_Participant11, Label: 0
+    ID: Control_Participant15, Label: 0
+    ID: Control_Participant3, Label: 0
+    ID: Control_Participant4, Label: 0
+    ID: Control_Participant5, Label: 0
+    ID: Control_Participant8, Label: 0
+    ID: Control_Participant9, Label: 0
+  → test 환자 ID 및 라벨:
+    ID: COVID19_Participant26, Label: 1
+    ID: Control_Participant3, Label: 1
+    ID: COVID19_Participant7, Label: 1
+    ID: Control_Participant9, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: Control_Participant12, Label: 1
+    ID: Control_Participant4, Label: 0
+    ID: Control_Participant5, Label: 0
+    ID: COVID19_Participant13, Label: 0
+train_p_index_ 15
+valid_p_index 8
+test_p_index 9
+data augment 실행 안 함
+eval_p_index len:  17
+individual_train 15
+individual_eval 17
+train data의 x, y, id 길이: 15 15 15
+valid data의 x, y, id 길이: 8 8 8
+test data의 x, y, id 길이: 9 9 9
+output_class :  1
+Memory Allocated: 16.69 MB
+Memory Reserved: 42.00 MB
+cuda
+Epoch 1, Train Loss 0.662945, Valid_loss 0.677160
+Epoch 2, Train Loss 0.661504, Valid_loss 0.676448
+Epoch 3, Train Loss 0.660085, Valid_loss 0.675742
+Epoch 4, Train Loss 0.658719, Valid_loss 0.675040
+Epoch 5, Train Loss 0.657347, Valid_loss 0.674345
+Epoch 6, Train Loss 0.655962, Valid_loss 0.673654
+Epoch 7, Train Loss 0.654561, Valid_loss 0.672966
+Epoch 8, Train Loss 0.653143, Valid_loss 0.672280
+Epoch 9, Train Loss 0.651711, Valid_loss 0.671597
+Epoch 10, Train Loss 0.650263, Valid_loss 0.670912
+Epoch 11, Train Loss 0.648796, Valid_loss 0.670222
+Epoch 12, Train Loss 0.647281, Valid_loss 0.669530
+Epoch 13, Train Loss 0.645746, Valid_loss 0.668841
+Epoch 14, Train Loss 0.644183, Valid_loss 0.668151
+Epoch 15, Train Loss 0.642590, Valid_loss 0.667455
+Epoch 16, Train Loss 0.640964, Valid_loss 0.666761
+Epoch 17, Train Loss 0.639308, Valid_loss 0.666072
+Epoch 18, Train Loss 0.637622, Valid_loss 0.665393
+Epoch 19, Train Loss 0.635912, Valid_loss 0.664724
+Epoch 20, Train Loss 0.634180, Valid_loss 0.664061
+Epoch 21, Train Loss 0.632428, Valid_loss 0.663409
+Epoch 22, Train Loss 0.630660, Valid_loss 0.662771
+Epoch 23, Train Loss 0.628882, Valid_loss 0.662148
+Epoch 24, Train Loss 0.627100, Valid_loss 0.661547
+Epoch 25, Train Loss 0.625320, Valid_loss 0.660966
+Epoch 26, Train Loss 0.623550, Valid_loss 0.660650
+Epoch 27, Train Loss 0.621926, Valid_loss 0.660443
+Epoch 28, Train Loss 0.620390, Valid_loss 0.660502
+Epoch 29, Train Loss 0.619128, Valid_loss 0.660713
+Epoch 30, Train Loss 0.617991, Valid_loss 0.660912
+Epoch 31, Train Loss 0.616992, Valid_loss 0.661096
+Epoch 32, Train Loss 0.616181, Valid_loss 0.661052
+Epoch 33, Train Loss 0.615508, Valid_loss 0.660747
+Epoch 34, Train Loss 0.614836, Valid_loss 0.660446
+Epoch 35, Train Loss 0.614161, Valid_loss 0.660147
+Epoch 36, Train Loss 0.613537, Valid_loss 0.659847
+Epoch 37, Train Loss 0.612910, Valid_loss 0.659546
+Epoch 38, Train Loss 0.612268, Valid_loss 0.659243
+Epoch 39, Train Loss 0.611611, Valid_loss 0.658935
+Epoch 40, Train Loss 0.610938, Valid_loss 0.658621
+Epoch 41, Train Loss 0.610245, Valid_loss 0.658300
+Epoch 42, Train Loss 0.609531, Valid_loss 0.657971
+Epoch 43, Train Loss 0.608795, Valid_loss 0.657633
+Epoch 44, Train Loss 0.608035, Valid_loss 0.657286
+Epoch 45, Train Loss 0.607249, Valid_loss 0.656930
+Epoch 46, Train Loss 0.606435, Valid_loss 0.656563
+Epoch 47, Train Loss 0.605568, Valid_loss 0.656184
+Epoch 48, Train Loss 0.604653, Valid_loss 0.655791
+Epoch 49, Train Loss 0.603701, Valid_loss 0.655387
+Epoch 50, Train Loss 0.602711, Valid_loss 0.654968
+Epoch 51, Train Loss 0.601688, Valid_loss 0.654752
+Epoch 52, Train Loss 0.601157, Valid_loss 0.654530
+Epoch 53, Train Loss 0.600611, Valid_loss 0.654302
+Epoch 54, Train Loss 0.600049, Valid_loss 0.654070
+Epoch 55, Train Loss 0.599461, Valid_loss 0.653833
+Epoch 56, Train Loss 0.598828, Valid_loss 0.653589
+Epoch 57, Train Loss 0.598175, Valid_loss 0.653339
+Epoch 58, Train Loss 0.597502, Valid_loss 0.653084
+Epoch 59, Train Loss 0.596809, Valid_loss 0.652823
+Epoch 60, Train Loss 0.596094, Valid_loss 0.652558
+Epoch 61, Train Loss 0.595357, Valid_loss 0.652287
+Epoch 62, Train Loss 0.594598, Valid_loss 0.652010
+Epoch 63, Train Loss 0.593817, Valid_loss 0.651727
+Epoch 64, Train Loss 0.593012, Valid_loss 0.651439
+Epoch 65, Train Loss 0.592182, Valid_loss 0.651145
+Epoch 66, Train Loss 0.591328, Valid_loss 0.650845
+Epoch 67, Train Loss 0.590448, Valid_loss 0.650541
+Epoch 68, Train Loss 0.589542, Valid_loss 0.650233
+Epoch 69, Train Loss 0.588608, Valid_loss 0.649919
+Epoch 70, Train Loss 0.587645, Valid_loss 0.649599
+Epoch 71, Train Loss 0.586652, Valid_loss 0.649275
+Epoch 72, Train Loss 0.585627, Valid_loss 0.648947
+Epoch 73, Train Loss 0.584576, Valid_loss 0.648615
+Epoch 74, Train Loss 0.583505, Valid_loss 0.648280
+Epoch 75, Train Loss 0.582401, Valid_loss 0.647942
+Epoch 76, Train Loss 0.581183, Valid_loss 0.647600
+Epoch 77, Train Loss 0.579862, Valid_loss 0.647255
+Epoch 78, Train Loss 0.578483, Valid_loss 0.646843
+Epoch 79, Train Loss 0.577045, Valid_loss 0.646319
+Epoch 80, Train Loss 0.575489, Valid_loss 0.645781
+Epoch 81, Train Loss 0.573860, Valid_loss 0.645231
+Epoch 82, Train Loss 0.572155, Valid_loss 0.644667
+Epoch 83, Train Loss 0.570301, Valid_loss 0.644094
+Epoch 84, Train Loss 0.568284, Valid_loss 0.643509
+Epoch 85, Train Loss 0.566160, Valid_loss 0.642913
+Epoch 86, Train Loss 0.563925, Valid_loss 0.642305
+Epoch 87, Train Loss 0.561617, Valid_loss 0.641684
+Epoch 88, Train Loss 0.559309, Valid_loss 0.640514
+Epoch 89, Train Loss 0.556614, Valid_loss 0.639288
+Epoch 90, Train Loss 0.553858, Valid_loss 0.638013
+Epoch 91, Train Loss 0.551041, Valid_loss 0.636176
+Epoch 92, Train Loss 0.548113, Valid_loss 0.634138
+Epoch 93, Train Loss 0.545100, Valid_loss 0.631941
+Epoch 94, Train Loss 0.542034, Valid_loss 0.629344
+Epoch 95, Train Loss 0.538944, Valid_loss 0.628043
+Epoch 96, Train Loss 0.535857, Valid_loss 0.626793
+Epoch 97, Train Loss 0.532735, Valid_loss 0.625598
+Epoch 98, Train Loss 0.529490, Valid_loss 0.624347
+Epoch 99, Train Loss 0.526104, Valid_loss 0.622755
+Epoch 100, Train Loss 0.522703, Valid_loss 0.622549
+COVID19_Participant26 -- true: COVID-19 -- pred: COVID-19
+Control_Participant3 -- true: normal -- pred: COVID-19
+COVID19_Participant7 -- true: COVID-19 -- pred: COVID-19
+Control_Participant9 -- true: normal -- pred: COVID-19
+COVID19_Participant26 -- true: COVID-19 -- pred: COVID-19
+Control_Participant12 -- true: normal -- pred: COVID-19
+Control_Participant4 -- true: normal -- pred: COVID-19
+Control_Participant5 -- true: normal -- pred: COVID-19
+COVID19_Participant13 -- true: COVID-19 -- pred: COVID-19
+true :  [1, 0, 1, 0, 1, 0, 0, 0, 1]
+pred :  [1, 1, 1, 1, 1, 1, 1, 1, 1]
+Confusion Matrix: [0 5 0 4]
+Best performance: Epoch 100, Loss 0.522703, Test ACC 0.444444, Test AUC 0.700000, Test Recall 1.000000, Test Precision 0.444444
+✅ Total valid splits used: 4
+🔁 Repeat 2, Fold 4
+🔍 Split #5
+  → train_p_index 환자 수: 26
+  → test_p_index 환자 수: 6
+  → train 환자 ID: ['COVID19_Participant11', 'COVID19_Participant14', 'COVID19_Participant15', 'COVID19_Participant17', 'COVID19_Participant19', 'COVID19_Participant2', 'COVID19_Participant20', 'COVID19_Participant22', 'COVID19_Participant23', 'COVID19_Participant25', 'COVID19_Participant26', 'COVID19_Participant28', 'COVID19_Participant31', 'COVID19_Participant32', 'COVID19_Participant37', 'COVID19_Participant4', 'COVID19_Participant7', 'COVID19_Participant8', 'Control_Participant1', 'Control_Participant10', 'Control_Participant3', 'Control_Participant4', 'Control_Participant5', 'Control_Participant7', 'Control_Participant8', 'Control_Participant9']
+  → test  환자 ID: ['Control_Participant7', 'Control_Participant5', 'COVID19_Participant26', 'Control_Participant4', 'COVID19_Participant31', 'COVID19_Participant7']
+  → train 환자 ID 및 라벨:
+    ID: COVID19_Participant11, Label: 1
+    ID: COVID19_Participant14, Label: 1
+    ID: COVID19_Participant15, Label: 1
+    ID: COVID19_Participant17, Label: 1
+    ID: COVID19_Participant19, Label: 1
+    ID: COVID19_Participant2, Label: 1
+    ID: COVID19_Participant20, Label: 1
+    ID: COVID19_Participant22, Label: 1
+    ID: COVID19_Participant23, Label: 1
+    ID: COVID19_Participant25, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: COVID19_Participant28, Label: 1
+    ID: COVID19_Participant31, Label: 1
+    ID: COVID19_Participant32, Label: 1
+    ID: COVID19_Participant37, Label: 1
+    ID: COVID19_Participant4, Label: 1
+    ID: COVID19_Participant7, Label: 1
+    ID: COVID19_Participant8, Label: 1
+    ID: Control_Participant1, Label: 0
+    ID: Control_Participant10, Label: 0
+    ID: Control_Participant3, Label: 0
+    ID: Control_Participant4, Label: 0
+    ID: Control_Participant5, Label: 0
+    ID: Control_Participant7, Label: 0
+    ID: Control_Participant8, Label: 0
+    ID: Control_Participant9, Label: 0
+  → test 환자 ID 및 라벨:
+    ID: Control_Participant7, Label: 1
+    ID: Control_Participant5, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: Control_Participant4, Label: 1
+    ID: COVID19_Participant31, Label: 0
+    ID: COVID19_Participant7, Label: 0
+train_p_index_ 17
+valid_p_index 9
+test_p_index 6
+data augment 실행 안 함
+eval_p_index len:  15
+individual_train 17
+individual_eval 15
+train data의 x, y, id 길이: 17 17 17
+valid data의 x, y, id 길이: 9 9 9
+test data의 x, y, id 길이: 6 6 6
+output_class :  1
+Memory Allocated: 16.69 MB
+Memory Reserved: 42.00 MB
+cuda
+Epoch 1, Train Loss 0.618456, Valid_loss 0.741104
+Epoch 2, Train Loss 0.616703, Valid_loss 0.743978
+Epoch 3, Train Loss 0.615080, Valid_loss 0.747056
+Epoch 4, Train Loss 0.760236, Valid_loss 0.748322
+Epoch 5, Train Loss 0.568997, Valid_loss 0.748416
+Epoch 6, Train Loss 0.612997, Valid_loss 0.749422
+Epoch 7, Train Loss 0.545743, Valid_loss 0.751055
+Epoch 8, Train Loss 0.604642, Valid_loss 0.753480
+Epoch 9, Train Loss 0.607249, Valid_loss 0.756322
+Epoch 10, Train Loss 0.591353, Valid_loss 0.759479
+Epoch 11, Train Loss 0.543853, Valid_loss 0.762985
+Epoch 12, Train Loss 0.599182, Valid_loss 0.766484
+Epoch 13, Train Loss 0.522399, Valid_loss 0.769898
+Epoch 14, Train Loss 0.560777, Valid_loss 0.773091
+Epoch 15, Train Loss 0.576629, Valid_loss 0.776011
+Epoch 16, Train Loss 0.571754, Valid_loss 0.778583
+Epoch 17, Train Loss 0.587717, Valid_loss 0.780830
+Epoch 18, Train Loss 0.586308, Valid_loss 0.782717
+Epoch 19, Train Loss 0.594170, Valid_loss 0.783995
+Epoch 20, Train Loss 0.591829, Valid_loss 0.784687
+Epoch 21, Train Loss 0.521359, Valid_loss 0.785290
+Epoch 22, Train Loss 0.497935, Valid_loss 0.786136
+Epoch 23, Train Loss 0.535883, Valid_loss 0.787242
+Epoch 24, Train Loss 0.580820, Valid_loss 0.788454
+Epoch 25, Train Loss 0.796234, Valid_loss 0.789099
+Epoch 26, Train Loss 0.581827, Valid_loss 0.789190
+Epoch 27, Train Loss 0.581244, Valid_loss 0.789356
+Epoch 28, Train Loss 0.497477, Valid_loss 0.789795
+Epoch 29, Train Loss 0.490306, Valid_loss 0.790652
+Epoch 30, Train Loss 0.543979, Valid_loss 0.791794
+Epoch 31, Train Loss 0.582394, Valid_loss 0.793002
+Epoch 32, Train Loss 0.522979, Valid_loss 0.794263
+Epoch 33, Train Loss 0.577387, Valid_loss 0.795504
+Epoch 34, Train Loss 0.490650, Valid_loss 0.796631
+Epoch 35, Train Loss 0.574031, Valid_loss 0.797588
+Epoch 36, Train Loss 0.580384, Valid_loss 0.798102
+Epoch 37, Train Loss 0.494916, Valid_loss 0.798480
+Epoch 38, Train Loss 0.478201, Valid_loss 0.799209
+Epoch 39, Train Loss 0.511525, Valid_loss 0.800225
+Epoch 40, Train Loss 0.489375, Valid_loss 0.801489
+Epoch 41, Train Loss 0.499596, Valid_loss 0.802945
+Epoch 42, Train Loss 0.710667, Valid_loss 0.803939
+Epoch 43, Train Loss 0.495463, Valid_loss 0.804428
+Epoch 44, Train Loss 0.469220, Valid_loss 0.805044
+Epoch 45, Train Loss 0.574597, Valid_loss 0.805390
+Epoch 46, Train Loss 0.567707, Valid_loss 0.805577
+Epoch 47, Train Loss 0.497500, Valid_loss 0.806100
+Epoch 48, Train Loss 0.464344, Valid_loss 0.807102
+Epoch 49, Train Loss 0.565229, Valid_loss 0.808337
+Epoch 50, Train Loss 0.704930, Valid_loss 0.808941
+Epoch 51, Train Loss 0.490719, Valid_loss 0.809011
+Epoch 52, Train Loss 0.514587, Valid_loss 0.809293
+Control_Participant7 -- true: normal -- pred: COVID-19
+Control_Participant5 -- true: normal -- pred: COVID-19
+COVID19_Participant26 -- true: COVID-19 -- pred: COVID-19
+Control_Participant4 -- true: normal -- pred: COVID-19
+COVID19_Participant31 -- true: COVID-19 -- pred: COVID-19
+COVID19_Participant7 -- true: COVID-19 -- pred: COVID-19
+true :  [0, 0, 1, 0, 1, 1]
+pred :  [1, 1, 1, 1, 1, 1]
+Confusion Matrix: [0 3 0 3]
+Best performance: Epoch 1, Loss 0.618456, Test ACC 0.500000, Test AUC 0.444444, Test Recall 1.000000, Test Precision 0.500000
+✅ Total valid splits used: 5
+
+📌 Repeat 2: 평균 AUC = 0.7372, 표준편차 = 0.1898
+🔁 Repeat 3, Fold 0
+🔍 Split #1
+  → train_p_index 환자 수: 24
+  → test_p_index 환자 수: 8
+  → train 환자 ID: ['COVID19_Participant13', 'COVID19_Participant14', 'COVID19_Participant15', 'COVID19_Participant2', 'COVID19_Participant20', 'COVID19_Participant22', 'COVID19_Participant23', 'COVID19_Participant26', 'COVID19_Participant28', 'COVID19_Participant29', 'COVID19_Participant32', 'COVID19_Participant37', 'COVID19_Participant39', 'COVID19_Participant4', 'COVID19_Participant7', 'COVID19_Participant8', 'Control_Participant10', 'Control_Participant11', 'Control_Participant15', 'Control_Participant3', 'Control_Participant5', 'Control_Participant7', 'Control_Participant8', 'Control_Participant9']
+  → test  환자 ID: ['COVID19_Participant13', 'Control_Participant5', 'COVID19_Participant26', 'COVID19_Participant13', 'Control_Participant7', 'Control_Participant3', 'COVID19_Participant26', 'Control_Participant7']
+  → train 환자 ID 및 라벨:
+    ID: COVID19_Participant13, Label: 1
+    ID: COVID19_Participant14, Label: 1
+    ID: COVID19_Participant15, Label: 1
+    ID: COVID19_Participant2, Label: 1
+    ID: COVID19_Participant20, Label: 1
+    ID: COVID19_Participant22, Label: 1
+    ID: COVID19_Participant23, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: COVID19_Participant28, Label: 1
+    ID: COVID19_Participant29, Label: 1
+    ID: COVID19_Participant32, Label: 1
+    ID: COVID19_Participant37, Label: 1
+    ID: COVID19_Participant39, Label: 1
+    ID: COVID19_Participant4, Label: 1
+    ID: COVID19_Participant7, Label: 1
+    ID: COVID19_Participant8, Label: 1
+    ID: Control_Participant10, Label: 0
+    ID: Control_Participant11, Label: 0
+    ID: Control_Participant15, Label: 0
+    ID: Control_Participant3, Label: 0
+    ID: Control_Participant5, Label: 0
+    ID: Control_Participant7, Label: 0
+    ID: Control_Participant8, Label: 0
+    ID: Control_Participant9, Label: 0
+  → test 환자 ID 및 라벨:
+    ID: COVID19_Participant13, Label: 1
+    ID: Control_Participant5, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: COVID19_Participant13, Label: 1
+    ID: Control_Participant7, Label: 1
+    ID: Control_Participant3, Label: 1
+    ID: COVID19_Participant26, Label: 0
+    ID: Control_Participant7, Label: 0
+train_p_index_ 16
+valid_p_index 8
+test_p_index 8
+data augment 실행 안 함
+eval_p_index len:  16
+individual_train 16
+individual_eval 16
+train data의 x, y, id 길이: 16 16 16
+valid data의 x, y, id 길이: 8 8 8
+test data의 x, y, id 길이: 8 8 8
+output_class :  1
+Memory Allocated: 16.69 MB
+Memory Reserved: 42.00 MB
+cuda
+Epoch 1, Train Loss 0.850083, Valid_loss 0.662581
+Epoch 2, Train Loss 0.836980, Valid_loss 0.657715
+Epoch 3, Train Loss 0.825122, Valid_loss 0.654468
+Epoch 4, Train Loss 0.814214, Valid_loss 0.652365
+Epoch 5, Train Loss 0.804219, Valid_loss 0.651173
+Epoch 6, Train Loss 0.795079, Valid_loss 0.650737
+Epoch 7, Train Loss 0.786775, Valid_loss 0.650847
+Epoch 8, Train Loss 0.779190, Valid_loss 0.651511
+Epoch 9, Train Loss 0.772333, Valid_loss 0.652622
+Epoch 10, Train Loss 0.766240, Valid_loss 0.654393
+Epoch 11, Train Loss 0.760866, Valid_loss 0.656674
+Epoch 12, Train Loss 0.756372, Valid_loss 0.659556
+Epoch 13, Train Loss 0.752544, Valid_loss 0.662339
+Epoch 14, Train Loss 0.749178, Valid_loss 0.664906
+Epoch 15, Train Loss 0.746230, Valid_loss 0.667377
+Epoch 16, Train Loss 0.743603, Valid_loss 0.669676
+Epoch 17, Train Loss 0.741280, Valid_loss 0.671382
+Epoch 18, Train Loss 0.739298, Valid_loss 0.673174
+Epoch 19, Train Loss 0.737506, Valid_loss 0.675013
+Epoch 20, Train Loss 0.735860, Valid_loss 0.676706
+Epoch 21, Train Loss 0.734337, Valid_loss 0.677994
+Epoch 22, Train Loss 0.732918, Valid_loss 0.679075
+Epoch 23, Train Loss 0.731565, Valid_loss 0.680036
+Epoch 24, Train Loss 0.730284, Valid_loss 0.680914
+Epoch 25, Train Loss 0.729064, Valid_loss 0.681712
+Epoch 26, Train Loss 0.727895, Valid_loss 0.682434
+Epoch 27, Train Loss 0.726804, Valid_loss 0.683101
+Epoch 28, Train Loss 0.725793, Valid_loss 0.683743
+Epoch 29, Train Loss 0.724802, Valid_loss 0.684282
+Epoch 30, Train Loss 0.723787, Valid_loss 0.684707
+Epoch 31, Train Loss 0.722790, Valid_loss 0.685086
+Epoch 32, Train Loss 0.721807, Valid_loss 0.685389
+Epoch 33, Train Loss 0.720820, Valid_loss 0.685621
+Epoch 34, Train Loss 0.719834, Valid_loss 0.685790
+Epoch 35, Train Loss 0.718864, Valid_loss 0.685929
+Epoch 36, Train Loss 0.717905, Valid_loss 0.686058
+Epoch 37, Train Loss 0.716948, Valid_loss 0.686129
+Epoch 38, Train Loss 0.715991, Valid_loss 0.686141
+Epoch 39, Train Loss 0.715036, Valid_loss 0.686066
+Epoch 40, Train Loss 0.714091, Valid_loss 0.685907
+Epoch 41, Train Loss 0.713134, Valid_loss 0.685669
+Epoch 42, Train Loss 0.712166, Valid_loss 0.685356
+Epoch 43, Train Loss 0.711186, Valid_loss 0.684974
+Epoch 44, Train Loss 0.710201, Valid_loss 0.684522
+Epoch 45, Train Loss 0.709234, Valid_loss 0.684018
+Epoch 46, Train Loss 0.708271, Valid_loss 0.683457
+Epoch 47, Train Loss 0.707310, Valid_loss 0.682861
+Epoch 48, Train Loss 0.706352, Valid_loss 0.682280
+Epoch 49, Train Loss 0.705397, Valid_loss 0.681679
+Epoch 50, Train Loss 0.704446, Valid_loss 0.681045
+Epoch 51, Train Loss 0.703500, Valid_loss 0.680713
+Epoch 52, Train Loss 0.703029, Valid_loss 0.680371
+Epoch 53, Train Loss 0.702558, Valid_loss 0.680018
+Epoch 54, Train Loss 0.702086, Valid_loss 0.679656
+Epoch 55, Train Loss 0.701615, Valid_loss 0.679283
+Epoch 56, Train Loss 0.701143, Valid_loss 0.678902
+Epoch 57, Train Loss 0.700671, Valid_loss 0.678512
+Epoch 58, Train Loss 0.700208, Valid_loss 0.678066
+Epoch 59, Train Loss 0.699757, Valid_loss 0.677622
+Epoch 60, Train Loss 0.699305, Valid_loss 0.677192
+Epoch 61, Train Loss 0.698850, Valid_loss 0.676776
+Epoch 62, Train Loss 0.698400, Valid_loss 0.676382
+Epoch 63, Train Loss 0.697946, Valid_loss 0.676009
+Epoch 64, Train Loss 0.697489, Valid_loss 0.675654
+Epoch 65, Train Loss 0.697029, Valid_loss 0.675317
+Epoch 66, Train Loss 0.696565, Valid_loss 0.674995
+Epoch 67, Train Loss 0.696097, Valid_loss 0.674686
+Epoch 68, Train Loss 0.695625, Valid_loss 0.674388
+Epoch 69, Train Loss 0.695149, Valid_loss 0.674101
+Epoch 70, Train Loss 0.694670, Valid_loss 0.673822
+Epoch 71, Train Loss 0.694186, Valid_loss 0.673550
+Epoch 72, Train Loss 0.693699, Valid_loss 0.673283
+Epoch 73, Train Loss 0.693207, Valid_loss 0.673020
+Epoch 74, Train Loss 0.692712, Valid_loss 0.672758
+Epoch 75, Train Loss 0.692212, Valid_loss 0.672496
+Epoch 76, Train Loss 0.691708, Valid_loss 0.672231
+Epoch 77, Train Loss 0.691216, Valid_loss 0.671920
+Epoch 78, Train Loss 0.690729, Valid_loss 0.671573
+Epoch 79, Train Loss 0.690237, Valid_loss 0.671192
+Epoch 80, Train Loss 0.689741, Valid_loss 0.670778
+Epoch 81, Train Loss 0.689240, Valid_loss 0.670333
+Epoch 82, Train Loss 0.688736, Valid_loss 0.669858
+Epoch 83, Train Loss 0.688227, Valid_loss 0.669355
+Epoch 84, Train Loss 0.687714, Valid_loss 0.668792
+Epoch 85, Train Loss 0.687198, Valid_loss 0.668173
+Epoch 86, Train Loss 0.686677, Valid_loss 0.667537
+Epoch 87, Train Loss 0.686152, Valid_loss 0.666887
+Epoch 88, Train Loss 0.685624, Valid_loss 0.666224
+Epoch 89, Train Loss 0.685092, Valid_loss 0.665550
+Epoch 90, Train Loss 0.684557, Valid_loss 0.664866
+Epoch 91, Train Loss 0.684017, Valid_loss 0.664174
+Epoch 92, Train Loss 0.683474, Valid_loss 0.663475
+Epoch 93, Train Loss 0.682927, Valid_loss 0.662769
+Epoch 94, Train Loss 0.682376, Valid_loss 0.662178
+Epoch 95, Train Loss 0.681823, Valid_loss 0.661717
+Epoch 96, Train Loss 0.681266, Valid_loss 0.661219
+Epoch 97, Train Loss 0.680705, Valid_loss 0.660687
+Epoch 98, Train Loss 0.680140, Valid_loss 0.660126
+Epoch 99, Train Loss 0.679598, Valid_loss 0.659625
+Epoch 100, Train Loss 0.679149, Valid_loss 0.659184
+COVID19_Participant13 -- true: COVID-19 -- pred: normal
+Control_Participant5 -- true: normal -- pred: normal
+COVID19_Participant26 -- true: COVID-19 -- pred: normal
+COVID19_Participant13 -- true: COVID-19 -- pred: normal
+Control_Participant7 -- true: normal -- pred: normal
+Control_Participant3 -- true: normal -- pred: normal
+COVID19_Participant26 -- true: COVID-19 -- pred: COVID-19
+Control_Participant7 -- true: normal -- pred: normal
+true :  [1, 0, 1, 1, 0, 0, 1, 0]
+pred :  [0, 0, 0, 0, 0, 0, 1, 0]
+Confusion Matrix: [4 0 3 1]
+Best performance: Epoch 6, Loss 0.795079, Test ACC 0.625000, Test AUC 1.000000, Test Recall 0.250000, Test Precision 1.000000
+✅ Total valid splits used: 1
+🔁 Repeat 3, Fold 1
+🔍 Split #2
+  → train_p_index 환자 수: 28
+  → test_p_index 환자 수: 4
+  → train 환자 ID: ['COVID19_Participant11', 'COVID19_Participant13', 'COVID19_Participant14', 'COVID19_Participant17', 'COVID19_Participant19', 'COVID19_Participant2', 'COVID19_Participant20', 'COVID19_Participant22', 'COVID19_Participant23', 'COVID19_Participant25', 'COVID19_Participant26', 'COVID19_Participant28', 'COVID19_Participant29', 'COVID19_Participant31', 'COVID19_Participant32', 'COVID19_Participant37', 'COVID19_Participant4', 'COVID19_Participant40', 'COVID19_Participant8', 'Control_Participant1', 'Control_Participant11', 'Control_Participant15', 'Control_Participant3', 'Control_Participant4', 'Control_Participant5', 'Control_Participant7', 'Control_Participant8', 'Control_Participant9']
+  → test  환자 ID: ['COVID19_Participant26', 'COVID19_Participant26', 'Control_Participant7', 'Control_Participant7']
+  → train 환자 ID 및 라벨:
+    ID: COVID19_Participant11, Label: 1
+    ID: COVID19_Participant13, Label: 1
+    ID: COVID19_Participant14, Label: 1
+    ID: COVID19_Participant17, Label: 1
+    ID: COVID19_Participant19, Label: 1
+    ID: COVID19_Participant2, Label: 1
+    ID: COVID19_Participant20, Label: 1
+    ID: COVID19_Participant22, Label: 1
+    ID: COVID19_Participant23, Label: 1
+    ID: COVID19_Participant25, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: COVID19_Participant28, Label: 1
+    ID: COVID19_Participant29, Label: 1
+    ID: COVID19_Participant31, Label: 1
+    ID: COVID19_Participant32, Label: 1
+    ID: COVID19_Participant37, Label: 1
+    ID: COVID19_Participant4, Label: 1
+    ID: COVID19_Participant40, Label: 1
+    ID: COVID19_Participant8, Label: 1
+    ID: Control_Participant1, Label: 0
+    ID: Control_Participant11, Label: 0
+    ID: Control_Participant15, Label: 0
+    ID: Control_Participant3, Label: 0
+    ID: Control_Participant4, Label: 0
+    ID: Control_Participant5, Label: 0
+    ID: Control_Participant7, Label: 0
+    ID: Control_Participant8, Label: 0
+    ID: Control_Participant9, Label: 0
+  → test 환자 ID 및 라벨:
+    ID: COVID19_Participant26, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: Control_Participant7, Label: 1
+    ID: Control_Participant7, Label: 0
+train_p_index_ 18
+valid_p_index 10
+test_p_index 4
+data augment 실행 안 함
+eval_p_index len:  14
+individual_train 18
+individual_eval 14
+train data의 x, y, id 길이: 18 18 18
+valid data의 x, y, id 길이: 10 10 10
+test data의 x, y, id 길이: 4 4 4
+output_class :  1
+Memory Allocated: 16.69 MB
+Memory Reserved: 42.00 MB
+cuda
+Epoch 1, Train Loss 0.592500, Valid_loss 0.722781
+Epoch 2, Train Loss 0.674367, Valid_loss 0.723068
+Epoch 3, Train Loss 0.591998, Valid_loss 0.723231
+Epoch 4, Train Loss 0.661469, Valid_loss 0.723392
+Epoch 5, Train Loss 0.588695, Valid_loss 0.723540
+Epoch 6, Train Loss 0.565094, Valid_loss 0.723813
+Epoch 7, Train Loss 0.668273, Valid_loss 0.724113
+Epoch 8, Train Loss 0.570549, Valid_loss 0.724389
+Epoch 9, Train Loss 0.581268, Valid_loss 0.724748
+Epoch 10, Train Loss 0.560826, Valid_loss 0.725193
+Epoch 11, Train Loss 0.568641, Valid_loss 0.725724
+Epoch 12, Train Loss 0.560656, Valid_loss 0.726308
+Epoch 13, Train Loss 0.755717, Valid_loss 0.726733
+Epoch 14, Train Loss 0.568206, Valid_loss 0.726955
+Epoch 15, Train Loss 0.550123, Valid_loss 0.727269
+Epoch 16, Train Loss 0.568356, Valid_loss 0.727664
+Epoch 17, Train Loss 0.554148, Valid_loss 0.728122
+Epoch 18, Train Loss 0.659506, Valid_loss 0.728562
+Epoch 19, Train Loss 0.667893, Valid_loss 0.728823
+Epoch 20, Train Loss 0.767357, Valid_loss 0.728831
+Epoch 21, Train Loss 0.653061, Valid_loss 0.728637
+Epoch 22, Train Loss 0.766001, Valid_loss 0.728318
+Epoch 23, Train Loss 0.640463, Valid_loss 0.727894
+Epoch 24, Train Loss 0.551838, Valid_loss 0.727556
+Epoch 25, Train Loss 0.529152, Valid_loss 0.727407
+Epoch 26, Train Loss 0.634082, Valid_loss 0.727368
+Epoch 27, Train Loss 0.559205, Valid_loss 0.727378
+Epoch 28, Train Loss 0.647367, Valid_loss 0.727403
+Epoch 29, Train Loss 0.638751, Valid_loss 0.727338
+Epoch 30, Train Loss 0.537946, Valid_loss 0.727330
+Epoch 31, Train Loss 0.527338, Valid_loss 0.727488
+Epoch 32, Train Loss 0.518317, Valid_loss 0.727782
+Epoch 33, Train Loss 0.525463, Valid_loss 0.728176
+Epoch 34, Train Loss 0.656830, Valid_loss 0.728521
+Epoch 35, Train Loss 0.753444, Valid_loss 0.728556
+Epoch 36, Train Loss 0.640664, Valid_loss 0.728373
+Epoch 37, Train Loss 0.636187, Valid_loss 0.728132
+Epoch 38, Train Loss 0.524325, Valid_loss 0.727973
+Epoch 39, Train Loss 0.626006, Valid_loss 0.727912
+Epoch 40, Train Loss 0.531013, Valid_loss 0.727841
+Epoch 41, Train Loss 0.652262, Valid_loss 0.727721
+Epoch 42, Train Loss 0.660491, Valid_loss 0.727391
+Epoch 43, Train Loss 0.634469, Valid_loss 0.726874
+Epoch 44, Train Loss 0.525446, Valid_loss 0.726371
+Epoch 45, Train Loss 0.640854, Valid_loss 0.725913
+Epoch 46, Train Loss 0.515978, Valid_loss 0.725608
+Epoch 47, Train Loss 0.518441, Valid_loss 0.725671
+Epoch 48, Train Loss 0.550166, Valid_loss 0.725959
+Epoch 49, Train Loss 0.532417, Valid_loss 0.726398
+Epoch 50, Train Loss 0.528068, Valid_loss 0.727047
+Epoch 51, Train Loss 0.619874, Valid_loss 0.727278
+Epoch 52, Train Loss 0.543396, Valid_loss 0.727364
+COVID19_Participant26 -- true: COVID-19 -- pred: COVID-19
+COVID19_Participant26 -- true: COVID-19 -- pred: COVID-19
+Control_Participant7 -- true: normal -- pred: COVID-19
+Control_Participant7 -- true: normal -- pred: COVID-19
+true :  [1, 1, 0, 0]
+pred :  [1, 1, 1, 1]
+Confusion Matrix: [0 2 0 2]
+Best performance: Epoch 1, Loss 0.592500, Test ACC 0.500000, Test AUC 0.000000, Test Recall 1.000000, Test Precision 0.500000
+✅ Total valid splits used: 2
+🔁 Repeat 3, Fold 2
+🔍 Split #3
+  → train_p_index 환자 수: 25
+  → test_p_index 환자 수: 7
+  → train 환자 ID: ['COVID19_Participant11', 'COVID19_Participant13', 'COVID19_Participant14', 'COVID19_Participant15', 'COVID19_Participant17', 'COVID19_Participant19', 'COVID19_Participant20', 'COVID19_Participant22', 'COVID19_Participant25', 'COVID19_Participant26', 'COVID19_Participant28', 'COVID19_Participant29', 'COVID19_Participant31', 'COVID19_Participant32', 'COVID19_Participant39', 'COVID19_Participant4', 'COVID19_Participant40', 'COVID19_Participant7', 'Control_Participant1', 'Control_Participant10', 'Control_Participant11', 'Control_Participant3', 'Control_Participant4', 'Control_Participant7', 'Control_Participant8']
+  → test  환자 ID: ['COVID19_Participant26', 'COVID19_Participant26', 'COVID19_Participant31', 'COVID19_Participant13', 'Control_Participant4', 'Control_Participant7', 'Control_Participant7']
+  → train 환자 ID 및 라벨:
+    ID: COVID19_Participant11, Label: 1
+    ID: COVID19_Participant13, Label: 1
+    ID: COVID19_Participant14, Label: 1
+    ID: COVID19_Participant15, Label: 1
+    ID: COVID19_Participant17, Label: 1
+    ID: COVID19_Participant19, Label: 1
+    ID: COVID19_Participant20, Label: 1
+    ID: COVID19_Participant22, Label: 1
+    ID: COVID19_Participant25, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: COVID19_Participant28, Label: 1
+    ID: COVID19_Participant29, Label: 1
+    ID: COVID19_Participant31, Label: 1
+    ID: COVID19_Participant32, Label: 1
+    ID: COVID19_Participant39, Label: 1
+    ID: COVID19_Participant4, Label: 1
+    ID: COVID19_Participant40, Label: 1
+    ID: COVID19_Participant7, Label: 1
+    ID: Control_Participant1, Label: 0
+    ID: Control_Participant10, Label: 0
+    ID: Control_Participant11, Label: 0
+    ID: Control_Participant3, Label: 0
+    ID: Control_Participant4, Label: 0
+    ID: Control_Participant7, Label: 0
+    ID: Control_Participant8, Label: 0
+  → test 환자 ID 및 라벨:
+    ID: COVID19_Participant26, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: COVID19_Participant31, Label: 1
+    ID: COVID19_Participant13, Label: 1
+    ID: Control_Participant4, Label: 0
+    ID: Control_Participant7, Label: 0
+    ID: Control_Participant7, Label: 0
+train_p_index_ 16
+valid_p_index 9
+test_p_index 7
+data augment 실행 안 함
+eval_p_index len:  16
+individual_train 16
+individual_eval 16
+train data의 x, y, id 길이: 16 16 16
+valid data의 x, y, id 길이: 9 9 9
+test data의 x, y, id 길이: 7 7 7
+output_class :  1
+Memory Allocated: 16.69 MB
+Memory Reserved: 42.00 MB
+cuda
+Epoch 1, Train Loss 0.568241, Valid_loss 0.650066
+Epoch 2, Train Loss 0.567263, Valid_loss 0.649742
+Epoch 3, Train Loss 0.566304, Valid_loss 0.649220
+Epoch 4, Train Loss 0.565512, Valid_loss 0.648773
+Epoch 5, Train Loss 0.564789, Valid_loss 0.648583
+Epoch 6, Train Loss 0.564052, Valid_loss 0.648433
+Epoch 7, Train Loss 0.563390, Valid_loss 0.648296
+Epoch 8, Train Loss 0.562709, Valid_loss 0.648123
+Epoch 9, Train Loss 0.562135, Valid_loss 0.647897
+Epoch 10, Train Loss 0.561546, Valid_loss 0.647664
+Epoch 11, Train Loss 0.560941, Valid_loss 0.647407
+Epoch 12, Train Loss 0.560320, Valid_loss 0.647137
+Epoch 13, Train Loss 0.559685, Valid_loss 0.646855
+Epoch 14, Train Loss 0.559037, Valid_loss 0.646560
+Epoch 15, Train Loss 0.558377, Valid_loss 0.646247
+Epoch 16, Train Loss 0.557702, Valid_loss 0.645908
+Epoch 17, Train Loss 0.557010, Valid_loss 0.645537
+Epoch 18, Train Loss 0.556299, Valid_loss 0.645128
+Epoch 19, Train Loss 0.555562, Valid_loss 0.644677
+Epoch 20, Train Loss 0.554798, Valid_loss 0.644175
+Epoch 21, Train Loss 0.554004, Valid_loss 0.643617
+Epoch 22, Train Loss 0.553178, Valid_loss 0.642994
+Epoch 23, Train Loss 0.552316, Valid_loss 0.642300
+Epoch 24, Train Loss 0.551416, Valid_loss 0.641533
+Epoch 25, Train Loss 0.550474, Valid_loss 0.640687
+Epoch 26, Train Loss 0.549484, Valid_loss 0.639744
+Epoch 27, Train Loss 0.548331, Valid_loss 0.638705
+Epoch 28, Train Loss 0.547193, Valid_loss 0.637586
+Epoch 29, Train Loss 0.546014, Valid_loss 0.636446
+Epoch 30, Train Loss 0.544814, Valid_loss 0.635232
+Epoch 31, Train Loss 0.543601, Valid_loss 0.633959
+Epoch 32, Train Loss 0.542416, Valid_loss 0.632664
+Epoch 33, Train Loss 0.541243, Valid_loss 0.631342
+Epoch 34, Train Loss 0.540059, Valid_loss 0.630107
+Epoch 35, Train Loss 0.538814, Valid_loss 0.628858
+Epoch 36, Train Loss 0.537526, Valid_loss 0.627577
+Epoch 37, Train Loss 0.536166, Valid_loss 0.626266
+Epoch 38, Train Loss 0.534820, Valid_loss 0.624904
+Epoch 39, Train Loss 0.533528, Valid_loss 0.623655
+Epoch 40, Train Loss 0.532531, Valid_loss 0.622480
+Epoch 41, Train Loss 0.531483, Valid_loss 0.621470
+Epoch 42, Train Loss 0.530400, Valid_loss 0.620659
+Epoch 43, Train Loss 0.529274, Valid_loss 0.619822
+Epoch 44, Train Loss 0.528042, Valid_loss 0.618913
+Epoch 45, Train Loss 0.526879, Valid_loss 0.617889
+Epoch 46, Train Loss 0.525627, Valid_loss 0.616801
+Epoch 47, Train Loss 0.524218, Valid_loss 0.615708
+Epoch 48, Train Loss 0.522726, Valid_loss 0.614691
+Epoch 49, Train Loss 0.521189, Valid_loss 0.613865
+Epoch 50, Train Loss 0.519611, Valid_loss 0.613561
+Epoch 51, Train Loss 0.517938, Valid_loss 0.613332
+Epoch 52, Train Loss 0.517126, Valid_loss 0.612925
+Epoch 53, Train Loss 0.516175, Valid_loss 0.612395
+Epoch 54, Train Loss 0.515087, Valid_loss 0.611569
+Epoch 55, Train Loss 0.513988, Valid_loss 0.610795
+Epoch 56, Train Loss 0.512856, Valid_loss 0.610111
+Epoch 57, Train Loss 0.511652, Valid_loss 0.609555
+Epoch 58, Train Loss 0.510376, Valid_loss 0.609053
+Epoch 59, Train Loss 0.509027, Valid_loss 0.608548
+Epoch 60, Train Loss 0.507591, Valid_loss 0.608026
+Epoch 61, Train Loss 0.506075, Valid_loss 0.607501
+Epoch 62, Train Loss 0.504506, Valid_loss 0.607037
+Epoch 63, Train Loss 0.502955, Valid_loss 0.606559
+Epoch 64, Train Loss 0.501346, Valid_loss 0.605820
+Epoch 65, Train Loss 0.499618, Valid_loss 0.604857
+Epoch 66, Train Loss 0.497767, Valid_loss 0.604044
+Epoch 67, Train Loss 0.495841, Valid_loss 0.603218
+Epoch 68, Train Loss 0.493852, Valid_loss 0.602486
+Epoch 69, Train Loss 0.492230, Valid_loss 0.601846
+Epoch 70, Train Loss 0.490490, Valid_loss 0.601199
+Epoch 71, Train Loss 0.488638, Valid_loss 0.600587
+Epoch 72, Train Loss 0.486812, Valid_loss 0.600000
+Epoch 73, Train Loss 0.484870, Valid_loss 0.599437
+Epoch 74, Train Loss 0.482962, Valid_loss 0.598932
+Epoch 75, Train Loss 0.480900, Valid_loss 0.598441
+Epoch 76, Train Loss 0.478611, Valid_loss 0.597871
+Epoch 77, Train Loss 0.476194, Valid_loss 0.597206
+Epoch 78, Train Loss 0.473638, Valid_loss 0.596376
+Epoch 79, Train Loss 0.471387, Valid_loss 0.595488
+Epoch 80, Train Loss 0.469727, Valid_loss 0.594980
+Epoch 81, Train Loss 0.468053, Valid_loss 0.594702
+Epoch 82, Train Loss 0.466310, Valid_loss 0.594757
+Epoch 83, Train Loss 0.464586, Valid_loss 0.595018
+COVID19_Participant26 -- true: COVID-19 -- pred: COVID-19
+COVID19_Participant26 -- true: COVID-19 -- pred: COVID-19
+COVID19_Participant31 -- true: COVID-19 -- pred: COVID-19
+COVID19_Participant13 -- true: COVID-19 -- pred: COVID-19
+Control_Participant4 -- true: normal -- pred: COVID-19
+Control_Participant7 -- true: normal -- pred: COVID-19
+Control_Participant7 -- true: normal -- pred: COVID-19
+true :  [1, 1, 1, 1, 0, 0, 0]
+pred :  [1, 1, 1, 1, 1, 1, 1]
+Confusion Matrix: [0 3 0 4]
+Best performance: Epoch 81, Loss 0.468053, Test ACC 0.571429, Test AUC 0.250000, Test Recall 1.000000, Test Precision 0.571429
+✅ Total valid splits used: 3
+🔁 Repeat 3, Fold 3
+🔍 Split #4
+  → train_p_index 환자 수: 25
+  → test_p_index 환자 수: 7
+  → train 환자 ID: ['COVID19_Participant11', 'COVID19_Participant13', 'COVID19_Participant14', 'COVID19_Participant15', 'COVID19_Participant17', 'COVID19_Participant19', 'COVID19_Participant2', 'COVID19_Participant23', 'COVID19_Participant25', 'COVID19_Participant29', 'COVID19_Participant31', 'COVID19_Participant37', 'COVID19_Participant39', 'COVID19_Participant40', 'COVID19_Participant7', 'COVID19_Participant8', 'Control_Participant1', 'Control_Participant10', 'Control_Participant11', 'Control_Participant15', 'Control_Participant4', 'Control_Participant5', 'Control_Participant7', 'Control_Participant8', 'Control_Participant9']
+  → test  환자 ID: ['Control_Participant10', 'Control_Participant5', 'Control_Participant7', 'COVID19_Participant25', 'Control_Participant9', 'Control_Participant1', 'COVID19_Participant13']
+  → train 환자 ID 및 라벨:
+    ID: COVID19_Participant11, Label: 1
+    ID: COVID19_Participant13, Label: 1
+    ID: COVID19_Participant14, Label: 1
+    ID: COVID19_Participant15, Label: 1
+    ID: COVID19_Participant17, Label: 1
+    ID: COVID19_Participant19, Label: 1
+    ID: COVID19_Participant2, Label: 1
+    ID: COVID19_Participant23, Label: 1
+    ID: COVID19_Participant25, Label: 1
+    ID: COVID19_Participant29, Label: 1
+    ID: COVID19_Participant31, Label: 1
+    ID: COVID19_Participant37, Label: 1
+    ID: COVID19_Participant39, Label: 1
+    ID: COVID19_Participant40, Label: 1
+    ID: COVID19_Participant7, Label: 1
+    ID: COVID19_Participant8, Label: 1
+    ID: Control_Participant1, Label: 0
+    ID: Control_Participant10, Label: 0
+    ID: Control_Participant11, Label: 0
+    ID: Control_Participant15, Label: 0
+    ID: Control_Participant4, Label: 0
+    ID: Control_Participant5, Label: 0
+    ID: Control_Participant7, Label: 0
+    ID: Control_Participant8, Label: 0
+    ID: Control_Participant9, Label: 0
+  → test 환자 ID 및 라벨:
+    ID: Control_Participant10, Label: 1
+    ID: Control_Participant5, Label: 1
+    ID: Control_Participant7, Label: 1
+    ID: COVID19_Participant25, Label: 1
+    ID: Control_Participant9, Label: 1
+    ID: Control_Participant1, Label: 1
+    ID: COVID19_Participant13, Label: 0
+train_p_index_ 16
+valid_p_index 9
+test_p_index 7
+data augment 실행 안 함
+eval_p_index len:  16
+individual_train 16
+individual_eval 16
+train data의 x, y, id 길이: 16 16 16
+valid data의 x, y, id 길이: 9 9 9
+test data의 x, y, id 길이: 7 7 7
+output_class :  1
+Memory Allocated: 16.69 MB
+Memory Reserved: 42.00 MB
+cuda
+Epoch 1, Train Loss 0.769557, Valid_loss 0.674173
+Epoch 2, Train Loss 0.757348, Valid_loss 0.672347
+Epoch 3, Train Loss 0.746762, Valid_loss 0.670749
+Epoch 4, Train Loss 0.737880, Valid_loss 0.669394
+Epoch 5, Train Loss 0.729671, Valid_loss 0.668322
+Epoch 6, Train Loss 0.722128, Valid_loss 0.667483
+Epoch 7, Train Loss 0.715233, Valid_loss 0.666816
+Epoch 8, Train Loss 0.708899, Valid_loss 0.666267
+Epoch 9, Train Loss 0.703050, Valid_loss 0.665817
+Epoch 10, Train Loss 0.697599, Valid_loss 0.665442
+Epoch 11, Train Loss 0.692478, Valid_loss 0.665125
+Epoch 12, Train Loss 0.687564, Valid_loss 0.664844
+Epoch 13, Train Loss 0.682724, Valid_loss 0.664599
+Epoch 14, Train Loss 0.678054, Valid_loss 0.664386
+Epoch 15, Train Loss 0.673506, Valid_loss 0.664180
+Epoch 16, Train Loss 0.669189, Valid_loss 0.663982
+Epoch 17, Train Loss 0.664953, Valid_loss 0.663786
+Epoch 18, Train Loss 0.660780, Valid_loss 0.663589
+Epoch 19, Train Loss 0.656664, Valid_loss 0.663397
+Epoch 20, Train Loss 0.652616, Valid_loss 0.663197
+Epoch 21, Train Loss 0.648631, Valid_loss 0.662987
+Epoch 22, Train Loss 0.644699, Valid_loss 0.662756
+Epoch 23, Train Loss 0.640917, Valid_loss 0.662503
+Epoch 24, Train Loss 0.637510, Valid_loss 0.662226
+Epoch 25, Train Loss 0.634422, Valid_loss 0.661919
+Epoch 26, Train Loss 0.631393, Valid_loss 0.661584
+Epoch 27, Train Loss 0.628361, Valid_loss 0.661151
+Epoch 28, Train Loss 0.625462, Valid_loss 0.660856
+Epoch 29, Train Loss 0.622669, Valid_loss 0.660545
+Epoch 30, Train Loss 0.619793, Valid_loss 0.660202
+Epoch 31, Train Loss 0.617286, Valid_loss 0.659824
+Epoch 32, Train Loss 0.614755, Valid_loss 0.659356
+Epoch 33, Train Loss 0.611935, Valid_loss 0.658860
+Epoch 34, Train Loss 0.609127, Valid_loss 0.658333
+Epoch 35, Train Loss 0.606331, Valid_loss 0.657780
+Epoch 36, Train Loss 0.603544, Valid_loss 0.657121
+Epoch 37, Train Loss 0.600687, Valid_loss 0.656441
+Epoch 38, Train Loss 0.597877, Valid_loss 0.655875
+Epoch 39, Train Loss 0.595048, Valid_loss 0.655287
+Epoch 40, Train Loss 0.592240, Valid_loss 0.654698
+Epoch 41, Train Loss 0.589617, Valid_loss 0.654098
+Epoch 42, Train Loss 0.586897, Valid_loss 0.653662
+Epoch 43, Train Loss 0.584242, Valid_loss 0.653238
+Epoch 44, Train Loss 0.581611, Valid_loss 0.652829
+Epoch 45, Train Loss 0.578996, Valid_loss 0.652303
+Epoch 46, Train Loss 0.576371, Valid_loss 0.651689
+Epoch 47, Train Loss 0.573720, Valid_loss 0.651001
+Epoch 48, Train Loss 0.571094, Valid_loss 0.650317
+Epoch 49, Train Loss 0.568506, Valid_loss 0.649638
+Epoch 50, Train Loss 0.565981, Valid_loss 0.648909
+Epoch 51, Train Loss 0.563457, Valid_loss 0.648524
+Epoch 52, Train Loss 0.562195, Valid_loss 0.648126
+Epoch 53, Train Loss 0.560935, Valid_loss 0.647692
+Epoch 54, Train Loss 0.559671, Valid_loss 0.647227
+Epoch 55, Train Loss 0.558401, Valid_loss 0.646739
+Epoch 56, Train Loss 0.557124, Valid_loss 0.646271
+Epoch 57, Train Loss 0.555845, Valid_loss 0.645817
+Epoch 58, Train Loss 0.554568, Valid_loss 0.645377
+Epoch 59, Train Loss 0.553297, Valid_loss 0.644953
+Epoch 60, Train Loss 0.552045, Valid_loss 0.644547
+Epoch 61, Train Loss 0.550793, Valid_loss 0.644132
+Epoch 62, Train Loss 0.549542, Valid_loss 0.643712
+Epoch 63, Train Loss 0.548290, Valid_loss 0.643287
+Epoch 64, Train Loss 0.547036, Valid_loss 0.642860
+Epoch 65, Train Loss 0.545782, Valid_loss 0.642433
+Epoch 66, Train Loss 0.544543, Valid_loss 0.642007
+Epoch 67, Train Loss 0.543304, Valid_loss 0.641583
+Epoch 68, Train Loss 0.542084, Valid_loss 0.641139
+Epoch 69, Train Loss 0.540871, Valid_loss 0.640677
+Epoch 70, Train Loss 0.539664, Valid_loss 0.640199
+Epoch 71, Train Loss 0.538461, Valid_loss 0.639711
+Epoch 72, Train Loss 0.537253, Valid_loss 0.639211
+Epoch 73, Train Loss 0.536019, Valid_loss 0.638705
+Epoch 74, Train Loss 0.534774, Valid_loss 0.638196
+Epoch 75, Train Loss 0.533529, Valid_loss 0.637653
+Epoch 76, Train Loss 0.532320, Valid_loss 0.637086
+Epoch 77, Train Loss 0.531113, Valid_loss 0.636500
+Epoch 78, Train Loss 0.529902, Valid_loss 0.635897
+Epoch 79, Train Loss 0.528688, Valid_loss 0.635284
+Epoch 80, Train Loss 0.527472, Valid_loss 0.634668
+Epoch 81, Train Loss 0.526254, Valid_loss 0.634052
+Epoch 82, Train Loss 0.525036, Valid_loss 0.633445
+Epoch 83, Train Loss 0.523816, Valid_loss 0.632903
+Epoch 84, Train Loss 0.522595, Valid_loss 0.632385
+Epoch 85, Train Loss 0.521372, Valid_loss 0.631888
+Epoch 86, Train Loss 0.520146, Valid_loss 0.631410
+Epoch 87, Train Loss 0.518918, Valid_loss 0.630951
+Epoch 88, Train Loss 0.517693, Valid_loss 0.630509
+Epoch 89, Train Loss 0.516470, Valid_loss 0.630083
+Epoch 90, Train Loss 0.515243, Valid_loss 0.629673
+Epoch 91, Train Loss 0.514013, Valid_loss 0.629278
+Epoch 92, Train Loss 0.512779, Valid_loss 0.628895
+Epoch 93, Train Loss 0.511543, Valid_loss 0.628522
+Epoch 94, Train Loss 0.510304, Valid_loss 0.628156
+Epoch 95, Train Loss 0.509129, Valid_loss 0.627803
+Epoch 96, Train Loss 0.508173, Valid_loss 0.627498
+Epoch 97, Train Loss 0.507223, Valid_loss 0.627239
+Epoch 98, Train Loss 0.506253, Valid_loss 0.627019
+Epoch 99, Train Loss 0.505295, Valid_loss 0.626838
+Epoch 100, Train Loss 0.504335, Valid_loss 0.626695
+Control_Participant10 -- true: normal -- pred: COVID-19
+Control_Participant5 -- true: normal -- pred: COVID-19
+Control_Participant7 -- true: normal -- pred: COVID-19
+COVID19_Participant25 -- true: COVID-19 -- pred: COVID-19
+Control_Participant9 -- true: normal -- pred: COVID-19
+Control_Participant1 -- true: normal -- pred: COVID-19
+COVID19_Participant13 -- true: COVID-19 -- pred: COVID-19
+true :  [0, 0, 0, 1, 0, 0, 1]
+pred :  [1, 1, 1, 1, 1, 1, 1]
+Confusion Matrix: [0 5 0 2]
+Best performance: Epoch 100, Loss 0.504335, Test ACC 0.285714, Test AUC 0.500000, Test Recall 1.000000, Test Precision 0.285714
+✅ Total valid splits used: 4
+🔁 Repeat 3, Fold 4
+🔍 Split #5
+  → train_p_index 환자 수: 26
+  → test_p_index 환자 수: 6
+  → train 환자 ID: ['COVID19_Participant11', 'COVID19_Participant15', 'COVID19_Participant17', 'COVID19_Participant19', 'COVID19_Participant2', 'COVID19_Participant20', 'COVID19_Participant22', 'COVID19_Participant23', 'COVID19_Participant25', 'COVID19_Participant26', 'COVID19_Participant28', 'COVID19_Participant31', 'COVID19_Participant32', 'COVID19_Participant37', 'COVID19_Participant39', 'COVID19_Participant4', 'COVID19_Participant40', 'COVID19_Participant7', 'COVID19_Participant8', 'Control_Participant1', 'Control_Participant10', 'Control_Participant15', 'Control_Participant3', 'Control_Participant4', 'Control_Participant5', 'Control_Participant9']
+  → test  환자 ID: ['COVID19_Participant26', 'Control_Participant4', 'COVID19_Participant11', 'COVID19_Participant25', 'COVID19_Participant31', 'Control_Participant5']
+  → train 환자 ID 및 라벨:
+    ID: COVID19_Participant11, Label: 1
+    ID: COVID19_Participant15, Label: 1
+    ID: COVID19_Participant17, Label: 1
+    ID: COVID19_Participant19, Label: 1
+    ID: COVID19_Participant2, Label: 1
+    ID: COVID19_Participant20, Label: 1
+    ID: COVID19_Participant22, Label: 1
+    ID: COVID19_Participant23, Label: 1
+    ID: COVID19_Participant25, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: COVID19_Participant28, Label: 1
+    ID: COVID19_Participant31, Label: 1
+    ID: COVID19_Participant32, Label: 1
+    ID: COVID19_Participant37, Label: 1
+    ID: COVID19_Participant39, Label: 1
+    ID: COVID19_Participant4, Label: 1
+    ID: COVID19_Participant40, Label: 1
+    ID: COVID19_Participant7, Label: 1
+    ID: COVID19_Participant8, Label: 1
+    ID: Control_Participant1, Label: 0
+    ID: Control_Participant10, Label: 0
+    ID: Control_Participant15, Label: 0
+    ID: Control_Participant3, Label: 0
+    ID: Control_Participant4, Label: 0
+    ID: Control_Participant5, Label: 0
+    ID: Control_Participant9, Label: 0
+  → test 환자 ID 및 라벨:
+    ID: COVID19_Participant26, Label: 1
+    ID: Control_Participant4, Label: 1
+    ID: COVID19_Participant11, Label: 1
+    ID: COVID19_Participant25, Label: 0
+    ID: COVID19_Participant31, Label: 0
+    ID: Control_Participant5, Label: 0
+train_p_index_ 17
+valid_p_index 9
+test_p_index 6
+data augment 실행 안 함
+eval_p_index len:  15
+individual_train 17
+individual_eval 15
+train data의 x, y, id 길이: 17 17 17
+valid data의 x, y, id 길이: 9 9 9
+test data의 x, y, id 길이: 6 6 6
+output_class :  1
+Memory Allocated: 16.69 MB
+Memory Reserved: 42.00 MB
+cuda
+Epoch 1, Train Loss 0.459274, Valid_loss 0.725746
+Epoch 2, Train Loss 0.462731, Valid_loss 0.730285
+Epoch 3, Train Loss 0.459548, Valid_loss 0.734502
+Epoch 4, Train Loss 0.469011, Valid_loss 0.738231
+Epoch 5, Train Loss 0.470138, Valid_loss 0.741421
+Epoch 6, Train Loss 0.478832, Valid_loss 0.744303
+Epoch 7, Train Loss 0.455881, Valid_loss 0.747052
+Epoch 8, Train Loss 0.463826, Valid_loss 0.749304
+Epoch 9, Train Loss 0.426469, Valid_loss 0.751031
+Epoch 10, Train Loss 0.424652, Valid_loss 0.752788
+Epoch 11, Train Loss 0.429613, Valid_loss 0.754003
+Epoch 12, Train Loss 0.468362, Valid_loss 0.753918
+Epoch 13, Train Loss 0.874109, Valid_loss 0.752361
+Epoch 14, Train Loss 0.813576, Valid_loss 0.748914
+Epoch 15, Train Loss 0.461142, Valid_loss 0.744461
+Epoch 16, Train Loss 0.868443, Valid_loss 0.739043
+Epoch 17, Train Loss 0.455169, Valid_loss 0.734346
+Epoch 18, Train Loss 0.421060, Valid_loss 0.731328
+Epoch 19, Train Loss 0.445955, Valid_loss 0.729919
+Epoch 20, Train Loss 0.439852, Valid_loss 0.729304
+Epoch 21, Train Loss 0.774175, Valid_loss 0.729069
+Epoch 22, Train Loss 0.437304, Valid_loss 0.728923
+Epoch 23, Train Loss 0.453458, Valid_loss 0.728522
+Epoch 24, Train Loss 0.833407, Valid_loss 0.727784
+Epoch 25, Train Loss 0.750385, Valid_loss 0.726376
+Epoch 26, Train Loss 0.413614, Valid_loss 0.724668
+Epoch 27, Train Loss 0.816804, Valid_loss 0.722596
+Epoch 28, Train Loss 0.427891, Valid_loss 0.720265
+Epoch 29, Train Loss 0.451502, Valid_loss 0.717964
+Epoch 30, Train Loss 0.406402, Valid_loss 0.716178
+Epoch 31, Train Loss 0.406014, Valid_loss 0.714672
+Epoch 32, Train Loss 0.429289, Valid_loss 0.713923
+Epoch 33, Train Loss 0.409026, Valid_loss 0.714327
+Epoch 34, Train Loss 0.443070, Valid_loss 0.715457
+Epoch 35, Train Loss 0.405422, Valid_loss 0.716630
+Epoch 36, Train Loss 0.436391, Valid_loss 0.717876
+Epoch 37, Train Loss 0.403029, Valid_loss 0.718823
+Epoch 38, Train Loss 0.428525, Valid_loss 0.720204
+Epoch 39, Train Loss 0.409596, Valid_loss 0.721974
+Epoch 40, Train Loss 0.402600, Valid_loss 0.723056
+Epoch 41, Train Loss 0.807695, Valid_loss 0.720942
+Epoch 42, Train Loss 0.404500, Valid_loss 0.716551
+Epoch 43, Train Loss 0.397325, Valid_loss 0.711983
+Epoch 44, Train Loss 0.425968, Valid_loss 0.707382
+Epoch 45, Train Loss 0.393229, Valid_loss 0.702639
+Epoch 46, Train Loss 0.391119, Valid_loss 0.696756
+Epoch 47, Train Loss 0.720534, Valid_loss 0.686407
+Epoch 48, Train Loss 0.708183, Valid_loss 0.668223
+Epoch 49, Train Loss 0.685958, Valid_loss 0.646564
+Epoch 50, Train Loss 0.475917, Valid_loss 0.631874
+Epoch 51, Train Loss 0.653735, Valid_loss 0.627840
+Epoch 52, Train Loss 0.398234, Valid_loss 0.624879
+Epoch 53, Train Loss 0.431973, Valid_loss 0.624985
+Epoch 54, Train Loss 0.421879, Valid_loss 0.628294
+COVID19_Participant26 -- true: COVID-19 -- pred: COVID-19
+Control_Participant4 -- true: normal -- pred: COVID-19
+COVID19_Participant11 -- true: COVID-19 -- pred: COVID-19
+COVID19_Participant25 -- true: COVID-19 -- pred: COVID-19
+COVID19_Participant31 -- true: COVID-19 -- pred: COVID-19
+Control_Participant5 -- true: normal -- pred: COVID-19
+true :  [1, 0, 1, 1, 1, 0]
+pred :  [1, 1, 1, 1, 1, 1]
+Confusion Matrix: [0 2 0 4]
+Best performance: Epoch 52, Loss 0.398234, Test ACC 0.666667, Test AUC 0.625000, Test Recall 1.000000, Test Precision 0.666667
+✅ Total valid splits used: 5
+
+📌 Repeat 3: 평균 AUC = 0.4750, 표준편차 = 0.3391
+🔁 Repeat 4, Fold 0
+🔍 Split #1
+  → train_p_index 환자 수: 27
+  → test_p_index 환자 수: 5
+  → train 환자 ID: ['COVID19_Participant11', 'COVID19_Participant13', 'COVID19_Participant14', 'COVID19_Participant15', 'COVID19_Participant17', 'COVID19_Participant19', 'COVID19_Participant2', 'COVID19_Participant22', 'COVID19_Participant23', 'COVID19_Participant25', 'COVID19_Participant26', 'COVID19_Participant28', 'COVID19_Participant37', 'COVID19_Participant39', 'COVID19_Participant4', 'COVID19_Participant40', 'COVID19_Participant7', 'COVID19_Participant8', 'Control_Participant1', 'Control_Participant11', 'Control_Participant15', 'Control_Participant3', 'Control_Participant4', 'Control_Participant5', 'Control_Participant7', 'Control_Participant8', 'Control_Participant9']
+  → test  환자 ID: ['COVID19_Participant11', 'Control_Participant5', 'Control_Participant7', 'COVID19_Participant26', 'Control_Participant7']
+  → train 환자 ID 및 라벨:
+    ID: COVID19_Participant11, Label: 1
+    ID: COVID19_Participant13, Label: 1
+    ID: COVID19_Participant14, Label: 1
+    ID: COVID19_Participant15, Label: 1
+    ID: COVID19_Participant17, Label: 1
+    ID: COVID19_Participant19, Label: 1
+    ID: COVID19_Participant2, Label: 1
+    ID: COVID19_Participant22, Label: 1
+    ID: COVID19_Participant23, Label: 1
+    ID: COVID19_Participant25, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: COVID19_Participant28, Label: 1
+    ID: COVID19_Participant37, Label: 1
+    ID: COVID19_Participant39, Label: 1
+    ID: COVID19_Participant4, Label: 1
+    ID: COVID19_Participant40, Label: 1
+    ID: COVID19_Participant7, Label: 1
+    ID: COVID19_Participant8, Label: 1
+    ID: Control_Participant1, Label: 0
+    ID: Control_Participant11, Label: 0
+    ID: Control_Participant15, Label: 0
+    ID: Control_Participant3, Label: 0
+    ID: Control_Participant4, Label: 0
+    ID: Control_Participant5, Label: 0
+    ID: Control_Participant7, Label: 0
+    ID: Control_Participant8, Label: 0
+    ID: Control_Participant9, Label: 0
+  → test 환자 ID 및 라벨:
+    ID: COVID19_Participant11, Label: 1
+    ID: Control_Participant5, Label: 1
+    ID: Control_Participant7, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: Control_Participant7, Label: 0
+train_p_index_ 18
+valid_p_index 9
+test_p_index 5
+data augment 실행 안 함
+eval_p_index len:  14
+individual_train 18
+individual_eval 14
+train data의 x, y, id 길이: 18 18 18
+valid data의 x, y, id 길이: 9 9 9
+test data의 x, y, id 길이: 5 5 5
+output_class :  1
+Memory Allocated: 16.69 MB
+Memory Reserved: 42.00 MB
+cuda
+Epoch 1, Train Loss 0.694246, Valid_loss 0.691651
+Epoch 2, Train Loss 0.687762, Valid_loss 0.690115
+Epoch 3, Train Loss 0.671143, Valid_loss 0.689153
+Epoch 4, Train Loss 0.682818, Valid_loss 0.688376
+Epoch 5, Train Loss 0.683248, Valid_loss 0.687703
+Epoch 6, Train Loss 0.680996, Valid_loss 0.687144
+Epoch 7, Train Loss 0.658972, Valid_loss 0.686475
+Epoch 8, Train Loss 0.660944, Valid_loss 0.685675
+Epoch 9, Train Loss 0.670714, Valid_loss 0.684942
+Epoch 10, Train Loss 0.651861, Valid_loss 0.684345
+Epoch 11, Train Loss 0.676971, Valid_loss 0.683779
+Epoch 12, Train Loss 0.673659, Valid_loss 0.683202
+Epoch 13, Train Loss 0.642391, Valid_loss 0.682547
+Epoch 14, Train Loss 0.666555, Valid_loss 0.681854
+Epoch 15, Train Loss 0.632226, Valid_loss 0.681213
+Epoch 16, Train Loss 0.667480, Valid_loss 0.680559
+Epoch 17, Train Loss 0.636343, Valid_loss 0.679937
+Epoch 18, Train Loss 0.628823, Valid_loss 0.679363
+Epoch 19, Train Loss 0.668456, Valid_loss 0.678807
+Epoch 20, Train Loss 0.630922, Valid_loss 0.678277
+Epoch 21, Train Loss 0.616225, Valid_loss 0.677766
+Epoch 22, Train Loss 0.661564, Valid_loss 0.677208
+Epoch 23, Train Loss 0.616628, Valid_loss 0.676637
+Epoch 24, Train Loss 0.692840, Valid_loss 0.676079
+Epoch 25, Train Loss 0.664187, Valid_loss 0.675520
+Epoch 26, Train Loss 0.654387, Valid_loss 0.674987
+Epoch 27, Train Loss 0.612688, Valid_loss 0.674447
+Epoch 28, Train Loss 0.614305, Valid_loss 0.673931
+Epoch 29, Train Loss 0.618025, Valid_loss 0.673532
+Epoch 30, Train Loss 0.611138, Valid_loss 0.673334
+Epoch 31, Train Loss 0.634629, Valid_loss 0.673399
+Epoch 32, Train Loss 0.607463, Valid_loss 0.673224
+Epoch 33, Train Loss 0.610750, Valid_loss 0.673116
+Epoch 34, Train Loss 0.610651, Valid_loss 0.673148
+Epoch 35, Train Loss 0.605798, Valid_loss 0.673458
+Epoch 36, Train Loss 0.607612, Valid_loss 0.674364
+Epoch 37, Train Loss 0.645113, Valid_loss 0.675172
+Epoch 38, Train Loss 0.649314, Valid_loss 0.675425
+Epoch 39, Train Loss 0.602203, Valid_loss 0.674907
+Epoch 40, Train Loss 0.629431, Valid_loss 0.674190
+Epoch 41, Train Loss 0.598163, Valid_loss 0.673355
+Epoch 42, Train Loss 0.592298, Valid_loss 0.672531
+Epoch 43, Train Loss 0.616493, Valid_loss 0.671427
+Epoch 44, Train Loss 0.642477, Valid_loss 0.669896
+Epoch 45, Train Loss 0.634285, Valid_loss 0.661344
+Epoch 46, Train Loss 0.585308, Valid_loss 0.651520
+Epoch 47, Train Loss 0.582786, Valid_loss 0.644836
+Epoch 48, Train Loss 0.605395, Valid_loss 0.640072
+Epoch 49, Train Loss 0.602252, Valid_loss 0.635801
+Epoch 50, Train Loss 0.598958, Valid_loss 0.633660
+Epoch 51, Train Loss 0.588086, Valid_loss 0.633945
+Epoch 52, Train Loss 0.586356, Valid_loss 0.634701
+COVID19_Participant11 -- true: COVID-19 -- pred: COVID-19
+Control_Participant5 -- true: normal -- pred: COVID-19
+Control_Participant7 -- true: normal -- pred: COVID-19
+COVID19_Participant26 -- true: COVID-19 -- pred: COVID-19
+Control_Participant7 -- true: normal -- pred: COVID-19
+true :  [1, 0, 0, 1, 0]
+pred :  [1, 1, 1, 1, 1]
+Confusion Matrix: [0 3 0 2]
+Best performance: Epoch 50, Loss 0.598958, Test ACC 0.400000, Test AUC 0.000000, Test Recall 1.000000, Test Precision 0.400000
+✅ Total valid splits used: 1
+🔁 Repeat 4, Fold 1
+🔍 Split #2
+  → train_p_index 환자 수: 27
+  → test_p_index 환자 수: 5
+  → train 환자 ID: ['COVID19_Participant11', 'COVID19_Participant13', 'COVID19_Participant14', 'COVID19_Participant15', 'COVID19_Participant17', 'COVID19_Participant19', 'COVID19_Participant2', 'COVID19_Participant20', 'COVID19_Participant22', 'COVID19_Participant23', 'COVID19_Participant25', 'COVID19_Participant26', 'COVID19_Participant29', 'COVID19_Participant31', 'COVID19_Participant32', 'COVID19_Participant37', 'COVID19_Participant4', 'COVID19_Participant40', 'COVID19_Participant7', 'Control_Participant10', 'Control_Participant11', 'Control_Participant15', 'Control_Participant3', 'Control_Participant4', 'Control_Participant7', 'Control_Participant8', 'Control_Participant9']
+  → test  환자 ID: ['COVID19_Participant31', 'COVID19_Participant26', 'COVID19_Participant13', 'Control_Participant7', 'Control_Participant7']
+  → train 환자 ID 및 라벨:
+    ID: COVID19_Participant11, Label: 1
+    ID: COVID19_Participant13, Label: 1
+    ID: COVID19_Participant14, Label: 1
+    ID: COVID19_Participant15, Label: 1
+    ID: COVID19_Participant17, Label: 1
+    ID: COVID19_Participant19, Label: 1
+    ID: COVID19_Participant2, Label: 1
+    ID: COVID19_Participant20, Label: 1
+    ID: COVID19_Participant22, Label: 1
+    ID: COVID19_Participant23, Label: 1
+    ID: COVID19_Participant25, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: COVID19_Participant29, Label: 1
+    ID: COVID19_Participant31, Label: 1
+    ID: COVID19_Participant32, Label: 1
+    ID: COVID19_Participant37, Label: 1
+    ID: COVID19_Participant4, Label: 1
+    ID: COVID19_Participant40, Label: 1
+    ID: COVID19_Participant7, Label: 1
+    ID: Control_Participant10, Label: 0
+    ID: Control_Participant11, Label: 0
+    ID: Control_Participant15, Label: 0
+    ID: Control_Participant3, Label: 0
+    ID: Control_Participant4, Label: 0
+    ID: Control_Participant7, Label: 0
+    ID: Control_Participant8, Label: 0
+    ID: Control_Participant9, Label: 0
+  → test 환자 ID 및 라벨:
+    ID: COVID19_Participant31, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: COVID19_Participant13, Label: 1
+    ID: Control_Participant7, Label: 0
+    ID: Control_Participant7, Label: 0
+train_p_index_ 18
+valid_p_index 9
+test_p_index 5
+data augment 실행 안 함
+eval_p_index len:  14
+individual_train 18
+individual_eval 14
+train data의 x, y, id 길이: 18 18 18
+valid data의 x, y, id 길이: 9 9 9
+test data의 x, y, id 길이: 5 5 5
+output_class :  1
+Memory Allocated: 16.69 MB
+Memory Reserved: 42.00 MB
+cuda
+Epoch 1, Train Loss 0.743775, Valid_loss 0.768652
+Epoch 2, Train Loss 0.738408, Valid_loss 0.762700
+Epoch 3, Train Loss 0.814213, Valid_loss 0.754793
+Epoch 4, Train Loss 0.806203, Valid_loss 0.744018
+Epoch 5, Train Loss 0.791558, Valid_loss 0.731512
+Epoch 6, Train Loss 0.779450, Valid_loss 0.718820
+Epoch 7, Train Loss 0.715709, Valid_loss 0.707875
+Epoch 8, Train Loss 0.765579, Valid_loss 0.698210
+Epoch 9, Train Loss 0.720513, Valid_loss 0.689567
+Epoch 10, Train Loss 0.760299, Valid_loss 0.683677
+Epoch 11, Train Loss 0.743654, Valid_loss 0.679856
+Epoch 12, Train Loss 0.729269, Valid_loss 0.679134
+Epoch 13, Train Loss 0.742260, Valid_loss 0.680527
+Epoch 14, Train Loss 0.699980, Valid_loss 0.681209
+Epoch 15, Train Loss 0.722655, Valid_loss 0.681543
+Epoch 16, Train Loss 0.683513, Valid_loss 0.681413
+Epoch 17, Train Loss 0.684954, Valid_loss 0.681015
+Epoch 18, Train Loss 0.718121, Valid_loss 0.680537
+Epoch 19, Train Loss 0.708977, Valid_loss 0.679917
+Epoch 20, Train Loss 0.698929, Valid_loss 0.679010
+Epoch 21, Train Loss 0.681545, Valid_loss 0.677755
+Epoch 22, Train Loss 0.698855, Valid_loss 0.676214
+Epoch 23, Train Loss 0.704153, Valid_loss 0.674858
+Epoch 24, Train Loss 0.680697, Valid_loss 0.673110
+Epoch 25, Train Loss 0.712203, Valid_loss 0.671058
+Epoch 26, Train Loss 0.688962, Valid_loss 0.669296
+Epoch 27, Train Loss 0.706236, Valid_loss 0.667620
+Epoch 28, Train Loss 0.706283, Valid_loss 0.666275
+Epoch 29, Train Loss 0.705548, Valid_loss 0.665225
+Epoch 30, Train Loss 0.700947, Valid_loss 0.664454
+Epoch 31, Train Loss 0.665083, Valid_loss 0.663489
+Epoch 32, Train Loss 0.684034, Valid_loss 0.662232
+Epoch 33, Train Loss 0.696232, Valid_loss 0.661025
+Epoch 34, Train Loss 0.659365, Valid_loss 0.659759
+Epoch 35, Train Loss 0.661813, Valid_loss 0.658484
+Epoch 36, Train Loss 0.678312, Valid_loss 0.657077
+Epoch 37, Train Loss 0.676162, Valid_loss 0.655557
+Epoch 38, Train Loss 0.674531, Valid_loss 0.653965
+Epoch 39, Train Loss 0.696884, Valid_loss 0.652560
+Epoch 40, Train Loss 0.672072, Valid_loss 0.651498
+Epoch 41, Train Loss 0.663883, Valid_loss 0.650160
+Epoch 42, Train Loss 0.678551, Valid_loss 0.648450
+Epoch 43, Train Loss 0.658174, Valid_loss 0.646909
+Epoch 44, Train Loss 0.644323, Valid_loss 0.644822
+Epoch 45, Train Loss 0.680647, Valid_loss 0.642795
+Epoch 46, Train Loss 0.646377, Valid_loss 0.641529
+Epoch 47, Train Loss 0.636997, Valid_loss 0.640848
+Epoch 48, Train Loss 0.648855, Valid_loss 0.640308
+Epoch 49, Train Loss 0.668013, Valid_loss 0.639730
+Epoch 50, Train Loss 0.666268, Valid_loss 0.639235
+Epoch 51, Train Loss 0.673129, Valid_loss 0.638955
+Epoch 52, Train Loss 0.648933, Valid_loss 0.638820
+Epoch 53, Train Loss 0.629240, Valid_loss 0.638292
+Epoch 54, Train Loss 0.655676, Valid_loss 0.637224
+Epoch 55, Train Loss 0.663419, Valid_loss 0.636302
+Epoch 56, Train Loss 0.657432, Valid_loss 0.635709
+Epoch 57, Train Loss 0.643884, Valid_loss 0.635202
+Epoch 58, Train Loss 0.633389, Valid_loss 0.634447
+Epoch 59, Train Loss 0.607545, Valid_loss 0.633255
+Epoch 60, Train Loss 0.661001, Valid_loss 0.632036
+Epoch 61, Train Loss 0.669896, Valid_loss 0.631293
+Epoch 62, Train Loss 0.634278, Valid_loss 0.630881
+Epoch 63, Train Loss 0.645310, Valid_loss 0.630525
+Epoch 64, Train Loss 0.630055, Valid_loss 0.629897
+Epoch 65, Train Loss 0.653264, Valid_loss 0.629223
+Epoch 66, Train Loss 0.647646, Valid_loss 0.628810
+Epoch 67, Train Loss 0.620228, Valid_loss 0.628489
+Epoch 68, Train Loss 0.625841, Valid_loss 0.628211
+Epoch 69, Train Loss 0.629929, Valid_loss 0.628115
+Epoch 70, Train Loss 0.639952, Valid_loss 0.627997
+Epoch 71, Train Loss 0.642566, Valid_loss 0.627660
+Epoch 72, Train Loss 0.596920, Valid_loss 0.627006
+Epoch 73, Train Loss 0.650462, Valid_loss 0.626187
+Epoch 74, Train Loss 0.620622, Valid_loss 0.625590
+Epoch 75, Train Loss 0.659043, Valid_loss 0.625268
+Epoch 76, Train Loss 0.615125, Valid_loss 0.625051
+Epoch 77, Train Loss 0.621368, Valid_loss 0.624731
+Epoch 78, Train Loss 0.592344, Valid_loss 0.624223
+Epoch 79, Train Loss 0.609445, Valid_loss 0.623486
+Epoch 80, Train Loss 0.649294, Valid_loss 0.622842
+Epoch 81, Train Loss 0.643609, Valid_loss 0.622446
+Epoch 82, Train Loss 0.640740, Valid_loss 0.622096
+Epoch 83, Train Loss 0.643745, Valid_loss 0.621501
+Epoch 84, Train Loss 0.618615, Valid_loss 0.620779
+Epoch 85, Train Loss 0.618757, Valid_loss 0.620227
+Epoch 86, Train Loss 0.581994, Valid_loss 0.619703
+Epoch 87, Train Loss 0.623906, Valid_loss 0.619036
+Epoch 88, Train Loss 0.638966, Valid_loss 0.618405
+Epoch 89, Train Loss 0.643386, Valid_loss 0.617779
+Epoch 90, Train Loss 0.565308, Valid_loss 0.617017
+Epoch 91, Train Loss 0.602912, Valid_loss 0.615995
+Epoch 92, Train Loss 0.626136, Valid_loss 0.615106
+Epoch 93, Train Loss 0.596151, Valid_loss 0.614298
+Epoch 94, Train Loss 0.646284, Valid_loss 0.613619
+Epoch 95, Train Loss 0.622475, Valid_loss 0.613193
+Epoch 96, Train Loss 0.595307, Valid_loss 0.612822
+Epoch 97, Train Loss 0.624104, Valid_loss 0.612528
+Epoch 98, Train Loss 0.612508, Valid_loss 0.612382
+Epoch 99, Train Loss 0.638769, Valid_loss 0.612402
+Epoch 100, Train Loss 0.589653, Valid_loss 0.612262
+COVID19_Participant31 -- true: COVID-19 -- pred: COVID-19
+COVID19_Participant26 -- true: COVID-19 -- pred: COVID-19
+COVID19_Participant13 -- true: COVID-19 -- pred: COVID-19
+Control_Participant7 -- true: normal -- pred: COVID-19
+Control_Participant7 -- true: normal -- pred: normal
+true :  [1, 1, 1, 0, 0]
+pred :  [1, 1, 1, 1, 0]
+Confusion Matrix: [1 1 0 3]
+Best performance: Epoch 100, Loss 0.589653, Test ACC 0.800000, Test AUC 0.500000, Test Recall 1.000000, Test Precision 0.750000
+✅ Total valid splits used: 2
+🔁 Repeat 4, Fold 2
+🔍 Split #3
+  → train_p_index 환자 수: 23
+  → test_p_index 환자 수: 9
+  → train 환자 ID: ['COVID19_Participant13', 'COVID19_Participant14', 'COVID19_Participant15', 'COVID19_Participant17', 'COVID19_Participant20', 'COVID19_Participant23', 'COVID19_Participant25', 'COVID19_Participant28', 'COVID19_Participant29', 'COVID19_Participant31', 'COVID19_Participant32', 'COVID19_Participant37', 'COVID19_Participant39', 'COVID19_Participant4', 'COVID19_Participant40', 'COVID19_Participant8', 'Control_Participant1', 'Control_Participant10', 'Control_Participant11', 'Control_Participant3', 'Control_Participant5', 'Control_Participant7', 'Control_Participant9']
+  → test  환자 ID: ['COVID19_Participant31', 'COVID19_Participant5', 'Control_Participant3', 'Control_Participant1', 'Control_Participant7', 'COVID19_Participant13', 'Control_Participant3', 'COVID19_Participant13', 'Control_Participant5']
+  → train 환자 ID 및 라벨:
+    ID: COVID19_Participant13, Label: 1
+    ID: COVID19_Participant14, Label: 1
+    ID: COVID19_Participant15, Label: 1
+    ID: COVID19_Participant17, Label: 1
+    ID: COVID19_Participant20, Label: 1
+    ID: COVID19_Participant23, Label: 1
+    ID: COVID19_Participant25, Label: 1
+    ID: COVID19_Participant28, Label: 1
+    ID: COVID19_Participant29, Label: 1
+    ID: COVID19_Participant31, Label: 1
+    ID: COVID19_Participant32, Label: 1
+    ID: COVID19_Participant37, Label: 1
+    ID: COVID19_Participant39, Label: 1
+    ID: COVID19_Participant4, Label: 1
+    ID: COVID19_Participant40, Label: 1
+    ID: COVID19_Participant8, Label: 1
+    ID: Control_Participant1, Label: 0
+    ID: Control_Participant10, Label: 0
+    ID: Control_Participant11, Label: 0
+    ID: Control_Participant3, Label: 0
+    ID: Control_Participant5, Label: 0
+    ID: Control_Participant7, Label: 0
+    ID: Control_Participant9, Label: 0
+  → test 환자 ID 및 라벨:
+    ID: COVID19_Participant31, Label: 1
+    ID: COVID19_Participant5, Label: 1
+    ID: Control_Participant3, Label: 1
+    ID: Control_Participant1, Label: 1
+    ID: Control_Participant7, Label: 1
+    ID: COVID19_Participant13, Label: 1
+    ID: Control_Participant3, Label: 0
+    ID: COVID19_Participant13, Label: 0
+    ID: Control_Participant5, Label: 0
+train_p_index_ 15
+valid_p_index 8
+test_p_index 9
+data augment 실행 안 함
+eval_p_index len:  17
+individual_train 15
+individual_eval 17
+train data의 x, y, id 길이: 15 15 15
+valid data의 x, y, id 길이: 8 8 8
+test data의 x, y, id 길이: 9 9 9
+output_class :  1
+Memory Allocated: 16.69 MB
+Memory Reserved: 42.00 MB
+cuda
+Epoch 1, Train Loss 0.682549, Valid_loss 0.658202
+Epoch 2, Train Loss 0.678709, Valid_loss 0.657320
+Epoch 3, Train Loss 0.675017, Valid_loss 0.656285
+Epoch 4, Train Loss 0.671419, Valid_loss 0.655155
+Epoch 5, Train Loss 0.667916, Valid_loss 0.653836
+Epoch 6, Train Loss 0.664565, Valid_loss 0.652884
+Epoch 7, Train Loss 0.661182, Valid_loss 0.652060
+Epoch 8, Train Loss 0.657842, Valid_loss 0.651348
+Epoch 9, Train Loss 0.654583, Valid_loss 0.650621
+Epoch 10, Train Loss 0.651268, Valid_loss 0.649650
+Epoch 11, Train Loss 0.647755, Valid_loss 0.648625
+Epoch 12, Train Loss 0.644165, Valid_loss 0.647706
+Epoch 13, Train Loss 0.640667, Valid_loss 0.646913
+Epoch 14, Train Loss 0.637271, Valid_loss 0.646283
+Epoch 15, Train Loss 0.633826, Valid_loss 0.645656
+Epoch 16, Train Loss 0.630744, Valid_loss 0.644900
+Epoch 17, Train Loss 0.627601, Valid_loss 0.644084
+Epoch 18, Train Loss 0.624489, Valid_loss 0.643267
+Epoch 19, Train Loss 0.621403, Valid_loss 0.642450
+Epoch 20, Train Loss 0.618435, Valid_loss 0.641628
+Epoch 21, Train Loss 0.615578, Valid_loss 0.640795
+Epoch 22, Train Loss 0.612826, Valid_loss 0.639954
+Epoch 23, Train Loss 0.610172, Valid_loss 0.639085
+Epoch 24, Train Loss 0.607521, Valid_loss 0.638116
+Epoch 25, Train Loss 0.604859, Valid_loss 0.637162
+Epoch 26, Train Loss 0.602273, Valid_loss 0.636237
+Epoch 27, Train Loss 0.599760, Valid_loss 0.635299
+Epoch 28, Train Loss 0.597173, Valid_loss 0.634369
+Epoch 29, Train Loss 0.594647, Valid_loss 0.633436
+Epoch 30, Train Loss 0.592307, Valid_loss 0.632496
+Epoch 31, Train Loss 0.590031, Valid_loss 0.631543
+Epoch 32, Train Loss 0.587813, Valid_loss 0.630578
+Epoch 33, Train Loss 0.585650, Valid_loss 0.629612
+Epoch 34, Train Loss 0.583434, Valid_loss 0.628812
+Epoch 35, Train Loss 0.581227, Valid_loss 0.628005
+Epoch 36, Train Loss 0.579061, Valid_loss 0.627189
+Epoch 37, Train Loss 0.576934, Valid_loss 0.626360
+Epoch 38, Train Loss 0.574920, Valid_loss 0.625506
+Epoch 39, Train Loss 0.573117, Valid_loss 0.624605
+Epoch 40, Train Loss 0.571356, Valid_loss 0.623648
+Epoch 41, Train Loss 0.569823, Valid_loss 0.622642
+Epoch 42, Train Loss 0.568290, Valid_loss 0.621765
+Epoch 43, Train Loss 0.566757, Valid_loss 0.620874
+Epoch 44, Train Loss 0.565220, Valid_loss 0.620014
+Epoch 45, Train Loss 0.563677, Valid_loss 0.619060
+Epoch 46, Train Loss 0.562078, Valid_loss 0.618013
+Epoch 47, Train Loss 0.560466, Valid_loss 0.616884
+Epoch 48, Train Loss 0.558844, Valid_loss 0.615689
+Epoch 49, Train Loss 0.557213, Valid_loss 0.614441
+Epoch 50, Train Loss 0.555575, Valid_loss 0.613147
+Epoch 51, Train Loss 0.553934, Valid_loss 0.612483
+Epoch 52, Train Loss 0.553110, Valid_loss 0.611805
+Epoch 53, Train Loss 0.552283, Valid_loss 0.611116
+Epoch 54, Train Loss 0.551452, Valid_loss 0.610418
+Epoch 55, Train Loss 0.550620, Valid_loss 0.609644
+Epoch 56, Train Loss 0.549787, Valid_loss 0.608886
+Epoch 57, Train Loss 0.548953, Valid_loss 0.608164
+Epoch 58, Train Loss 0.548118, Valid_loss 0.607446
+Epoch 59, Train Loss 0.547283, Valid_loss 0.606731
+Epoch 60, Train Loss 0.546450, Valid_loss 0.606024
+Epoch 61, Train Loss 0.545616, Valid_loss 0.605325
+Epoch 62, Train Loss 0.544785, Valid_loss 0.604612
+Epoch 63, Train Loss 0.543958, Valid_loss 0.603946
+Epoch 64, Train Loss 0.543130, Valid_loss 0.603331
+Epoch 65, Train Loss 0.542302, Valid_loss 0.602756
+Epoch 66, Train Loss 0.541476, Valid_loss 0.602183
+Epoch 67, Train Loss 0.540685, Valid_loss 0.601641
+Epoch 68, Train Loss 0.539913, Valid_loss 0.601125
+Epoch 69, Train Loss 0.539142, Valid_loss 0.600637
+Epoch 70, Train Loss 0.538373, Valid_loss 0.600148
+Epoch 71, Train Loss 0.537607, Valid_loss 0.599663
+Epoch 72, Train Loss 0.536842, Valid_loss 0.599188
+Epoch 73, Train Loss 0.536078, Valid_loss 0.598723
+Epoch 74, Train Loss 0.535318, Valid_loss 0.598283
+Epoch 75, Train Loss 0.534556, Valid_loss 0.597867
+Epoch 76, Train Loss 0.533795, Valid_loss 0.597452
+Epoch 77, Train Loss 0.533036, Valid_loss 0.597037
+Epoch 78, Train Loss 0.532277, Valid_loss 0.596653
+Epoch 79, Train Loss 0.531518, Valid_loss 0.596286
+Epoch 80, Train Loss 0.530758, Valid_loss 0.595922
+Epoch 81, Train Loss 0.530001, Valid_loss 0.595553
+Epoch 82, Train Loss 0.529270, Valid_loss 0.595181
+Epoch 83, Train Loss 0.528538, Valid_loss 0.594806
+Epoch 84, Train Loss 0.527806, Valid_loss 0.594431
+Epoch 85, Train Loss 0.527074, Valid_loss 0.594070
+Epoch 86, Train Loss 0.526341, Valid_loss 0.593710
+Epoch 87, Train Loss 0.525608, Valid_loss 0.593352
+Epoch 88, Train Loss 0.524876, Valid_loss 0.593028
+Epoch 89, Train Loss 0.524141, Valid_loss 0.592703
+Epoch 90, Train Loss 0.523407, Valid_loss 0.592381
+Epoch 91, Train Loss 0.522673, Valid_loss 0.592059
+Epoch 92, Train Loss 0.521939, Valid_loss 0.591737
+Epoch 93, Train Loss 0.521207, Valid_loss 0.591400
+Epoch 94, Train Loss 0.520484, Valid_loss 0.591050
+Epoch 95, Train Loss 0.519751, Valid_loss 0.590689
+Epoch 96, Train Loss 0.519025, Valid_loss 0.590370
+Epoch 97, Train Loss 0.518298, Valid_loss 0.590103
+Epoch 98, Train Loss 0.517553, Valid_loss 0.589849
+Epoch 99, Train Loss 0.516804, Valid_loss 0.589605
+Epoch 100, Train Loss 0.516053, Valid_loss 0.589370
+COVID19_Participant31 -- true: COVID-19 -- pred: COVID-19
+COVID19_Participant5 -- true: COVID-19 -- pred: COVID-19
+Control_Participant3 -- true: normal -- pred: COVID-19
+Control_Participant1 -- true: normal -- pred: COVID-19
+Control_Participant7 -- true: normal -- pred: COVID-19
+COVID19_Participant13 -- true: COVID-19 -- pred: COVID-19
+Control_Participant3 -- true: normal -- pred: COVID-19
+COVID19_Participant13 -- true: COVID-19 -- pred: COVID-19
+Control_Participant5 -- true: normal -- pred: COVID-19
+true :  [1, 1, 0, 0, 0, 1, 0, 1, 0]
+pred :  [1, 1, 1, 1, 1, 1, 1, 1, 1]
+Confusion Matrix: [0 5 0 4]
+Best performance: Epoch 100, Loss 0.516053, Test ACC 0.444444, Test AUC 0.850000, Test Recall 1.000000, Test Precision 0.444444
+✅ Total valid splits used: 3
+🔁 Repeat 4, Fold 3
+🔍 Split #4
+  → train_p_index 환자 수: 26
+  → test_p_index 환자 수: 6
+  → train 환자 ID: ['COVID19_Participant11', 'COVID19_Participant13', 'COVID19_Participant15', 'COVID19_Participant19', 'COVID19_Participant2', 'COVID19_Participant20', 'COVID19_Participant22', 'COVID19_Participant23', 'COVID19_Participant25', 'COVID19_Participant26', 'COVID19_Participant28', 'COVID19_Participant29', 'COVID19_Participant31', 'COVID19_Participant32', 'COVID19_Participant39', 'COVID19_Participant4', 'COVID19_Participant7', 'COVID19_Participant8', 'Control_Participant1', 'Control_Participant10', 'Control_Participant11', 'Control_Participant15', 'Control_Participant4', 'Control_Participant5', 'Control_Participant7', 'Control_Participant8']
+  → test  환자 ID: ['Control_Participant4', 'Control_Participant4', 'COVID19_Participant26', 'COVID19_Participant7', 'Control_Participant7', 'COVID19_Participant31']
+  → train 환자 ID 및 라벨:
+    ID: COVID19_Participant11, Label: 1
+    ID: COVID19_Participant13, Label: 1
+    ID: COVID19_Participant15, Label: 1
+    ID: COVID19_Participant19, Label: 1
+    ID: COVID19_Participant2, Label: 1
+    ID: COVID19_Participant20, Label: 1
+    ID: COVID19_Participant22, Label: 1
+    ID: COVID19_Participant23, Label: 1
+    ID: COVID19_Participant25, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: COVID19_Participant28, Label: 1
+    ID: COVID19_Participant29, Label: 1
+    ID: COVID19_Participant31, Label: 1
+    ID: COVID19_Participant32, Label: 1
+    ID: COVID19_Participant39, Label: 1
+    ID: COVID19_Participant4, Label: 1
+    ID: COVID19_Participant7, Label: 1
+    ID: COVID19_Participant8, Label: 1
+    ID: Control_Participant1, Label: 0
+    ID: Control_Participant10, Label: 0
+    ID: Control_Participant11, Label: 0
+    ID: Control_Participant15, Label: 0
+    ID: Control_Participant4, Label: 0
+    ID: Control_Participant5, Label: 0
+    ID: Control_Participant7, Label: 0
+    ID: Control_Participant8, Label: 0
+  → test 환자 ID 및 라벨:
+    ID: Control_Participant4, Label: 1
+    ID: Control_Participant4, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: COVID19_Participant7, Label: 1
+    ID: Control_Participant7, Label: 0
+    ID: COVID19_Participant31, Label: 0
+train_p_index_ 17
+valid_p_index 9
+test_p_index 6
+data augment 실행 안 함
+eval_p_index len:  15
+individual_train 17
+individual_eval 15
+train data의 x, y, id 길이: 17 17 17
+valid data의 x, y, id 길이: 9 9 9
+test data의 x, y, id 길이: 6 6 6
+output_class :  1
+Memory Allocated: 16.69 MB
+Memory Reserved: 42.00 MB
+cuda
+Epoch 1, Train Loss 1.316401, Valid_loss 0.808419
+Epoch 2, Train Loss 1.321701, Valid_loss 0.803601
+Epoch 3, Train Loss 1.310742, Valid_loss 0.797204
+Epoch 4, Train Loss 0.774090, Valid_loss 0.789911
+Epoch 5, Train Loss 1.331803, Valid_loss 0.782445
+Epoch 6, Train Loss 0.781847, Valid_loss 0.774738
+Epoch 7, Train Loss 1.293359, Valid_loss 0.767476
+Epoch 8, Train Loss 1.262432, Valid_loss 0.760043
+Epoch 9, Train Loss 1.237863, Valid_loss 0.752275
+Epoch 10, Train Loss 1.226643, Valid_loss 0.744453
+Epoch 11, Train Loss 1.217999, Valid_loss 0.736535
+Epoch 12, Train Loss 1.204117, Valid_loss 0.728678
+Epoch 13, Train Loss 1.179056, Valid_loss 0.720831
+Epoch 14, Train Loss 1.240796, Valid_loss 0.713056
+Epoch 15, Train Loss 0.740282, Valid_loss 0.707235
+Epoch 16, Train Loss 0.738886, Valid_loss 0.702614
+Epoch 17, Train Loss 1.140058, Valid_loss 0.698248
+Epoch 18, Train Loss 1.132020, Valid_loss 0.693701
+Epoch 19, Train Loss 1.096853, Valid_loss 0.689039
+Epoch 20, Train Loss 0.716856, Valid_loss 0.684763
+Epoch 21, Train Loss 0.720909, Valid_loss 0.681249
+Epoch 22, Train Loss 1.068662, Valid_loss 0.677970
+Epoch 23, Train Loss 1.075266, Valid_loss 0.674621
+Epoch 24, Train Loss 0.992587, Valid_loss 0.671995
+Epoch 25, Train Loss 1.058020, Valid_loss 0.670547
+Epoch 26, Train Loss 0.694647, Valid_loss 0.670572
+Epoch 27, Train Loss 1.001099, Valid_loss 0.670922
+Epoch 28, Train Loss 0.986701, Valid_loss 0.670614
+Epoch 29, Train Loss 0.982112, Valid_loss 0.670343
+Epoch 30, Train Loss 1.027945, Valid_loss 0.670309
+Epoch 31, Train Loss 0.984158, Valid_loss 0.670465
+Epoch 32, Train Loss 1.016181, Valid_loss 0.669613
+Epoch 33, Train Loss 0.946218, Valid_loss 0.668890
+Epoch 34, Train Loss 0.937656, Valid_loss 0.668632
+Epoch 35, Train Loss 0.977317, Valid_loss 0.668799
+Epoch 36, Train Loss 0.970472, Valid_loss 0.668396
+Epoch 37, Train Loss 0.937212, Valid_loss 0.668067
+Epoch 38, Train Loss 0.891096, Valid_loss 0.667750
+Epoch 39, Train Loss 0.907791, Valid_loss 0.667414
+Epoch 40, Train Loss 0.918156, Valid_loss 0.667126
+Epoch 41, Train Loss 0.957484, Valid_loss 0.666940
+Epoch 42, Train Loss 0.917089, Valid_loss 0.667161
+Epoch 43, Train Loss 0.668616, Valid_loss 0.667549
+Epoch 44, Train Loss 0.942671, Valid_loss 0.667933
+Epoch 45, Train Loss 0.875178, Valid_loss 0.668348
+Epoch 46, Train Loss 0.700224, Valid_loss 0.668734
+Epoch 47, Train Loss 0.839607, Valid_loss 0.669091
+Epoch 48, Train Loss 0.927288, Valid_loss 0.669491
+Epoch 49, Train Loss 0.865966, Valid_loss 0.669928
+Epoch 50, Train Loss 0.664118, Valid_loss 0.670341
+Epoch 51, Train Loss 0.823024, Valid_loss 0.670534
+Epoch 52, Train Loss 0.820910, Valid_loss 0.670740
+Control_Participant4 -- true: normal -- pred: normal
+Control_Participant4 -- true: normal -- pred: normal
+COVID19_Participant26 -- true: COVID-19 -- pred: normal
+COVID19_Participant7 -- true: COVID-19 -- pred: normal
+Control_Participant7 -- true: normal -- pred: normal
+COVID19_Participant31 -- true: COVID-19 -- pred: normal
+true :  [0, 0, 1, 1, 0, 1]
+pred :  [0, 0, 0, 0, 0, 0]
+Confusion Matrix: [3 0 3 0]
+Best performance: Epoch 41, Loss 0.957484, Test ACC 0.500000, Test AUC 0.666667, Test Recall 0.000000, Test Precision 0.000000
+✅ Total valid splits used: 4
+🔁 Repeat 4, Fold 4
+🔍 Split #5
+  → train_p_index 환자 수: 25
+  → test_p_index 환자 수: 7
+  → train 환자 ID: ['COVID19_Participant11', 'COVID19_Participant14', 'COVID19_Participant17', 'COVID19_Participant19', 'COVID19_Participant2', 'COVID19_Participant20', 'COVID19_Participant22', 'COVID19_Participant26', 'COVID19_Participant28', 'COVID19_Participant29', 'COVID19_Participant31', 'COVID19_Participant32', 'COVID19_Participant37', 'COVID19_Participant39', 'COVID19_Participant40', 'COVID19_Participant7', 'COVID19_Participant8', 'Control_Participant1', 'Control_Participant10', 'Control_Participant15', 'Control_Participant3', 'Control_Participant4', 'Control_Participant5', 'Control_Participant8', 'Control_Participant9']
+  → test  환자 ID: ['COVID19_Participant26', 'Control_Participant3', 'Control_Participant1', 'Control_Participant4', 'Control_Participant1', 'COVID19_Participant7', 'COVID19_Participant31']
+  → train 환자 ID 및 라벨:
+    ID: COVID19_Participant11, Label: 1
+    ID: COVID19_Participant14, Label: 1
+    ID: COVID19_Participant17, Label: 1
+    ID: COVID19_Participant19, Label: 1
+    ID: COVID19_Participant2, Label: 1
+    ID: COVID19_Participant20, Label: 1
+    ID: COVID19_Participant22, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: COVID19_Participant28, Label: 1
+    ID: COVID19_Participant29, Label: 1
+    ID: COVID19_Participant31, Label: 1
+    ID: COVID19_Participant32, Label: 1
+    ID: COVID19_Participant37, Label: 1
+    ID: COVID19_Participant39, Label: 1
+    ID: COVID19_Participant40, Label: 1
+    ID: COVID19_Participant7, Label: 1
+    ID: COVID19_Participant8, Label: 1
+    ID: Control_Participant1, Label: 0
+    ID: Control_Participant10, Label: 0
+    ID: Control_Participant15, Label: 0
+    ID: Control_Participant3, Label: 0
+    ID: Control_Participant4, Label: 0
+    ID: Control_Participant5, Label: 0
+    ID: Control_Participant8, Label: 0
+    ID: Control_Participant9, Label: 0
+  → test 환자 ID 및 라벨:
+    ID: COVID19_Participant26, Label: 1
+    ID: Control_Participant3, Label: 1
+    ID: Control_Participant1, Label: 1
+    ID: Control_Participant4, Label: 1
+    ID: Control_Participant1, Label: 1
+    ID: COVID19_Participant7, Label: 0
+    ID: COVID19_Participant31, Label: 0
+train_p_index_ 16
+valid_p_index 9
+test_p_index 7
+data augment 실행 안 함
+eval_p_index len:  16
+individual_train 16
+individual_eval 16
+train data의 x, y, id 길이: 16 16 16
+valid data의 x, y, id 길이: 9 9 9
+test data의 x, y, id 길이: 7 7 7
+output_class :  1
+Memory Allocated: 16.69 MB
+Memory Reserved: 42.00 MB
+cuda
+Epoch 1, Train Loss 0.572142, Valid_loss 0.801907
+Epoch 2, Train Loss 0.569006, Valid_loss 0.802562
+Epoch 3, Train Loss 0.566020, Valid_loss 0.803589
+Epoch 4, Train Loss 0.563329, Valid_loss 0.804614
+Epoch 5, Train Loss 0.560998, Valid_loss 0.805437
+Epoch 6, Train Loss 0.558910, Valid_loss 0.805953
+Epoch 7, Train Loss 0.556939, Valid_loss 0.806127
+Epoch 8, Train Loss 0.554985, Valid_loss 0.805937
+Epoch 9, Train Loss 0.552967, Valid_loss 0.805358
+Epoch 10, Train Loss 0.550814, Valid_loss 0.804382
+Epoch 11, Train Loss 0.548478, Valid_loss 0.802986
+Epoch 12, Train Loss 0.545925, Valid_loss 0.801154
+Epoch 13, Train Loss 0.543126, Valid_loss 0.798773
+Epoch 14, Train Loss 0.540072, Valid_loss 0.795839
+Epoch 15, Train Loss 0.536767, Valid_loss 0.792352
+Epoch 16, Train Loss 0.534463, Valid_loss 0.789034
+Epoch 17, Train Loss 0.533289, Valid_loss 0.786390
+Epoch 18, Train Loss 0.531869, Valid_loss 0.784374
+Epoch 19, Train Loss 0.530240, Valid_loss 0.783029
+Epoch 20, Train Loss 0.528466, Valid_loss 0.782264
+Epoch 21, Train Loss 0.526559, Valid_loss 0.781883
+Epoch 22, Train Loss 0.524540, Valid_loss 0.781819
+Epoch 23, Train Loss 0.522440, Valid_loss 0.781934
+Epoch 24, Train Loss 0.520276, Valid_loss 0.782115
+Epoch 25, Train Loss 0.518055, Valid_loss 0.782216
+Epoch 26, Train Loss 0.515783, Valid_loss 0.782121
+Epoch 27, Train Loss 0.513516, Valid_loss 0.781723
+Epoch 28, Train Loss 0.511252, Valid_loss 0.780901
+Epoch 29, Train Loss 0.508916, Valid_loss 0.779584
+Epoch 30, Train Loss 0.506455, Valid_loss 0.777710
+Epoch 31, Train Loss 0.503889, Valid_loss 0.775291
+Epoch 32, Train Loss 0.501207, Valid_loss 0.772215
+Epoch 33, Train Loss 0.498467, Valid_loss 0.768446
+Epoch 34, Train Loss 0.495642, Valid_loss 0.763961
+Epoch 35, Train Loss 0.492703, Valid_loss 0.758755
+Epoch 36, Train Loss 0.489660, Valid_loss 0.752990
+Epoch 37, Train Loss 0.486554, Valid_loss 0.746728
+Epoch 38, Train Loss 0.484427, Valid_loss 0.742180
+Epoch 39, Train Loss 0.482217, Valid_loss 0.739233
+Epoch 40, Train Loss 0.479790, Valid_loss 0.737623
+Epoch 41, Train Loss 0.477212, Valid_loss 0.736999
+Epoch 42, Train Loss 0.474712, Valid_loss 0.736097
+Epoch 43, Train Loss 0.472193, Valid_loss 0.734736
+Epoch 44, Train Loss 0.469570, Valid_loss 0.732833
+Epoch 45, Train Loss 0.466864, Valid_loss 0.730393
+Epoch 46, Train Loss 0.464170, Valid_loss 0.727975
+Epoch 47, Train Loss 0.461840, Valid_loss 0.725603
+Epoch 48, Train Loss 0.459539, Valid_loss 0.724400
+Epoch 49, Train Loss 0.457761, Valid_loss 0.724906
+Epoch 50, Train Loss 0.456480, Valid_loss 0.727099
+Epoch 51, Train Loss 0.455223, Valid_loss 0.728753
+Epoch 52, Train Loss 0.454550, Valid_loss 0.730849
+COVID19_Participant26 -- true: COVID-19 -- pred: COVID-19
+Control_Participant3 -- true: normal -- pred: COVID-19
+Control_Participant1 -- true: normal -- pred: COVID-19
+Control_Participant4 -- true: normal -- pred: COVID-19
+Control_Participant1 -- true: normal -- pred: COVID-19
+COVID19_Participant7 -- true: COVID-19 -- pred: COVID-19
+COVID19_Participant31 -- true: COVID-19 -- pred: COVID-19
+true :  [1, 0, 0, 0, 0, 1, 1]
+pred :  [1, 1, 1, 1, 1, 1, 1]
+Confusion Matrix: [0 4 0 3]
+Best performance: Epoch 48, Loss 0.459539, Test ACC 0.428571, Test AUC 0.916667, Test Recall 1.000000, Test Precision 0.428571
+✅ Total valid splits used: 5
+
+📌 Repeat 4: 평균 AUC = 0.5867, 표준편차 = 0.3275

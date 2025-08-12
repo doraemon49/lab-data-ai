@@ -1,0 +1,121 @@
+Namespace(seed=240, batch_size=16, learning_rate=0.0001, weight_decay=0.0001, epochs=100, task='custom_covid', emb_dim=8, h_dim=128, dropout=0.0, layers=1, heads=4, train_sample_cells=100, test_sample_cells=100, train_num_sample=20, test_num_sample=100, model='Transformer', dataset=None, inter_only=False, same_pheno=0, augment_num=100, alpha=1.0, repeat=5, all=1, min_size=6000, n_splits=5, pca=False, mix_type=1, norm_first=False, warmup=False, top_k=1)
+🔁 Repeat 0, Fold 0
+✅ [DEBUG] singler_annotation 유니크값: ['Epithelial_cells', 'Platelets', 'Keratinocytes', 'Macrophage', 'B_cell', ..., 'MEP', 'BM & Prog.', 'Pro-B_cell_CD34+', 'Pro-Myelocyte', NaN]
+Length: 37
+Categories (36, object): ['Astrocyte', 'BM', 'BM & Prog.', 'B_cell', ..., 'Smooth_muscle_cells',
+                          'T_cells', 'Tissue_stem_cells', 'iPS_cells']
+✅ [DEBUG] singler_annotation isna sum: 4
+✅ [DEBUG] singler_annotation dtype: category
+✅ [DEBUG] NaN 위치들:
+GCGAACTAACGG_Control_Participant3     NaN
+AACTCTAGTTCG_Control_Participant3     NaN
+GCAATGTCCTAA_Control_Participant10    NaN
+AGTAAATACGGA_COVID19_Participant20    NaN
+Name: singler_annotation, dtype: category
+Categories (36, object): ['Astrocyte', 'BM', 'BM & Prog.', 'B_cell', ..., 'Smooth_muscle_cells',
+                          'T_cells', 'Tissue_stem_cells', 'iPS_cells']
+✅ [DEBUG] singler_annotation 유니크값: ['Keratinocytes', 'Epithelial_cells', 'Neurons', 'iPS_cells', 'Embryonic_stem_cells', ..., 'Hepatocytes', 'Macrophage', 'Pro-B_cell_CD34+', 'Tissue_stem_cells', 'Pre-B_cell_CD34-']
+Length: 36
+Categories (36, object): ['Astrocyte', 'BM', 'BM & Prog.', 'B_cell', ..., 'Smooth_muscle_cells',
+                          'T_cells', 'Tissue_stem_cells', 'iPS_cells']
+✅ [DEBUG] singler_annotation isna sum: 0
+✅ [DEBUG] singler_annotation dtype: category
+✅ [DEBUG] NaN 위치들:
+Series([], Name: singler_annotation, dtype: category
+Categories (36, object): ['Astrocyte', 'BM', 'BM & Prog.', 'B_cell', ..., 'Smooth_muscle_cells',
+                          'T_cells', 'Tissue_stem_cells', 'iPS_cells'])
+🔍 Split #1
+  → train_p_index 환자 수: 29
+  → test_p_index 환자 수: 10
+  → train 환자 ID: ['COVID19_Participant12', 'COVID19_Participant13', 'COVID19_Participant14', 'COVID19_Participant15', 'COVID19_Participant17', 'COVID19_Participant19', 'COVID19_Participant2', 'COVID19_Participant20', 'COVID19_Participant22', 'COVID19_Participant23', 'COVID19_Participant26', 'COVID19_Participant29', 'COVID19_Participant3', 'COVID19_Participant31', 'COVID19_Participant32', 'COVID19_Participant36', 'COVID19_Participant37', 'COVID19_Participant4', 'COVID19_Participant40', 'COVID19_Participant7', 'Control_Participant1', 'Control_Participant10', 'Control_Participant11', 'Control_Participant15', 'Control_Participant3', 'Control_Participant4', 'Control_Participant5', 'Control_Participant6', 'Control_Participant8']
+  → test  환자 ID: ['COVID19_Participant5', 'Control_Participant3', 'COVID19_Participant31', 'COVID19_Participant7', 'Control_Participant3', 'Control_Participant1', 'Control_Participant4', 'Control_Participant3', 'COVID19_Participant13', 'COVID19_Participant26']
+  → train 환자 ID 및 라벨:
+    ID: COVID19_Participant12, Label: 1
+    ID: COVID19_Participant13, Label: 1
+    ID: COVID19_Participant14, Label: 1
+    ID: COVID19_Participant15, Label: 1
+    ID: COVID19_Participant17, Label: 1
+    ID: COVID19_Participant19, Label: 1
+    ID: COVID19_Participant2, Label: 1
+    ID: COVID19_Participant20, Label: 1
+    ID: COVID19_Participant22, Label: 1
+    ID: COVID19_Participant23, Label: 1
+    ID: COVID19_Participant26, Label: 1
+    ID: COVID19_Participant29, Label: 1
+    ID: COVID19_Participant3, Label: 1
+    ID: COVID19_Participant31, Label: 1
+    ID: COVID19_Participant32, Label: 1
+    ID: COVID19_Participant36, Label: 1
+    ID: COVID19_Participant37, Label: 1
+    ID: COVID19_Participant4, Label: 1
+    ID: COVID19_Participant40, Label: 1
+    ID: COVID19_Participant7, Label: 1
+    ID: Control_Participant1, Label: 0
+    ID: Control_Participant10, Label: 0
+    ID: Control_Participant11, Label: 0
+    ID: Control_Participant15, Label: 0
+    ID: Control_Participant3, Label: 0
+    ID: Control_Participant4, Label: 0
+    ID: Control_Participant5, Label: 0
+    ID: Control_Participant6, Label: 0
+    ID: Control_Participant8, Label: 0
+  → test 환자 ID 및 라벨:
+    ID: COVID19_Participant5, Label: 1
+    ID: Control_Participant3, Label: 1
+    ID: COVID19_Participant31, Label: 1
+    ID: COVID19_Participant7, Label: 1
+    ID: Control_Participant3, Label: 1
+    ID: Control_Participant1, Label: 1
+    ID: Control_Participant4, Label: 1
+    ID: Control_Participant3, Label: 0
+    ID: COVID19_Participant13, Label: 0
+    ID: COVID19_Participant26, Label: 0
+train_p_index_ 19
+valid_p_index 10
+test_p_index 10
+✅ Checking cell_type before mixups...
+Unique types: {<class 'str'>}
+Example values (first 10): ['Epithelial_cells', 'Platelets', 'Epithelial_cells', 'Epithelial_cells', 'Epithelial_cells', 'Keratinocytes', 'Macrophage', 'Epithelial_cells', 'B_cell', 'Epithelial_cells']
+NaN exists? False
+🔍 isna count: 0
+🧪 Types in set(cell_type): {<class 'str'>}
+data augment 실행 함
+======= sample mixup ... ============
+
+  0%|          | 0/100 [00:00<?, ?it/s]
+  1%|          | 1/100 [00:00<00:14,  6.94it/s]
+  2%|▏         | 2/100 [00:00<00:12,  7.93it/s]
+  3%|▎         | 3/100 [00:00<00:12,  7.97it/s]
+  4%|▍         | 4/100 [00:00<00:11,  8.01it/s]
+  5%|▌         | 5/100 [00:00<00:11,  8.10it/s]
+  6%|▌         | 6/100 [00:00<00:11,  8.14it/s]
+  7%|▋         | 7/100 [00:00<00:11,  8.11it/s]
+  8%|▊         | 8/100 [00:00<00:11,  8.24it/s]
+  9%|▉         | 9/100 [00:01<00:11,  8.17it/s]
+ 10%|█         | 10/100 [00:01<00:10,  8.36it/s]
+ 11%|█         | 11/100 [00:01<00:10,  8.44it/s]
+ 12%|█▏        | 12/100 [00:01<00:10,  8.52it/s]
+ 13%|█▎        | 13/100 [00:01<00:10,  8.60it/s]
+ 14%|█▍        | 14/100 [00:01<00:09,  8.70it/s]
+ 15%|█▌        | 15/100 [00:01<00:10,  8.25it/s]
+ 16%|█▌        | 16/100 [00:01<00:10,  8.21it/s]
+ 17%|█▋        | 17/100 [00:02<00:10,  8.27it/s]
+ 18%|█▊        | 18/100 [00:02<00:13,  6.15it/s]
+ 19%|█▉        | 19/100 [00:02<00:11,  6.89it/s]
+ 20%|██        | 20/100 [00:02<00:11,  7.25it/s]
+ 21%|██        | 21/100 [00:02<00:10,  7.50it/s]
+ 22%|██▏       | 22/100 [00:02<00:10,  7.44it/s]
+ 23%|██▎       | 23/100 [00:02<00:09,  7.90it/s]
+ 24%|██▍       | 24/100 [00:03<00:09,  8.06it/s]
+ 25%|██▌       | 25/100 [00:03<00:09,  8.21it/s]
+ 26%|██▌       | 26/100 [00:03<00:08,  8.33it/s]
+ 27%|██▋       | 27/100 [00:03<00:09,  7.99it/s]
+ 28%|██▊       | 28/100 [00:03<00:08,  8.37it/s]
+ 29%|██▉       | 29/100 [00:03<00:08,  8.63it/s]
+ 29%|██▉       | 29/100 [00:03<00:09,  7.77it/s]
+Traceback (most recent call last):
+  File "/data/project/kim89/ScRAT/main.py", line 628, in <module>
+    data_augmented, train_p_index_aug, labels_aug, cell_type_aug = mixups(
+  File "/data/project/kim89/ScRAT/utils.py", line 168, in mixups
+    sampled_idx_2 = np.random.choice(i_sub_2, diff_sub)
+KeyboardInterrupt
