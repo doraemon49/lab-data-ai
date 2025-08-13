@@ -170,83 +170,139 @@ def Covid_data(args):
 
     return p_idx, labels_, cell_type, patient_id, origin, cell_type_large
 
+# dataloader.py에 있는 Custom_data()를 h5ad가 아니라 
+# 이미 load된 AnnData 객체를 받아 처리하는 버전으로 하나 추가하면 됩니다.
+def Custom_data_from_loaded(data, args):
+    # 1. 라벨 매핑 정의
+    id_dict = {
+        'normal': 0,
+        # 'COVID-19': 1
+        'hypertrophic cardiomyopathy':1,
+        'dilated cardiomyopathy':2
+    }
 
-def Custom_data(args):
-    '''
-    !!! Need to change line 178 before running the code !!!
-    '''
-    data = scanpy.read_h5ad(args.dataset)
-    ### Cardio data 실행 코드
-    if args.task == 'custom_cardio':
-        id_dict = {
-            'normal': 0,
-            'hypertrophic cardiomyopathy': 1,
-            'dilated cardiomyopathy': 2
-        }
-        patient_id = data.obs['patient']
-        labels = data.obs['disease__ontology_label']
-        cell_type = data.obs['cell_type_annotation']
+    # 2. 환자 ID, 라벨, 셀 타입 정보 추출
+    patient_id = data.obs['patient'] if 'patient' in data.obs else data.obs['donor_id']
+    labels = data.obs['disease__ontology_label']
+    cell_type = data.obs['manual_annotation']
+    # cell_type = data.obs['singler_annotation']
     
-    ### Covid data 실행 코드
-    elif args.task == 'custom_covid':
-        id_dict = {
-            'normal': 0,
-            'COVID-19': 1
-        }
-        patient_id = data.obs['donor_id']
-        labels = data.obs['disease__ontology_label']        
-        cell_type = data.obs['cell_type_annotation']
-    
-    else:
-        raise ValueError(f"Unsupported task for Custom_data: {args.task}")
+    # print("✅ [DEBUG] manual_annotation 유니크값:", cell_type.unique())
+    # print("✅ [DEBUG] manual_annotation isna sum:", cell_type.isna().sum())
+    # print("✅ [DEBUG] manual_annotation dtype:", cell_type.dtype)
 
-    # data = scanpy.read_h5ad(args.dataset)
-    if args.pca == True:
+    # print("✅ [DEBUG] NaN 위치들:")
+    # print(cell_type[cell_type.isna()])
+
+    # 3. expression 데이터 선택
+    if args.pca:
         origin = data.obsm['X_pca']
     else:
-        # origin = data.layers['raw']
-        # pca False ; 수정 2
         origin = data.X.toarray() if not isinstance(data.X, np.ndarray) else data.X
 
-    
-    # patient_id = data.obs['patient_id']
-
-    # labels = data.obs['Outcome']
-
-    # cell_type = data.obs['cell_type']
-
-    cell_type_large = None
-    # This (high resolution) cell_type is only for attention analysis, not necessary
-    # cell_type_large = data.obs['cell_type_large']
-
+    # 4. 라벨을 숫자로 변환
     labels_ = np.array(labels.map(id_dict))
 
-    l_dict = {}
+    # 5. 환자별 인덱스를 구성
     indices = np.arange(origin.shape[0])
     p_ids = sorted(set(patient_id))
     p_idx = []
 
     for i in p_ids:
         idx = indices[patient_id == i]
-        if len(set(labels_[idx])) > 1:   # one patient with more than one labels
+        if len(set(labels_[idx])) > 1:
             for ii in sorted(set(labels_[idx])):
                 if ii > -1:
                     iidx = idx[labels_[idx] == ii]
-                    tt_idx = iidx
-                    # if len(tt_idx) < 500:  # exclude the sample with the number of cells fewer than 500
-                    if len(tt_idx) < max(args.train_sample_cells, args.test_sample_cells):
+                    if len(iidx) < max(args.train_sample_cells, args.test_sample_cells):
                         continue
-                    p_idx.append(tt_idx)
-                    l_dict[labels_[iidx[0]]] = l_dict.get(labels_[iidx[0]], 0) + 1
+                    p_idx.append(iidx)
         else:
             if labels_[idx[0]] > -1:
-                tt_idx = idx
-                # if len(tt_idx) < 500:  # exclude the sample with the number of cells fewer than 500
-                if len(tt_idx) < max(args.train_sample_cells, args.test_sample_cells):
+                if len(idx) < max(args.train_sample_cells, args.test_sample_cells):
                     continue
-                p_idx.append(tt_idx)
-                l_dict[labels_[idx[0]]] = l_dict.get(labels_[idx[0]], 0) + 1
+                p_idx.append(idx)
 
-    # print(l_dict)
+    # 6. numpy 기반으로 반환
+    return p_idx, labels_, np.array(cell_type), np.array(patient_id), origin
 
-    return p_idx, labels_, cell_type, patient_id, origin, cell_type_large
+
+# def Custom_data(args):
+#     '''
+#     !!! Need to change line 178 before running the code !!!
+#     '''
+#     data = scanpy.read_h5ad(args.dataset)
+#     ### Cardio data 실행 코드
+#     if args.task == 'custom_cardio':
+#         id_dict = {
+#             'normal': 0,
+#             'hypertrophic cardiomyopathy': 1,
+#             'dilated cardiomyopathy': 2
+#         }
+#         patient_id = data.obs['patient']
+#         labels = data.obs['disease__ontology_label']
+#         cell_type = data.obs['cell_type_annotation']
+    
+#     ### Covid data 실행 코드
+#     elif args.task == 'custom_covid':
+#         id_dict = {
+#             'normal': 0,
+#             'COVID-19': 1
+#         }
+#         patient_id = data.obs['donor_id']
+#         labels = data.obs['disease__ontology_label']        
+#         cell_type = data.obs['cell_type_annotation']
+    
+#     else:
+#         raise ValueError(f"Unsupported task for Custom_data: {args.task}")
+
+#     # data = scanpy.read_h5ad(args.dataset)
+#     if args.pca == True:
+#         origin = data.obsm['X_pca']
+#     else:
+#         # origin = data.layers['raw']
+#         # pca False ; 수정 2
+#         origin = data.X.toarray() if not isinstance(data.X, np.ndarray) else data.X
+
+    
+#     # patient_id = data.obs['patient_id']
+
+#     # labels = data.obs['Outcome']
+
+#     # cell_type = data.obs['cell_type']
+
+#     cell_type_large = None
+#     # This (high resolution) cell_type is only for attention analysis, not necessary
+#     # cell_type_large = data.obs['cell_type_large']
+
+#     labels_ = np.array(labels.map(id_dict))
+
+#     l_dict = {}
+#     indices = np.arange(origin.shape[0])
+#     p_ids = sorted(set(patient_id))
+#     p_idx = []
+
+#     for i in p_ids:
+#         idx = indices[patient_id == i]
+#         if len(set(labels_[idx])) > 1:   # one patient with more than one labels
+#             for ii in sorted(set(labels_[idx])):
+#                 if ii > -1:
+#                     iidx = idx[labels_[idx] == ii]
+#                     tt_idx = iidx
+#                     # if len(tt_idx) < 500:  # exclude the sample with the number of cells fewer than 500
+#                     if len(tt_idx) < max(args.train_sample_cells, args.test_sample_cells):
+#                         continue
+#                     p_idx.append(tt_idx)
+#                     l_dict[labels_[iidx[0]]] = l_dict.get(labels_[iidx[0]], 0) + 1
+#         else:
+#             if labels_[idx[0]] > -1:
+#                 tt_idx = idx
+#                 # if len(tt_idx) < 500:  # exclude the sample with the number of cells fewer than 500
+#                 if len(tt_idx) < max(args.train_sample_cells, args.test_sample_cells):
+#                     continue
+#                 p_idx.append(tt_idx)
+#                 l_dict[labels_[idx[0]]] = l_dict.get(labels_[idx[0]], 0) + 1
+
+#     # print(l_dict)
+
+#     return p_idx, labels_, cell_type, patient_id, origin, cell_type_large

@@ -12,7 +12,9 @@ from model_baseline import *
 from Transformer import TransformerPredictor
 
 from dataloader import *
-from torch.nn.parallel import DistributedDataParallel as DDP
+from collections import defaultdict
+import pandas as pd
+import numpy as np
 
 
 def _str2bool(v):
@@ -101,6 +103,11 @@ def train(x_train, x_valid, x_test, y_train, y_valid, y_test, id_train, id_test,
     test_loader = torch.utils.data.DataLoader(dataset_2, batch_size=1, shuffle=False, collate_fn=dataset_2.collate)
     valid_loader = torch.utils.data.DataLoader(dataset_3, batch_size=1, shuffle=False, collate_fn=dataset_3.collate)
 
+    # print("👉 train_loader 길이 (샘플수/batch크기):", len(train_loader))
+    # print("👉 test_loader 길이:", len(test_loader))
+    # print("👉 valid_loader 길이:", len(valid_loader))
+
+
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     input_dim = data_augmented[0].shape[-1]
@@ -162,7 +169,6 @@ def train(x_train, x_valid, x_test, y_train, y_valid, y_test, id_train, id_test,
             x_ = torch.from_numpy(data_augmented[batch[0]]).float().to(device)
             y_ = batch[1].to(device)
             mask_ = batch[3].to(device)
-
             optimizer.zero_grad()
 
             out = model(x_, mask_)
@@ -319,18 +325,26 @@ def train(x_train, x_valid, x_test, y_train, y_valid, y_test, id_train, id_test,
     except:
         test_auc = 0.0
 
+
+
     test_acc = accuracy_score(true, pred)
     for idx in range(len(pred)):
         print(f"{test_id[idx]} -- true: {label_dict[true[idx]]} -- pred: {label_dict[pred[idx]]}")
     test_accs.append(test_acc)
 
+    print("true : ", true)
+    print("pred : ", pred)
+
     # Confusion Matrix 및 지표 분기
     if output_class == 1:
         cm = confusion_matrix(true, pred).ravel()
-        recall = cm[3] / (cm[3] + cm[2])
-        precision = cm[3] / (cm[3] + cm[1])
-        if (cm[3] + cm[1]) == 0:
-            precision = 0
+
+        if len(cm) == 4:
+            recall = cm[3] / (cm[3] + cm[2]) if (cm[3] + cm[2]) > 0 else 0
+            precision = cm[3] / (cm[3] + cm[1]) if (cm[3] + cm[1]) > 0 else 0
+        else:
+            print("⚠️ Skipping evaluation due to insufficient class diversity")
+            recall = precision = 0
         print("Confusion Matrix: " + str(cm))
 
     else:
@@ -352,29 +366,38 @@ def train(x_train, x_valid, x_test, y_train, y_valid, y_test, id_train, id_test,
 if args.model != 'Transformer':
     args.repeat = 60
 
+# 1. 기존 코드
 # if args.task != 'custom':
 #     p_idx, labels_, cell_type, patient_id, data, cell_type_large = Covid_data(args)
-if args.task == 'custom_cardio':
-    p_idx, labels_, cell_type, patient_id, data, cell_type_large = Custom_data(args)
-elif args.task == 'custom_covid':
-    p_idx, labels_, cell_type, patient_id, data, cell_type_large = Custom_data(args)
-else:
-    p_idx, labels_, cell_type, patient_id, data, cell_type_large = Covid_data(args)
 # else:
 #     p_idx, labels_, cell_type, patient_id, data, cell_type_large = Custom_data(args)
-rkf = RepeatedKFold(n_splits=abs(args.n_splits), n_repeats=args.repeat * 100, random_state=args.seed)
-num = np.arange(len(p_idx))
-accuracy, aucs, cms, recalls, precisions = [], [], [], [], []
-iter_count = 0
 
-#  class 분포와 split 구성 확인
-from collections import Counter
-print(Counter(labels_))  # class 당, 전체 cell 단위 라벨 분포 # ex) Counter({1: 235252, 0: 185441, 2: 171996})
-patient_classes = [labels_[p[0]] for p in p_idx]
-print("환자 수 기준 클래스 분포:")
-print(Counter(patient_classes))
-# for i, p in enumerate(p_idx):
-#     print(f"Sample {i} - Class: {labels_[p[0]]}")
+"""
+# 2. covid, cardio를 위한 custom 추가 코드
+# if args.task == 'custom_cardio':
+#     p_idx, labels_, cell_type, patient_id, data, cell_type_large = Custom_data(args)
+# elif args.task == 'custom_covid':
+#     p_idx, labels_, cell_type, patient_id, data, cell_type_large = Custom_data(args)
+
+# else:
+#     p_idx, labels_, cell_type, patient_id, data, cell_type_large = Covid_data(args)
+
+
+# 내부에서 랜덤하게 split을 생성 
+# rkf = RepeatedKFold(n_splits=abs(args.n_splits), n_repeats=args.repeat * 100, random_state=args.seed)
+
+# num = np.arange(len(p_idx))
+# accuracy, aucs, cms, recalls, precisions = [], [], [], [], []
+# iter_count = 0
+
+# #  class 분포와 split 구성 확인
+# from collections import Counter
+# print(Counter(labels_))  # class 당, 전체 cell 단위 라벨 분포 # ex) Counter({1: 235252, 0: 185441, 2: 171996})
+# patient_classes = [labels_[p[0]] for p in p_idx]
+# print("환자 수 기준 클래스 분포:")
+# print(Counter(patient_classes))
+# # for i, p in enumerate(p_idx):
+# #     print(f"Sample {i} - Class: {labels_[p[0]]}")
 
 
 for train_index, test_index in rkf.split(num):
@@ -485,20 +508,221 @@ for train_index, test_index in rkf.split(num):
 
     del data_augmented
 
-print("="*33)
-print("=== Final Evaluation (average across all splits) ===")
-print("="*33)
+"""
+# 사전 생성된 split 파일을 기반으로 고정된 train/test 데이터셋으로 실험을 수행하기 위해 (2번코드) # => 주석처리
 
-print("Best performance: Test ACC %f,   Test AUC %f,   Test Recall %f,   Test Precision %f" % (np.average(accuracy), np.average(aucs), np.average(recalls), np.average(precisions)))
+# 3. for loop 직접 구성 (repeat × fold)
 
-print("=================================")
-print("=== 저희 논문용 Final Evaluation (average across all splits) ===")
-print("=================================")
-print(f"Best performance: "
-      f"Test ACC {np.mean(accuracy):.6f}+-{np.std(accuracy):.6f}, "
-      f"Test AUC {np.mean(aucs):.6f}+-{np.std(aucs):.6f}, "
-      f"Test Recall {np.mean(recalls):.6f}+-{np.std(recalls):.6f}, "
-      f"Test Precision {np.mean(precisions):.6f}+-{np.std(precisions):.6f}")
+for repeat in range(args.repeat):
+    fold_aucs, accuracy, cms, recalls, precisions = [], [], [], [], []
+    iter_count = 0
+    for fold in range(args.n_splits):
+        print(f"🔁 Repeat {repeat}, Fold {fold}")
+        train_path = f"/data/project/kim89/0805_data/repeat_{repeat}/fold_{fold}_train.h5ad"
+        test_path = f"/data/project/kim89/0805_data/repeat_{repeat}/fold_{fold}_test.h5ad"
+
+        train_data = scanpy.read_h5ad(train_path)
+        test_data = scanpy.read_h5ad(test_path)
+
+        train_p_index, train_labels, train_cell_type, patient_id, train_origin = Custom_data_from_loaded(train_data, args)
+        test_p_index, test_labels, test_cell_type, test_patient_id, test_origin = Custom_data_from_loaded(test_data, args)
+
+        labels_ = train_labels
+
+        print(f"🔍 Split #{iter_count + 1}")
+        print(f"  → train_p_index 환자 수: {len(train_p_index)}")
+        print(f"  → test_p_index 환자 수: {len(test_p_index)}")
+
+        # 실제 환자 ID로 보기
+        train_ids = [patient_id[idx[0]] for idx in train_p_index]
+        test_ids = [patient_id[idx[0]] for idx in test_p_index]
+        print(f"  → train 환자 ID: {train_ids}")
+        print(f"  → test  환자 ID: {test_ids}")
+
+        # 각 환자의 ID와 label 함께 출력
+        print("  → train 환자 ID 및 라벨:")
+        for idxs in train_p_index:
+            idx = idxs[0]
+            print(f"    ID: {patient_id[idx]}, Label: {train_labels[idx]}")
+
+        print("  → test 환자 ID 및 라벨:")
+        for idxs in test_p_index:
+            idx = idxs[0]
+            print(f"    ID: {patient_id[idx]}, Label: {test_labels[idx]}")
+
+
+        # if args.n_splits < 0:
+        #     temp_idx = train_p_index
+        #     train_p_index = test_p_index
+        #     test_p_index = temp_idx
+
+
+        label_stat = [labels_[idx[0]] for idx in train_p_index] #  train set에 포함된 환자들의 라벨 목록
+        unique, cts = np.unique(label_stat, return_counts=True)
+
+        # 훈련 데이터(train_p_index)에 클래스가 2개 이상 존재해야 학습을 진행한다.
+        if len(unique) < 2 or (1 in cts): 
+            # 클래스가 하나밖에 없음 → 불균형 → 스킵 
+            # or 
+            # 등장한 클래스 중 한 클래스의 환자 수가 1명밖에 안 됨 → 학습이 불안정해질 가능성이 매우 높기 때문에 skip
+            continue
+    #     print(dict(zip(unique, cts)))
+        
+        # 원래 코드에는 test set의 클래스 불균형은 체크하지 않음
+        # ### ✅ test_p_index 클래스 확인 추가
+        # test_label_stat = [labels_[idx[0]] for idx in test_p_index]
+        # if len(set(test_label_stat)) < 2:
+        #     print(f"⚠️  Skipping split: test set has only one class -> {set(test_label_stat)}")
+        #     continue
+
+        # train_data에서 환자 단위로, train과 validation 나누기
+        kk = 0
+        while True:
+            train_p_index_, valid_p_index, ty, vy = train_test_split(train_p_index, label_stat, test_size=0.33,
+                                                                random_state=args.seed + kk)
+            if len(set(ty)) == 2 and len(set(vy)) == 2:
+                break
+            kk += 1
+
+        print("train_p_index_",len(train_p_index_))
+        print("valid_p_index",len(valid_p_index))
+        print("test_p_index",len(test_p_index))
+
+
+        train_p_index = train_p_index_
+        len_valid = len(valid_p_index)
+        # _index = np.concatenate([valid_p_index, test_p_index])
+        _index = valid_p_index + test_p_index  # ✅ 리스트끼리 결합
+
+
+        # train_ids = []
+        # for i in train_p_index:
+        #     train_ids.append(patient_id.iloc[p_idx[i][0]])
+
+    #     print(train_ids)
+
+        x_train = []
+        x_test = []
+        x_valid = []
+        y_train = []
+        y_valid = []
+        y_test = []
+        id_train = []
+        id_test = []
+        id_valid = []
+
+        train_cell_type = pd.Series([
+            ct if isinstance(ct, str) else "Unknown"
+            for ct in train_cell_type
+        ])
+
+        print("✅ Checking cell_type before mixups...")
+        print("Unique types:", set([type(x) for x in train_cell_type]))
+        print("Example values (first 10):", list(train_cell_type[:10]))
+        print("NaN exists?", any([isinstance(x, float) and np.isnan(x) for x in train_cell_type]))
+        # 1. Series에 NaN이 있는지 확실히 확인
+        print("🔍 isna count:", pd.Series(train_cell_type).isna().sum())
+
+        # 2. set 안에 float (NaN)가 섞여 있는지 확인
+        print("🧪 Types in set(cell_type):", set([type(x) for x in set(train_cell_type)]))
+
+        if args.augment_num > 0:
+            print("data augment 실행 함")
+            data_augmented, train_p_index_aug, labels_aug, cell_type_aug = mixups(
+                args, train_origin, train_p_index_, train_labels, train_cell_type
+            )
+            if data_augmented is None:
+                print("⚠️ Skipping due to insufficient classes for mixup")
+                continue
+        else:
+            print("data augment 실행 안 함")
+            data_augmented = train_origin
+            train_p_index_aug = train_p_index_
+            labels_aug = train_labels
+            cell_type_aug = train_cell_type
+
+  
+        # 평가용 인덱스는 valid + test로 합쳐서 sampling (scRAT 구조상 하나로 묶어서 sampling)
+        eval_p_index = valid_p_index + test_p_index
+        print("eval_p_index len: ",len(eval_p_index))
+
+        individual_train, individual_eval = sampling(
+            args,
+            train_p_index_aug,
+            eval_p_index,
+            train_labels,
+            labels_aug,
+            cell_type_aug
+        )
+        print("individual_train", len(individual_train))
+        print("individual_eval", len(individual_eval))
+
+        for sample_list in individual_train:
+            for sample in sample_list:
+                id, label = sample
+                x_train.append(id)
+                y_train.append(label)
+                id_train.append(id)
+
+
+        n_valid = len(valid_p_index)
+        for i in range(len(eval_p_index)):
+            ids, labels = [x[0] for x in individual_eval[i]], [x[1] for x in individual_eval[i]]
+            if i < n_valid:
+                x_valid.append(ids)
+                y_valid.append(labels[0])
+                id_valid.append(ids)
+            else:
+                x_test.append(ids)
+                y_test.append(labels[0])
+                id_test.append(ids)
+
+
+        x_train, x_valid, x_test, y_train, y_valid, y_test = x_train, x_valid, x_test, np.array(y_train).reshape([-1, 1]), \
+                                                            np.array(y_valid).reshape([-1, 1]), np.array(y_test).reshape([-1, 1])
+        print("train data의 x, y, id 길이:", len(x_train), len(y_train), len(id_train))
+        print("valid data의 x, y, id 길이:", len(x_valid), len(y_valid), len(id_valid))
+        print("test data의 x, y, id 길이:", len(x_test), len(y_test), len(id_test))
+
+        auc, acc, cm, recall, precision = train(
+            x_train, x_valid, x_test,
+            y_train, y_valid, y_test,
+            id_train, id_test,
+            data_augmented=data_augmented,  # numpy array
+            data=train_origin             # or full data if needed
+        )
+
+        fold_aucs.append(auc)
+        accuracy.append(acc)
+        cms.append(cm)
+        recalls.append(recall)
+        precisions.append(precision)
+        iter_count += 1
+        if iter_count == abs(args.n_splits) * args.repeat:
+            break
+        print(f"✅ Total valid splits used: {iter_count}")
+
+        del data_augmented
+        
+    # 🔽 Repeat 단위 AUC 출력 추가
+    print(f"\n📌 Repeat {repeat}: 평균 AUC = {np.mean(fold_aucs):.4f}, 표준편차 = {np.std(fold_aucs):.4f}")
+
+
+
+# print("="*33)
+# print("=== Final Evaluation (average across all splits) ===")
+# print("="*33)
+
+# print("Best performance: Test ACC %f,   Test AUC %f,   Test Recall %f,   Test Precision %f" % (np.average(accuracy), np.average(aucs), np.average(recalls), np.average(precisions)))
+
+# print("=================================")
+# print("=== 저희 논문용 Final Evaluation (average across all splits) ===")
+# print("=================================")
+# print(f"Best performance: "
+#       f"Test ACC {np.mean(accuracy):.6f}+-{np.std(accuracy):.6f}, "
+#       f"Test AUC {np.mean(aucs):.6f}+-{np.std(aucs):.6f}, "
+#       f"Test Recall {np.mean(recalls):.6f}+-{np.std(recalls):.6f}, "
+#       f"Test Precision {np.mean(precisions):.6f}+-{np.std(precisions):.6f}")
 
 ####################################
 ######## Only for repeat > 1 #######
