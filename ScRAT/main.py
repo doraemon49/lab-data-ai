@@ -129,14 +129,6 @@ def safe_gather(data_mat, index_tensor):
 
 
 def train(x_train, x_valid, x_test, y_train, y_valid, y_test, id_train, id_test, data_augmented, data):
-# def train(x_train, x_valid, x_test,
-#           y_train, y_valid, y_test,
-#           id_train, id_test,
-#           data_augmented,  # train용
-#           data_train,      # 원본 train
-#           data_valid,      # 원본 valid
-#           data_test):      # 원본 test
-
     dataset_1 = MyDataset(x_train, x_valid, x_test, y_train, y_valid, y_test, id_train, id_test, fold='train')
     dataset_2 = MyDataset(x_train, x_valid, x_test, y_train, y_valid, y_test, id_train, id_test, fold='test')
     dataset_3 = MyDataset(x_train, x_valid, x_test, y_train, y_valid, y_test, id_train, id_test, fold='val')
@@ -153,19 +145,19 @@ def train(x_train, x_valid, x_test, y_train, y_valid, y_test, id_train, id_test,
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     input_dim = data_augmented[0].shape[-1]
-    # output_class = 1
+
     output_class = len(set(labels_))
     if (output_class == 2):
         output_class = 1
-    
+
+    if args.task == 'custom_covid':
+        output_class = 1
     if args.task == 'custom_cardio':
         output_class = 3
     if args.task == 'custom_kidney':
         output_class = 3
-    
-    
-    print("output_class : ", output_class)
 
+    print("output_class : ", output_class)
 
     if args.model == 'Transformer':
         model = TransformerPredictor(input_dim=input_dim, model_dim=args.emb_dim, num_classes=output_class,
@@ -412,9 +404,9 @@ def train(x_train, x_valid, x_test, y_train, y_valid, y_test, id_train, id_test,
                 func = np.vectorize(f)
                 out = np.argmax(np.bincount(func(out).reshape(-1))).reshape(-1)[0]
                 pred.append(out)
-                test_id.append(test_patient_id[batch[2][0][0][0]])
+                test_id.append([batch[2][0]])
                 if out != y_:
-                    wrong.append(test_patient_id[batch[2][0][0][0]])
+                    wrong.append([batch[2][0]])
 
             else:
                 # ===== Multiclass =====
@@ -467,30 +459,30 @@ def train(x_train, x_valid, x_test, y_train, y_valid, y_test, id_train, id_test,
     
     # ====== 집계 및 지표 ======
     if output_class == 1:
-        test_acc = accuracy_score(trues_bin, preds_bin)
+        test_acc = accuracy_score(true, pred)
         try:
-            test_auc = metrics.roc_auc_score(trues_bin, probs_bin)
+            test_auc = metrics.roc_auc_score(true, prob)
         except ValueError:
             print("⚠️ AUC 계산 불가: test set 클래스가 단일입니다.")
             test_auc = np.nan
 
-        cm = confusion_matrix(trues_bin, preds_bin).ravel()
+        cm = confusion_matrix(true, pred).ravel()
         if len(cm) == 4:
             recall    = cm[3] / (cm[3] + cm[2]) if (cm[3] + cm[2]) > 0 else np.nan
             precision = cm[3] / (cm[3] + cm[1]) if (cm[3] + cm[1]) > 0 else np.nan
         else:
             recall = precision = np.nan
 
-        # 로그 (원하면)
-        for i in range(len(preds_bin)):
-            print(f"{test_ids[i]} -- true: {label_dict[trues_bin[i]]} -- pred: {label_dict[preds_bin[i]]}")
+        # 로그
+        for i in range(len(pred)):
+            print(f"{test_ids[i]} -- true: {label_dict[true[i]]} -- pred: {label_dict[pred[i]]}")
 
-    else:
+    else: # multi-class
         test_acc = accuracy_score(trues_mc, preds_mc)
         try:
             # probvecs_mc: (num_samples, C) 로 변환
             prob_matrix = np.vstack(probvecs_mc)   # shape [N, C]
-            test_auc = metrics.roc_auc_score(trues_mc, prob_matrix, multi_class='ovr', average='weighted')
+            test_auc = metrics.roc_auc_score(trues_mc, prob_matrix, multi_class='ovo') # , average='weighted'
         except ValueError:
             print("⚠️ AUC 계산 불가: test set에 모든 클래스가 포함되지 않음")
             test_auc = np.nan
@@ -968,9 +960,9 @@ for repeat in range(args.repeat):
 
         # 행 방향 이어붙이기 + 인덱스 초기화
         cell_type = pd.concat([train_ct, test_ct], ignore_index=True)
-
+        cell_type = cell_type.astype("string").fillna("Unknown")
         print("전체 cell type 길이", cell_type)
-
+        print("cell type의 NaN 개수 체크",cell_type.isna().sum())
         data_augmented, train_p_idx, labels_augmented, cell_type_augmented = mixups(args, data,
                                                                             train_p_index,
                                                                             labels_,
