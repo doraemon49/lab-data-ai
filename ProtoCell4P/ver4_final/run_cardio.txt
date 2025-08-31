@@ -1,0 +1,26 @@
+
+# |    0   N/A  N/A   3325619      C   python                                      384MiB | # 시작
+# |    0   N/A  N/A   3325619      C   python                                     1690MiB | # tuning 단계
+# |    0   N/A  N/A   3325619      C   python                                     2462MiB |
+# 본 학습 시작 --> oom 에러남
+# |    0   N/A  N/A   3325619      C   python                                     3094MiB |
+# |    0   N/A  N/A   3325619      C   python                                     3844MiB |
+
+# 그래서 그냥 512로 돌아오기
+#   587MiB / 24564MiB 
+
+# 736
+# 시작  401MiB / 24564Mi
+# 본 학습에서 에러남
+
+
+
+# AMP + TF32 추가
+# covid     15602MiB |
+# cardio      582MiB |
+# kidney    15586MiB
+
+# 512에서 # |    1   N/A  N/A   2670908      C   python        15576MiB |
+# 768에서 # |    1   N/A  N/A   2636782      C   python        23854MiB |
+# 736에서 # |    1   N/A  N/A   2642256      C   python                                    19204MiB |
+# 816에서 # |    1   N/A  N/A   2644769      C   python                                    23468MiB |
