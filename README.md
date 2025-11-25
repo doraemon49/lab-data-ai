@@ -157,6 +157,13 @@
   <li><a href="https://doraemin.tistory.com/211" target="_blank">[CoT] Chain-of-Thought Prompting Elicits Reasoning in Large Language Models</a></li>
   <li><a href="https://doraemin.tistory.com/216" target="_blank">Isoform Function Prediction Using a Deep Neural Network</a></li>
   <li><a href="https://doraemin.tistory.com/217" target="_blank">[DosaCNV] Deep multiple-instance learning accurately predicts gene haploinsufficiency and deletion pathogenicity</a></li>
+  <li><a href="https://doraemin.tistory.com/282" target="_blank">Healthcare Biclustering of Predictive Gene Expression Using LSTM-SVM Hybrid</a></li>
+  <li><a href="https://doraemin.tistory.com/283" target="_blank">Hierarchical Marker Genes Selection in scRNA-seq Analysis</a></li>
+  <li><a href="https://doraemin.tistory.com/284" target="_blank">CASCC: a co-expression-assisted single-cell RNA-seq data clustering method</a></li>
+  <li><a href="https://doraemin.tistory.com/285" target="_blank">Graph Attention Networks (GAT)</a></li>
+  <li><a href="https://doraemin.tistory.com/286" target="_blank">Graph Attention Networkfor Link Prediction of Gene Regulationsfrom Single-cell RNA-sequencing Data(GENELink)</a></li>
+  <li><a href="https://doraemin.tistory.com/287" target="_blank">RECOVERING TIME-VARYINGNETWORKS FROM SINGLE-CELLDATA</a></li>
+
 </ul>
 </details>
 <!--
