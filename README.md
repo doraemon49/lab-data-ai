@@ -146,8 +146,8 @@
 
 # PAPER REVIEWS
 
-<details>
-<summary>PAPER REVIEWS</summary>
+<!-- <details> -->
+<!-- <summary>PAPER REVIEWS</summary> -->
 <ul>
   <li><a href="https://doraemin.tistory.com/206" target="_blank">Transcriptome analysis based onmachine learning reveals a role forautoinflammatory genes of chronicnonbacterial osteomyelitis (CNO)</a></li>
   <li><a href="https://doraemin.tistory.com/207" target="_blank">[DESeq2] Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2</a></li>
@@ -165,7 +165,7 @@
   <li><a href="https://doraemin.tistory.com/287" target="_blank">RECOVERING TIME-VARYINGNETWORKS FROM SINGLE-CELLDATA</a></li>
 
 </ul>
-</details>
+<!-- </details> -->
 <!--
 <details>
 <summary></summary>
