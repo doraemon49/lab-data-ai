@@ -1,8 +1,6 @@
 # laboratory
 
-명지대학교 오민식 교수님 연구실 (ARTIFICIAL INTELLIGENCE AND DATA ANALYTICS LAB)
-<br>
-[인공지능을 다양한 분야의 데이터에 적용하여 문제 해결 방법을 개발하는 연구실](https://ailab-mju.github.io/)
+[ARTIFICIAL INTELLIGENCE AND DATA ANALYTICS LAB](https://ailab-mju.github.io/) under Prof. Minsik Oh, Myongji University
 
 ✨ Visit my personal tech blog to read more about my journey as a developer. : [Doraemin](https://doraemin.tistory.com/)
 
